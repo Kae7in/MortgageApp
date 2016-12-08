@@ -161,7 +161,7 @@ class MortgageAppTests: XCTestCase {
         XCTAssertEqual(c.calculateInterestRate(mortgage: m, loanMonth: 85), 4.6)
     }
     
-    func testCalculateMonthlyPayment() {
+    func testCalculateMonthlyPayment1() {
         let m = Mortgage()
         let c = MortgageCalculator()
         

@@ -22,6 +22,10 @@ class Mortgage: NSObject {
     var adjustLifetimeCap: NSDecimalNumber = 0
     var adjustIntervalMonths: Int = 12
     var startDate = Date()
+    var totalLoanCost: NSDecimalNumber = 0
+    var paymentSchedule = [Amortization]()
+    var numberOfPayments: Int = 360
+    var monthlyPayment: NSDecimalNumber = 0
     
     func loanAmount() -> NSDecimalNumber {
         var str = self.downPayment
