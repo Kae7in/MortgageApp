@@ -173,7 +173,6 @@ class MortgageAppTests: XCTestCase {
         XCTAssertEqual(c.roundDecimals(num: c.calculateMonthlyPayment(loanAmount: m.loanAmount(), loanTermMonths: m.loanTermMonths, interestRate: m.interestRate)), 909.29)
     }
     
-    /*
     func testExtraPayments1() {
         var m = Mortgage()
         let c = MortgageCalculator()
@@ -186,10 +185,9 @@ class MortgageAppTests: XCTestCase {
         
         m = c.calculateMortgage(mortgage: m)
         XCTAssert(m.paymentSchedule.count == 302)
-        XCTAssertEqual(m.paymentSchedule[36].remainingLoanBalance, 183551.85)
+        XCTAssertEqual(m.paymentSchedule[37].remainingLoanBalance, 183551.85)
         XCTAssertEqual(m.totalLoanCost, 104109.91)
     }
-     */
     
     func testPerformanceExample() {
         // This is an example of a performance test case.

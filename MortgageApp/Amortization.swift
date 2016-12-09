@@ -31,7 +31,6 @@ class Amortization: NSObject {
     var propertyTax: NSDecimalNumber = 0.0
     var propertyTaxLoanYearToDate: NSDecimalNumber = 0.0
     var propertyTaxToDate: NSDecimalNumber = 0.0
-    var monthlyPayment: NSDecimalNumber = 0.0
     var remainingLoanBalance: NSDecimalNumber = 0.0
     var scheduledMonthlyPayment: NSDecimalNumber = 0.0
 }

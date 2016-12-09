@@ -21,11 +21,10 @@ class ViewController: UIViewController {
         m.interestRate = 3.6
         m.loanTermMonths = 360
         m.salePrice = 200000
-        // NOT TESTED YET
-         m.extras = [["startMonth":1, "endMonth":360, "extraIntervalMonths":1, "extraAmount":100]]
+        m.extras = [["startMonth":1, "endMonth":360, "extraIntervalMonths":1, "extraAmount":100]]
         
         m = c.calculateMortgage(mortgage: m)
-        let loanPeriod = 0
+        let loanPeriod = 37
         let mirror = Mirror(reflecting: m.paymentSchedule[loanPeriod])
         for child in mirror.children {
             print(child)

@@ -152,7 +152,7 @@ class MortgageCalculator: NSObject {
             amortization.loanYear = loanYear
             rollupSummaryFields.map({ (field: String) in
                 if loanYearRollUpSummary[field] != nil {
-                    loanYearRollUpSummary[field]?.adding(amortization.value(forKey: field) as! NSDecimalNumber)
+                    loanYearRollUpSummary[field] = loanYearRollUpSummary[field]?.adding(amortization.value(forKey: field) as! NSDecimalNumber)
                 } else {
                     loanYearRollUpSummary[field] = amortization.value(forKey: field) as! NSDecimalNumber?
                 }
@@ -186,7 +186,7 @@ class MortgageCalculator: NSObject {
         let additionalFieldsToProcess = ["scheduledMonthlyPayment", "remainingLoanBalance"]
         
         for i in 0..<amortizations.count {
-            let amortization = amortizations[i]
+            var amortization = amortizations[i]
             rollupSummaryFields.map({ (field: String) in
                 var temp: NSDecimalNumber = amortization.value(forKey: field) as! NSDecimalNumber
                 amortization.setValue(roundDecimals(num: temp.dividing(by: NSDecimalNumber(value: 100))), forKey: field)
@@ -201,8 +201,8 @@ class MortgageCalculator: NSObject {
                 let val = roundDecimals(num: temp.dividing(by: NSDecimalNumber(value: 100)))
                 amortization.setValue(val, forKey: field)
             })
-            
-            mortgage.totalLoanCost.adding(amortization.interest)
+
+            mortgage.totalLoanCost = mortgage.totalLoanCost.adding(amortization.interest)
         }
         
         mortgage.totalLoanCost = roundDecimals(num: mortgage.totalLoanCost)
