@@ -14,9 +14,6 @@ class MortgageAppTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-//        let m = MortgageCalculator()
-//        let options: [String:Any] = ["downPayment": "0%", "interestRate": 3.6, "loanTermMonths": 360, "salePrice": 200000]
-//        m.initOptions(options: options)
     }
     
     override func tearDown() {
@@ -188,6 +185,24 @@ class MortgageAppTests: XCTestCase {
         XCTAssertEqual(m.paymentSchedule[37].remainingLoanBalance, 183551.85)
         XCTAssertEqual(m.totalLoanCost, 104109.91)
     }
+    
+    func testExtraPayments2() {
+        var m = Mortgage()
+        let c = MortgageCalculator()
+        
+        m.downPayment = "0%"
+        m.interestRate = 3.6
+        m.loanTermMonths = 360
+        m.salePrice = 200000
+        m.extras = [["startMonth":1, "endMonth":360, "extraIntervalMonths":1, "extraAmount":100], ["startMonth":1, "endMonth":1, "extraIntervalMonths":1, "extraAmount":1000]]
+        
+        m = c.calculateMortgage(mortgage: m)
+        XCTAssert(m.paymentSchedule.count == 299)
+        XCTAssertEqual(m.paymentSchedule[100].remainingLoanBalance, 150449.88)
+        XCTAssertEqual(m.totalLoanCost, 102656.41)
+    }
+    
+    // TODO: Write ARM Mortgage tests
     
     func testPerformanceExample() {
         // This is an example of a performance test case.

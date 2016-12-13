@@ -9,13 +9,6 @@
 import Foundation
 
 
-// ADD MONTH EXAMPLE
-//var comps = DateComponents()
-//comps.setValue(2, for: Calendar.Component.month)
-//let date: Date = Date()
-//let newDate: Date = Calendar.current.date(byAdding: comps, to: date)!
-
-
 class MortgageCalculator: NSObject {
     
     func roundDecimals(num: NSDecimalNumber) -> NSDecimalNumber {
