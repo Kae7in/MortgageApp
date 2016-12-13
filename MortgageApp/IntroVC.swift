@@ -42,7 +42,7 @@ class IntroVC: UIViewController {
     }
     
     func addMessage() {
-        let string = "Your loan is made up of principal and interest, which combine to form the reamining balance."
+        let string = "Your loan is made up of principal and interest, which combine to form the remaining balance."
         let defaultFontAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Ultralight", size: 38.0)!, NSForegroundColorAttributeName: UIColor.white]
         let attributedString = NSMutableAttributedString(string: string, attributes: defaultFontAttributes)
         let boldFontAttribute = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Medium", size: 38.0)!]
@@ -51,12 +51,16 @@ class IntroVC: UIViewController {
         attributedString.addAttributes(boldFontAttribute, range: (string as NSString).range(of: "interest"))
         attributedString.addAttributes(boldFontAttribute, range: (string as NSString).range(of: "balance"))
         
-        let height: CGFloat = 190.0
-        label = UILabel(frame: CGRect(x: 10.0, y: 0.0, width: view.frame.width - 20.0, height: height))
-        label!.frame = label!.frame.offsetBy(dx: 0.0, dy: self.horizontalLine!.frame.minY - label!.frame.height)
+        label = UILabel(frame: CGRect(x: 10.0, y: 0.0, width: view.frame.width - 20.0, height: CGFloat.greatestFiniteMagnitude))  // maximum height used because we will resize dynamically
         label?.textAlignment = .left
         label?.attributedText = attributedString
-        label?.numberOfLines = 0
+        label?.numberOfLines = 4
+        label?.lineBreakMode = NSLineBreakMode.byTruncatingTail
+        label!.adjustsFontSizeToFitWidth = true
+        label!.minimumScaleFactor = 24.0 / label!.font.pointSize  // Dynamically resize font to fit label
+        label?.sizeToFit()  // Must dynamically size resize label to fit the text more exactly
+        let y: CGFloat = self.horizontalLine!.frame.minY - label!.frame.height
+        label!.frame = CGRect(x: label!.frame.minX, y: y - 5.0, width: label!.frame.width, height: label!.frame.height)
         view.addSubview(label!)
     }
     
