@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -110,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="2081" y="-287"/>
         </scene>
-        <!--Intro DetailVC-->
+        <!--Intro DetailVC1-->
         <scene sceneID="AZx-Ix-Ir7">
             <objects>
-                <viewController storyboardIdentifier="IntroVC1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B5R-YV-7cJ" customClass="IntroDetailVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroVC1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B5R-YV-7cJ" customClass="IntroDetailVC1" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Why-hV-qqo"/>
                         <viewControllerLayoutGuide type="bottom" id="REV-4G-Lrb"/>
@@ -121,17 +122,50 @@
                     <view key="view" contentMode="scaleToFill" id="4df-9C-OXa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fyg-Ec-81n">
+                                <rect key="frame" x="0.0" y="300" width="375" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="mfF-tl-OCa"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtr-3A-V0H">
+                                <rect key="frame" x="10" y="251" width="355" height="41"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Your loan is made up of principal and interest, which combine to form the remaining balance.">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.1803921568627451" green="0.73725490196078436" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jtr-3A-V0H" firstAttribute="centerX" secondItem="4df-9C-OXa" secondAttribute="centerX" id="8gX-Qk-Dad"/>
+                            <constraint firstItem="Fyg-Ec-81n" firstAttribute="top" secondItem="jtr-3A-V0H" secondAttribute="bottom" constant="8" id="9SK-8C-W1H"/>
+                            <constraint firstItem="REV-4G-Lrb" firstAttribute="top" secondItem="Fyg-Ec-81n" secondAttribute="bottom" constant="366" id="c9U-Jv-WSC"/>
+                            <constraint firstItem="Fyg-Ec-81n" firstAttribute="width" secondItem="4df-9C-OXa" secondAttribute="width" id="cnk-Dh-QQt"/>
+                            <constraint firstItem="Fyg-Ec-81n" firstAttribute="centerX" secondItem="4df-9C-OXa" secondAttribute="centerX" id="evt-i5-L38"/>
+                            <constraint firstItem="jtr-3A-V0H" firstAttribute="width" secondItem="4df-9C-OXa" secondAttribute="height" multiplier="355:667" id="knM-Jb-bXa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="message" destination="jtr-3A-V0H" id="3Fq-He-YcR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fE-FI-41Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3200.8000000000002" y="-554.57271364317842"/>
+            <point key="canvasLocation" x="2820" y="-1041.2293853073463"/>
         </scene>
-        <!--Intro DetailVC-->
+        <!--Intro DetailVC2-->
         <scene sceneID="eFR-Cf-JVh">
             <objects>
-                <viewController storyboardIdentifier="IntroVC2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J8h-nY-apC" customClass="IntroDetailVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroVC2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J8h-nY-apC" customClass="IntroDetailVC2" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oi5-6F-cGA"/>
                         <viewControllerLayoutGuide type="bottom" id="cMU-uL-dZJ"/>
@@ -139,17 +173,50 @@
                     <view key="view" contentMode="scaleToFill" id="uWA-gt-InM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tbx-VK-svj">
+                                <rect key="frame" x="0.0" y="300" width="375" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="J1j-to-7NA"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5Q-iC-ggm">
+                                <rect key="frame" x="10" y="251" width="355" height="41"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="An extra payment goes entirely towards paying down the principal of your loan.">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.7367932745190453" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="b5Q-iC-ggm" firstAttribute="width" secondItem="uWA-gt-InM" secondAttribute="height" multiplier="355:667" id="AKH-Cy-LwL"/>
+                            <constraint firstItem="Tbx-VK-svj" firstAttribute="centerX" secondItem="uWA-gt-InM" secondAttribute="centerX" id="E4d-yI-d6u"/>
+                            <constraint firstItem="Tbx-VK-svj" firstAttribute="top" secondItem="b5Q-iC-ggm" secondAttribute="bottom" constant="8" id="G08-DQ-cTp"/>
+                            <constraint firstItem="cMU-uL-dZJ" firstAttribute="top" secondItem="Tbx-VK-svj" secondAttribute="bottom" constant="366" id="iqV-Rg-Rbk"/>
+                            <constraint firstItem="Tbx-VK-svj" firstAttribute="width" secondItem="uWA-gt-InM" secondAttribute="width" id="wFA-5f-dGU"/>
+                            <constraint firstItem="b5Q-iC-ggm" firstAttribute="centerX" secondItem="uWA-gt-InM" secondAttribute="centerX" id="xfG-IA-DTj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="message" destination="b5Q-iC-ggm" id="5Qt-Je-FfZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOm-37-kER" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4137" y="-460"/>
+            <point key="canvasLocation" x="3620" y="-1041.2293853073463"/>
         </scene>
-        <!--Intro DetailVC-->
+        <!--Intro DetailVC3-->
         <scene sceneID="gGW-uM-5Xy">
             <objects>
-                <viewController storyboardIdentifier="IntroVC3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="e0v-0j-cEN" customClass="IntroDetailVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroVC3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="e0v-0j-cEN" customClass="IntroDetailVC3" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JNN-1v-GWw"/>
                         <viewControllerLayoutGuide type="bottom" id="nlx-xO-C7c"/>
@@ -157,12 +224,249 @@
                     <view key="view" contentMode="scaleToFill" id="6p2-iQ-jxT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4W-OQ-TiP">
+                                <rect key="frame" x="10" y="251" width="355" height="41"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="In turn, you no longer owe the interest you would have paid to the bank on that principal.">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GgA-VW-rMg">
+                                <rect key="frame" x="0.0" y="300" width="375" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="GZo-9Z-efx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.1803921568627451" green="0.73725490196078436" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nlx-xO-C7c" firstAttribute="top" secondItem="GgA-VW-rMg" secondAttribute="bottom" constant="366" id="1Mi-Xz-a3f"/>
+                            <constraint firstItem="GgA-VW-rMg" firstAttribute="centerX" secondItem="6p2-iQ-jxT" secondAttribute="centerX" id="5mo-pY-65j"/>
+                            <constraint firstItem="GgA-VW-rMg" firstAttribute="width" secondItem="6p2-iQ-jxT" secondAttribute="width" id="JR4-Bf-Hes"/>
+                            <constraint firstItem="g4W-OQ-TiP" firstAttribute="centerX" secondItem="6p2-iQ-jxT" secondAttribute="centerX" id="bOX-pZ-OCp"/>
+                            <constraint firstItem="g4W-OQ-TiP" firstAttribute="width" secondItem="6p2-iQ-jxT" secondAttribute="height" multiplier="355:667" id="jSX-f8-VCO"/>
+                            <constraint firstItem="GgA-VW-rMg" firstAttribute="top" secondItem="g4W-OQ-TiP" secondAttribute="bottom" constant="8" id="u7G-zo-FD0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="message" destination="g4W-OQ-TiP" id="mvB-k6-5vU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6IF-Q9-bSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4982" y="-154"/>
+            <point key="canvasLocation" x="4445.6000000000004" y="-1041.2293853073463"/>
+        </scene>
+        <!--Intro DetailVC4-->
+        <scene sceneID="BmR-gA-oig">
+            <objects>
+                <viewController storyboardIdentifier="IntroVC4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7RD-Mz-tvh" customClass="IntroDetailVC4" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fS9-z6-vUK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dgn-CV-UrD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ljU-CA-rPw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGT-1I-ygn">
+                                <rect key="frame" x="10" y="251" width="355" height="41"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="This means you pay the bank less AND pay your mortgage off sooner.">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6HG-lW-5vs">
+                                <rect key="frame" x="0.0" y="300" width="375" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="6nD-3d-Le6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18431372549019609" green="0.74117647058823533" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YGT-1I-ygn" firstAttribute="centerX" secondItem="ljU-CA-rPw" secondAttribute="centerX" id="57y-CE-2MY"/>
+                            <constraint firstItem="6HG-lW-5vs" firstAttribute="width" secondItem="ljU-CA-rPw" secondAttribute="width" id="GTJ-yh-Pqz"/>
+                            <constraint firstItem="6HG-lW-5vs" firstAttribute="top" secondItem="YGT-1I-ygn" secondAttribute="bottom" constant="8" id="GZJ-sv-va9"/>
+                            <constraint firstItem="6HG-lW-5vs" firstAttribute="centerX" secondItem="ljU-CA-rPw" secondAttribute="centerX" id="IRX-GK-VBE"/>
+                            <constraint firstItem="YGT-1I-ygn" firstAttribute="width" secondItem="ljU-CA-rPw" secondAttribute="height" multiplier="355:667" id="LQO-BL-yNW"/>
+                            <constraint firstItem="Dgn-CV-UrD" firstAttribute="top" secondItem="6HG-lW-5vs" secondAttribute="bottom" constant="366" id="f1o-Re-tQQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="message" destination="YGT-1I-ygn" id="g5p-Zq-dN0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hk0-kM-xJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5248.8000000000002" y="-1041.2293853073463"/>
+        </scene>
+        <!--Intro DetailVC5-->
+        <scene sceneID="4f1-GZ-I14">
+            <objects>
+                <viewController storyboardIdentifier="IntroVC5" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ePJ-L4-fQW" customClass="IntroDetailVC5" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vr2-0j-tcT"/>
+                        <viewControllerLayoutGuide type="bottom" id="IQ9-PA-qnC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ReQ-lK-7th">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccg-4w-5fQ">
+                                <rect key="frame" x="10" y="251" width="355" height="41"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="And if you made an extra payment every year, you'd save even more money and more time.">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N7o-6z-T9z">
+                                <rect key="frame" x="0.0" y="300" width="375" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="zAv-Uy-Cwl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18431372549019609" green="0.74117647058823533" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ccg-4w-5fQ" firstAttribute="width" secondItem="ReQ-lK-7th" secondAttribute="height" multiplier="355:667" id="8k3-st-l1C"/>
+                            <constraint firstItem="IQ9-PA-qnC" firstAttribute="top" secondItem="N7o-6z-T9z" secondAttribute="bottom" constant="366" id="Lxu-oN-tok"/>
+                            <constraint firstItem="N7o-6z-T9z" firstAttribute="centerX" secondItem="ReQ-lK-7th" secondAttribute="centerX" id="Lz1-d9-AS1"/>
+                            <constraint firstItem="ccg-4w-5fQ" firstAttribute="centerX" secondItem="ReQ-lK-7th" secondAttribute="centerX" id="QAt-lU-Tfs"/>
+                            <constraint firstItem="N7o-6z-T9z" firstAttribute="top" secondItem="ccg-4w-5fQ" secondAttribute="bottom" constant="8" id="dQf-0d-09v"/>
+                            <constraint firstItem="N7o-6z-T9z" firstAttribute="width" secondItem="ReQ-lK-7th" secondAttribute="width" id="yvQ-Wa-nvp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="message" destination="ccg-4w-5fQ" id="YaV-22-Xos"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GWn-8u-Viz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6153" y="-1041"/>
+        </scene>
+        <!--Intro DetailVC6-->
+        <scene sceneID="cRA-D0-t8T">
+            <objects>
+                <viewController storyboardIdentifier="IntroVC6" id="hno-7F-efd" customClass="IntroDetailVC6" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EGh-fq-QXh"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Yg-cC-41y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1pY-rF-txb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3L-vO-W2z">
+                                <rect key="frame" x="10" y="251" width="355" height="41"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="In fact, you will earn 7x more on extra mortgage payments than a savings account.">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRr-s8-Ams">
+                                <rect key="frame" x="0.0" y="300" width="375" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ZtW-3x-S4e"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18431372549019609" green="0.74117647058823533" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="VRr-s8-Ams" firstAttribute="top" secondItem="D3L-vO-W2z" secondAttribute="bottom" constant="8" id="1TM-wy-nQS"/>
+                            <constraint firstItem="D3L-vO-W2z" firstAttribute="width" secondItem="1pY-rF-txb" secondAttribute="height" multiplier="355:667" id="C14-q1-qr9"/>
+                            <constraint firstItem="VRr-s8-Ams" firstAttribute="centerX" secondItem="1pY-rF-txb" secondAttribute="centerX" id="OX4-1F-nZT"/>
+                            <constraint firstItem="D3L-vO-W2z" firstAttribute="centerX" secondItem="1pY-rF-txb" secondAttribute="centerX" id="X8e-fU-ElE"/>
+                            <constraint firstItem="8Yg-cC-41y" firstAttribute="top" secondItem="VRr-s8-Ams" secondAttribute="bottom" constant="366" id="Z4T-zg-yj2"/>
+                            <constraint firstItem="VRr-s8-Ams" firstAttribute="width" secondItem="1pY-rF-txb" secondAttribute="width" id="nCa-IF-wxI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="message" destination="D3L-vO-W2z" id="v40-X7-F4i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NEG-cX-U0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6994" y="-1041"/>
+        </scene>
+        <!--Intro DetailVC7-->
+        <scene sceneID="4pX-7T-kgu">
+            <objects>
+                <viewController storyboardIdentifier="IntroVC7" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4A6-Nb-2JV" customClass="IntroDetailVC7" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zM8-rd-N5r"/>
+                        <viewControllerLayoutGuide type="bottom" id="sSG-lb-nou"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jIj-WI-TFa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7p-tH-2us">
+                                <rect key="frame" x="10" y="251" width="355" height="41"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Wondering what happens if you put in even more money?">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yez-TF-bHW">
+                                <rect key="frame" x="0.0" y="300" width="375" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="lgs-fP-hpf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18431372549019609" green="0.74117647058823533" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="W7p-tH-2us" firstAttribute="centerX" secondItem="jIj-WI-TFa" secondAttribute="centerX" id="6c8-dA-2it"/>
+                            <constraint firstItem="yez-TF-bHW" firstAttribute="centerX" secondItem="jIj-WI-TFa" secondAttribute="centerX" id="CZb-0B-Mpm"/>
+                            <constraint firstItem="yez-TF-bHW" firstAttribute="top" secondItem="W7p-tH-2us" secondAttribute="bottom" constant="8" id="Tkr-UW-i3d"/>
+                            <constraint firstItem="sSG-lb-nou" firstAttribute="top" secondItem="yez-TF-bHW" secondAttribute="bottom" constant="366" id="YXj-sP-w5N"/>
+                            <constraint firstItem="W7p-tH-2us" firstAttribute="width" secondItem="jIj-WI-TFa" secondAttribute="height" multiplier="355:667" id="bJa-5R-UFt"/>
+                            <constraint firstItem="yez-TF-bHW" firstAttribute="width" secondItem="jIj-WI-TFa" secondAttribute="width" id="q17-eq-Rvq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="message" destination="W7p-tH-2us" id="Gy3-rZ-iJw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T9o-xQ-pXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7866" y="-1041"/>
         </scene>
         <!--Mortgage DetailVC-->
         <scene sceneID="kY9-RO-0XG">

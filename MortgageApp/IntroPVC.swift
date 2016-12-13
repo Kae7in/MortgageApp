@@ -11,7 +11,7 @@ import UIKit
 class IntroPVC: UIPageViewController {
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newIntroVC(num: 1), self.newIntroVC(num: 2), self.newIntroVC(num: 3)]
+        return [self.newIntroVC(num: 1), self.newIntroVC(num: 2), self.newIntroVC(num: 3), self.newIntroVC(num: 4), self.newIntroVC(num: 5), self.newIntroVC(num: 6), self.newIntroVC(num: 7)]
     }()
     
     override func viewDidLoad() {
@@ -27,11 +27,7 @@ class IntroPVC: UIPageViewController {
     }
     
     private func newIntroVC(num: Int) -> UIViewController {
-        var vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "IntroVC\(num)") as! IntroDetailVC
-        
-        vc.addMessage(message: num)
-        
-        return vc
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "IntroVC\(num)")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
