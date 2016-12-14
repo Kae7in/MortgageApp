@@ -30,7 +30,6 @@ class IntroPVC: UIPageViewController {
     private func newIntroVC(num: Int) -> UIViewController {
         let vc: IntroDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "IntroVC\(num)") as! IntroDetailVC
         vc.mortgage = mortgage
-        
         return vc as UIViewController
     }
     

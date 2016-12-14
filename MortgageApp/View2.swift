@@ -14,6 +14,7 @@ class View2: IntroDetailVC {
     @IBOutlet weak var principalLabel: UILabel!
     @IBOutlet weak var extraPaymentLabel: UILabel!
     @IBOutlet weak var newPrincipalLabel: UILabel!
+    var displayed: Bool = false
     
     // Number animation stuff
     var extraPaymentCounter: NSDecimalNumber = 0.0
@@ -29,7 +30,10 @@ class View2: IntroDetailVC {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        displayMortgageData()
+        if !displayed {
+            displayed = true
+            displayMortgageData()
+        }
     }
     
     func formatMessage() {
@@ -46,14 +50,19 @@ class View2: IntroDetailVC {
     }
     
     func displayMortgageData() {
-        principalLabel.text! = mortgage!.loanAmount().stringValue.components(separatedBy: ".")[0]
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = NumberFormatter.Style.decimal
+        
+        principalLabel.text! = numberFormatter.string(from: mortgage!.loanAmount())!.components(separatedBy: ".")[0]
+        newPrincipalLabel.text! = principalLabel.text!
+        
         Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { (timer) in
             let value: NSDecimalNumber = self.mortgage!.monthlyPayment
-            self.extraPaymentCounter = self.animate(label: self.extraPaymentLabel, value: value, timer: timer, counter: self.extraPaymentCounter, increment: 1)
+            self.extraPaymentCounter = self.animate(label: self.extraPaymentLabel, value: value, timer: timer, counter: self.extraPaymentCounter, increment: 6)
         }
         Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { (timer) in
             let value: NSDecimalNumber = self.mortgage!.loanAmount().subtracting(self.mortgage!.monthlyPayment)
-            self.newPrincipalCounter = self.animate(label: self.newPrincipalLabel, value: value, timer: timer, counter: self.newPrincipalCounter, increment: -1)
+            self.newPrincipalCounter = self.animate(label: self.newPrincipalLabel, value: value, timer: timer, counter: self.newPrincipalCounter, increment: -6)
         }
     }
 

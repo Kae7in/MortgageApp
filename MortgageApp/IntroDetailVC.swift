@@ -32,19 +32,21 @@ class IntroDetailVC: UIViewController {
     }
     
     func animate(label: UILabel, value: NSDecimalNumber, timer: Timer, counter: NSDecimalNumber, increment: Int) -> NSDecimalNumber {
-        label.attributedText! = NSAttributedString(string: "$" + counter.stringValue)
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = NumberFormatter.Style.decimal
+        label.attributedText! = NSAttributedString(string: "$" + numberFormatter.string(from: counter)!)
         
         if increment > 0 {
             if counter.compare(value) == ComparisonResult.orderedDescending ||
                 counter.compare(value) == ComparisonResult.orderedSame {
                 timer.invalidate()
-                label.attributedText! = NSAttributedString(string: "$" + value.stringValue.components(separatedBy: ".")[0])
+                label.attributedText! = NSAttributedString(string: "$" + numberFormatter.string(from: value)!.components(separatedBy: ".")[0])
             }
         } else if increment < 0 {
             if counter.compare(value) == ComparisonResult.orderedAscending ||
                 counter.compare(value) == ComparisonResult.orderedSame {
                 timer.invalidate()
-                label.attributedText! = NSAttributedString(string: "$" + value.stringValue.components(separatedBy: ".")[0])
+                label.attributedText! = NSAttributedString(string: "$" + numberFormatter.string(from: value)!.components(separatedBy: ".")[0])
             }
         } else {
             return counter

@@ -26,12 +26,7 @@ class View1: IntroDetailVC {
         let mc = MortgageCalculator()
         mortgage = mc.calculateMortgage(mortgage: mortgage!)
         
-        
         formatMessage()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         displayMortgageData()
     }
     
@@ -63,6 +58,9 @@ class View1: IntroDetailVC {
             self.balanceCounter = self.animate(label: self.balanceLabel, value: value, timer: timer, counter: self.balanceCounter, increment: 1000)
         }
     }
+    
+    
+    
     
     // TODO: Produce all the necessary mortgage data
 
