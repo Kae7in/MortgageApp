@@ -20,13 +20,16 @@
 		1AABB4871DFA06A9006A3B91 /* Amortization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AABB4861DFA06A9006A3B91 /* Amortization.swift */; };
 		1AB349A91DFF5A1500E76049 /* IntroPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349A81DFF5A1500E76049 /* IntroPVC.swift */; };
 		1AB349AB1DFF5C9100E76049 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349AA1DFF5C9100E76049 /* CustomColors.swift */; };
-		1AB349AF1E006DDD00E76049 /* IntroDetailVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349AE1E006DDD00E76049 /* IntroDetailVC1.swift */; };
-		1AB349B71E0096F800E76049 /* IntroDetailVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349B61E0096F800E76049 /* IntroDetailVC2.swift */; };
-		1AB349B91E009F3300E76049 /* IntroDetailVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349B81E009F3300E76049 /* IntroDetailVC3.swift */; };
-		1AB349BB1E009FA400E76049 /* IntroDetailVC4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349BA1E009FA400E76049 /* IntroDetailVC4.swift */; };
-		1AB349BD1E00A08400E76049 /* IntroDetailVC5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349BC1E00A08400E76049 /* IntroDetailVC5.swift */; };
-		1AB349BF1E00A0AD00E76049 /* IntroDetailVC6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349BE1E00A0AD00E76049 /* IntroDetailVC6.swift */; };
-		1AB349C31E00A10600E76049 /* IntroDetailVC7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349C21E00A10600E76049 /* IntroDetailVC7.swift */; };
+		1AB349AF1E006DDD00E76049 /* View1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349AE1E006DDD00E76049 /* View1.swift */; };
+		1AB349B71E0096F800E76049 /* View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349B61E0096F800E76049 /* View2.swift */; };
+		1AB349B91E009F3300E76049 /* View3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349B81E009F3300E76049 /* View3.swift */; };
+		1AB349BB1E009FA400E76049 /* View4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349BA1E009FA400E76049 /* View4.swift */; };
+		1AB349BD1E00A08400E76049 /* View5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349BC1E00A08400E76049 /* View5.swift */; };
+		1AB349BF1E00A0AD00E76049 /* View6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349BE1E00A0AD00E76049 /* View6.swift */; };
+		1AB349C31E00A10600E76049 /* View7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349C21E00A10600E76049 /* View7.swift */; };
+		1AB349C91E01B82200E76049 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1AB349C81E01B82200E76049 /* SF-UI-Display-Thin.otf */; };
+		1AB349CB1E01BB3A00E76049 /* IntroDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349CA1E01BB3A00E76049 /* IntroDetailVC.swift */; };
+		1AEC028B1E01E000000B473A /* SF-UI-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1AEC028A1E01E000000B473A /* SF-UI-Display-Ultralight.otf */; };
 		9101B69E65A77A193E63F839 /* Pods_MortgageAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC64DA83D2664394F9645E6 /* Pods_MortgageAppTests.framework */; };
 		D0D4EAD7B6014BECB5CC9200 /* Pods_MortgageAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88664985621365C37BA174D5 /* Pods_MortgageAppUITests.framework */; };
 		FDBCEB14AC085B6713E3B68A /* Pods_MortgageApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D6722F3434C4D27B742890 /* Pods_MortgageApp.framework */; };
@@ -69,13 +72,17 @@
 		1AABB4861DFA06A9006A3B91 /* Amortization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Amortization.swift; sourceTree = "<group>"; };
 		1AB349A81DFF5A1500E76049 /* IntroPVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroPVC.swift; sourceTree = "<group>"; };
 		1AB349AA1DFF5C9100E76049 /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
-		1AB349AE1E006DDD00E76049 /* IntroDetailVC1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroDetailVC1.swift; sourceTree = "<group>"; };
-		1AB349B61E0096F800E76049 /* IntroDetailVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroDetailVC2.swift; sourceTree = "<group>"; };
-		1AB349B81E009F3300E76049 /* IntroDetailVC3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroDetailVC3.swift; sourceTree = "<group>"; };
-		1AB349BA1E009FA400E76049 /* IntroDetailVC4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroDetailVC4.swift; sourceTree = "<group>"; };
-		1AB349BC1E00A08400E76049 /* IntroDetailVC5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroDetailVC5.swift; sourceTree = "<group>"; };
-		1AB349BE1E00A0AD00E76049 /* IntroDetailVC6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroDetailVC6.swift; sourceTree = "<group>"; };
-		1AB349C21E00A10600E76049 /* IntroDetailVC7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroDetailVC7.swift; sourceTree = "<group>"; };
+		1AB349AE1E006DDD00E76049 /* View1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
+		1AB349B61E0096F800E76049 /* View2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View2.swift; sourceTree = "<group>"; };
+		1AB349B81E009F3300E76049 /* View3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View3.swift; sourceTree = "<group>"; };
+		1AB349BA1E009FA400E76049 /* View4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View4.swift; sourceTree = "<group>"; };
+		1AB349BC1E00A08400E76049 /* View5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View5.swift; sourceTree = "<group>"; };
+		1AB349BE1E00A0AD00E76049 /* View6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View6.swift; sourceTree = "<group>"; };
+		1AB349C21E00A10600E76049 /* View7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View7.swift; sourceTree = "<group>"; };
+		1AB349C81E01B82200E76049 /* SF-UI-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.otf"; sourceTree = "<group>"; };
+		1AB349CA1E01BB3A00E76049 /* IntroDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroDetailVC.swift; sourceTree = "<group>"; };
+		1AEC02891E01D35F000B473A /* MortgageApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MortgageApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		1AEC028A1E01E000000B473A /* SF-UI-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Ultralight.otf"; sourceTree = "<group>"; };
 		226F37C3A03A63A923EAB14F /* Pods-MortgageAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MortgageAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MortgageAppUITests/Pods-MortgageAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		31D6722F3434C4D27B742890 /* Pods_MortgageApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MortgageApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		361665E4A68BCB7623A2CE65 /* Pods-MortgageApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MortgageApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MortgageApp/Pods-MortgageApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,8 +155,9 @@
 				1A36D42C1DF86AF40093A411 /* Main.storyboard */,
 				1A36D42F1DF86AF40093A411 /* Assets.xcassets */,
 				1A36D4311DF86AF40093A411 /* LaunchScreen.storyboard */,
-				1A36D4341DF86AF40093A411 /* Info.plist */,
+				1AB349C71E01B7F600E76049 /* Supporting Files */,
 				1AB349AA1DFF5C9100E76049 /* CustomColors.swift */,
+				1AEC02891E01D35F000B473A /* MortgageApp-Bridging-Header.h */,
 			);
 			path = MortgageApp;
 			sourceTree = "<group>";
@@ -186,15 +194,26 @@
 			isa = PBXGroup;
 			children = (
 				1AB349A81DFF5A1500E76049 /* IntroPVC.swift */,
-				1AB349AE1E006DDD00E76049 /* IntroDetailVC1.swift */,
-				1AB349B61E0096F800E76049 /* IntroDetailVC2.swift */,
-				1AB349B81E009F3300E76049 /* IntroDetailVC3.swift */,
-				1AB349BA1E009FA400E76049 /* IntroDetailVC4.swift */,
-				1AB349BC1E00A08400E76049 /* IntroDetailVC5.swift */,
-				1AB349BE1E00A0AD00E76049 /* IntroDetailVC6.swift */,
-				1AB349C21E00A10600E76049 /* IntroDetailVC7.swift */,
+				1AB349CA1E01BB3A00E76049 /* IntroDetailVC.swift */,
+				1AB349AE1E006DDD00E76049 /* View1.swift */,
+				1AB349B61E0096F800E76049 /* View2.swift */,
+				1AB349B81E009F3300E76049 /* View3.swift */,
+				1AB349BA1E009FA400E76049 /* View4.swift */,
+				1AB349BC1E00A08400E76049 /* View5.swift */,
+				1AB349BE1E00A0AD00E76049 /* View6.swift */,
+				1AB349C21E00A10600E76049 /* View7.swift */,
 			);
 			name = Intro;
+			sourceTree = "<group>";
+		};
+		1AB349C71E01B7F600E76049 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AEC028A1E01E000000B473A /* SF-UI-Display-Ultralight.otf */,
+				1AB349C81E01B82200E76049 /* SF-UI-Display-Thin.otf */,
+				1A36D4341DF86AF40093A411 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		5D1A253FFDEE53455B4A0FD4 /* Pods */ = {
@@ -337,8 +356,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB349C91E01B82200E76049 /* SF-UI-Display-Thin.otf in Resources */,
 				1A36D4331DF86AF40093A411 /* LaunchScreen.storyboard in Resources */,
 				1A36D4301DF86AF40093A411 /* Assets.xcassets in Resources */,
+				1AEC028B1E01E000000B473A /* SF-UI-Display-Ultralight.otf in Resources */,
 				1A36D42E1DF86AF40093A411 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,19 +525,20 @@
 			files = (
 				1AABB4871DFA06A9006A3B91 /* Amortization.swift in Sources */,
 				1A36D42B1DF86AF40093A411 /* ViewController.swift in Sources */,
-				1AB349C31E00A10600E76049 /* IntroDetailVC7.swift in Sources */,
+				1AB349C31E00A10600E76049 /* View7.swift in Sources */,
 				1A36D4291DF86AF40093A411 /* AppDelegate.swift in Sources */,
-				1AB349BB1E009FA400E76049 /* IntroDetailVC4.swift in Sources */,
+				1AB349BB1E009FA400E76049 /* View4.swift in Sources */,
 				1A36D4581DF86CC00093A411 /* MortgageCalculator.swift in Sources */,
-				1AB349BD1E00A08400E76049 /* IntroDetailVC5.swift in Sources */,
+				1AB349CB1E01BB3A00E76049 /* IntroDetailVC.swift in Sources */,
+				1AB349BD1E00A08400E76049 /* View5.swift in Sources */,
 				1A36D45C1DF895070093A411 /* Mortgage.swift in Sources */,
 				1AB349AB1DFF5C9100E76049 /* CustomColors.swift in Sources */,
 				1AB349A91DFF5A1500E76049 /* IntroPVC.swift in Sources */,
-				1AB349B91E009F3300E76049 /* IntroDetailVC3.swift in Sources */,
+				1AB349B91E009F3300E76049 /* View3.swift in Sources */,
 				1A80FF7B1DFF0D3800193664 /* MortgageDetailVC.swift in Sources */,
-				1AB349BF1E00A0AD00E76049 /* IntroDetailVC6.swift in Sources */,
-				1AB349AF1E006DDD00E76049 /* IntroDetailVC1.swift in Sources */,
-				1AB349B71E0096F800E76049 /* IntroDetailVC2.swift in Sources */,
+				1AB349BF1E00A0AD00E76049 /* View6.swift in Sources */,
+				1AB349AF1E006DDD00E76049 /* View1.swift in Sources */,
+				1AB349B71E0096F800E76049 /* View2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +639,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "MortgageApp/MortgageApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -660,6 +683,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "MortgageApp/MortgageApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

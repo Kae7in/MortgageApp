@@ -62,13 +62,20 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier! == "toMortgageDetail" {
-            let m = Mortgage()
-            m.salePrice = NSDecimalNumber(value: Double(self.principal.text!)!)
-            m.interestRate = NSDecimalNumber(value: Double(self.apr.text!)!)
-            m.loanTermMonths = Int(self.termYears.text!)! * 12
-            m.downPayment = self.downPercent.text! + "%"
-            
+        let m = Mortgage()
+//        m.salePrice = NSDecimalNumber(value: Double(self.principal.text!)!)
+//        m.interestRate = NSDecimalNumber(value: Double(self.apr.text!)!)
+//        m.loanTermMonths = Int(self.termYears.text!)! * 12
+//        m.downPayment = self.downPercent.text! + "%"
+        m.salePrice = 200000
+        m.interestRate = 3.6
+        m.loanTermMonths = 360
+        m.downPayment = "0%"
+        
+        if segue.identifier! == "toIntro" {
+            let introPVC = segue.destination as! IntroPVC
+            introPVC.mortgage = m
+        } else if segue.identifier! == "toMortgageDetail" {
             let mortgageDetailVC = segue.destination as! MortgageDetailVC
             mortgageDetailVC.m = m
         }

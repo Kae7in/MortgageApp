@@ -1,22 +1,22 @@
 //
-//  IntroDetailVC5.swift
+//  IntroDetailVC.swift
 //  MortgageApp
 //
-//  Created by Kaelin Hooper on 12/13/16.
+//  Created by Kaelin Hooper on 12/14/16.
 //  Copyright © 2016 Kaelin Hooper. All rights reserved.
 //
 
 import UIKit
 
-class IntroDetailVC5: UIViewController {
-
-    @IBOutlet weak var message: UILabel!
+class IntroDetailVC: UIViewController {
     
+    var mortgage: Mortgage? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
         setBackgroundColors()
-        formatMessage()
     }
     
     func setBackgroundColors() {
@@ -30,17 +30,10 @@ class IntroDetailVC5: UIViewController {
         
         UIApplication.shared.statusBarStyle = .lightContent
     }
-    
-    func formatMessage() {
-        let string = message.text!
-        let defaultFontAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Ultralight", size: 38.0)!, NSForegroundColorAttributeName: UIColor.white]
-        let attributedString = NSMutableAttributedString(string: string, attributes: defaultFontAttributes)
-        let boldFontAttribute = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Medium", size: 38.0)!]
-        
-        attributedString.addAttributes(boldFontAttribute, range: (string as NSString).range(of: "every year"))
-        
-        message.attributedText = attributedString
-        message.sizeToFit()
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
 

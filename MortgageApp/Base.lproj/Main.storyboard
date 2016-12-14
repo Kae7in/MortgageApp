@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="2081" y="-287"/>
         </scene>
-        <!--Intro DetailVC1-->
+        <!--View1-->
         <scene sceneID="AZx-Ix-Ir7">
             <objects>
-                <viewController storyboardIdentifier="IntroVC1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B5R-YV-7cJ" customClass="IntroDetailVC1" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroVC1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B5R-YV-7cJ" customClass="View1" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Why-hV-qqo"/>
                         <viewControllerLayoutGuide type="bottom" id="REV-4G-Lrb"/>
@@ -147,21 +147,21 @@
                                 <rect key="frame" x="0.0" y="301" width="375" height="366"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ExT-wD-D2L">
-                                        <rect key="frame" x="42" y="120" width="291" height="125"/>
+                                        <rect key="frame" x="37" y="110" width="302" height="145"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="aDC-Cf-fML">
-                                                <rect key="frame" x="0.0" y="0.0" width="291" height="56"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="302" height="64.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="1lA-Ji-Lpr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="135.5" height="56"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="141" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwH-9T-H1O">
-                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="62" height="21.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Principal">
                                                                         <attributes>
                                                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="18" name="SFMono-Light"/>
+                                                                            <font key="NSFont" size="18" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -169,13 +169,13 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJh-IS-C49">
-                                                                <rect key="frame" x="0.0" y="21" width="95.5" height="35"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="121" height="43"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="$---,---">
                                                                         <attributes>
                                                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="30" name="SFMono-Light"/>
-                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            <font key="NSFont" size="36" name="SFUIDisplay-Ultralight"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                 </attributedString>
@@ -183,11 +183,11 @@
                                                             </label>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="HJh-IS-C49" secondAttribute="trailing" constant="40" id="h8k-aq-mnS"/>
+                                                            <constraint firstAttribute="trailing" secondItem="HJh-IS-C49" secondAttribute="trailing" constant="20" id="h8k-aq-mnS"/>
                                                         </constraints>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmz-aL-jsR">
-                                                        <rect key="frame" x="135.5" y="10.5" width="60" height="45.5"/>
+                                                        <rect key="frame" x="141" y="19" width="40" height="45.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="+">
                                                                 <attributes>
@@ -200,15 +200,15 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="UEO-5a-RHS">
-                                                        <rect key="frame" x="195.5" y="0.0" width="95.5" height="56"/>
+                                                        <rect key="frame" x="181" y="0.0" width="121" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8a-ea-HiW">
-                                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="21.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Interest">
                                                                         <attributes>
                                                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="18" name="SFMono-Light"/>
+                                                                            <font key="NSFont" size="18" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -216,13 +216,13 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjD-P5-ZE6">
-                                                                <rect key="frame" x="0.0" y="21" width="95.5" height="35"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="121" height="43"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="$---,---">
                                                                         <attributes>
                                                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="30" name="SFMono-Light"/>
-                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            <font key="NSFont" size="36" name="SFUIDisplay-Ultralight"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                 </attributedString>
@@ -232,14 +232,14 @@
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="zmz-aL-jsR" firstAttribute="leading" secondItem="UEO-5a-RHS" secondAttribute="leading" constant="-60" id="AxZ-Nk-gX8"/>
+                                                    <constraint firstItem="zmz-aL-jsR" firstAttribute="leading" secondItem="UEO-5a-RHS" secondAttribute="leading" constant="-40" id="AxZ-Nk-gX8"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZVH-e0-x8j">
-                                                <rect key="frame" x="80.5" y="69" width="130.5" height="56"/>
+                                                <rect key="frame" x="66" y="80.5" width="170" height="64.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDL-us-gvi">
-                                                        <rect key="frame" x="0.0" y="0.0" width="23.5" height="56"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="64.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="=">
                                                                 <attributes>
@@ -252,15 +252,15 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="h85-0j-KsL">
-                                                        <rect key="frame" x="23.5" y="0.0" width="107" height="56"/>
+                                                        <rect key="frame" x="34" y="0.0" width="136" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hct-Am-RFa">
-                                                                <rect key="frame" x="0.0" y="0.0" width="65" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="59.5" height="21.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Balance">
                                                                         <attributes>
                                                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="18" name="SFMono-Light"/>
+                                                                            <font key="NSFont" size="18" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -268,13 +268,13 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbM-Sf-53i">
-                                                                <rect key="frame" x="0.0" y="21" width="107" height="35"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="136" height="43"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="$---,----">
                                                                         <attributes>
                                                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="30" name="SFMono-Light"/>
-                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            <font key="NSFont" size="36" name="SFUIDisplay-Ultralight"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                 </attributedString>
@@ -283,10 +283,13 @@
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="jDL-us-gvi" firstAttribute="leading" secondItem="VbM-Sf-53i" secondAttribute="trailing" constant="-170" id="Xgg-cN-Gdb"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="125" id="6jR-7W-ZNJ"/>
+                                            <constraint firstAttribute="height" constant="145" id="6jR-7W-ZNJ"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -312,17 +315,20 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="balanceLabel" destination="VbM-Sf-53i" id="dSQ-6R-r1a"/>
+                        <outlet property="interestLabel" destination="FjD-P5-ZE6" id="NCV-yX-ROx"/>
                         <outlet property="message" destination="jtr-3A-V0H" id="3Fq-He-YcR"/>
+                        <outlet property="principalLabel" destination="HJh-IS-C49" id="t8W-2v-4az"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fE-FI-41Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2820" y="-1041.2293853073463"/>
         </scene>
-        <!--Intro DetailVC2-->
+        <!--View2-->
         <scene sceneID="eFR-Cf-JVh">
             <objects>
-                <viewController storyboardIdentifier="IntroVC2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J8h-nY-apC" customClass="IntroDetailVC2" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroVC2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J8h-nY-apC" customClass="View2" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oi5-6F-cGA"/>
                         <viewControllerLayoutGuide type="bottom" id="cMU-uL-dZJ"/>
@@ -370,10 +376,10 @@
             </objects>
             <point key="canvasLocation" x="3620" y="-1041.2293853073463"/>
         </scene>
-        <!--Intro DetailVC3-->
+        <!--View3-->
         <scene sceneID="gGW-uM-5Xy">
             <objects>
-                <viewController storyboardIdentifier="IntroVC3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="e0v-0j-cEN" customClass="IntroDetailVC3" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroVC3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="e0v-0j-cEN" customClass="View3" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JNN-1v-GWw"/>
                         <viewControllerLayoutGuide type="bottom" id="nlx-xO-C7c"/>
@@ -421,10 +427,10 @@
             </objects>
             <point key="canvasLocation" x="4445.6000000000004" y="-1041.2293853073463"/>
         </scene>
-        <!--Intro DetailVC4-->
+        <!--View4-->
         <scene sceneID="BmR-gA-oig">
             <objects>
-                <viewController storyboardIdentifier="IntroVC4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7RD-Mz-tvh" customClass="IntroDetailVC4" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroVC4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7RD-Mz-tvh" customClass="View4" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fS9-z6-vUK"/>
                         <viewControllerLayoutGuide type="bottom" id="Dgn-CV-UrD"/>
@@ -472,10 +478,10 @@
             </objects>
             <point key="canvasLocation" x="5248.8000000000002" y="-1041.2293853073463"/>
         </scene>
-        <!--Intro DetailVC5-->
+        <!--View5-->
         <scene sceneID="4f1-GZ-I14">
             <objects>
-                <viewController storyboardIdentifier="IntroVC5" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ePJ-L4-fQW" customClass="IntroDetailVC5" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroVC5" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ePJ-L4-fQW" customClass="View5" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vr2-0j-tcT"/>
                         <viewControllerLayoutGuide type="bottom" id="IQ9-PA-qnC"/>
@@ -523,10 +529,10 @@
             </objects>
             <point key="canvasLocation" x="6153" y="-1041"/>
         </scene>
-        <!--Intro DetailVC6-->
+        <!--View6-->
         <scene sceneID="cRA-D0-t8T">
             <objects>
-                <viewController storyboardIdentifier="IntroVC6" id="hno-7F-efd" customClass="IntroDetailVC6" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroVC6" id="hno-7F-efd" customClass="View6" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EGh-fq-QXh"/>
                         <viewControllerLayoutGuide type="bottom" id="8Yg-cC-41y"/>
@@ -574,10 +580,10 @@
             </objects>
             <point key="canvasLocation" x="6994" y="-1041"/>
         </scene>
-        <!--Intro DetailVC7-->
+        <!--View7-->
         <scene sceneID="4pX-7T-kgu">
             <objects>
-                <viewController storyboardIdentifier="IntroVC7" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4A6-Nb-2JV" customClass="IntroDetailVC7" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroVC7" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4A6-Nb-2JV" customClass="View7" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zM8-rd-N5r"/>
                         <viewControllerLayoutGuide type="bottom" id="sSG-lb-nou"/>
@@ -741,7 +747,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="253-ad-U9a" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gAk-ar-knE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gAk-ar-knE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

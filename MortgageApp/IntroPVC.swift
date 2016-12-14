@@ -10,6 +10,7 @@ import UIKit
 
 class IntroPVC: UIPageViewController {
     
+    var mortgage: Mortgage? = nil
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         return [self.newIntroVC(num: 1), self.newIntroVC(num: 2), self.newIntroVC(num: 3), self.newIntroVC(num: 4), self.newIntroVC(num: 5), self.newIntroVC(num: 6), self.newIntroVC(num: 7)]
     }()
@@ -27,7 +28,10 @@ class IntroPVC: UIPageViewController {
     }
     
     private func newIntroVC(num: Int) -> UIViewController {
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "IntroVC\(num)")
+        let vc: IntroDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "IntroVC\(num)") as! IntroDetailVC
+        vc.mortgage = mortgage
+        
+        return vc as UIViewController
     }
     
     override func viewWillDisappear(_ animated: Bool) {
