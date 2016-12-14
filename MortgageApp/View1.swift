@@ -26,10 +26,12 @@ class View1: IntroDetailVC {
         let mc = MortgageCalculator()
         mortgage = mc.calculateMortgage(mortgage: mortgage!)
         
+        
         formatMessage()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         displayMortgageData()
     }
     
@@ -50,28 +52,16 @@ class View1: IntroDetailVC {
     func displayMortgageData() {
         Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { (timer) in
             let value: NSDecimalNumber = self.mortgage!.loanAmount()
-            self.principalCounter = self.animate(label: self.principalLabel, value: value, timer: timer, counter: self.principalCounter)
+            self.principalCounter = self.animate(label: self.principalLabel, value: value, timer: timer, counter: self.principalCounter, increment: 1000)
         }
         Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { (timer) in
             let value: NSDecimalNumber = self.mortgage!.totalLoanCost
-            self.interestCounter = self.animate(label: self.interestLabel, value: value, timer: timer, counter: self.interestCounter)
+            self.interestCounter = self.animate(label: self.interestLabel, value: value, timer: timer, counter: self.interestCounter, increment: 1000)
         }
         Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { (timer) in
             let value: NSDecimalNumber = self.mortgage!.loanAmount().adding(self.mortgage!.totalLoanCost)
-            self.balanceCounter = self.animate(label: self.balanceLabel, value: value, timer: timer, counter: self.balanceCounter)
+            self.balanceCounter = self.animate(label: self.balanceLabel, value: value, timer: timer, counter: self.balanceCounter, increment: 1000)
         }
-    }
-    
-    func animate(label: UILabel, value: NSDecimalNumber, timer: Timer, counter: NSDecimalNumber) -> NSDecimalNumber {
-        label.text! = "$" + counter.stringValue
-        
-        if counter.compare(value) == ComparisonResult.orderedDescending ||
-            counter.compare(value) == ComparisonResult.orderedSame {
-            timer.invalidate()
-            label.text! = "$" + value.stringValue.components(separatedBy: ".")[0]
-        }
-        
-        return counter.adding(NSDecimalNumber(value: 1000))
     }
     
     // TODO: Produce all the necessary mortgage data

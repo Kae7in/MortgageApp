@@ -30,6 +30,28 @@ class IntroDetailVC: UIViewController {
         
         UIApplication.shared.statusBarStyle = .lightContent
     }
+    
+    func animate(label: UILabel, value: NSDecimalNumber, timer: Timer, counter: NSDecimalNumber, increment: Int) -> NSDecimalNumber {
+        label.attributedText! = NSAttributedString(string: "$" + counter.stringValue)
+        
+        if increment > 0 {
+            if counter.compare(value) == ComparisonResult.orderedDescending ||
+                counter.compare(value) == ComparisonResult.orderedSame {
+                timer.invalidate()
+                label.attributedText! = NSAttributedString(string: "$" + value.stringValue.components(separatedBy: ".")[0])
+            }
+        } else if increment < 0 {
+            if counter.compare(value) == ComparisonResult.orderedAscending ||
+                counter.compare(value) == ComparisonResult.orderedSame {
+                timer.invalidate()
+                label.attributedText! = NSAttributedString(string: "$" + value.stringValue.components(separatedBy: ".")[0])
+            }
+        } else {
+            return counter
+        }
+        
+        return counter.adding(NSDecimalNumber(value: increment))
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

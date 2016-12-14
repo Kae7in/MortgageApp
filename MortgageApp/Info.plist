@@ -38,6 +38,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>SF-UI-Display-Regular.otf</string>
 		<string>SF-UI-Display-Ultralight.otf</string>
 		<string>SF-UI-Display-Thin.otf</string>
 	</array>
