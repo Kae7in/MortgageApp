@@ -16,10 +16,6 @@ class View2: IntroDetailVC {
     @IBOutlet weak var newPrincipalLabel: UILabel!
     var displayed: Bool = false
     
-    // Number animation stuff
-    var extraPaymentCounter: NSDecimalNumber = 0.0
-    var newPrincipalCounter: NSDecimalNumber = 0.0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -56,14 +52,10 @@ class View2: IntroDetailVC {
         principalLabel.text! = numberFormatter.string(from: mortgage!.loanAmount())!.components(separatedBy: ".")[0]
         newPrincipalLabel.text! = principalLabel.text!
         
-        Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { (timer) in
-            let value: NSDecimalNumber = self.mortgage!.monthlyPayment
-            self.extraPaymentCounter = self.animate(label: self.extraPaymentLabel, value: value, timer: timer, counter: self.extraPaymentCounter, increment: 6)
-        }
-        Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { (timer) in
-            let value: NSDecimalNumber = self.mortgage!.loanAmount().subtracting(self.mortgage!.monthlyPayment)
-            self.newPrincipalCounter = self.animate(label: self.newPrincipalLabel, value: value, timer: timer, counter: self.newPrincipalCounter, increment: -6)
-        }
+        var value = self.mortgage!.monthlyPayment
+        animate(label: extraPaymentLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, increment: 10, interval: 0.001)
+        value = self.mortgage!.loanAmount().subtracting(self.mortgage!.monthlyPayment)
+        animate(label: newPrincipalLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, increment: -10, interval: 0.001)
     }
 
     override func didReceiveMemoryWarning() {

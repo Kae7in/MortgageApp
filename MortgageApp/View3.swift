@@ -14,11 +14,8 @@ class View3: IntroDetailVC {
     @IBOutlet weak var interestLabel: UILabel!
     @IBOutlet weak var interestSavedLabel: UILabel!
     @IBOutlet weak var newInterestLabel: UILabel!
-    var displayed: Bool = false
-    
-    // Number animation stuff
-    var interestSavedCounter: NSDecimalNumber = 0.0
     var oldInterest: NSDecimalNumber = 0.0
+    var displayed: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +32,13 @@ class View3: IntroDetailVC {
         if !displayed {
             displayed = true
             displayMortgageData()
+            
+            // TODO: GET RID OF THIS
+            // Revert mortgage back to original state -- without extra payments
+            let mc = MortgageCalculator()
+            mortgage!.extras = []
+            mortgage = mc.calculateMortgage(mortgage: mortgage!)
         }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
     }
     
     func formatMessage() {
@@ -62,14 +60,10 @@ class View3: IntroDetailVC {
         interestLabel.text! = numberFormatter.string(from: oldInterest)!.components(separatedBy: ".")[0]
         newInterestLabel.text! = interestLabel.text!
         
-        let diff: NSDecimalNumber = self.oldInterest.subtracting(self.mortgage!.totalLoanCost)
-        Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { (timer) in
-            self.interestSavedCounter = self.animate(label: self.interestSavedLabel, value: diff, timer: timer, counter: self.interestSavedCounter, increment: 8)
-        }
-        Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { (timer) in
-            let value: NSDecimalNumber = self.mortgage!.totalLoanCost
-            self.oldInterest = self.animate(label: self.newInterestLabel, value: value, timer: timer, counter: self.oldInterest, increment: -8)
-        }
+        var value = self.oldInterest.subtracting(self.mortgage!.totalLoanCost)
+        animate(label: interestSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, increment: 10, interval: 0.001)
+        value = self.mortgage!.totalLoanCost
+        animate(label: newInterestLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, increment: -10, interval: 0.001)
     }
     
     override func didReceiveMemoryWarning() {

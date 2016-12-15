@@ -79,6 +79,10 @@ class ViewController: UIViewController {
             let mortgageDetailVC = segue.destination as! MortgageDetailVC
             mortgageDetailVC.m = m
         }
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
     }
 
 }

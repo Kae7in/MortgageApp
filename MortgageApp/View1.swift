@@ -15,11 +15,6 @@ class View1: IntroDetailVC {
     @IBOutlet weak var interestLabel: UILabel!
     @IBOutlet weak var balanceLabel: UILabel!
     
-    // Number animation stuff
-    var principalCounter: NSDecimalNumber = 0.0
-    var interestCounter: NSDecimalNumber = 0.0
-    var balanceCounter: NSDecimalNumber = 0.0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -45,18 +40,12 @@ class View1: IntroDetailVC {
     }
     
     func displayMortgageData() {
-        Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { (timer) in
-            let value: NSDecimalNumber = self.mortgage!.loanAmount()
-            self.principalCounter = self.animate(label: self.principalLabel, value: value, timer: timer, counter: self.principalCounter, increment: 1000)
-        }
-        Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { (timer) in
-            let value: NSDecimalNumber = self.mortgage!.totalLoanCost
-            self.interestCounter = self.animate(label: self.interestLabel, value: value, timer: timer, counter: self.interestCounter, increment: 1000)
-        }
-        Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { (timer) in
-            let value: NSDecimalNumber = self.mortgage!.loanAmount().adding(self.mortgage!.totalLoanCost)
-            self.balanceCounter = self.animate(label: self.balanceLabel, value: value, timer: timer, counter: self.balanceCounter, increment: 1000)
-        }
+        var value: NSDecimalNumber = self.mortgage!.loanAmount()
+        animate(label: principalLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, increment: 1000, interval: 0.001)
+        value = self.mortgage!.totalLoanCost
+        animate(label: interestLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, increment: 1000, interval: 0.001)
+        value = self.mortgage!.loanAmount().adding(self.mortgage!.totalLoanCost)
+        animate(label: balanceLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, increment: 1000, interval: 0.001)
     }
     
     

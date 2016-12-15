@@ -31,28 +31,36 @@ class IntroDetailVC: UIViewController {
         UIApplication.shared.statusBarStyle = .lightContent
     }
     
-    func animate(label: UILabel, value: NSDecimalNumber, timer: Timer, counter: NSDecimalNumber, increment: Int) -> NSDecimalNumber {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = NumberFormatter.Style.decimal
-        label.attributedText! = NSAttributedString(string: "$" + numberFormatter.string(from: counter)!)
+    func animate(label: UILabel, startValue: NSDecimalNumber, endValue: NSDecimalNumber, increment: Int, interval: TimeInterval, dollars: Bool = true) {
+        var counter = startValue
         
-        if increment > 0 {
-            if counter.compare(value) == ComparisonResult.orderedDescending ||
-                counter.compare(value) == ComparisonResult.orderedSame {
-                timer.invalidate()
-                label.attributedText! = NSAttributedString(string: "$" + numberFormatter.string(from: value)!.components(separatedBy: ".")[0])
+        Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { (timer) in
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = NumberFormatter.Style.decimal
+            
+            var str = dollars ? "$" + numberFormatter.string(from: counter)! : numberFormatter.string(from:counter)!
+            label.attributedText! = NSAttributedString(string: str)
+            
+            if increment > 0 {
+                if counter.compare(endValue) == ComparisonResult.orderedDescending ||
+                    counter.compare(endValue) == ComparisonResult.orderedSame {
+                    timer.invalidate()
+                    str = dollars ? "$" + numberFormatter.string(from: endValue)! : numberFormatter.string(from:endValue)!
+                    label.attributedText! = NSAttributedString(string: str.components(separatedBy: ".")[0])
+                }
+            } else if increment < 0 {
+                if counter.compare(endValue) == ComparisonResult.orderedAscending ||
+                    counter.compare(endValue) == ComparisonResult.orderedSame {
+                    timer.invalidate()
+                    str = dollars ? "$" + numberFormatter.string(from: endValue)! : numberFormatter.string(from:endValue)!
+                    label.attributedText! = NSAttributedString(string: str.components(separatedBy: ".")[0])
+                }
+            } else {
+                return
             }
-        } else if increment < 0 {
-            if counter.compare(value) == ComparisonResult.orderedAscending ||
-                counter.compare(value) == ComparisonResult.orderedSame {
-                timer.invalidate()
-                label.attributedText! = NSAttributedString(string: "$" + numberFormatter.string(from: value)!.components(separatedBy: ".")[0])
-            }
-        } else {
-            return counter
+            
+            counter = counter.adding(NSDecimalNumber(value: increment))
         }
-        
-        return counter.adding(NSDecimalNumber(value: increment))
     }
 
     override func didReceiveMemoryWarning() {
