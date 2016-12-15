@@ -31,6 +31,13 @@ class View2: IntroDetailVC {
         }
     }
     
+    
+    @IBAction func nextIntroVC(_ sender: UIButton) {
+        if let secondViewController = pageController?.orderedViewControllers[2] {
+            pageController!.setViewControllers([secondViewController], direction: .forward, animated: true, completion: nil)
+        }
+    }
+    
     func formatMessage() {
         let string = message.text!
         let defaultFontAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Ultralight", size: 38.0)!, NSForegroundColorAttributeName: UIColor.white]
@@ -48,13 +55,13 @@ class View2: IntroDetailVC {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
         
-        principalLabel.text! = numberFormatter.string(from: mortgage!.loanAmount())!.components(separatedBy: ".")[0]
+        principalLabel.text! = "$" + numberFormatter.string(from: mortgage!.loanAmount())!.components(separatedBy: ".")[0]
         newPrincipalLabel.text! = principalLabel.text!
         
         var value = self.mortgage!.monthlyPayment
-        animate(label: extraPaymentLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, increment: 10, interval: 0.001)
+        animate(label: extraPaymentLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, increment: 5, interval: 0.001)
         value = self.mortgage!.loanAmount().subtracting(self.mortgage!.monthlyPayment)
-        animate(label: newPrincipalLabel, startValue: mortgage!.loanAmount(), endValue: value, increment: -10, interval: 0.001)
+        animate(label: newPrincipalLabel, startValue: mortgage!.loanAmount(), endValue: value, increment: -5, interval: 0.001)
     }
 
     override func didReceiveMemoryWarning() {

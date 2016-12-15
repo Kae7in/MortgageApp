@@ -57,7 +57,7 @@ class View3: IntroDetailVC {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
         
-        interestLabel.text! = numberFormatter.string(from: oldInterest)!.components(separatedBy: ".")[0]
+        interestLabel.text! = "$" + numberFormatter.string(from: oldInterest)!.components(separatedBy: ".")[0]
         newInterestLabel.text! = interestLabel.text!
         
         var value = self.oldInterest.subtracting(self.mortgage!.totalLoanCost)
