@@ -25,6 +25,12 @@ class View1: IntroDetailVC {
         displayMortgageData()
     }
     
+    @IBAction func nextIntroVC(_ sender: UIButton) {
+        if let secondViewController = pageController?.orderedViewControllers[1] {
+            pageController!.setViewControllers([secondViewController], direction: .forward, animated: true, completion: nil)
+        }
+    }
+    
     func formatMessage() {
         let string = message.text!
         let defaultFontAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Ultralight", size: 38.0)!, NSForegroundColorAttributeName: UIColor.white]

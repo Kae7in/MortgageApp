@@ -11,6 +11,7 @@ import UIKit
 class IntroDetailVC: UIViewController {
     
     var mortgage: Mortgage? = nil
+    var pageController: IntroPVC? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()

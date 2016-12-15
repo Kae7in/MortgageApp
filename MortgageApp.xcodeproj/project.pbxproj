@@ -11,6 +11,9 @@
 		1A1067E01E031F6F00729426 /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A1067DD1E031F6F00729426 /* SF-UI-Display-Regular.otf */; };
 		1A1067E11E031F6F00729426 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A1067DE1E031F6F00729426 /* SF-UI-Display-Thin.otf */; };
 		1A1067E21E031F6F00729426 /* SF-UI-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A1067DF1E031F6F00729426 /* SF-UI-Display-Ultralight.otf */; };
+		1A1067EC1E03564B00729426 /* nextLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1067E91E03564B00729426 /* nextLarge.png */; };
+		1A1067ED1E03564B00729426 /* nextMedium.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1067EA1E03564B00729426 /* nextMedium.png */; };
+		1A1067EE1E03564B00729426 /* nextSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1067EB1E03564B00729426 /* nextSmall.png */; };
 		1A36D4291DF86AF40093A411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D4281DF86AF40093A411 /* AppDelegate.swift */; };
 		1A36D42B1DF86AF40093A411 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D42A1DF86AF40093A411 /* ViewController.swift */; };
 		1A36D42E1DF86AF40093A411 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A36D42C1DF86AF40093A411 /* Main.storyboard */; };
@@ -58,6 +61,9 @@
 		1A1067DD1E031F6F00729426 /* SF-UI-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Regular.otf"; sourceTree = "<group>"; };
 		1A1067DE1E031F6F00729426 /* SF-UI-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.otf"; sourceTree = "<group>"; };
 		1A1067DF1E031F6F00729426 /* SF-UI-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Ultralight.otf"; sourceTree = "<group>"; };
+		1A1067E91E03564B00729426 /* nextLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextLarge.png; sourceTree = "<group>"; };
+		1A1067EA1E03564B00729426 /* nextMedium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextMedium.png; sourceTree = "<group>"; };
+		1A1067EB1E03564B00729426 /* nextSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextSmall.png; sourceTree = "<group>"; };
 		1A36D4251DF86AF40093A411 /* MortgageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MortgageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A36D4281DF86AF40093A411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A36D42A1DF86AF40093A411 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +162,9 @@
 				1AB349C61E00AA9F00E76049 /* Intro */,
 				1A80FF7A1DFF0D3800193664 /* MortgageDetailVC.swift */,
 				1A36D42C1DF86AF40093A411 /* Main.storyboard */,
+				1A1067E91E03564B00729426 /* nextLarge.png */,
+				1A1067EA1E03564B00729426 /* nextMedium.png */,
+				1A1067EB1E03564B00729426 /* nextSmall.png */,
 				1A36D42F1DF86AF40093A411 /* Assets.xcassets */,
 				1A36D4311DF86AF40093A411 /* LaunchScreen.storyboard */,
 				1AB349C71E01B7F600E76049 /* Supporting Files */,
@@ -362,10 +371,13 @@
 			files = (
 				1A36D4331DF86AF40093A411 /* LaunchScreen.storyboard in Resources */,
 				1A36D4301DF86AF40093A411 /* Assets.xcassets in Resources */,
+				1A1067ED1E03564B00729426 /* nextMedium.png in Resources */,
+				1A1067EC1E03564B00729426 /* nextLarge.png in Resources */,
 				1A1067E01E031F6F00729426 /* SF-UI-Display-Regular.otf in Resources */,
 				1A36D42E1DF86AF40093A411 /* Main.storyboard in Resources */,
 				1A1067E21E031F6F00729426 /* SF-UI-Display-Ultralight.otf in Resources */,
 				1A1067E11E031F6F00729426 /* SF-UI-Display-Thin.otf in Resources */,
+				1A1067EE1E03564B00729426 /* nextSmall.png in Resources */,
 				1A1067DC1E031E8F00729426 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
