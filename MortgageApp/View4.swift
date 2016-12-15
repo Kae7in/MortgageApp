@@ -64,17 +64,27 @@ class View4: IntroDetailVC {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
         
-//        interestSavedLabel.text! = numberFormatter.string(from: interestSaved)!.components(separatedBy: ".")[0]
-//        newInterestLabel.text! = interestSavedLabel.text!
-        
         animate(label: interestSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved!, increment: 10, interval: 0.001)
         animate(label: timeSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: NSDecimalNumber(value: timeSaved!), increment: 1, interval: 0.5, dollars: false)
-//        Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { (timer) in
-//            interestSavedCounter = self.animate(label: self.interestSavedLabel, value: self.interestSaved!, timer: timer, counter: interestSavedCounter, increment: 10)
-//        }
-//        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { (timer) in
-//            timeSavedCounter = self.animate(label: self.timeSavedLabel, value: NSDecimalNumber(value: self.timeSaved!), timer: timer, counter: timeSavedCounter, increment: 1)
-//        }
+        
+        /* Format the tagline */
+        let attributedString = NSMutableAttributedString()
+        
+        // Append everything before the $
+        var comps:[String] = taglineLabel.text!.components(separatedBy: "$")
+        attributedString.append(NSAttributedString(string: comps[0]))
+        
+        // Append the bolded dollar amount
+        let string = "$" + String(mortgage!.monthlyPayment.dividing(by: NSDecimalNumber(value: 12.0)).int32Value)
+        let boldDollars = NSMutableAttributedString(string: string)
+        let boldFontAttribute = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Medium", size: 22.0)!]
+        boldDollars.addAttributes(boldFontAttribute, range: (string as NSString).range(of: string))
+        attributedString.append(boldDollars)
+        
+        // Append everything after the $
+        attributedString.append(NSAttributedString(string: comps[1]))
+        
+        taglineLabel.attributedText = attributedString
     }
     
 
