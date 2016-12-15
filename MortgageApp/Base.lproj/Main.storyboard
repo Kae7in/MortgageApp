@@ -152,7 +152,7 @@
                                 <rect key="frame" x="0.0" y="301" width="375" height="366"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ExT-wD-D2L">
-                                        <rect key="frame" x="25.5" y="103" width="325.5" height="159"/>
+                                        <rect key="frame" x="25" y="103" width="325.5" height="159"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="aDC-Cf-fML">
                                                 <rect key="frame" x="0.0" y="0.0" width="325.5" height="64.5"/>
