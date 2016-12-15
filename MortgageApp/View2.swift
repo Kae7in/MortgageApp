@@ -19,7 +19,6 @@ class View2: IntroDetailVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        newPrincipalCounter = mortgage!.loanAmount()
         
         formatMessage()
     }
