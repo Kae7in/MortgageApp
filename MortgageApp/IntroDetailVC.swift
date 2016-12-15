@@ -34,7 +34,7 @@ class IntroDetailVC: UIViewController {
     func animate(label: UILabel, startValue: NSDecimalNumber, endValue: NSDecimalNumber, increment: Int, interval: TimeInterval, dollars: Bool = true) {
         var counter = startValue
         
-        Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { (timer) in
+        Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { (timer) in
             let numberFormatter = NumberFormatter()
             numberFormatter.numberStyle = NumberFormatter.Style.decimal
             

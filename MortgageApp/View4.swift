@@ -67,6 +67,8 @@ class View4: IntroDetailVC {
 //        interestSavedLabel.text! = numberFormatter.string(from: interestSaved)!.components(separatedBy: ".")[0]
 //        newInterestLabel.text! = interestSavedLabel.text!
         
+        animate(label: interestSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved!, increment: 10, interval: 0.001)
+        animate(label: timeSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: NSDecimalNumber(value: timeSaved!), increment: 1, interval: 0.5, dollars: false)
 //        Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { (timer) in
 //            interestSavedCounter = self.animate(label: self.interestSavedLabel, value: self.interestSaved!, timer: timer, counter: interestSavedCounter, increment: 10)
 //        }

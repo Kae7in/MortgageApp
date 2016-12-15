@@ -747,10 +747,10 @@
                                         <rect key="frame" x="23" y="99.5" width="330" height="167.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="f78-nT-awp">
-                                                <rect key="frame" x="10" y="0.0" width="310" height="64.5"/>
+                                                <rect key="frame" x="19" y="0.0" width="292.5" height="64.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="jeD-gc-1iI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="127" height="64.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxW-hZ-Mjw">
                                                                 <rect key="frame" x="0.0" y="0.0" width="103.5" height="21.5"/>
@@ -765,8 +765,8 @@
                                                                 </attributedString>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$---,---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NM-E4-yfW">
-                                                                <rect key="frame" x="0.0" y="21.5" width="127" height="43"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NM-E4-yfW">
+                                                                <rect key="frame" x="0.0" y="21.5" width="44.5" height="43"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -774,7 +774,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="BFw-Fj-kRC">
-                                                        <rect key="frame" x="207" y="0.0" width="103" height="64.5"/>
+                                                        <rect key="frame" x="183.5" y="0.0" width="109" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKn-30-6NF">
                                                                 <rect key="frame" x="0.0" y="0.0" width="87" height="21.5"/>
@@ -790,9 +790,9 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o97-Ki-QEY">
-                                                                <rect key="frame" x="0.0" y="21.5" width="103" height="43"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="109" height="43"/>
                                                                 <attributedString key="attributedText">
-                                                                    <fragment content="- ">
+                                                                    <fragment content="0 ">
                                                                         <attributes>
                                                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="36" name="SFUIDisplay-Regular"/>
