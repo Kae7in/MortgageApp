@@ -18,6 +18,12 @@ class View6: IntroDetailVC {
         formatMessage()
     }
     
+    @IBAction func nextIntroVC(_ sender: UIButton) {
+        if let secondViewController = pageController?.orderedViewControllers[6] {
+            pageController!.setViewControllers([secondViewController], direction: .forward, animated: true, completion: nil)
+        }
+    }
+    
     func formatMessage() {
         let string = message.text!
         let defaultFontAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Ultralight", size: 38.0)!, NSForegroundColorAttributeName: UIColor.white]

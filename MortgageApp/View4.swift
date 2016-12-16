@@ -47,6 +47,12 @@ class View4: IntroDetailVC {
         }
     }
     
+    @IBAction func nextIntroVC(_ sender: UIButton) {
+        if let secondViewController = pageController?.orderedViewControllers[4] {
+            pageController!.setViewControllers([secondViewController], direction: .forward, animated: true, completion: nil)
+        }
+    }
+    
     func formatMessage() {
         let string = message.text!
         let defaultFontAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Ultralight", size: 38.0)!, NSForegroundColorAttributeName: UIColor.white]
@@ -64,7 +70,7 @@ class View4: IntroDetailVC {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
         
-        animate(label: interestSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved!, increment: 10, interval: 0.001)
+        animate(label: interestSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved!, increment: 5, interval: 0.001)
         animate(label: timeSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: NSDecimalNumber(value: timeSaved!), increment: 1, interval: 0.5, dollars: false)
         
         /* Format the tagline */
