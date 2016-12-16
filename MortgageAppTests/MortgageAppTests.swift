@@ -200,6 +200,9 @@ class MortgageAppTests: XCTestCase {
         XCTAssert(m.paymentSchedule.count == 299)
         XCTAssertEqual(m.paymentSchedule[100].remainingLoanBalance, 150449.88)
         XCTAssertEqual(m.totalLoanCost, 102656.41)
+        
+        m.calculateRemainingLoanCost()
+        XCTAssertEqual(m.paymentSchedule[100].remainingLoanCost, 49268.17)
     }
     
     // TODO: Write ARM Mortgage tests

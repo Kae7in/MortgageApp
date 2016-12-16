@@ -30,10 +30,12 @@ class View4: IntroDetailVC {
         let oldInterest = mortgage!.totalLoanCost
         let oldNumPayments = mortgage!.numberOfPayments
         let mc = MortgageCalculator()
+        
         mortgage!.extras = [["startMonth":1, "endMonth":1, "extraIntervalMonths":1, "extraAmount":Int(mortgage!.monthlyPayment)]]
         self.mortgage = mc.calculateMortgage(mortgage: mortgage!)
         let newInterest = mortgage!.totalLoanCost
         let newNumPayments = mortgage!.numberOfPayments
+        
         interestSaved = oldInterest.subtracting(newInterest)
         timeSaved = oldNumPayments - newNumPayments
     }

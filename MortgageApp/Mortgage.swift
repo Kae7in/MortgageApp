@@ -34,4 +34,18 @@ class Mortgage: NSObject {
         let loanAmount = self.salePrice.subtracting(self.salePrice.multiplying(by: downPercent.dividing(by: 100)))
         return loanAmount
     }
+    
+    // TODO: Bake this into the original amortization calculation
+    func calculateRemainingLoanCost() {
+        for amortization in paymentSchedule {
+            var remainingLoanCost = self.totalLoanCost.subtracting(amortization.interestToDate)
+            let compResult: ComparisonResult = remainingLoanCost.compare(NSDecimalNumber(value: 0))
+            
+            if compResult == ComparisonResult.orderedAscending {
+                remainingLoanCost = 0
+            }
+            
+            amortization.remainingLoanCost = remainingLoanCost
+        }
+    }
 }
