@@ -24,8 +24,29 @@ class Mortgage: NSObject {
     var startDate = Date()
     var totalLoanCost: NSDecimalNumber = 0
     var paymentSchedule = [Amortization]()
+    var originalPaymentSchedule = [Amortization]()
     var numberOfPayments: Int = 360
     var monthlyPayment: NSDecimalNumber = 0
+    
+    override init() {
+        super.init()
+    }
+    
+    init(_ mortgage: Mortgage) {
+        self.loanTermMonths = mortgage.loanTermMonths
+        self.salePrice = mortgage.salePrice
+        self.interestRate = mortgage.interestRate
+        self.downPayment = mortgage.downPayment
+        self.extras = mortgage.extras
+        self.propertyTaxRate = mortgage.propertyTaxRate
+        self.homeInsurance = mortgage.homeInsurance
+        self.adjustFixedRateMonths = mortgage.adjustFixedRateMonths
+        self.adjustInitialCap = mortgage.adjustInitialCap
+        self.adjustPeriodicCap = mortgage.adjustPeriodicCap
+        self.adjustLifetimeCap = mortgage.adjustLifetimeCap
+        self.adjustIntervalMonths = mortgage.adjustIntervalMonths
+        self.startDate = mortgage.startDate
+    }
     
     func loanAmount() -> NSDecimalNumber {
         var str = self.downPayment
@@ -36,16 +57,52 @@ class Mortgage: NSObject {
     }
     
     // TODO: Bake this into the original amortization calculation
-    func calculateRemainingLoanCost() {
+    func setOriginalPaymentSchedule() {
+        if originalPaymentSchedule.isEmpty && extras.isEmpty {
+            
+            /* If paymentSchedule doesn't include extra payments,
+                then it is the originalPaymentSchedule we want. */
+            
+            originalPaymentSchedule = paymentSchedule
+        } else if originalPaymentSchedule.isEmpty {
+            
+            /* If paymentSchedule includes extra payments, then we
+                need to recalculate this mortgage without extra
+                to get the originalPaymentSchedule. */
+            
+            var m = Mortgage(self)
+            m.extras = []
+            let mc = MortgageCalculator()
+            m = mc.calculateMortgage(mortgage: m)
+            self.originalPaymentSchedule = m.paymentSchedule
+        }
+    }
+    
+    // TODO: Bake this into the original amortization calculation
+    func calculateAdditionalMetrics() {
         for amortization in paymentSchedule {
-            var remainingLoanCost = self.totalLoanCost.subtracting(amortization.interestToDate)
-            let compResult: ComparisonResult = remainingLoanCost.compare(NSDecimalNumber(value: 0))
+            calculateRemainingLoanCostForPeriod(amortization: amortization)
+            calculateInterestSavedForPeriod(amortization: amortization)
+        }
+    }
+    
+    private func calculateRemainingLoanCostForPeriod(amortization: Amortization) {
+        var remainingLoanCost = self.totalLoanCost.subtracting(amortization.interestToDate)
+        let compResult: ComparisonResult = remainingLoanCost.compare(NSDecimalNumber(value: 0))
             
-            if compResult == ComparisonResult.orderedAscending {
-                remainingLoanCost = 0
-            }
+        if compResult == ComparisonResult.orderedAscending {
+            remainingLoanCost = 0
+        }
             
-            amortization.remainingLoanCost = remainingLoanCost
+        amortization.remainingLoanCost = remainingLoanCost
+    }
+    
+    private func calculateInterestSavedForPeriod(amortization: Amortization) {
+        if !paymentSchedule.isEmpty && !originalPaymentSchedule.isEmpty {
+            let periodIndex = amortization.loanMonth - 1
+            let originalInterest = originalPaymentSchedule[periodIndex].interest
+            let currentInterest = paymentSchedule[periodIndex].interest
+            amortization.interestSaved = originalInterest.subtracting(currentInterest)
         }
     }
 }

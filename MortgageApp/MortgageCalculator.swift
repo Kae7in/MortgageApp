@@ -200,8 +200,10 @@ class MortgageCalculator: NSObject {
         
         mortgage.totalLoanCost = roundDecimals(num: mortgage.totalLoanCost)
         mortgage.paymentSchedule = amortizations
+        mortgage.setOriginalPaymentSchedule()
         mortgage.numberOfPayments = mortgage.paymentSchedule.count
         mortgage.monthlyPayment = mortgage.paymentSchedule[0].scheduledMonthlyPayment
+        mortgage.calculateAdditionalMetrics()
     }
     
 }

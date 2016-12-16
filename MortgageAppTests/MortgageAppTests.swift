@@ -195,14 +195,13 @@ class MortgageAppTests: XCTestCase {
         m.loanTermMonths = 360
         m.salePrice = 200000
         m.extras = [["startMonth":1, "endMonth":360, "extraIntervalMonths":1, "extraAmount":100], ["startMonth":1, "endMonth":1, "extraIntervalMonths":1, "extraAmount":1000]]
-        
         m = c.calculateMortgage(mortgage: m)
+        
         XCTAssert(m.paymentSchedule.count == 299)
         XCTAssertEqual(m.paymentSchedule[100].remainingLoanBalance, 150449.88)
         XCTAssertEqual(m.totalLoanCost, 102656.41)
-        
-        m.calculateRemainingLoanCost()
         XCTAssertEqual(m.paymentSchedule[100].remainingLoanCost, 49268.17)
+        XCTAssertEqual(m.paymentSchedule[100].interestSaved, 38.96)
     }
     
     // TODO: Write ARM Mortgage tests
