@@ -24,7 +24,7 @@ class Mortgage: NSObject {
     var startDate = Date()
     var totalLoanCost: NSDecimalNumber = 0
     var paymentSchedule = [Amortization]()
-    var originalPaymentSchedule = [Amortization]()
+    var originalMortgage: Mortgage? = nil
     var numberOfPayments: Int = 360
     var monthlyPayment: NSDecimalNumber = 0
     
@@ -46,6 +46,11 @@ class Mortgage: NSObject {
         self.adjustLifetimeCap = mortgage.adjustLifetimeCap
         self.adjustIntervalMonths = mortgage.adjustIntervalMonths
         self.startDate = mortgage.startDate
+        self.totalLoanCost = mortgage.totalLoanCost
+        self.paymentSchedule = mortgage.paymentSchedule
+        self.originalMortgage = mortgage.originalMortgage
+        self.numberOfPayments = mortgage.numberOfPayments
+        self.monthlyPayment = mortgage.monthlyPayment
     }
     
     func loanAmount() -> NSDecimalNumber {
@@ -56,25 +61,28 @@ class Mortgage: NSObject {
         return loanAmount
     }
     
+    func totalInterestSavings() -> NSDecimalNumber {
+        setOriginalPaymentSchedule()
+        return originalMortgage!.totalLoanCost.subtracting(self.totalLoanCost)
+    }
+    
     // TODO: Bake this into the original amortization calculation
     func setOriginalPaymentSchedule() {
-        if originalPaymentSchedule.isEmpty && extras.isEmpty {
-            
-            /* If paymentSchedule doesn't include extra payments,
-                then it is the originalPaymentSchedule we want. */
-            
-            originalPaymentSchedule = paymentSchedule
-        } else if originalPaymentSchedule.isEmpty {
-            
-            /* If paymentSchedule includes extra payments, then we
-                need to recalculate this mortgage without extra
-                to get the originalPaymentSchedule. */
-            
-            var m = Mortgage(self)
-            m.extras = []
-            let mc = MortgageCalculator()
-            m = mc.calculateMortgage(mortgage: m)
-            self.originalPaymentSchedule = m.paymentSchedule
+        if originalMortgage != nil {
+            // originalMortgage has already been set
+            return
+        } else {
+            // originalMortgage has not yet been set
+            if extras.isEmpty {
+                self.originalMortgage = Mortgage(self)
+            } else {
+                var m = Mortgage(self)
+                m.extras = []
+                m.originalMortgage = m  // Must be set to non-nil value (reference to itself, in this case) so as to no loop infinitely
+                let mc = MortgageCalculator()
+                m = mc.calculateMortgage(mortgage: m)
+                self.originalMortgage = m
+            }
         }
     }
     
@@ -98,9 +106,9 @@ class Mortgage: NSObject {
     }
     
     private func calculateInterestSavedForPeriod(amortization: Amortization) {
-        if !paymentSchedule.isEmpty && !originalPaymentSchedule.isEmpty {
+        if !paymentSchedule.isEmpty && !originalMortgage!.paymentSchedule.isEmpty {
             let periodIndex = amortization.loanMonth - 1
-            let originalInterest = originalPaymentSchedule[periodIndex].interest
+            let originalInterest = originalMortgage!.paymentSchedule[periodIndex].interest
             let currentInterest = paymentSchedule[periodIndex].interest
             amortization.interestSaved = originalInterest.subtracting(currentInterest)
         }
