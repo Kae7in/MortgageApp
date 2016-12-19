@@ -11,11 +11,34 @@ import UIKit
 class View6: IntroDetailVC {
 
     @IBOutlet weak var message: UILabel!
+    @IBOutlet weak var interestedSaved7YearsLabel: UILabel!
+    @IBOutlet weak var cdReturns7YearsLabel: UILabel!
+    @IBOutlet weak var interestSaved30YearsLabel: UILabel!
+    @IBOutlet weak var cdReturns30YearsLabel: UILabel!
+    var displayed: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         formatMessage()
+        createExtraPayment()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if !displayed {
+            displayed = true
+            displayMortgageData()
+        }
+    }
+    
+    func createExtraPayment() {
+        // Calculate interest saved and time saved with one extra payment
+        let mc = MortgageCalculator()
+        
+        mortgage!.extras = [["startMonth":1, "endMonth":360, "extraIntervalMonths":12, "extraAmount":Int(mortgage!.monthlyPayment)]]
+        self.mortgage = mc.calculateMortgage(mortgage: mortgage!)
     }
     
     @IBAction func nextIntroVC(_ sender: UIButton) {
@@ -34,6 +57,16 @@ class View6: IntroDetailVC {
         
         message.attributedText = attributedString
         message.sizeToFit()
+    }
+    
+    func displayMortgageData() {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = NumberFormatter.Style.decimal
+        
+        let interestSaved7Years = self.mortgage!.interestSavedForRange(start: 0, end: 7*12)
+        let interestSaved30Years = self.mortgage!.totalInterestSavings()
+        animate(label: interestedSaved7YearsLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved7Years, increment: 3, interval: 0.001)
+        animate(label: interestSaved30YearsLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved30Years, increment: 100, interval: 0.001)
     }
     
 

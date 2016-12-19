@@ -66,6 +66,14 @@ class Mortgage: NSObject {
         return originalMortgage!.totalLoanCost.subtracting(self.totalLoanCost)
     }
     
+    func interestSavedForRange(start: Int, end: Int) -> NSDecimalNumber {
+        var interestSaved7Years = NSDecimalNumber(value: 0.0)
+        for i in start..<end {
+            interestSaved7Years = interestSaved7Years.adding(self.paymentSchedule[i].interestSaved)
+        }
+        return interestSaved7Years
+    }
+    
     func monthsSaved() -> Int {
         return self.originalMortgage!.numberOfPayments - self.numberOfPayments
     }
