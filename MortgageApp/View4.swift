@@ -15,29 +15,20 @@ class View4: IntroDetailVC {
     @IBOutlet weak var timeSavedLabel: UILabel!
     @IBOutlet weak var taglineLabel: UILabel!
     var displayed: Bool = false
-    var interestSaved: NSDecimalNumber? = nil
-    var timeSaved: Int? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         formatMessage()
-        calculateInterestAndTimeSaved()
+        createExtraPayment()
     }
     
-    func calculateInterestAndTimeSaved() {
+    func createExtraPayment() {
         // Calculate interest saved and time saved with one extra payment
-        let oldInterest = mortgage!.totalLoanCost
-        let oldNumPayments = mortgage!.numberOfPayments
         let mc = MortgageCalculator()
         
         mortgage!.extras = [["startMonth":1, "endMonth":1, "extraIntervalMonths":1, "extraAmount":Int(mortgage!.monthlyPayment)]]
         self.mortgage = mc.calculateMortgage(mortgage: mortgage!)
-        let newInterest = mortgage!.totalLoanCost
-        let newNumPayments = mortgage!.numberOfPayments
-        
-        interestSaved = oldInterest.subtracting(newInterest)
-        timeSaved = oldNumPayments - newNumPayments
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,8 +63,10 @@ class View4: IntroDetailVC {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
         
-        animate(label: interestSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved!, increment: 5, interval: 0.001)
-        animate(label: timeSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: NSDecimalNumber(value: timeSaved!), increment: 1, interval: 0.5, dollars: false)
+        let interestSaved = self.mortgage!.totalInterestSavings()
+        animate(label: interestSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved, increment: 5, interval: 0.001)
+        let timeSaved = self.mortgage!.monthsSaved()
+        animate(label: timeSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: NSDecimalNumber(value: timeSaved), increment: 1, interval: 0.5, dollars: false)
         
         /* Format the tagline */
         let attributedString = NSMutableAttributedString()

@@ -66,6 +66,10 @@ class Mortgage: NSObject {
         return originalMortgage!.totalLoanCost.subtracting(self.totalLoanCost)
     }
     
+    func monthsSaved() -> Int {
+        return self.originalMortgage!.numberOfPayments - self.numberOfPayments
+    }
+    
     // TODO: Bake this into the original amortization calculation
     func setOriginalPaymentSchedule() {
         if originalMortgage != nil {
