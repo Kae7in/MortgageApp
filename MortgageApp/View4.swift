@@ -48,7 +48,7 @@ class View4: IntroDetailVC {
     
     func formatMessage() {
         let string = message.text!
-        let defaultFontAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Ultralight", size: 38.0)!, NSForegroundColorAttributeName: UIColor.white]
+        let defaultFontAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Thin", size: 38.0)!, NSForegroundColorAttributeName: UIColor.white]
         let attributedString = NSMutableAttributedString(string: string, attributes: defaultFontAttributes)
         let boldFontAttribute = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Medium", size: 38.0)!]
         
@@ -61,7 +61,7 @@ class View4: IntroDetailVC {
     
     func displayMortgageData() {
         let interestSaved = self.mortgage!.totalInterestSavings()
-        animate(label: interestSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved, increment: 5, interval: 0.001)
+        animate(label: interestSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved, increment: 10, interval: 0.001)
         let timeSaved = self.mortgage!.monthsSaved()
         animate(label: timeSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: NSDecimalNumber(value: timeSaved), increment: 1, interval: 0.5, dollars: false)
         

@@ -49,7 +49,7 @@ class View5: IntroDetailVC {
     
     func formatMessage() {
         let string = message.text!
-        let defaultFontAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Ultralight", size: 38.0)!, NSForegroundColorAttributeName: UIColor.white]
+        let defaultFontAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Thin", size: 38.0)!, NSForegroundColorAttributeName: UIColor.white]
         let attributedString = NSMutableAttributedString(string: string, attributes: defaultFontAttributes)
         let boldFontAttribute = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Medium", size: 38.0)!]
         

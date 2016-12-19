@@ -11,16 +11,21 @@ import UIKit
 class View7: IntroDetailVC {
 
     @IBOutlet weak var message: UILabel!
+    @IBOutlet weak var exploreExtraPaymentsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         formatMessage()
+        
+        exploreExtraPaymentsButton.layer.borderColor = UIColor.clear.cgColor
+        exploreExtraPaymentsButton.layer.borderWidth = 5.0
+        exploreExtraPaymentsButton.layer.cornerRadius = 20.0
     }
     
     func formatMessage() {
         let string = message.text!
-        let defaultFontAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Ultralight", size: 38.0)!, NSForegroundColorAttributeName: UIColor.white]
+        let defaultFontAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Thin", size: 38.0)!, NSForegroundColorAttributeName: UIColor.white]
         let attributedString = NSMutableAttributedString(string: string, attributes: defaultFontAttributes)
         let boldFontAttribute = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Medium", size: 38.0)!]
         
@@ -30,6 +35,17 @@ class View7: IntroDetailVC {
         message.sizeToFit()
     }
     
+    @IBAction func exploreExtraPaymentsButtonAction(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
+        self.performSegue(withIdentifier: "toMortgageDetail", sender: sender)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier! == "toMortgageDetail" {
+            let mortgageDetailVC = segue.destination as! MortgageDetailVC
+            mortgageDetailVC.m = self.mortgage!.originalMortgage
+        }
+    }
 
     /*
     // MARK: - Navigation

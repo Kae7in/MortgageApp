@@ -37,7 +37,6 @@ class IntroPVC: UIPageViewController {
         super.viewWillDisappear(animated)
         
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
-        
     }
 
     override func didReceiveMemoryWarning() {

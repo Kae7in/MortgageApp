@@ -40,7 +40,7 @@ class View2: IntroDetailVC {
     
     func formatMessage() {
         let string = message.text!
-        let defaultFontAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Ultralight", size: 38.0)!, NSForegroundColorAttributeName: UIColor.white]
+        let defaultFontAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Thin", size: 38.0)!, NSForegroundColorAttributeName: UIColor.white]
         let attributedString = NSMutableAttributedString(string: string, attributes: defaultFontAttributes)
         let boldFontAttribute = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Medium", size: 38.0)!]
         
@@ -59,9 +59,9 @@ class View2: IntroDetailVC {
         newPrincipalLabel.text! = principalLabel.text!
         
         var value = self.mortgage!.monthlyPayment
-        animate(label: extraPaymentLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, increment: 2, interval: 0.001)
+        animate(label: extraPaymentLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, increment: 4, interval: 0.001)
         value = self.mortgage!.loanAmount().subtracting(self.mortgage!.monthlyPayment)
-        animate(label: newPrincipalLabel, startValue: mortgage!.loanAmount(), endValue: value, increment: -2, interval: 0.001)
+        animate(label: newPrincipalLabel, startValue: mortgage!.loanAmount(), endValue: value, increment: -4, interval: 0.001)
     }
 
     override func didReceiveMemoryWarning() {
