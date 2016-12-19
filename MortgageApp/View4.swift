@@ -60,9 +60,6 @@ class View4: IntroDetailVC {
     }
     
     func displayMortgageData() {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = NumberFormatter.Style.decimal
-        
         let interestSaved = self.mortgage!.totalInterestSavings()
         animate(label: interestSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved, increment: 5, interval: 0.001)
         let timeSaved = self.mortgage!.monthsSaved()

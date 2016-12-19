@@ -59,10 +59,7 @@ class View5: IntroDetailVC {
         message.sizeToFit()
     }
     
-    func displayMortgageData() {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = NumberFormatter.Style.decimal
-        
+    func displayMortgageData() {        
         let interestSaved = self.mortgage!.totalInterestSavings()
         animate(label: interestSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved, increment: 100, interval: 0.001)
         let yearsSaved = self.mortgage!.monthsSaved() / 12

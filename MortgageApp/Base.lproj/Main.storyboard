@@ -1248,7 +1248,7 @@
                                 <rect key="frame" x="-0.5" y="301" width="375" height="296"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZhM-Sq-tP8">
-                                        <rect key="frame" x="40.5" y="35" width="295.5" height="226"/>
+                                        <rect key="frame" x="40" y="35" width="295.5" height="226"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="yKP-Us-xez">
                                                 <rect key="frame" x="0.0" y="0.0" width="295.5" height="103"/>
@@ -1329,7 +1329,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="hP8-L3-s1v">
-                                                <rect key="frame" x="0.5" y="123" width="295" height="103"/>
+                                                <rect key="frame" x="0.0" y="123" width="295" height="103"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="rRE-kE-8ty">
                                                         <rect key="frame" x="0.0" y="0.0" width="147.5" height="103"/>

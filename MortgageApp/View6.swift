@@ -63,10 +63,33 @@ class View6: IntroDetailVC {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
         
+        // Interest saved from extra mortgage payments
         let interestSaved7Years = self.mortgage!.interestSavedForRange(start: 0, end: 7*12)
         let interestSaved30Years = self.mortgage!.totalInterestSavings()
         animate(label: interestedSaved7YearsLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved7Years, increment: 3, interval: 0.001)
         animate(label: interestSaved30YearsLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved30Years, increment: 100, interval: 0.001)
+        
+        // Interest returns from average-rate CD
+        let cdReturns7Years = calculateCompoundInterest(investment: self.mortgage!.monthlyPayment, yearsToContribute: 7)
+        let cdReturns30Years = calculateCompoundInterest(investment: self.mortgage!.monthlyPayment, yearsToContribute: mortgage!.originalMortgage!.loanTermMonths / 12)
+        self.cdReturns7YearsLabel.text! = "$" + numberFormatter.string(from: cdReturns7Years)!.components(separatedBy: ".").first!
+        self.cdReturns30YearsLabel.text! = "$" + numberFormatter.string(from: cdReturns30Years)!.components(separatedBy: ".").first!
+    }
+    
+    func calculateCompoundInterest(investment: NSDecimalNumber, yearsToContribute: Int) -> NSDecimalNumber {
+        let yearlyRate = getAverageCDRate().dividing(by: NSDecimalNumber(value: 100.0))
+        var futureValue = NSDecimalNumber(value: 0.0)
+        var contributed = NSDecimalNumber(value: 0.0)
+        for _ in 1...yearsToContribute {
+            futureValue = futureValue.adding(investment).multiplying(by: NSDecimalNumber(value: 1.0).adding(yearlyRate))
+            contributed = contributed.adding(investment)
+        }
+        return futureValue.subtracting(contributed)
+    }
+    
+    func getAverageCDRate() -> NSDecimalNumber {
+        // TODO: Find API that serves industry average rate
+        return NSDecimalNumber(value: 0.51)
     }
     
 
