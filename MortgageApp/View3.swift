@@ -66,9 +66,9 @@ class View3: IntroDetailVC {
         newInterestLabel.text! = interestLabel.text!
         
         var value = oldInterest.subtracting(self.mortgage!.totalLoanCost)
-        animate(label: interestSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, increment: 10, interval: 0.001)
+        animate(label: interestSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, interval: 0.001)
         value = self.mortgage!.totalLoanCost
-        animate(label: newInterestLabel, startValue: oldInterest, endValue: value, increment: -10, interval: 0.001)
+        animate(label: newInterestLabel, startValue: oldInterest, endValue: value, interval: 0.001)
     }
     
     override func didReceiveMemoryWarning() {

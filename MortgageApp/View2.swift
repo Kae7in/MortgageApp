@@ -59,9 +59,9 @@ class View2: IntroDetailVC {
         newPrincipalLabel.text! = principalLabel.text!
         
         var value = self.mortgage!.monthlyPayment
-        animate(label: extraPaymentLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, increment: 4, interval: 0.001)
+        animate(label: extraPaymentLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, interval: 0.001)
         value = self.mortgage!.loanAmount().subtracting(self.mortgage!.monthlyPayment)
-        animate(label: newPrincipalLabel, startValue: mortgage!.loanAmount(), endValue: value, increment: -4, interval: 0.001)
+        animate(label: newPrincipalLabel, startValue: mortgage!.loanAmount(), endValue: value, interval: 0.001)
     }
 
     override func didReceiveMemoryWarning() {

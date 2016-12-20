@@ -61,9 +61,9 @@ class View4: IntroDetailVC {
     
     func displayMortgageData() {
         let interestSaved = self.mortgage!.totalInterestSavings()
-        animate(label: interestSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved, increment: 10, interval: 0.001)
+        animate(label: interestSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved, interval: 0.001)
         let timeSaved = self.mortgage!.monthsSaved()
-        animate(label: timeSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: NSDecimalNumber(value: timeSaved), increment: 1, interval: 0.5, dollars: false)
+        animate(label: timeSavedLabel, startValue: NSDecimalNumber(value: 0.0), endValue: NSDecimalNumber(value: timeSaved), interval: 0.5, dollars: false)
         
         /* Format the tagline */
         let attributedString = NSMutableAttributedString()

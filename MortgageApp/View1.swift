@@ -47,11 +47,11 @@ class View1: IntroDetailVC {
     
     func displayMortgageData() {
         var value: NSDecimalNumber = self.mortgage!.loanAmount()
-        animate(label: principalLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, increment: 1000, interval: 0.001)
+        animate(label: principalLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, interval: 0.001)
         value = self.mortgage!.totalLoanCost
-        animate(label: interestLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, increment: 1000, interval: 0.001)
+        animate(label: interestLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, interval: 0.001)
         value = self.mortgage!.loanAmount().adding(self.mortgage!.totalLoanCost)
-        animate(label: balanceLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, increment: 1000, interval: 0.001)
+        animate(label: balanceLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, interval: 0.001)
     }
     
     

@@ -32,8 +32,13 @@ class IntroDetailVC: UIViewController {
         UIApplication.shared.statusBarStyle = .lightContent
     }
     
-    func animate(label: UILabel, startValue: NSDecimalNumber, endValue: NSDecimalNumber, increment: Int, interval: TimeInterval, dollars: Bool = true) {
+    func animate(label: UILabel, startValue: NSDecimalNumber, endValue: NSDecimalNumber, interval: TimeInterval, dollars: Bool = true) {
         var counter = startValue
+        var increment = abs(endValue.subtracting(startValue).int32Value) / 200
+        print(increment)
+        if increment == 0 {
+            increment = 1
+        }
         
         Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { (timer) in
             let numberFormatter = NumberFormatter()
