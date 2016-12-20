@@ -43,8 +43,6 @@ class ViewController: UIViewController {
     
     @IBAction func mortgageSubmitted(_ sender: UIButton) {
         if validateInput() {
-            performSegue(withIdentifier: "toMortgageDetail", sender: nil)
-        } else {
             performSegue(withIdentifier: "toIntro", sender: nil)
         }
     }
@@ -63,14 +61,10 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let m = Mortgage()
-//        m.salePrice = NSDecimalNumber(value: Double(self.principal.text!)!)
-//        m.interestRate = NSDecimalNumber(value: Double(self.apr.text!)!)
-//        m.loanTermMonths = Int(self.termYears.text!)! * 12
-//        m.downPayment = self.downPercent.text! + "%"
-        m.salePrice = 200000
-        m.interestRate = 3.6
-        m.loanTermMonths = 360
-        m.downPayment = "0%"
+        m.salePrice = NSDecimalNumber(value: Double(self.principal.text!)!)
+        m.interestRate = NSDecimalNumber(value: Double(self.apr.text!)!)
+        m.loanTermMonths = Int(self.termYears.text!)! * 12
+        m.downPayment = self.downPercent.text! + "%"
         
         if segue.identifier! == "toIntro" {
             let introPVC = segue.destination as! IntroPVC
@@ -85,5 +79,23 @@ class ViewController: UIViewController {
         navigationItem.backBarButtonItem = backItem
     }
 
+    @IBAction func testIntroAction(_ sender: UIButton) {
+        self.principal.text! = "200000"
+        self.apr.text! = "3.6"
+        self.termYears.text! = "30"
+        self.downPercent.text! = "0"
+        
+        performSegue(withIdentifier: "toIntro", sender: nil)
+    }
+    
+    
+    @IBAction func testDetailViewAction(_ sender: UIButton) {
+        self.principal.text! = "200000"
+        self.apr.text! = "3.6"
+        self.termYears.text! = "30"
+        self.downPercent.text! = "0"
+        
+        performSegue(withIdentifier: "toMortgageDetail", sender: nil)
+    }
 }
 

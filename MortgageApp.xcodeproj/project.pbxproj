@@ -20,6 +20,7 @@
 		1A36D4491DF86AF50093A411 /* MortgageAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D4481DF86AF50093A411 /* MortgageAppUITests.swift */; };
 		1A36D4581DF86CC00093A411 /* MortgageCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D4571DF86CC00093A411 /* MortgageCalculator.swift */; };
 		1A36D45C1DF895070093A411 /* Mortgage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D45B1DF895070093A411 /* Mortgage.swift */; };
+		1A7DE08D1E099EB300E29CED /* EditPaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DE08C1E099EB300E29CED /* EditPaymentVC.swift */; };
 		1A80FF7B1DFF0D3800193664 /* MortgageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80FF7A1DFF0D3800193664 /* MortgageDetailVC.swift */; };
 		1AABB4871DFA06A9006A3B91 /* Amortization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AABB4861DFA06A9006A3B91 /* Amortization.swift */; };
 		1AB349A91DFF5A1500E76049 /* IntroPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349A81DFF5A1500E76049 /* IntroPVC.swift */; };
@@ -73,6 +74,7 @@
 		1A36D44A1DF86AF50093A411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A36D4571DF86CC00093A411 /* MortgageCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MortgageCalculator.swift; sourceTree = "<group>"; };
 		1A36D45B1DF895070093A411 /* Mortgage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mortgage.swift; sourceTree = "<group>"; };
+		1A7DE08C1E099EB300E29CED /* EditPaymentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPaymentVC.swift; sourceTree = "<group>"; };
 		1A80FF7A1DFF0D3800193664 /* MortgageDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MortgageDetailVC.swift; sourceTree = "<group>"; };
 		1AABB4861DFA06A9006A3B91 /* Amortization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Amortization.swift; sourceTree = "<group>"; };
 		1AB349A81DFF5A1500E76049 /* IntroPVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroPVC.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				1A36D42A1DF86AF40093A411 /* ViewController.swift */,
 				1AB349C61E00AA9F00E76049 /* Intro */,
 				1A80FF7A1DFF0D3800193664 /* MortgageDetailVC.swift */,
+				1A7DE08C1E099EB300E29CED /* EditPaymentVC.swift */,
 				1A36D42C1DF86AF40093A411 /* Main.storyboard */,
 				1A36D42F1DF86AF40093A411 /* Assets.xcassets */,
 				1A36D4311DF86AF40093A411 /* LaunchScreen.storyboard */,
@@ -545,6 +548,7 @@
 				1AB349BF1E00A0AD00E76049 /* View6.swift in Sources */,
 				1AB349AF1E006DDD00E76049 /* View1.swift in Sources */,
 				1AB349B71E0096F800E76049 /* View2.swift in Sources */,
+				1A7DE08D1E099EB300E29CED /* EditPaymentVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

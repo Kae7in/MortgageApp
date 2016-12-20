@@ -66,8 +66,8 @@ class View6: IntroDetailVC {
         // Interest saved from extra mortgage payments
         let interestSaved7Years = self.mortgage!.interestSavedForRange(start: 0, end: 7*12)
         let interestSaved30Years = self.mortgage!.totalInterestSavings()
-        animate(label: interestedSaved7YearsLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved7Years, increment: 3, interval: 0.001)
-        animate(label: interestSaved30YearsLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved30Years, increment: 100, interval: 0.001)
+        animate(label: interestedSaved7YearsLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved7Years, increment: 6, interval: 0.001)
+        animate(label: interestSaved30YearsLabel, startValue: NSDecimalNumber(value: 0.0), endValue: interestSaved30Years, increment: 200, interval: 0.001)
         
         // Interest returns from average-rate CD
         let cdReturns7Years = calculateCompoundInterest(investment: self.mortgage!.monthlyPayment, yearsToContribute: 7)
