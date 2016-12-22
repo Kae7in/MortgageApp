@@ -34,10 +34,15 @@ class IntroDetailVC: UIViewController {
     
     func animate(label: UILabel, startValue: NSDecimalNumber, endValue: NSDecimalNumber, interval: TimeInterval, dollars: Bool = true) {
         var counter = startValue
-        var increment = abs(endValue.subtracting(startValue).int32Value) / 200
-        print(increment)
-        if increment == 0 {
+        var increment = endValue.subtracting(startValue).int32Value
+        if increment > 300 {
+            increment = increment / 150
+        } else if increment < -300 {
+            increment = increment / 150
+        } else if increment > 0 {
             increment = 1
+        } else if increment < 0 {
+            increment = -1
         }
         
         Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { (timer) in

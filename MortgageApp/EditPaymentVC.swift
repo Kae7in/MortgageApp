@@ -13,6 +13,7 @@ class EditPaymentVC: UIViewController {
     var m: Mortgage? = nil
     var mc: MortgageCalculator = MortgageCalculator()
 
+    @IBOutlet weak var navbar: UINavigationItem!
     @IBOutlet weak var interestSavings: UILabel!
     @IBOutlet weak var extraPaymentSlider: UISlider!
     @IBOutlet weak var extraPaymentLabel: UILabel!
@@ -20,8 +21,9 @@ class EditPaymentVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        layoutViews()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,9 +31,22 @@ class EditPaymentVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        layoutViews()
+    }
+    
+    func layoutViews() {
+        layoutNavigationBar()
+    }
+    
+    func layoutNavigationBar() {
+        navbar.title = "Extra Payment"
+//        navbar.titleTextAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Light", size: 20.0)!, NSForegroundColorAttributeName: UIColor(rgbColorCodeRed: 200, green: 200, blue: 200, alpha: 1.0)]
+    }
+    
     func updateLabels() {
-        let yearsSaved = self.m!.monthsSaved() / 12
-        let remainingMonthsSaved = self.m!.monthsSaved() % 12
+//        let yearsSaved = self.m!.monthsSaved() / 12
+//        let remainingMonthsSaved = self.m!.monthsSaved() % 12
         //principal.text = "$" + String(describing: m!.loanAmount())
         //interest.text = "$" + String(describing: m!.totalLoanCost).components(separatedBy: ".")[0]
         interestSavings.text! = "$" + String(describing: self.m?.originalMortgage!.totalLoanCost.subtracting(m!.totalLoanCost)).components(separatedBy: ".")[0]

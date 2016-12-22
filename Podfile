@@ -6,6 +6,7 @@ target 'MortgageApp' do
   use_frameworks!
 
   # Pods for MortgageApp
+  pod 'Charts'
 
   target 'MortgageAppTests' do
     inherit! :search_paths
