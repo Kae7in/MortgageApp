@@ -66,7 +66,7 @@ class MortgageDetailVC: UIViewController, ChartViewDelegate {
         nav?.tintColor = UIColor(rgbColorCodeRed: 238, green: 87, blue: 106, alpha: 1.0)
         self.navigationItem.title = "Mortgage Balance"
         nav?.titleTextAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Light", size: 20.0)!, NSForegroundColorAttributeName: UIColor(rgbColorCodeRed: 155, green: 155, blue: 155, alpha: 1.0)]
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "addbutton"), style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "addbutton"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(extraPaymentButtonAction(sender:)))
         self.navigationItem.rightBarButtonItem?.imageInsets = UIEdgeInsets(top: 15.0, left: 30.0, bottom: 15.0, right: 0.0)
         
         segment.addTarget(self, action: #selector(changeBalanceType), for: .valueChanged)
@@ -175,7 +175,7 @@ class MortgageDetailVC: UIViewController, ChartViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func extraPaymentButtonAction(_ sender: UIButton) {
+    func extraPaymentButtonAction(sender: UIBarButtonItem) {
         performSegue(withIdentifier: "toEditPayment", sender: sender)
     }
     

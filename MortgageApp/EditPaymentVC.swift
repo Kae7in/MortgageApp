@@ -41,7 +41,10 @@ class EditPaymentVC: UIViewController {
     
     func layoutNavigationBar() {
         navbar.title = "Extra Payment"
-//        navbar.titleTextAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Light", size: 20.0)!, NSForegroundColorAttributeName: UIColor(rgbColorCodeRed: 200, green: 200, blue: 200, alpha: 1.0)]
+        navbar.rightBarButtonItem?.target = self
+        navbar.rightBarButtonItem?.action = #selector(saveButton(sender:))
+        navbar.leftBarButtonItem?.target = self
+        navbar.leftBarButtonItem?.action = #selector(cancelButton(sender:))
     }
     
     func updateLabels() {
@@ -75,6 +78,14 @@ class EditPaymentVC: UIViewController {
         }
         m = mc.calculateMortgage(mortgage: m!)
         updateLabels()
+    }
+    
+    func saveButton(sender: UIBarButtonItem) {
+        
+    }
+    
+    func cancelButton(sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 
