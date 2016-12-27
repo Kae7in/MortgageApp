@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 
-class MortgageDetailVC: UIViewController {
+class MortgageDetailVC: UIViewController, ChartViewDelegate {
     
     var m: Mortgage? = nil
     var mc: MortgageCalculator = MortgageCalculator()
@@ -19,6 +19,7 @@ class MortgageDetailVC: UIViewController {
     @IBOutlet weak var yearsLeftLabel: UILabel!
     @IBOutlet weak var monthsLeftLabel: UILabel!
     @IBOutlet weak var monthlyPaymentLabel: UILabel!
+    let segment:UISegmentedControl = UISegmentedControl(items: ["Total", "Principal", "Interest"])
     
     @IBOutlet weak var lineChart: LineChartView!
     
@@ -26,22 +27,24 @@ class MortgageDetailVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        m!.extras = [["startMonth":1, "endMonth":360, "extraIntervalMonths":12, "extraAmount":Int(m!.monthlyPayment)]]
+//        m!.extras = [["startMonth":1, "endMonth":360, "extraIntervalMonths":12, "extraAmount":Int(m!.monthlyPayment)]]
         m = mc.calculateMortgage(mortgage: m!)
         layoutViews()
     }
     
     func layoutViews() {
-        updateLabels()
+        // TODO: Use current balance remaining and current time left
+        updateLabels(balanceLeft: m!.loanAmount().adding(m!.totalLoanCost), timeLeft: self.m!.numberOfPayments)
         layoutNavigationBar()
         layoutExtraPaymentButton()
-        updateChartWithData()
+        layoutChart()
+        updateChartWithData(type: "Total")
     }
     
-    func updateLabels() {
+    func updateLabels(balanceLeft: NSNumber, timeLeft: Int) {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
-        let balanceComponents = numberFormatter.string(from: m!.loanAmount().adding(m!.totalLoanCost))!.components(separatedBy: ".")
+        let balanceComponents = numberFormatter.string(from: balanceLeft)!.components(separatedBy: ".")
         
         balance.text! = balanceComponents.first!
         if balanceComponents.count > 1 {
@@ -50,8 +53,8 @@ class MortgageDetailVC: UIViewController {
             balanceCents.text! = ".00"
         }
         
-        let yearsLeft = self.m!.numberOfPayments / 12
-        let remainingMonthsLeft = self.m!.numberOfPayments % 12
+        let yearsLeft = timeLeft / 12
+        let remainingMonthsLeft = timeLeft % 12
         
         self.yearsLeftLabel.text! = String(yearsLeft) + "yr"
         self.monthsLeftLabel.text! = String(remainingMonthsLeft) + "mo"
@@ -62,11 +65,11 @@ class MortgageDetailVC: UIViewController {
         nav?.barStyle = UIBarStyle.black
         nav?.tintColor = UIColor(rgbColorCodeRed: 238, green: 87, blue: 106, alpha: 1.0)
         self.navigationItem.title = "Mortgage Balance"
-        nav?.titleTextAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Light", size: 20.0)!, NSForegroundColorAttributeName: UIColor(rgbColorCodeRed: 200, green: 200, blue: 200, alpha: 1.0)]
+        nav?.titleTextAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Light", size: 20.0)!, NSForegroundColorAttributeName: UIColor(rgbColorCodeRed: 155, green: 155, blue: 155, alpha: 1.0)]
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "addbutton"), style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         self.navigationItem.rightBarButtonItem?.imageInsets = UIEdgeInsets(top: 15.0, left: 30.0, bottom: 15.0, right: 0.0)
         
-        let segment:UISegmentedControl = UISegmentedControl(items: ["Total", "Principal", "Interest"])
+        segment.addTarget(self, action: #selector(changeBalanceType), for: .valueChanged)
         segment.sizeToFit()
         segment.tintColor = UIColor(rgbColorCodeRed: 238, green: 87, blue: 106, alpha: 1.0)
         segment.selectedSegmentIndex = 0
@@ -76,24 +79,95 @@ class MortgageDetailVC: UIViewController {
         self.view.addSubview(segment)
     }
     
+    func changeBalanceType(sender: UISegmentedControl) {
+        let str = sender.titleForSegment(at: sender.selectedSegmentIndex)!
+        if str == "Total" {
+            // TODO: Add balance remaining given current date and time remaining given current date
+            updateLabels(balanceLeft: self.m!.totalLoanCost.adding(self.m!.loanAmount()), timeLeft: self.m!.loanTermMonths)
+        } else if str == "Principal" {
+            updateLabels(balanceLeft: self.m!.loanAmount(), timeLeft: self.m!.loanTermMonths)
+        } else if str == "Interest" {
+            updateLabels(balanceLeft: self.m!.totalLoanCost, timeLeft: self.m!.loanTermMonths)
+        }
+        
+        updateChartWithData(type: str)
+    }
+    
     func layoutExtraPaymentButton() {
 //        extraPaymentButton.layer.borderColor = UIColor.clear.cgColor
 //        extraPaymentButton.layer.borderWidth = 5.0
 //        extraPaymentButton.layer.cornerRadius = 20.0
     }
     
-    func updateChartWithData() {
+    func layoutChart() {
+        lineChart.chartDescription?.enabled = false
+        lineChart.drawGridBackgroundEnabled = false
+        lineChart.legend.enabled = false
+        lineChart.leftAxis.enabled = false
+        lineChart.leftAxis.spaceBottom = 0.1
+        lineChart.setViewPortOffsets(left: 5.0, top: 0.0, right: 7.0, bottom: 20.0)
+        lineChart.setScaleEnabled(false)
+        lineChart.doubleTapToZoomEnabled = false
+        lineChart.rightAxis.enabled = false
+        lineChart.xAxis.drawGridLinesEnabled = false
+        lineChart.xAxis.labelPosition = XAxis.LabelPosition.bottom
+        lineChart.xAxis.setLabelCount(self.m!.loanTermMonths / (5*12), force: false)
+        lineChart.xAxis.drawAxisLineEnabled = false
+        lineChart.animate(xAxisDuration: 0.5, easingOption: ChartEasingOption.easeInQuart)
+//        let yAx = lineChart.leftAxis
+//        yAx.axisMaximum = self.m!.paymentSchedule[0].remainingLoanBalance.adding(self.m!.totalLoanCost).doubleValue
+        
+        let marker: BalloonMarker = BalloonMarker(color: UIColor.gray, font: UIFont(name: ".SFUIDisplay-Thin", size: 16.0)!, textColor: UIColor.white, insets: UIEdgeInsets(top: 7.0, left: 7.0, bottom: 20.0, right: 7.0))
+        marker.minimumSize = CGSize(width: 75.0, height: 35.0)
+        marker.chartView = self.lineChart
+        lineChart.marker = marker
+        
+        lineChart.delegate = self
+    }
+    
+    func updateChartWithData(type: String) {
         var dataEntries = [ChartDataEntry]()
-        for i in 0..<self.m!.paymentSchedule.count {
-            let remainingPrincipal = self.m!.paymentSchedule[i].remainingLoanBalance
-            let remainingInterest = self.m!.paymentSchedule[i].remainingLoanCost
-            let yValue = remainingPrincipal.adding(remainingInterest)
-            let dataEntry = ChartDataEntry(x: Double(i), y: Double(yValue))
+        let termYears = self.m!.loanTermMonths / 12
+        for i in 0...termYears {
+            var j = (i * 12) - 1
+            j = j < 0 ? 0 : j
+            var yValue = NSDecimalNumber(value: 0.0)
+            
+            if type == "Total" {
+                let remainingPrincipal = self.m!.paymentSchedule[j].remainingLoanBalance
+                let remainingInterest = self.m!.paymentSchedule[j].remainingLoanCost
+                yValue = remainingPrincipal.adding(remainingInterest)
+            } else if type == "Principal" {
+                yValue = self.m!.paymentSchedule[j].remainingLoanBalance
+            } else if type == "Interest" {
+                yValue = self.m!.paymentSchedule[j].remainingLoanCost
+            }
+            
+            let dataEntry = ChartDataEntry(x: Double(i), y: Double(yValue), data: self.m!.paymentSchedule[j])
             dataEntries.append(dataEntry)
         }
         let chartDataSet = LineChartDataSet(values: dataEntries, label: "Amortization")
+        chartDataSet.drawValuesEnabled = false
+        chartDataSet.drawCirclesEnabled = false
+        chartDataSet.setColor(NSUIColor(cgColor: UIColor(rgbColorCodeRed: 238, green: 87, blue: 106, alpha: 1).cgColor))
+        chartDataSet.lineWidth = 4.0
+        
+        let fromColor = UIColor(rgbColorCodeRed: 238, green: 87, blue: 106, alpha: 0.1)
+        let gradientColors = [fromColor.cgColor, UIColor.white.cgColor] as CFArray
+        let gradient = CGGradient(colorsSpace: nil, colors: gradientColors, locations: nil)
+        chartDataSet.fillAlpha = 1.0
+        chartDataSet.fill = Fill(linearGradient: gradient!, angle: -90.0)
+        chartDataSet.drawFilledEnabled = true
+        
         let chartData = LineChartData(dataSet: chartDataSet)
         lineChart.data = chartData
+        lineChart.animate(xAxisDuration: 0.2, easingOption: ChartEasingOption.easeInQuart)
+    }
+    
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        let a = entry.data as! Amortization
+        let timeLeft = self.m!.paymentSchedule.count - a.loanMonth
+        updateLabels(balanceLeft: NSDecimalNumber(value: highlight.y), timeLeft: Int(timeLeft))
     }
 
     override func didReceiveMemoryWarning() {

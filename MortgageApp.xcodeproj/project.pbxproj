@@ -20,6 +20,7 @@
 		1A36D4491DF86AF50093A411 /* MortgageAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D4481DF86AF50093A411 /* MortgageAppUITests.swift */; };
 		1A36D4581DF86CC00093A411 /* MortgageCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D4571DF86CC00093A411 /* MortgageCalculator.swift */; };
 		1A36D45C1DF895070093A411 /* Mortgage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D45B1DF895070093A411 /* Mortgage.swift */; };
+		1A43F9031E12E1A700E82480 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43F9021E12E1A700E82480 /* BalloonMarker.swift */; };
 		1A7DE08D1E099EB300E29CED /* EditPaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DE08C1E099EB300E29CED /* EditPaymentVC.swift */; };
 		1A80FF7B1DFF0D3800193664 /* MortgageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80FF7A1DFF0D3800193664 /* MortgageDetailVC.swift */; };
 		1AABB4871DFA06A9006A3B91 /* Amortization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AABB4861DFA06A9006A3B91 /* Amortization.swift */; };
@@ -74,6 +75,7 @@
 		1A36D44A1DF86AF50093A411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A36D4571DF86CC00093A411 /* MortgageCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MortgageCalculator.swift; sourceTree = "<group>"; };
 		1A36D45B1DF895070093A411 /* Mortgage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mortgage.swift; sourceTree = "<group>"; };
+		1A43F9021E12E1A700E82480 /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
 		1A7DE08C1E099EB300E29CED /* EditPaymentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPaymentVC.swift; sourceTree = "<group>"; };
 		1A80FF7A1DFF0D3800193664 /* MortgageDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MortgageDetailVC.swift; sourceTree = "<group>"; };
 		1AABB4861DFA06A9006A3B91 /* Amortization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Amortization.swift; sourceTree = "<group>"; };
@@ -131,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				1A36D4271DF86AF40093A411 /* MortgageApp */,
-				1A36D43C1DF86AF40093A411 /* MortgageAppTests */,
 				1A36D4471DF86AF50093A411 /* MortgageAppUITests */,
 				1A36D4261DF86AF40093A411 /* Products */,
 				5D1A253FFDEE53455B4A0FD4 /* Pods */,
@@ -157,6 +158,7 @@
 				1A36D42A1DF86AF40093A411 /* ViewController.swift */,
 				1AB349C61E00AA9F00E76049 /* Intro */,
 				1A80FF7A1DFF0D3800193664 /* MortgageDetailVC.swift */,
+				1A43F9021E12E1A700E82480 /* BalloonMarker.swift */,
 				1A7DE08C1E099EB300E29CED /* EditPaymentVC.swift */,
 				1A36D42C1DF86AF40093A411 /* Main.storyboard */,
 				1A36D42F1DF86AF40093A411 /* Assets.xcassets */,
@@ -164,6 +166,7 @@
 				1AB349C71E01B7F600E76049 /* Supporting Files */,
 				1AB349AA1DFF5C9100E76049 /* CustomColors.swift */,
 				1AEC02891E01D35F000B473A /* MortgageApp-Bridging-Header.h */,
+				1A36D43C1DF86AF40093A411 /* MortgageAppTests */,
 			);
 			path = MortgageApp;
 			sourceTree = "<group>";
@@ -175,7 +178,7 @@
 				1A36D43F1DF86AF40093A411 /* Info.plist */,
 			);
 			path = MortgageAppTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		1A36D4471DF86AF50093A411 /* MortgageAppUITests */ = {
 			isa = PBXGroup;
@@ -535,6 +538,7 @@
 				1AABB4871DFA06A9006A3B91 /* Amortization.swift in Sources */,
 				1A36D42B1DF86AF40093A411 /* ViewController.swift in Sources */,
 				1AB349C31E00A10600E76049 /* View7.swift in Sources */,
+				1A43F9031E12E1A700E82480 /* BalloonMarker.swift in Sources */,
 				1A36D4291DF86AF40093A411 /* AppDelegate.swift in Sources */,
 				1AB349BB1E009FA400E76049 /* View4.swift in Sources */,
 				1A36D4581DF86CC00093A411 /* MortgageCalculator.swift in Sources */,

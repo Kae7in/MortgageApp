@@ -169,16 +169,16 @@
                                 <rect key="frame" x="0.0" y="301" width="375" height="296"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ExT-wD-D2L">
-                                        <rect key="frame" x="42" y="70" width="292.5" height="156"/>
+                                        <rect key="frame" x="35.5" y="68.5" width="305.5" height="159"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aDC-Cf-fML">
-                                                <rect key="frame" x="0.0" y="0.0" width="292.5" height="63"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="305.5" height="64.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="1lA-Ji-Lpr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="63"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="121" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwH-9T-H1O">
-                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="62" height="21.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Principal">
                                                                         <attributes>
@@ -191,7 +191,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJh-IS-C49">
-                                                                <rect key="frame" x="0.0" y="21" width="114.5" height="42"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="121" height="43"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="$---,---">
                                                                         <attributes>
@@ -206,7 +206,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmz-aL-jsR">
-                                                        <rect key="frame" x="134.5" y="17.5" width="23.5" height="45.5"/>
+                                                        <rect key="frame" x="141" y="19" width="23.5" height="45.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="+">
                                                                 <attributes>
@@ -219,10 +219,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="UEO-5a-RHS">
-                                                        <rect key="frame" x="178" y="0.0" width="114.5" height="63"/>
+                                                        <rect key="frame" x="184.5" y="0.0" width="121" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8a-ea-HiW">
-                                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="21.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Interest">
                                                                         <attributes>
@@ -235,7 +235,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjD-P5-ZE6">
-                                                                <rect key="frame" x="0.0" y="21" width="114.5" height="42"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="121" height="43"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="$---,---">
                                                                         <attributes>
@@ -252,10 +252,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZVH-e0-x8j">
-                                                <rect key="frame" x="60.5" y="93" width="172" height="63"/>
+                                                <rect key="frame" x="63" y="94.5" width="179.5" height="64.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDL-us-gvi">
-                                                        <rect key="frame" x="0.0" y="0.0" width="23.5" height="63"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="23.5" height="64.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="=">
                                                                 <attributes>
@@ -268,10 +268,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="h85-0j-KsL">
-                                                        <rect key="frame" x="43.5" y="0.0" width="128.5" height="63"/>
+                                                        <rect key="frame" x="43.5" y="0.0" width="136" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hct-Am-RFa">
-                                                                <rect key="frame" x="0.0" y="0.0" width="65" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="59.5" height="21.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Balance">
                                                                         <attributes>
@@ -284,7 +284,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbM-Sf-53i">
-                                                                <rect key="frame" x="0.0" y="21" width="128.5" height="42"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="136" height="43"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="$---,----">
                                                                         <attributes>
@@ -384,16 +384,16 @@
                                 <rect key="frame" x="0.0" y="301" width="375" height="296"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bzb-Ar-mH5">
-                                        <rect key="frame" x="43.5" y="70" width="289.5" height="156"/>
+                                        <rect key="frame" x="43.5" y="68.5" width="289.5" height="159"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Efi-GW-T7G">
-                                                <rect key="frame" x="0.0" y="0.0" width="289.5" height="63"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="289.5" height="64.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Q9o-1z-idS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="63"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="121" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RW-GW-yDs">
-                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="62" height="21.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Principal">
                                                                         <attributes>
@@ -406,7 +406,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhV-2e-knf">
-                                                                <rect key="frame" x="0.0" y="21" width="114.5" height="42"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="121" height="43"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="$---,---">
                                                                         <attributes>
@@ -421,7 +421,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6U0-9L-CkR">
-                                                        <rect key="frame" x="134.5" y="17.5" width="17" height="45.5"/>
+                                                        <rect key="frame" x="141" y="19" width="17" height="45.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="-">
                                                                 <attributes>
@@ -434,16 +434,16 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="xb8-0h-sxF">
-                                                        <rect key="frame" x="171.5" y="0.0" width="118" height="63"/>
+                                                        <rect key="frame" x="178" y="0.0" width="111.5" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extra Payment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZL-Lc-h4P">
-                                                                <rect key="frame" x="0.0" y="0.0" width="118" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="21.5"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNT-77-9u6">
-                                                                <rect key="frame" x="0.0" y="21" width="40.5" height="42"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="44" height="43"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="36"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -453,10 +453,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Jk-MK-1yL">
-                                                <rect key="frame" x="66" y="93" width="158" height="63"/>
+                                                <rect key="frame" x="62.5" y="94.5" width="164.5" height="64.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0W-PW-hpa">
-                                                        <rect key="frame" x="0.0" y="0.0" width="23.5" height="63"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="23.5" height="64.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="=">
                                                                 <attributes>
@@ -469,10 +469,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="K26-5r-QiW">
-                                                        <rect key="frame" x="43.5" y="0.0" width="114.5" height="63"/>
+                                                        <rect key="frame" x="43.5" y="0.0" width="121" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Z5-Pl-SJ4">
-                                                                <rect key="frame" x="0.0" y="0.0" width="111" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="99" height="21.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="New Principal">
                                                                         <attributes>
@@ -485,7 +485,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1S-Yg-h8N">
-                                                                <rect key="frame" x="0.0" y="21" width="114.5" height="42"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="121" height="43"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="$---,---">
                                                                         <attributes>
@@ -586,16 +586,16 @@
                                 <rect key="frame" x="0.0" y="301" width="375" height="296"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="EMH-vJ-fNE">
-                                        <rect key="frame" x="44" y="70" width="287.5" height="156"/>
+                                        <rect key="frame" x="43" y="68.5" width="289" height="159"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MQU-hh-Okw">
-                                                <rect key="frame" x="0.0" y="0.0" width="287.5" height="63"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="289" height="64.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="mXc-DA-F5m">
-                                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="63"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="121" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaq-jb-leX">
-                                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="21.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Interest">
                                                                         <attributes>
@@ -608,7 +608,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIC-A0-urO">
-                                                                <rect key="frame" x="0.0" y="21" width="114.5" height="42"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="121" height="43"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="$---,---">
                                                                         <attributes>
@@ -623,7 +623,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqn-ui-Y49">
-                                                        <rect key="frame" x="134.5" y="17.5" width="17" height="45.5"/>
+                                                        <rect key="frame" x="141" y="19" width="17" height="45.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="-">
                                                                 <attributes>
@@ -636,16 +636,16 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="3Ic-we-pTN">
-                                                        <rect key="frame" x="171.5" y="0.0" width="116" height="63"/>
+                                                        <rect key="frame" x="178" y="0.0" width="111" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest Saved" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvz-f8-yEN">
-                                                                <rect key="frame" x="0.0" y="0.0" width="116" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="111" height="21.5"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4F-p8-zV0">
-                                                                <rect key="frame" x="0.0" y="21" width="40.5" height="42"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="44" height="43"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="36"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -655,10 +655,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Iux-Ye-E6P">
-                                                <rect key="frame" x="64.5" y="93" width="158" height="63"/>
+                                                <rect key="frame" x="62.5" y="94.5" width="164.5" height="64.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJX-f0-W6b">
-                                                        <rect key="frame" x="0.0" y="0.0" width="23.5" height="63"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="23.5" height="64.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="=">
                                                                 <attributes>
@@ -671,10 +671,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="O3K-8z-Nmu">
-                                                        <rect key="frame" x="43.5" y="0.0" width="114.5" height="63"/>
+                                                        <rect key="frame" x="43.5" y="0.0" width="121" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUi-IN-5EB">
-                                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="90.5" height="21.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="New Interest">
                                                                         <attributes>
@@ -687,7 +687,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvs-qH-u5Y">
-                                                                <rect key="frame" x="0.0" y="21" width="114.5" height="42"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="121" height="43"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="$---,---">
                                                                         <attributes>
@@ -789,16 +789,16 @@
                                 <rect key="frame" x="0.0" y="301" width="375" height="296"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="74v-Ap-pe1">
-                                        <rect key="frame" x="23" y="65.5" width="330" height="165.5"/>
+                                        <rect key="frame" x="23" y="64.5" width="330" height="167.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="f78-nT-awp">
-                                                <rect key="frame" x="13.5" y="0.0" width="303" height="64"/>
+                                                <rect key="frame" x="20" y="0.0" width="290.5" height="64.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="jeD-gc-1iI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="116" height="64"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxW-hZ-Mjw">
-                                                                <rect key="frame" x="0.0" y="0.0" width="116" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="21.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Interest Saved">
                                                                         <attributes>
@@ -811,7 +811,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NM-E4-yfW">
-                                                                <rect key="frame" x="0.0" y="21" width="44.5" height="43"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="44.5" height="43"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -819,10 +819,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="BFw-Fj-kRC">
-                                                        <rect key="frame" x="196" y="1" width="107" height="63"/>
+                                                        <rect key="frame" x="183.5" y="0.0" width="107" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKn-30-6NF">
-                                                                <rect key="frame" x="0.0" y="0.0" width="95.5" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="87" height="21.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Time Saved">
                                                                         <attributes>
@@ -835,16 +835,16 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="WQn-Bh-3bC">
-                                                                <rect key="frame" x="0.0" y="21" width="107" height="42"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="107" height="43"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o97-Ki-QEY">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="20.5" height="42"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="22" height="43"/>
                                                                         <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="36"/>
                                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGE-pW-ORJ">
-                                                                        <rect key="frame" x="26.5" y="11.5" width="80.5" height="28"/>
+                                                                        <rect key="frame" x="28" y="11.5" width="79" height="29"/>
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="months">
                                                                                 <attributes>
@@ -863,7 +863,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEf-rt-TlV">
-                                                <rect key="frame" x="0.0" y="114" width="330" height="51.5"/>
+                                                <rect key="frame" x="0.0" y="114.5" width="330" height="53"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="330" id="zT9-Iv-TYG"/>
                                                 </constraints>
@@ -977,16 +977,16 @@
                                 <rect key="frame" x="0.0" y="301" width="375" height="296"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="NDR-GG-VkO">
-                                        <rect key="frame" x="23" y="65.5" width="330" height="165.5"/>
+                                        <rect key="frame" x="23" y="64.5" width="330" height="167.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="cbf-cZ-Xbb">
-                                                <rect key="frame" x="10.5" y="0.0" width="309.5" height="64"/>
+                                                <rect key="frame" x="15.5" y="0.0" width="299" height="64.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="vBt-ZO-uvb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="116" height="64"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6q-zq-GAV">
-                                                                <rect key="frame" x="0.0" y="0.0" width="116" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="21.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Interest Saved">
                                                                         <attributes>
@@ -999,7 +999,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wis-Cg-lkj">
-                                                                <rect key="frame" x="0.0" y="21" width="44.5" height="43"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="44.5" height="43"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1007,10 +1007,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="k2f-MT-B6L">
-                                                        <rect key="frame" x="196" y="1" width="113.5" height="63"/>
+                                                        <rect key="frame" x="183.5" y="0.0" width="115.5" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gy-oz-JHJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="95.5" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="87" height="21.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Time Saved">
                                                                         <attributes>
@@ -1023,16 +1023,16 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="7dA-Z4-aNV">
-                                                                <rect key="frame" x="0.0" y="21" width="113.5" height="42"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="115.5" height="43"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vb-fX-jqd">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="20.5" height="42"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="22" height="43"/>
                                                                         <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="36"/>
                                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYK-zt-vgL">
-                                                                        <rect key="frame" x="26.5" y="11.5" width="20" height="28"/>
+                                                                        <rect key="frame" x="28" y="11.5" width="20" height="29"/>
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="yr">
                                                                                 <attributes>
@@ -1045,13 +1045,13 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPv-Pe-Scd">
-                                                                        <rect key="frame" x="52.5" y="0.0" width="20.5" height="42"/>
+                                                                        <rect key="frame" x="54" y="0.0" width="22" height="43"/>
                                                                         <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="36"/>
                                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8h8-4w-pL6">
-                                                                        <rect key="frame" x="79" y="11.5" width="34.5" height="28"/>
+                                                                        <rect key="frame" x="82" y="11.5" width="33.5" height="29"/>
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="mo">
                                                                                 <attributes>
@@ -1070,7 +1070,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPU-k6-VVU">
-                                                <rect key="frame" x="0.0" y="114" width="330" height="51.5"/>
+                                                <rect key="frame" x="0.0" y="114.5" width="330" height="53"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="330" id="iq8-7F-n46"/>
                                                 </constraints>
@@ -1172,16 +1172,16 @@
                                 <rect key="frame" x="-0.5" y="301" width="375" height="296"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZhM-Sq-tP8">
-                                        <rect key="frame" x="28" y="36.5" width="320" height="223"/>
+                                        <rect key="frame" x="40.5" y="35" width="295.5" height="226"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="yKP-Us-xez">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="101.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="295.5" height="103"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="U9g-Qw-b40">
-                                                        <rect key="frame" x="0.0" y="0.0" width="143.5" height="101.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="103"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTb-c1-Bgx">
-                                                                <rect key="frame" x="0.0" y="0.0" width="143.5" height="37.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="38.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="At 7 years">
                                                                         <attributes>
@@ -1194,13 +1194,13 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest Saved" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlZ-TG-47Z">
-                                                                <rect key="frame" x="0.0" y="37.5" width="116" height="21"/>
+                                                                <rect key="frame" x="0.0" y="38.5" width="111" height="21.5"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRz-Bt-ajL">
-                                                                <rect key="frame" x="0.0" y="58.5" width="44.5" height="43"/>
+                                                                <rect key="frame" x="0.0" y="60" width="44.5" height="43"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1208,10 +1208,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="xzX-xd-SaA">
-                                                        <rect key="frame" x="223.5" y="38.5" width="96.5" height="63"/>
+                                                        <rect key="frame" x="208" y="38.5" width="87.5" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6c-m0-E38">
-                                                                <rect key="frame" x="0.0" y="0.0" width="96.5" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="21.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Average CD">
                                                                         <attributes>
@@ -1224,10 +1224,10 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0r7-1m-0bM">
-                                                                <rect key="frame" x="0.0" y="21" width="40.5" height="42"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="41.5" height="43"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNR-Dl-CgQ">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="42"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="43"/>
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="$0">
                                                                                 <attributes>
@@ -1246,13 +1246,13 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="hP8-L3-s1v">
-                                                <rect key="frame" x="1" y="121.5" width="318" height="101.5"/>
+                                                <rect key="frame" x="0.5" y="123" width="295" height="103"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="rRE-kE-8ty">
-                                                        <rect key="frame" x="0.0" y="0.0" width="161.5" height="101.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="147.5" height="103"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBG-7L-yqj">
-                                                                <rect key="frame" x="0.0" y="0.0" width="161.5" height="37.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="147.5" height="38.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="At 30 years">
                                                                         <attributes>
@@ -1265,13 +1265,13 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest Saved" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfH-0E-xdr">
-                                                                <rect key="frame" x="0.0" y="37.5" width="116" height="21"/>
+                                                                <rect key="frame" x="0.0" y="38.5" width="111" height="21.5"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJg-7U-2eW">
-                                                                <rect key="frame" x="0.0" y="58.5" width="44.5" height="43"/>
+                                                                <rect key="frame" x="0.0" y="60" width="44.5" height="43"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1279,10 +1279,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="t5m-jt-5DB">
-                                                        <rect key="frame" x="221.5" y="38.5" width="96.5" height="63"/>
+                                                        <rect key="frame" x="207.5" y="38.5" width="87.5" height="64.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C13-sL-tQf">
-                                                                <rect key="frame" x="0.0" y="0.0" width="96.5" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="21.5"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Average CD">
                                                                         <attributes>
@@ -1295,10 +1295,10 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="nQM-HA-xqQ">
-                                                                <rect key="frame" x="0.0" y="21" width="40.5" height="42"/>
+                                                                <rect key="frame" x="0.0" y="21.5" width="41.5" height="43"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rod-4e-dRU">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="42"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="43"/>
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="$0">
                                                                                 <attributes>
@@ -1387,7 +1387,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LoD-c7-Asg">
-                                <rect key="frame" x="128.5" y="381" width="118.5" height="35"/>
+                                <rect key="frame" x="135" y="381" width="105.5" height="36"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Find out.">
                                         <attributes>
@@ -1488,10 +1488,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCe-12-oSI" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="-0.5" y="364" width="375" height="303"/>
+                                <rect key="frame" x="-0.5" y="317" width="375" height="350"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="303" id="Aje-EQ-0DN"/>
+                                    <constraint firstAttribute="height" constant="350" id="Aje-EQ-0DN"/>
                                 </constraints>
                             </view>
                         </subviews>
