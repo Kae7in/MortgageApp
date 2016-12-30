@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 
 class ViewController: UIViewController {
@@ -40,6 +41,20 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func logoutButtonAction(_ sender: UIButton) {
+        try! FIRAuth.auth()?.signOut()
+        let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "login")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        UIView.transition(with: appDelegate.window!, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: {
+            appDelegate.window!.rootViewController = rootViewController
+        }) { (completed) in
+            
+        }
+    }
+    
     
     @IBAction func mortgageSubmitted(_ sender: UIButton) {
         if validateInput() {

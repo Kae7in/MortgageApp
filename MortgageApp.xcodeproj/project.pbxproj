@@ -21,6 +21,11 @@
 		1A36D4581DF86CC00093A411 /* MortgageCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D4571DF86CC00093A411 /* MortgageCalculator.swift */; };
 		1A36D45C1DF895070093A411 /* Mortgage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D45B1DF895070093A411 /* Mortgage.swift */; };
 		1A43F9031E12E1A700E82480 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43F9021E12E1A700E82480 /* BalloonMarker.swift */; };
+		1A5BB7FF1E16C3E400B55D11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A5BB7FE1E16C3E400B55D11 /* GoogleService-Info.plist */; };
+		1A5BB8001E16C3E400B55D11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A5BB7FE1E16C3E400B55D11 /* GoogleService-Info.plist */; };
+		1A5BB8011E16C3E400B55D11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A5BB7FE1E16C3E400B55D11 /* GoogleService-Info.plist */; };
+		1A5BB8031E16C9D000B55D11 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BB8021E16C9D000B55D11 /* LoginVC.swift */; };
+		1A5BB8051E16CD3600B55D11 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BB8041E16CD3600B55D11 /* RegisterVC.swift */; };
 		1A7DE08D1E099EB300E29CED /* EditPaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DE08C1E099EB300E29CED /* EditPaymentVC.swift */; };
 		1A80FF7B1DFF0D3800193664 /* MortgageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A80FF7A1DFF0D3800193664 /* MortgageDetailVC.swift */; };
 		1AABB4871DFA06A9006A3B91 /* Amortization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AABB4861DFA06A9006A3B91 /* Amortization.swift */; };
@@ -76,6 +81,9 @@
 		1A36D4571DF86CC00093A411 /* MortgageCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MortgageCalculator.swift; sourceTree = "<group>"; };
 		1A36D45B1DF895070093A411 /* Mortgage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mortgage.swift; sourceTree = "<group>"; };
 		1A43F9021E12E1A700E82480 /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
+		1A5BB7FE1E16C3E400B55D11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1A5BB8021E16C9D000B55D11 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		1A5BB8041E16CD3600B55D11 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		1A7DE08C1E099EB300E29CED /* EditPaymentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPaymentVC.swift; sourceTree = "<group>"; };
 		1A80FF7A1DFF0D3800193664 /* MortgageDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MortgageDetailVC.swift; sourceTree = "<group>"; };
 		1AABB4861DFA06A9006A3B91 /* Amortization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Amortization.swift; sourceTree = "<group>"; };
@@ -155,6 +163,8 @@
 			children = (
 				1A36D4561DF86C560093A411 /* Model */,
 				1A36D4281DF86AF40093A411 /* AppDelegate.swift */,
+				1A5BB8021E16C9D000B55D11 /* LoginVC.swift */,
+				1A5BB8041E16CD3600B55D11 /* RegisterVC.swift */,
 				1A36D42A1DF86AF40093A411 /* ViewController.swift */,
 				1A43F9021E12E1A700E82480 /* BalloonMarker.swift */,
 				1AB349C61E00AA9F00E76049 /* Intro */,
@@ -222,6 +232,7 @@
 				1A1067DE1E031F6F00729426 /* SF-UI-Display-Thin.otf */,
 				1A1067DF1E031F6F00729426 /* SF-UI-Display-Ultralight.otf */,
 				1A36D4341DF86AF40093A411 /* Info.plist */,
+				1A5BB7FE1E16C3E400B55D11 /* GoogleService-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -367,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A36D4331DF86AF40093A411 /* LaunchScreen.storyboard in Resources */,
+				1A5BB7FF1E16C3E400B55D11 /* GoogleService-Info.plist in Resources */,
 				1A36D4301DF86AF40093A411 /* Assets.xcassets in Resources */,
 				1A1067E01E031F6F00729426 /* SF-UI-Display-Regular.otf in Resources */,
 				1A36D42E1DF86AF40093A411 /* Main.storyboard in Resources */,
@@ -380,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A5BB8001E16C3E400B55D11 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A5BB8011E16C3E400B55D11 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,11 +552,13 @@
 				1AABB4871DFA06A9006A3B91 /* Amortization.swift in Sources */,
 				1A36D42B1DF86AF40093A411 /* ViewController.swift in Sources */,
 				1AB349C31E00A10600E76049 /* View7.swift in Sources */,
+				1A5BB8031E16C9D000B55D11 /* LoginVC.swift in Sources */,
 				1A43F9031E12E1A700E82480 /* BalloonMarker.swift in Sources */,
 				1A36D4291DF86AF40093A411 /* AppDelegate.swift in Sources */,
 				1AB349BB1E009FA400E76049 /* View4.swift in Sources */,
 				1A36D4581DF86CC00093A411 /* MortgageCalculator.swift in Sources */,
 				1AB349CB1E01BB3A00E76049 /* IntroDetailVC.swift in Sources */,
+				1A5BB8051E16CD3600B55D11 /* RegisterVC.swift in Sources */,
 				1AB349BD1E00A08400E76049 /* View5.swift in Sources */,
 				1A36D45C1DF895070093A411 /* Mortgage.swift in Sources */,
 				1AB349AB1DFF5C9100E76049 /* CustomColors.swift in Sources */,
