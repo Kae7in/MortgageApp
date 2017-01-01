@@ -87,7 +87,6 @@
         <!--RegisterVC-->
         <scene sceneID="6qO-eA-rZq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yop-5Z-arb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="y9J-kC-tJq" customClass="RegisterVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Aqx-FZ-akS"/>
@@ -123,22 +122,36 @@
                                     <action selector="submitButtonAction:" destination="y9J-kC-tJq" eventType="touchUpInside" id="fKh-MY-Y2T"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="03s-sZ-bja">
+                                <rect key="frame" x="0.0" y="325" width="375" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="JEW-xs-uYn"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tJ0-GG-mnk" firstAttribute="centerX" secondItem="hxI-7h-HCC" secondAttribute="centerX" id="8fB-bM-jZn"/>
                             <constraint firstItem="tJ0-GG-mnk" firstAttribute="width" secondItem="hxI-7h-HCC" secondAttribute="width" id="Di3-ma-n3J"/>
+                            <constraint firstItem="03s-sZ-bja" firstAttribute="width" secondItem="hxI-7h-HCC" secondAttribute="width" id="FdE-vH-J83"/>
+                            <constraint firstItem="03s-sZ-bja" firstAttribute="top" secondItem="tJ0-GG-mnk" secondAttribute="bottom" id="JfA-QT-YNv"/>
                             <constraint firstItem="ryr-89-gHU" firstAttribute="width" secondItem="hxI-7h-HCC" secondAttribute="width" id="NdG-5t-CA3"/>
                             <constraint firstItem="tJ0-GG-mnk" firstAttribute="top" secondItem="ryr-89-gHU" secondAttribute="bottom" id="c3O-3p-1U4"/>
                             <constraint firstItem="ryr-89-gHU" firstAttribute="centerX" secondItem="hxI-7h-HCC" secondAttribute="centerX" id="jy8-v8-Waz"/>
+                            <constraint firstItem="03s-sZ-bja" firstAttribute="centerX" secondItem="hxI-7h-HCC" secondAttribute="centerX" id="lFl-oV-Y1Z"/>
                             <constraint firstItem="ryr-89-gHU" firstAttribute="top" secondItem="Aqx-FZ-akS" secondAttribute="bottom" constant="223" id="wKG-aF-ZXV"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confirmPasswordField" destination="03s-sZ-bja" id="tHy-NV-Psx"/>
                         <outlet property="emailField" destination="ryr-89-gHU" id="CIz-26-T3Q"/>
                         <outlet property="passwordField" destination="tJ0-GG-mnk" id="bqP-BI-XED"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yop-5Z-arb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="732" y="712.89355322338838"/>
         </scene>
@@ -1602,21 +1615,45 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="oJU-Em-p4O">
-                                <rect key="frame" x="87.5" y="144" width="200.5" height="65.5"/>
+                                <rect key="frame" x="90" y="144" width="196" height="65.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmB-VT-ANt">
-                                        <rect key="frame" x="0.0" y="24.5" width="21" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmB-VT-ANt">
+                                        <rect key="frame" x="0.0" y="24.5" width="20" height="41"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="$">
+                                                <attributes>
+                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="34" name="SFUIDisplay-Thin"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---,---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xI-sR-OgQ">
-                                        <rect key="frame" x="21" y="0.0" width="170.5" height="72"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xI-sR-OgQ">
+                                        <rect key="frame" x="20" y="0.0" width="167.5" height="72"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="---,---">
+                                                <attributes>
+                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="60" name="SFUIDisplay-Thin"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9n-2k-SI7">
-                                        <rect key="frame" x="191.5" y="24.5" width="9" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9n-2k-SI7">
+                                        <rect key="frame" x="187.5" y="24.5" width="8.5" height="41"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content=".">
+                                                <attributes>
+                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="34" name="SFUIDisplay-Thin"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>

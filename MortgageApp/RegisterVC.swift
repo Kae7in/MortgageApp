@@ -13,6 +13,7 @@ class RegisterVC: UIViewController {
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var confirmPasswordField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +47,10 @@ class RegisterVC: UIViewController {
     
     // TODO: Implement
     func validateCredentialsFormat(email: String, password: String) -> Bool {
-        return true
+        let pass1 = self.passwordField.text!
+        let pass2 = self.passwordField.text!
+        
+        return pass1 == pass2 ? true : false
     }
 
     /*
