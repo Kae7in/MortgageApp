@@ -41,6 +41,9 @@
 		1AF882D41E19CB64000CA84F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AF882D31E19CB64000CA84F /* Main.storyboard */; };
 		1AF882D51E19CB64000CA84F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AF882D31E19CB64000CA84F /* Main.storyboard */; };
 		1AF882D61E19CB64000CA84F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AF882D31E19CB64000CA84F /* Main.storyboard */; };
+		1AF882D81E1AC013000CA84F /* MortgageListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF882D71E1AC013000CA84F /* MortgageListVC.swift */; };
+		1AF882D91E1AC013000CA84F /* MortgageListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF882D71E1AC013000CA84F /* MortgageListVC.swift */; };
+		1AF882DA1E1AC013000CA84F /* MortgageListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF882D71E1AC013000CA84F /* MortgageListVC.swift */; };
 		9101B69E65A77A193E63F839 /* Pods_MortgageAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC64DA83D2664394F9645E6 /* Pods_MortgageAppTests.framework */; };
 		D0D4EAD7B6014BECB5CC9200 /* Pods_MortgageAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88664985621365C37BA174D5 /* Pods_MortgageAppUITests.framework */; };
 		FDBCEB14AC085B6713E3B68A /* Pods_MortgageApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D6722F3434C4D27B742890 /* Pods_MortgageApp.framework */; };
@@ -100,6 +103,7 @@
 		1AB349CA1E01BB3A00E76049 /* IntroDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroDetailVC.swift; sourceTree = "<group>"; };
 		1AEC02891E01D35F000B473A /* MortgageApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MortgageApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		1AF882D31E19CB64000CA84F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1AF882D71E1AC013000CA84F /* MortgageListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MortgageListVC.swift; sourceTree = "<group>"; };
 		226F37C3A03A63A923EAB14F /* Pods-MortgageAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MortgageAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MortgageAppUITests/Pods-MortgageAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		31D6722F3434C4D27B742890 /* Pods_MortgageApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MortgageApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		361665E4A68BCB7623A2CE65 /* Pods-MortgageApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MortgageApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MortgageApp/Pods-MortgageApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				1A36D4281DF86AF40093A411 /* AppDelegate.swift */,
 				1A5BB8021E16C9D000B55D11 /* LoginVC.swift */,
 				1A5BB8041E16CD3600B55D11 /* RegisterVC.swift */,
+				1AF882D71E1AC013000CA84F /* MortgageListVC.swift */,
 				1A36D42A1DF86AF40093A411 /* FirstMortgageVC.swift */,
 				1A43F9021E12E1A700E82480 /* BalloonMarker.swift */,
 				1AB349C61E00AA9F00E76049 /* Intro */,
@@ -568,6 +573,7 @@
 				1AB349AB1DFF5C9100E76049 /* CustomColors.swift in Sources */,
 				1AB349A91DFF5A1500E76049 /* IntroPVC.swift in Sources */,
 				1AB349B91E009F3300E76049 /* View3.swift in Sources */,
+				1AF882D81E1AC013000CA84F /* MortgageListVC.swift in Sources */,
 				1A80FF7B1DFF0D3800193664 /* MortgageDetailVC.swift in Sources */,
 				1AB349BF1E00A0AD00E76049 /* View6.swift in Sources */,
 				1AB349AF1E006DDD00E76049 /* View1.swift in Sources */,
@@ -580,6 +586,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AF882D91E1AC013000CA84F /* MortgageListVC.swift in Sources */,
 				1A36D43E1DF86AF40093A411 /* MortgageAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +595,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AF882DA1E1AC013000CA84F /* MortgageListVC.swift in Sources */,
 				1A36D4491DF86AF50093A411 /* MortgageAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
