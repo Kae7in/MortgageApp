@@ -77,9 +77,6 @@ class CreateMortgageVC: UIViewController {
             let introPVC = segue.destination as! IntroPVC
             introPVC.mortgage = self.mortgageData.mortgages.last!
             self.goingToIntro = false
-        } else if segue.identifier! == "toMortgageDetail" {
-            let mortgageDetailVC = segue.destination as! MortgageDetailVC
-            mortgageDetailVC.m = self.mortgageData.mortgages.last!
         }
         
         let backItem = UIBarButtonItem()

@@ -11,7 +11,7 @@ import Charts
 
 class MortgageDetailVC: UIViewController, ChartViewDelegate {
     
-    var m: Mortgage? = nil
+    var mortgage: Mortgage? = nil
     var mc: MortgageCalculator = MortgageCalculator()
     
     @IBOutlet weak var balance: UILabel!
@@ -28,13 +28,13 @@ class MortgageDetailVC: UIViewController, ChartViewDelegate {
         // Do any additional setup after loading the view.
         
 //        m!.extras = [["startMonth":1, "endMonth":360, "extraIntervalMonths":12, "extraAmount":Int(m!.monthlyPayment)]]
-        m = mc.calculateMortgage(mortgage: m!)
+        mortgage = mc.calculateMortgage(mortgage: mortgage!)
         layoutViews()
     }
     
     func layoutViews() {
         // TODO: Use current balance remaining and current time left
-        updateLabels(balanceLeft: m!.loanAmount().adding(m!.totalLoanCost), timeLeft: self.m!.numberOfPayments)
+        updateLabels(balanceLeft: mortgage!.loanAmount().adding(mortgage!.totalLoanCost), timeLeft: self.mortgage!.numberOfPayments)
         layoutNavigationBar()
         layoutExtraPaymentButton()
         layoutChart()
@@ -83,11 +83,11 @@ class MortgageDetailVC: UIViewController, ChartViewDelegate {
         let str = sender.titleForSegment(at: sender.selectedSegmentIndex)!
         if str == "Total" {
             // TODO: Add balance remaining given current date and time remaining given current date
-            updateLabels(balanceLeft: self.m!.totalLoanCost.adding(self.m!.loanAmount()), timeLeft: self.m!.loanTermMonths)
+            updateLabels(balanceLeft: self.mortgage!.totalLoanCost.adding(self.mortgage!.loanAmount()), timeLeft: self.mortgage!.loanTermMonths)
         } else if str == "Principal" {
-            updateLabels(balanceLeft: self.m!.loanAmount(), timeLeft: self.m!.loanTermMonths)
+            updateLabels(balanceLeft: self.mortgage!.loanAmount(), timeLeft: self.mortgage!.loanTermMonths)
         } else if str == "Interest" {
-            updateLabels(balanceLeft: self.m!.totalLoanCost, timeLeft: self.m!.loanTermMonths)
+            updateLabels(balanceLeft: self.mortgage!.totalLoanCost, timeLeft: self.mortgage!.loanTermMonths)
         }
         
         updateChartWithData(type: str)
@@ -111,7 +111,7 @@ class MortgageDetailVC: UIViewController, ChartViewDelegate {
         lineChart.rightAxis.enabled = false
         lineChart.xAxis.drawGridLinesEnabled = false
         lineChart.xAxis.labelPosition = XAxis.LabelPosition.bottom
-        lineChart.xAxis.setLabelCount(self.m!.loanTermMonths / (5*12), force: false)
+        lineChart.xAxis.setLabelCount(self.mortgage!.loanTermMonths / (5*12), force: false)
         lineChart.xAxis.drawAxisLineEnabled = false
         lineChart.animate(xAxisDuration: 0.5, easingOption: ChartEasingOption.easeInQuart)
 //        let yAx = lineChart.leftAxis
@@ -127,23 +127,23 @@ class MortgageDetailVC: UIViewController, ChartViewDelegate {
     
     func updateChartWithData(type: String) {
         var dataEntries = [ChartDataEntry]()
-        let termYears = self.m!.loanTermMonths / 12
+        let termYears = self.mortgage!.loanTermMonths / 12
         for i in 0...termYears {
             var j = (i * 12) - 1
             j = j < 0 ? 0 : j
             var yValue = NSDecimalNumber(value: 0.0)
             
             if type == "Total" {
-                let remainingPrincipal = self.m!.paymentSchedule[j].remainingLoanBalance
-                let remainingInterest = self.m!.paymentSchedule[j].remainingLoanCost
+                let remainingPrincipal = self.mortgage!.paymentSchedule[j].remainingLoanBalance
+                let remainingInterest = self.mortgage!.paymentSchedule[j].remainingLoanCost
                 yValue = remainingPrincipal.adding(remainingInterest)
             } else if type == "Principal" {
-                yValue = self.m!.paymentSchedule[j].remainingLoanBalance
+                yValue = self.mortgage!.paymentSchedule[j].remainingLoanBalance
             } else if type == "Interest" {
-                yValue = self.m!.paymentSchedule[j].remainingLoanCost
+                yValue = self.mortgage!.paymentSchedule[j].remainingLoanCost
             }
             
-            let dataEntry = ChartDataEntry(x: Double(i), y: Double(yValue), data: self.m!.paymentSchedule[j])
+            let dataEntry = ChartDataEntry(x: Double(i), y: Double(yValue), data: self.mortgage!.paymentSchedule[j])
             dataEntries.append(dataEntry)
         }
         let chartDataSet = LineChartDataSet(values: dataEntries, label: "Amortization")
@@ -166,7 +166,7 @@ class MortgageDetailVC: UIViewController, ChartViewDelegate {
     
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         let a = entry.data as! Amortization
-        let timeLeft = self.m!.paymentSchedule.count - a.loanMonth
+        let timeLeft = self.mortgage!.paymentSchedule.count - a.loanMonth
         updateLabels(balanceLeft: NSDecimalNumber(value: highlight.y), timeLeft: Int(timeLeft))
     }
 
@@ -182,7 +182,7 @@ class MortgageDetailVC: UIViewController, ChartViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! EditPaymentVC
         
-        dest.m = self.m
+        dest.m = self.mortgage
     }
 
     /*

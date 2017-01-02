@@ -49,6 +49,15 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         if segue.identifier! == "toCreateMortgage" {
             let dest: CreateMortgageVC = segue.destination as! CreateMortgageVC
             dest.mortgageData = self.mortgageData
+        } else if segue.identifier! == "toMortgageDetail" {
+            if let cellIndexPath = sender as? IndexPath {
+                let cellIndex = cellIndexPath.row
+                
+                let mortgage = self.mortgageData.mortgages[cellIndex]
+                
+                let mortgageDetailVC = segue.destination as! MortgageDetailVC
+                mortgageDetailVC.mortgage = mortgage
+            }
         }
     }
 
@@ -73,7 +82,7 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("TABLE ROW TOUCHED")
+        performSegue(withIdentifier: "toMortgageDetail", sender: indexPath)
     }
     
     
