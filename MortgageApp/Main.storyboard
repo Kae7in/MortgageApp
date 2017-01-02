@@ -155,11 +155,11 @@
             </objects>
             <point key="canvasLocation" x="748" y="1561"/>
         </scene>
-        <!--First MortgageVC-->
+        <!--Create MortgageVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <viewController id="BYZ-38-t0r" customClass="FirstMortgageVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createMortgage" id="BYZ-38-t0r" customClass="CreateMortgageVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -232,16 +232,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USA-X9-qhj">
-                                <rect key="frame" x="134" y="473" width="110" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Test Detail View"/>
-                                <connections>
-                                    <action selector="testDetailViewAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bHj-pR-hU9"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VL-7g-Pjo">
-                                <rect key="frame" x="163" y="611" width="48" height="30"/>
+                                <rect key="frame" x="163" y="500" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
@@ -257,103 +249,11 @@
                         <outlet property="downPercent" destination="ZjO-eV-ysV" id="fyj-5j-oSF"/>
                         <outlet property="principal" destination="vcU-9r-UwY" id="qf9-Va-Hgm"/>
                         <outlet property="termYears" destination="szI-Wx-nhl" id="Ry4-MO-lok"/>
-                        <segue destination="vWg-Be-mbr" kind="show" identifier="toMortgageDetail" id="AhK-0m-264"/>
+                        <segue destination="6I7-xW-vEX" kind="show" identifier="toIntro" id="xGQ-KD-rwY"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1490" y="-759"/>
-        </scene>
-        <!--firstMortgage-->
-        <scene sceneID="0yg-UQ-WaP">
-            <objects>
-                <viewController storyboardIdentifier="firstMortgage" title="firstMortgage" id="3kV-LE-Ovr" customClass="FirstMortgageVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GPG-wq-LH2"/>
-                        <viewControllerLayoutGuide type="bottom" id="uqS-nZ-eLh"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jsS-kg-qz3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="200,000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Ii-wp-5Gl">
-                                <rect key="frame" x="140" y="183" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="3.6" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LAA-3X-xhu">
-                                <rect key="frame" x="140" y="249" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="30 years" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5T9-IZ-s7b">
-                                <rect key="frame" x="140" y="314" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="20" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r8z-RQ-VbX">
-                                <rect key="frame" x="140" y="375" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAS-ZT-Lx7">
-                                <rect key="frame" x="164" y="424" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <action selector="mortgageSubmitted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UIp-wV-oPl"/>
-                                    <action selector="mortgageSubmitted:" destination="3kV-LE-Ovr" eventType="touchUpInside" id="uI8-JM-qsN"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAm-Gf-eDc">
-                                <rect key="frame" x="239" y="380" width="13" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFe-AK-btZ">
-                                <rect key="frame" x="239" y="319" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="583-oP-5jf">
-                                <rect key="frame" x="128" y="188" width="11" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWT-X4-N9y">
-                                <rect key="frame" x="239" y="254" width="13" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="apr" destination="LAA-3X-xhu" id="POu-ut-oMq"/>
-                        <outlet property="downPercent" destination="r8z-RQ-VbX" id="E1m-hu-qfN"/>
-                        <outlet property="principal" destination="3Ii-wp-5Gl" id="VYh-vK-Zg2"/>
-                        <outlet property="termYears" destination="5T9-IZ-s7b" id="DvJ-Nx-X3R"/>
-                        <segue destination="6I7-xW-vEX" kind="show" identifier="toIntro" id="49X-lm-d0h"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kbx-oc-Lkt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1521" y="1560"/>
+            <point key="canvasLocation" x="1414" y="799"/>
         </scene>
         <!--Settings-->
         <scene sceneID="jdY-UM-Jl2">
@@ -2056,7 +1956,7 @@
                     <connections>
                         <outlet property="tableView" destination="Ec0-I4-Hms" id="2JH-t1-Jn1"/>
                         <segue destination="vWg-Be-mbr" kind="show" identifier="toMortgageDetail" id="Qqo-0O-R8G"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="toCreateMortgage" id="2Ff-PQ-5kL"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toCreateMortgage" id="2Ff-PQ-5kL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYa-Ga-x54" userLabel="First Responder" sceneMemberID="firstResponder"/>

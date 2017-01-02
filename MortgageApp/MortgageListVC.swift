@@ -11,7 +11,7 @@ import UIKit
 class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    var items: [String] = ["We", "Heart", "Swift"]
+    var mortgageData = MortgageData()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +21,35 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.tableView.reloadData()
+    }
+    
     func layoutViews() {
+        layoutNavigationBar()
+    }
+    
+    func layoutNavigationBar() {
+        let nav = self.navigationController?.navigationBar
+        nav?.barStyle = UIBarStyle.black
+        nav?.tintColor = UIColor(rgbColorCodeRed: 238, green: 87, blue: 106, alpha: 1.0)
         self.navigationItem.title = "Mortgages"
+        nav?.titleTextAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Light", size: 20.0)!, NSForegroundColorAttributeName: UIColor(rgbColorCodeRed: 155, green: 155, blue: 155, alpha: 1.0)]
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "addbutton"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(addMortgage))
+        self.navigationItem.rightBarButtonItem?.imageInsets = UIEdgeInsets(top: 15.0, left: 30.0, bottom: 15.0, right: 0.0)
+    }
+    
+    func addMortgage() {
+        performSegue(withIdentifier: "toCreateMortgage", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier! == "toCreateMortgage" {
+            let dest: CreateMortgageVC = segue.destination as! CreateMortgageVC
+            dest.mortgageData = self.mortgageData
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,14 +59,14 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items.count
+        return self.mortgageData.mortgages.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
         
-        cell.textLabel?.text = self.items[indexPath.row]
+        cell.textLabel?.text = String(indexPath.row)
         
         return cell
     }
@@ -62,4 +89,9 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     */
 
+}
+
+
+class MortgageData {
+    var mortgages: [Mortgage] = []
 }

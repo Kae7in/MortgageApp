@@ -12,7 +12,7 @@
 		1A1067E11E031F6F00729426 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A1067DE1E031F6F00729426 /* SF-UI-Display-Thin.otf */; };
 		1A1067E21E031F6F00729426 /* SF-UI-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A1067DF1E031F6F00729426 /* SF-UI-Display-Ultralight.otf */; };
 		1A36D4291DF86AF40093A411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D4281DF86AF40093A411 /* AppDelegate.swift */; };
-		1A36D42B1DF86AF40093A411 /* FirstMortgageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D42A1DF86AF40093A411 /* FirstMortgageVC.swift */; };
+		1A36D42B1DF86AF40093A411 /* CreateMortgageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D42A1DF86AF40093A411 /* CreateMortgageVC.swift */; };
 		1A36D4301DF86AF40093A411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A36D42F1DF86AF40093A411 /* Assets.xcassets */; };
 		1A36D4331DF86AF40093A411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A36D4311DF86AF40093A411 /* LaunchScreen.storyboard */; };
 		1A36D43E1DF86AF40093A411 /* MortgageAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D43D1DF86AF40093A411 /* MortgageAppTests.swift */; };
@@ -72,7 +72,7 @@
 		1A1067DF1E031F6F00729426 /* SF-UI-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Ultralight.otf"; sourceTree = "<group>"; };
 		1A36D4251DF86AF40093A411 /* MortgageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MortgageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A36D4281DF86AF40093A411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A36D42A1DF86AF40093A411 /* FirstMortgageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstMortgageVC.swift; sourceTree = "<group>"; };
+		1A36D42A1DF86AF40093A411 /* CreateMortgageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMortgageVC.swift; sourceTree = "<group>"; };
 		1A36D42F1DF86AF40093A411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A36D4321DF86AF40093A411 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A36D4341DF86AF40093A411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 				1A5BB8021E16C9D000B55D11 /* LoginVC.swift */,
 				1A5BB8041E16CD3600B55D11 /* RegisterVC.swift */,
 				1AF882D71E1AC013000CA84F /* MortgageListVC.swift */,
-				1A36D42A1DF86AF40093A411 /* FirstMortgageVC.swift */,
+				1A36D42A1DF86AF40093A411 /* CreateMortgageVC.swift */,
 				1A43F9021E12E1A700E82480 /* BalloonMarker.swift */,
 				1AB349C61E00AA9F00E76049 /* Intro */,
 				1A80FF7A1DFF0D3800193664 /* MortgageDetailVC.swift */,
@@ -559,7 +559,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AABB4871DFA06A9006A3B91 /* Amortization.swift in Sources */,
-				1A36D42B1DF86AF40093A411 /* FirstMortgageVC.swift in Sources */,
+				1A36D42B1DF86AF40093A411 /* CreateMortgageVC.swift in Sources */,
 				1AB349C31E00A10600E76049 /* View7.swift in Sources */,
 				1A5BB8031E16C9D000B55D11 /* LoginVC.swift in Sources */,
 				1A43F9031E12E1A700E82480 /* BalloonMarker.swift in Sources */,
