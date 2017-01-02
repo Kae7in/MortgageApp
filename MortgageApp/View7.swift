@@ -41,11 +41,12 @@ class View7: IntroDetailVC {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window!.rootViewController = rootViewController
+        // TODO: Pass self.mortgage!.originalMortgage to new rootViewController?
     }
     
-    func saveFirstMortgageBeforeSwitchingViews() {
-        UserDefaults.standard.set(self.mortgage!.originalMortgage, forKey: "intro_mortgage")
-    }
+//    func saveFirstMortgageBeforeSwitchingViews() {
+//        UserDefaults.standard.set(self.mortgage!.originalMortgage, forKey: "intro_mortgage")
+//    }
     
 
     /*
