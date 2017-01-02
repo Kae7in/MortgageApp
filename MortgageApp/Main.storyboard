@@ -149,6 +149,7 @@
                         <outlet property="confirmPasswordField" destination="03s-sZ-bja" id="tHy-NV-Psx"/>
                         <outlet property="emailField" destination="ryr-89-gHU" id="CIz-26-T3Q"/>
                         <outlet property="passwordField" destination="tJ0-GG-mnk" id="bqP-BI-XED"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toCreateMortgage" id="685-4k-jfu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yop-5Z-arb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1970,5 +1971,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Qqo-0O-R8G"/>
+        <segue reference="685-4k-jfu"/>
     </inferredMetricsTieBreakers>
 </document>

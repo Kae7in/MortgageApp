@@ -33,16 +33,26 @@ class RegisterVC: UIViewController {
         if validateCredentialsFormat(email: email, password: password) {
             FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                 if user != nil {
-                    let rootViewController: CreateMortgageVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "createMortgage") as! CreateMortgageVC
+//                    let rootViewController: CreateMortgageVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "createMortgage") as! CreateMortgageVC
                     
-                    rootViewController.goingToIntro = true
+                    self.performSegue(withIdentifier: "toCreateMortgage", sender: nil)
                     
-                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    appDelegate.window!.rootViewController = rootViewController
+//                    rootViewController.goingToIntro = true
+                    
+//                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//                    appDelegate.window!.rootViewController = rootViewController
                 } else if error != nil {
                     // TODO: Do something
                 }
             })
+        }
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier! == "toCreateMortgage" {
+            let createVC = segue.destination as! CreateMortgageVC
+            createVC.goingToIntro = true
         }
     }
     

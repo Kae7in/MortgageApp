@@ -49,11 +49,11 @@ class CreateMortgageVC: UIViewController {
             m.loanTermMonths = Int(self.termYears.text!)! * 12
             m.downPayment = self.downPercent.text! + "%"
             
+            self.mortgageData.mortgages.append(m)
+            
             if self.goingToIntro {
                 performSegue(withIdentifier: "toIntro", sender: nil)
             } else {
-                self.mortgageData.mortgages.append(m)
-                
                 self.dismiss(animated: true, completion: {
                 })
             }
