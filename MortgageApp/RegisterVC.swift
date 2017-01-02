@@ -33,7 +33,7 @@ class RegisterVC: UIViewController {
         if validateCredentialsFormat(email: email, password: password) {
             FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                 if user != nil {
-                    let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
+                    let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "firstMortgage")
                     
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate
                     appDelegate.window!.rootViewController = rootViewController

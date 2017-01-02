@@ -1,5 +1,4 @@
-
-//  ViewController.swift
+//  FirstMortgageVC.swift
 //  MortgageApp
 //
 //  Created by Kaelin Hooper on 12/7/16.
@@ -10,7 +9,7 @@ import UIKit
 import FirebaseAuth
 
 
-class ViewController: UIViewController {
+class FirstMortgageVC: UIViewController {
 
     @IBOutlet weak var principal: UITextField!
     @IBOutlet weak var apr: UITextField!
@@ -55,7 +54,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func mortgageSubmitted(_ sender: UIButton) {
         if validateInput() {
             performSegue(withIdentifier: "toIntro", sender: nil)
@@ -92,15 +90,6 @@ class ViewController: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
-    }
-
-    @IBAction func testIntroAction(_ sender: UIButton) {
-        self.principal.text! = "200000"
-        self.apr.text! = "3.6"
-        self.termYears.text! = "30"
-        self.downPercent.text! = "0"
-        
-        performSegue(withIdentifier: "toIntro", sender: nil)
     }
     
     

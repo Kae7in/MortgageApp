@@ -36,16 +36,17 @@ class View7: IntroDetailVC {
     }
     
     @IBAction func exploreExtraPaymentsButtonAction(_ sender: UIButton) {
-        self.navigationController!.popViewController(animated: true)
-        self.performSegue(withIdentifier: "toMortgageDetail", sender: sender)
+//        self.navigationController!.popViewController(animated: true)
+        let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window!.rootViewController = rootViewController
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier! == "toMortgageDetail" {
-            let mortgageDetailVC = segue.destination as! MortgageDetailVC
-            mortgageDetailVC.m = self.mortgage!.originalMortgage
-        }
+    func saveFirstMortgageBeforeSwitchingViews() {
+        UserDefaults.standard.set(self.mortgage!.originalMortgage, forKey: "intro_mortgage")
     }
+    
 
     /*
     // MARK: - Navigation
