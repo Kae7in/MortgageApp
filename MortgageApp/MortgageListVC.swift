@@ -126,8 +126,16 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
         let mortgage = self.mortgageData.mortgages[indexPath.row]
         
-        cell.textLabel?.text = mortgage.name
-        cell.detailTextLabel?.text = "$" + String(Int(mortgage.totalInterestSavings())) + " saved"
+        var string = mortgage.name
+        var defaultFontAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Light", size: 24.0)!, NSForegroundColorAttributeName: UIColor.black]
+        var attributedString = NSMutableAttributedString(string: string, attributes: defaultFontAttributes)
+        cell.textLabel?.attributedText = attributedString
+        
+        string = "$" + String(Int(mortgage.totalInterestSavings())) + " saved"
+        defaultFontAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Light", size: 14.0)!, NSForegroundColorAttributeName: UIColor.init(rgbColorCodeRed: 208, green: 2, blue: 27, alpha: 1)]
+        attributedString = NSMutableAttributedString(string: string, attributes: defaultFontAttributes)
+        cell.detailTextLabel?.attributedText = attributedString
+        
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         
         return cell
