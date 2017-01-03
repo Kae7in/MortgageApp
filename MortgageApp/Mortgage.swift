@@ -9,6 +9,7 @@
 import Foundation
 
 class Mortgage: NSObject {
+    var name: String = ""
     var loanTermMonths: Int = 360
     var salePrice: NSDecimalNumber = 200000
     var interestRate: NSDecimalNumber = 3.6
@@ -33,6 +34,7 @@ class Mortgage: NSObject {
     }
     
     init(_ mortgage: Mortgage) {
+        self.name = mortgage.name
         self.loanTermMonths = mortgage.loanTermMonths
         self.salePrice = mortgage.salePrice
         self.interestRate = mortgage.interestRate
@@ -144,6 +146,7 @@ class Mortgage: NSObject {
 //import RealmSwift
 //
 //class Mortgage: Object {
+//    var name: String = ""
 //    var loanTermMonths: Int = 360
 //    var salePrice: NSDecimalNumber = 200000
 //    var interestRate: NSDecimalNumber = 3.6
@@ -165,6 +168,7 @@ class Mortgage: NSObject {
 //    
 //    func clone() -> Mortgage {
 //        let m = Mortgage()
+//        m.name = self.name
 //        m.loanTermMonths = self.loanTermMonths
 //        m.salePrice = self.salePrice
 //        m.interestRate = self.interestRate

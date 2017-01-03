@@ -9,6 +9,7 @@ target 'MortgageApp' do
   pod 'Charts'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
   target 'MortgageAppTests' do
     inherit! :search_paths

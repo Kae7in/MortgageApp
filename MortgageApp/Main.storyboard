@@ -106,7 +106,7 @@
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tJ0-GG-mnk">
-                                <rect key="frame" x="0.0" y="284" width="375" height="41"/>
+                                <rect key="frame" x="0.0" y="345" width="375" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="zDm-60-Y4g"/>
                                 </constraints>
@@ -123,7 +123,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="03s-sZ-bja">
-                                <rect key="frame" x="0.0" y="325" width="375" height="41"/>
+                                <rect key="frame" x="0.0" y="396" width="375" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="JEW-xs-uYn"/>
                                 </constraints>
@@ -131,17 +131,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pA8-0B-gN7">
+                                <rect key="frame" x="0.0" y="294" width="375" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="1ha-4i-mQ6"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tJ0-GG-mnk" firstAttribute="top" secondItem="pA8-0B-gN7" secondAttribute="bottom" constant="10" id="6uX-BT-EoO"/>
                             <constraint firstItem="tJ0-GG-mnk" firstAttribute="centerX" secondItem="hxI-7h-HCC" secondAttribute="centerX" id="8fB-bM-jZn"/>
                             <constraint firstItem="tJ0-GG-mnk" firstAttribute="width" secondItem="hxI-7h-HCC" secondAttribute="width" id="Di3-ma-n3J"/>
                             <constraint firstItem="03s-sZ-bja" firstAttribute="width" secondItem="hxI-7h-HCC" secondAttribute="width" id="FdE-vH-J83"/>
-                            <constraint firstItem="03s-sZ-bja" firstAttribute="top" secondItem="tJ0-GG-mnk" secondAttribute="bottom" id="JfA-QT-YNv"/>
+                            <constraint firstItem="03s-sZ-bja" firstAttribute="top" secondItem="tJ0-GG-mnk" secondAttribute="bottom" constant="10" id="JfA-QT-YNv"/>
                             <constraint firstItem="ryr-89-gHU" firstAttribute="width" secondItem="hxI-7h-HCC" secondAttribute="width" id="NdG-5t-CA3"/>
-                            <constraint firstItem="tJ0-GG-mnk" firstAttribute="top" secondItem="ryr-89-gHU" secondAttribute="bottom" id="c3O-3p-1U4"/>
+                            <constraint firstItem="pA8-0B-gN7" firstAttribute="width" secondItem="hxI-7h-HCC" secondAttribute="width" id="UfX-HG-fyB"/>
                             <constraint firstItem="ryr-89-gHU" firstAttribute="centerX" secondItem="hxI-7h-HCC" secondAttribute="centerX" id="jy8-v8-Waz"/>
                             <constraint firstItem="03s-sZ-bja" firstAttribute="centerX" secondItem="hxI-7h-HCC" secondAttribute="centerX" id="lFl-oV-Y1Z"/>
+                            <constraint firstItem="pA8-0B-gN7" firstAttribute="centerX" secondItem="hxI-7h-HCC" secondAttribute="centerX" id="qAt-Lz-GgB"/>
+                            <constraint firstItem="pA8-0B-gN7" firstAttribute="top" secondItem="ryr-89-gHU" secondAttribute="bottom" constant="10" id="w2P-Nc-JIk"/>
                             <constraint firstItem="ryr-89-gHU" firstAttribute="top" secondItem="Aqx-FZ-akS" secondAttribute="bottom" constant="223" id="wKG-aF-ZXV"/>
                         </constraints>
                     </view>
@@ -149,12 +161,13 @@
                         <outlet property="confirmPasswordField" destination="03s-sZ-bja" id="tHy-NV-Psx"/>
                         <outlet property="emailField" destination="ryr-89-gHU" id="CIz-26-T3Q"/>
                         <outlet property="passwordField" destination="tJ0-GG-mnk" id="bqP-BI-XED"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="toCreateMortgage" id="685-4k-jfu"/>
+                        <outlet property="usernameField" destination="pA8-0B-gN7" id="YIH-ml-gpC"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toCreateMortgage" id="685-4k-jfu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yop-5Z-arb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="1561"/>
+            <point key="canvasLocation" x="748" y="1560.2698650674663"/>
         </scene>
         <!--Create MortgageVC-->
         <scene sceneID="tne-QT-ifu">
@@ -241,6 +254,13 @@
                                     <action selector="logoutButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jjv-fO-4ZK"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mAl-SC-Cfw">
+                                <rect key="frame" x="139" y="52" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -248,6 +268,7 @@
                     <connections>
                         <outlet property="apr" destination="sYD-Ly-GSP" id="WNr-OQ-hLO"/>
                         <outlet property="downPercent" destination="ZjO-eV-ysV" id="fyj-5j-oSF"/>
+                        <outlet property="name" destination="mAl-SC-Cfw" id="p0n-ci-IuR"/>
                         <outlet property="principal" destination="vcU-9r-UwY" id="qf9-Va-Hgm"/>
                         <outlet property="termYears" destination="szI-Wx-nhl" id="Ry4-MO-lok"/>
                         <segue destination="6I7-xW-vEX" kind="show" identifier="toIntro" id="xGQ-KD-rwY"/>

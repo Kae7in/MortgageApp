@@ -7,10 +7,12 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 
 class CreateMortgageVC: UIViewController {
 
+    @IBOutlet weak var name: UITextField!
     @IBOutlet weak var principal: UITextField!
     @IBOutlet weak var apr: UITextField!
     @IBOutlet weak var termYears: UITextField!
@@ -18,9 +20,11 @@ class CreateMortgageVC: UIViewController {
     
     var goingToIntro: Bool = false
     var mortgageData = MortgageData()  // List of mortgages the previous UITableView will use as data
+    var ref: FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.ref = FIRDatabase.database().reference()
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,11 +47,7 @@ class CreateMortgageVC: UIViewController {
     
     @IBAction func mortgageSubmitted(_ sender: UIButton) {
         if validateInput() {
-            let m = Mortgage()
-            m.salePrice = NSDecimalNumber(value: Double(self.principal.text!)!)
-            m.interestRate = NSDecimalNumber(value: Double(self.apr.text!)!)
-            m.loanTermMonths = Int(self.termYears.text!)! * 12
-            m.downPayment = self.downPercent.text! + "%"
+            let m = createAndSaveMortgage()
             
             self.mortgageData.mortgages.append(m)
             
@@ -60,6 +60,7 @@ class CreateMortgageVC: UIViewController {
         }
     }
     
+    
     func validateInput() -> Bool {
         if principal.text!.isEmpty
             || apr.text!.isEmpty
@@ -70,6 +71,47 @@ class CreateMortgageVC: UIViewController {
         }
         
         return true
+    }
+    
+    func createAndSaveMortgage() -> Mortgage {
+        // Create Mortgage instance
+        let m = Mortgage()
+        m.name = self.name.text!
+        m.salePrice = NSDecimalNumber(value: Double(self.principal.text!)!)
+        m.interestRate = NSDecimalNumber(value: Double(self.apr.text!)!)
+        m.loanTermMonths = Int(self.termYears.text!)! * 12
+        m.downPayment = self.downPercent.text! + "%"
+        
+        // Get current user
+        let user = FIRAuth.auth()?.currentUser!
+        
+        // Get user's mortgages list
+        let ref = self.ref.child("mortgages/\(user!.uid)").child(m.name)
+        
+        // Create reflection of mortgage object
+        let mirrored_object = Mirror(reflecting: m)
+        
+        // Skip these attributes
+        let attributes_not_allowed: [String] = ["extras", "paymentSchedule", "originalMortgage", "startDate"]
+        
+        // Save the mortgage object's necessary attributes
+        for (_, attr) in mirrored_object.children.enumerated() {
+            if let property_name = attr.label as String! {
+                if attributes_not_allowed.contains(property_name) { continue }
+                
+                ref.child(property_name).setValue(attr.value)
+            }
+        }
+        
+        // Add date attribute
+        let dateF = DateFormatter()
+        dateF.dateFormat = "MMMM dd yyyy"
+        let str = dateF.string(from: m.startDate)
+        ref.child("startDate").setValue(str)
+        
+        // TODO: Add extras attribute
+        
+        return m
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
