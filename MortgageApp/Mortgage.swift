@@ -67,7 +67,13 @@ class Mortgage: NSObject {
     
     func totalInterestSavings() -> NSDecimalNumber {
         setOriginalPaymentSchedule()
-        return originalMortgage!.totalLoanCost.subtracting(self.totalLoanCost)
+        let result = originalMortgage!.totalLoanCost.subtracting(self.totalLoanCost)
+        
+        if result.compare(NSDecimalNumber(value: 0)) == ComparisonResult.orderedAscending {
+            return NSDecimalNumber(value: 0)
+        }
+        
+        return result
     }
     
     func interestSavedForRange(start: Int, end: Int) -> NSDecimalNumber {

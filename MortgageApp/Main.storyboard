@@ -172,7 +172,6 @@
         <!--Create MortgageVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="createMortgage" id="BYZ-38-t0r" customClass="CreateMortgageVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -274,6 +273,7 @@
                         <segue destination="6I7-xW-vEX" kind="show" identifier="toIntro" id="xGQ-KD-rwY"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1414" y="799"/>
         </scene>
@@ -340,7 +340,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Your loan is made up of principal and interest, which combine to form the remaining balance.">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.081330128205128194" green="0.081330128205128194" blue="0.081330128205128194" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -350,7 +350,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fyg-Ec-81n">
                                 <rect key="frame" x="0.0" y="300" width="375" height="1"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="mfF-tl-OCa"/>
                                 </constraints>
@@ -372,7 +372,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Principal">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="18" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -385,7 +385,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="$---,---">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="36" name="SFUIDisplay-Ultralight"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -400,7 +400,7 @@
                                                         <attributedString key="attributedText">
                                                             <fragment content="+">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <font key="NSFont" size="38" name=".AppleSystemUIFont"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
@@ -416,7 +416,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Interest">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="18" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -429,7 +429,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="$---,---">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="36" name="SFUIDisplay-Ultralight"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -449,7 +449,7 @@
                                                         <attributedString key="attributedText">
                                                             <fragment content="=">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <font key="NSFont" size="38" name=".AppleSystemUIFont"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
@@ -465,7 +465,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Balance">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="18" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -478,7 +478,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="$---,----">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="36" name="SFUIDisplay-Ultralight"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -493,7 +493,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="ExT-wD-D2L" firstAttribute="centerX" secondItem="sAn-y5-kwm" secondAttribute="centerX" id="IUj-oj-Ixu"/>
                                     <constraint firstItem="ExT-wD-D2L" firstAttribute="centerY" secondItem="sAn-y5-kwm" secondAttribute="centerY" id="rKE-e5-AbJ"/>
@@ -505,13 +505,13 @@
                                     <constraint firstAttribute="height" constant="48" id="URY-lF-jY8"/>
                                     <constraint firstAttribute="width" constant="48" id="qR7-et-cGv"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="nextLarge"/>
+                                <state key="normal" backgroundImage="nextbutton"/>
                                 <connections>
                                     <action selector="nextIntroVC:" destination="B5R-YV-7cJ" eventType="touchUpInside" id="ezn-Rn-Ijx"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.1803921568627451" green="0.73725490196078436" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="jtr-3A-V0H" firstAttribute="centerX" secondItem="4df-9C-OXa" secondAttribute="centerX" id="8gX-Qk-Dad"/>
                             <constraint firstAttribute="trailingMargin" secondItem="psO-h6-lQp" secondAttribute="trailing" constant="-3" id="9Ll-P0-Clx"/>
@@ -552,7 +552,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tbx-VK-svj">
                                 <rect key="frame" x="0.0" y="300" width="375" height="1"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="J1j-to-7NA"/>
                                 </constraints>
@@ -562,7 +562,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="An extra payment goes entirely towards paying down the principal of your loan.">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -587,7 +587,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Principal">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="18" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -600,7 +600,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="$---,---">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="36" name="SFUIDisplay-Ultralight"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -615,7 +615,7 @@
                                                         <attributedString key="attributedText">
                                                             <fragment content="-">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <font key="NSFont" size="38" name=".AppleSystemUIFont"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
@@ -629,13 +629,13 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extra Payment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZL-Lc-h4P">
                                                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="21.5"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
-                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNT-77-9u6">
                                                                 <rect key="frame" x="0.0" y="21.5" width="44" height="43"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="36"/>
-                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -650,7 +650,7 @@
                                                         <attributedString key="attributedText">
                                                             <fragment content="=">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <font key="NSFont" size="38" name=".AppleSystemUIFont"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
@@ -666,7 +666,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="New Principal">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="18" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -679,7 +679,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="$---,---">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="36" name="SFUIDisplay-Ultralight"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -706,14 +706,14 @@
                                     <constraint firstAttribute="width" constant="48" id="5sa-gs-Wej"/>
                                     <constraint firstAttribute="height" constant="48" id="z6k-dc-0W4"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="nextLarge"/>
+                                <state key="normal" backgroundImage="nextbutton"/>
                                 <connections>
                                     <action selector="nextIntroVC:" destination="B5R-YV-7cJ" eventType="touchUpInside" id="CAm-Oo-LYq"/>
                                     <action selector="nextIntroVC:" destination="J8h-nY-apC" eventType="touchUpInside" id="qzZ-3Y-IdM"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.7367932745190453" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="b5Q-iC-ggm" firstAttribute="width" secondItem="uWA-gt-InM" secondAttribute="height" multiplier="355:667" id="AKH-Cy-LwL"/>
                             <constraint firstItem="EUm-ro-I3L" firstAttribute="top" secondItem="Tbx-VK-svj" secondAttribute="bottom" id="Cl6-nK-5sd"/>
@@ -757,7 +757,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="In turn, you no longer owe the interest you would have paid to the bank on that principal.">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -767,7 +767,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GgA-VW-rMg">
                                 <rect key="frame" x="0.0" y="300" width="375" height="1"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="GZo-9Z-efx"/>
                                 </constraints>
@@ -789,7 +789,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Interest">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="18" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -802,7 +802,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="$---,---">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="36" name="SFUIDisplay-Ultralight"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -817,7 +817,7 @@
                                                         <attributedString key="attributedText">
                                                             <fragment content="-">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <font key="NSFont" size="38" name=".AppleSystemUIFont"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
@@ -831,13 +831,13 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest Saved" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvz-f8-yEN">
                                                                 <rect key="frame" x="0.0" y="0.0" width="111" height="21.5"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
-                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4F-p8-zV0">
                                                                 <rect key="frame" x="0.0" y="21.5" width="44" height="43"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="36"/>
-                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -852,7 +852,7 @@
                                                         <attributedString key="attributedText">
                                                             <fragment content="=">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <font key="NSFont" size="38" name=".AppleSystemUIFont"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
@@ -868,7 +868,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="New Interest">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="18" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -881,7 +881,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="$---,---">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="36" name="SFUIDisplay-Ultralight"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -908,7 +908,7 @@
                                     <constraint firstAttribute="width" constant="48" id="bIJ-XB-h01"/>
                                     <constraint firstAttribute="height" constant="48" id="fmP-0R-nAc"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="nextLarge"/>
+                                <state key="normal" backgroundImage="nextbutton"/>
                                 <connections>
                                     <action selector="nextIntroVC:" destination="e0v-0j-cEN" eventType="touchUpInside" id="JtP-tl-l1p"/>
                                     <action selector="nextIntroVC:" destination="J8h-nY-apC" eventType="touchUpInside" id="Yid-Iy-N7z"/>
@@ -916,7 +916,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.1803921568627451" green="0.73725490196078436" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="nlx-xO-C7c" firstAttribute="top" secondItem="GgA-VW-rMg" secondAttribute="bottom" constant="366" id="1Mi-Xz-a3f"/>
                             <constraint firstItem="nlx-xO-C7c" firstAttribute="top" secondItem="WLz-wb-ald" secondAttribute="bottom" constant="70" id="3Ht-RO-nMy"/>
@@ -960,7 +960,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="This means you pay the bank less AND pay your mortgage off sooner.">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -970,7 +970,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6HG-lW-5vs">
                                 <rect key="frame" x="0.0" y="300" width="375" height="1"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="6nD-3d-Le6"/>
                                 </constraints>
@@ -992,7 +992,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Interest Saved">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="18" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -1003,7 +1003,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NM-E4-yfW">
                                                                 <rect key="frame" x="0.0" y="21.5" width="44.5" height="43"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -1016,7 +1016,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Time Saved">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="18" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -1030,7 +1030,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o97-Ki-QEY">
                                                                         <rect key="frame" x="0.0" y="0.0" width="22" height="43"/>
                                                                         <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="36"/>
-                                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGE-pW-ORJ">
@@ -1038,7 +1038,7 @@
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="months">
                                                                                 <attributes>
-                                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                                     <font key="NSFont" size="24" name="SFUIDisplay-Regular"/>
                                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                                                 </attributes>
@@ -1060,7 +1060,7 @@
                                                 <attributedString key="attributedText">
                                                     <fragment content="Also achievable by paying $ extra per month!">
                                                         <attributes>
-                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <font key="NSFont" size="22" name="SFUIDisplay-Thin"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
@@ -1083,7 +1083,7 @@
                                     <constraint firstAttribute="height" constant="48" id="584-vr-HL9"/>
                                     <constraint firstAttribute="width" constant="48" id="iYF-EX-ujZ"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="nextLarge"/>
+                                <state key="normal" backgroundImage="nextbutton"/>
                                 <connections>
                                     <action selector="nextIntroVC:" destination="J8h-nY-apC" eventType="touchUpInside" id="XU5-O6-3Gu"/>
                                     <action selector="nextIntroVC:" destination="B5R-YV-7cJ" eventType="touchUpInside" id="rBi-ip-5ID"/>
@@ -1091,7 +1091,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.18431372549019609" green="0.74117647058823533" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="YGT-1I-ygn" firstAttribute="centerX" secondItem="ljU-CA-rPw" secondAttribute="centerX" id="57y-CE-2MY"/>
                             <constraint firstItem="rbJ-u8-5ZH" firstAttribute="width" secondItem="ljU-CA-rPw" secondAttribute="width" id="A5Q-nn-ucT"/>
@@ -1135,7 +1135,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="And if you made an extra payment every year, you'd save even more money and more time.">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -1145,7 +1145,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N7o-6z-T9z">
                                 <rect key="frame" x="0.0" y="300" width="375" height="1"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="zAv-Uy-Cwl"/>
                                 </constraints>
@@ -1156,7 +1156,7 @@
                                     <constraint firstAttribute="height" constant="48" id="LGV-yF-xpj"/>
                                     <constraint firstAttribute="width" constant="48" id="Tf1-os-E20"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="nextLarge"/>
+                                <state key="normal" backgroundImage="nextbutton"/>
                                 <connections>
                                     <action selector="nextIntroVC:" destination="J8h-nY-apC" eventType="touchUpInside" id="85h-HT-92j"/>
                                     <action selector="nextIntroVC:" destination="B5R-YV-7cJ" eventType="touchUpInside" id="LFe-q4-CY9"/>
@@ -1180,7 +1180,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Interest Saved">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="18" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -1191,7 +1191,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wis-Cg-lkj">
                                                                 <rect key="frame" x="0.0" y="21.5" width="44.5" height="43"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -1204,7 +1204,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Time Saved">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="18" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -1218,7 +1218,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vb-fX-jqd">
                                                                         <rect key="frame" x="0.0" y="0.0" width="22" height="43"/>
                                                                         <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="36"/>
-                                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYK-zt-vgL">
@@ -1226,7 +1226,7 @@
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="yr">
                                                                                 <attributes>
-                                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                                     <font key="NSFont" size="24" name="SFUIDisplay-Regular"/>
                                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                                                 </attributes>
@@ -1237,7 +1237,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPv-Pe-Scd">
                                                                         <rect key="frame" x="54" y="0.0" width="22" height="43"/>
                                                                         <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="36"/>
-                                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8h8-4w-pL6">
@@ -1245,7 +1245,7 @@
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="mo">
                                                                                 <attributes>
-                                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                                     <font key="NSFont" size="24" name="SFUIDisplay-Regular"/>
                                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                                                 </attributes>
@@ -1267,7 +1267,7 @@
                                                 <attributedString key="attributedText">
                                                     <fragment content="That's a guaranteed % rate of return on your money!">
                                                         <attributes>
-                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <font key="NSFont" size="22" name="SFUIDisplay-Thin"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
@@ -1285,7 +1285,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.18431372549019609" green="0.74117647058823533" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="nJ9-nS-Gqn" firstAttribute="centerX" secondItem="ReQ-lK-7th" secondAttribute="centerX" id="8NY-9J-M8Y"/>
                             <constraint firstItem="ccg-4w-5fQ" firstAttribute="width" secondItem="ReQ-lK-7th" secondAttribute="height" multiplier="355:667" id="8k3-st-l1C"/>
@@ -1330,7 +1330,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="In fact, you will earn 7x more on extra mortgage payments than a savings account.">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -1340,7 +1340,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRr-s8-Ams">
                                 <rect key="frame" x="0.0" y="300" width="375" height="1"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="ZtW-3x-S4e"/>
                                 </constraints>
@@ -1351,7 +1351,7 @@
                                     <constraint firstAttribute="height" constant="48" id="0PT-Z3-Zzm"/>
                                     <constraint firstAttribute="width" constant="48" id="3EL-AB-Uxy"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="nextLarge"/>
+                                <state key="normal" backgroundImage="nextbutton"/>
                                 <connections>
                                     <action selector="nextIntroVC:" destination="hno-7F-efd" eventType="touchUpInside" id="8gy-3x-aJR"/>
                                     <action selector="nextIntroVC:" destination="B5R-YV-7cJ" eventType="touchUpInside" id="U92-yb-W6r"/>
@@ -1362,7 +1362,7 @@
                                 <rect key="frame" x="-0.5" y="301" width="375" height="296"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZhM-Sq-tP8">
-                                        <rect key="frame" x="40.5" y="35" width="295.5" height="226"/>
+                                        <rect key="frame" x="40" y="35" width="295.5" height="226"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="yKP-Us-xez">
                                                 <rect key="frame" x="0.0" y="0.0" width="295.5" height="103"/>
@@ -1375,7 +1375,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="At 7 years">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="32" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -1386,13 +1386,13 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest Saved" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlZ-TG-47Z">
                                                                 <rect key="frame" x="0.0" y="38.5" width="111" height="21.5"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
-                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRz-Bt-ajL">
                                                                 <rect key="frame" x="0.0" y="60" width="44.5" height="43"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -1405,7 +1405,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Average CD">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="18" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -1421,7 +1421,7 @@
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="$0">
                                                                                 <attributes>
-                                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                                     <font key="NSFont" size="36" name="SFUIDisplay-Ultralight"/>
                                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                                 </attributes>
@@ -1446,7 +1446,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="At 30 years">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="32" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -1457,13 +1457,13 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest Saved" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfH-0E-xdr">
                                                                 <rect key="frame" x="0.0" y="38.5" width="111" height="21.5"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
-                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJg-7U-2eW">
                                                                 <rect key="frame" x="0.0" y="60" width="44.5" height="43"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -1476,7 +1476,7 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Average CD">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="18" name="SFUIDisplay-Thin"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -1492,7 +1492,7 @@
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="$0">
                                                                                 <attributes>
-                                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                                     <font key="NSFont" size="36" name="SFUIDisplay-Ultralight"/>
                                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                                 </attributes>
@@ -1516,7 +1516,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.18431372549019609" green="0.74117647058823533" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="VRr-s8-Ams" firstAttribute="top" secondItem="D3L-vO-W2z" secondAttribute="bottom" constant="8" id="1TM-wy-nQS"/>
                             <constraint firstItem="D3L-vO-W2z" firstAttribute="width" secondItem="1pY-rF-txb" secondAttribute="height" multiplier="355:667" id="C14-q1-qr9"/>
@@ -1561,7 +1561,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Wondering what happens if you put in even more money?">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -1571,7 +1571,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yez-TF-bHW">
                                 <rect key="frame" x="0.0" y="300" width="375" height="1"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="lgs-fP-hpf"/>
                                 </constraints>
@@ -1581,7 +1581,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Find out.">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="30" name="SFUIDisplay-Thin"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -1591,20 +1591,20 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLV-yH-LuJ">
                                 <rect key="frame" x="86" y="487" width="203" height="40"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="203" id="2YN-Tu-I47"/>
                                     <constraint firstAttribute="height" constant="40" id="pkT-TI-6Jk"/>
                                 </constraints>
                                 <state key="normal" title="Explore Extra Payments">
-                                    <color key="titleColor" red="0.043137254901960784" green="0.66666666666666663" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="exploreExtraPaymentsButtonAction:" destination="4A6-Nb-2JV" eventType="touchUpInside" id="jbB-S3-Txa"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.18431372549019609" green="0.74117647058823533" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="W7p-tH-2us" firstAttribute="centerX" secondItem="jIj-WI-TFa" secondAttribute="centerX" id="6c8-dA-2it"/>
                             <constraint firstItem="LoD-c7-Asg" firstAttribute="centerX" secondItem="jIj-WI-TFa" secondAttribute="centerX" id="6yG-Fr-Qc0"/>
@@ -1641,7 +1641,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Kg6-Ca-1JA">
-                                <rect key="frame" x="149" y="211" width="78" height="24"/>
+                                <rect key="frame" x="149" y="167" width="78" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0yr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylh-4Z-tfE">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="24"/>
@@ -1658,7 +1658,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="oJU-Em-p4O">
-                                <rect key="frame" x="90" y="144" width="196" height="65.5"/>
+                                <rect key="frame" x="89.5" y="100" width="196" height="65.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmB-VT-ANt">
                                         <rect key="frame" x="0.0" y="24.5" width="20" height="41"/>
@@ -1702,7 +1702,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCe-12-oSI" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="-0.5" y="268" width="375" height="350"/>
+                                <rect key="frame" x="-0.5" y="317" width="375" height="350"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="Aje-EQ-0DN"/>
@@ -1829,11 +1829,11 @@
                                     <navigationItem title="Extra Payment" id="EJ9-Xz-37B">
                                         <barButtonItem key="backBarButtonItem" title="Cancel" id="oHm-5r-rT7"/>
                                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="DNR-GQ-oM9">
-                                            <color key="tintColor" red="0.93333333333333335" green="0.3411764705882353" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="checkbutton" style="plain" id="ASl-7A-NaO">
+                                        <barButtonItem key="rightBarButtonItem" image="successbutton" style="plain" id="ASl-7A-NaO">
                                             <inset key="imageInsets" minX="30" minY="15" maxX="0.0" maxY="15"/>
-                                            <color key="tintColor" red="0.93333333333333335" green="0.3411764705882353" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -1987,11 +1987,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkbutton" width="60" height="60"/>
-        <image name="nextLarge" width="252" height="252"/>
+        <image name="nextbutton" width="84" height="84"/>
+        <image name="successbutton" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qqo-0O-R8G"/>
         <segue reference="685-4k-jfu"/>
+        <segue reference="m9e-om-YmW"/>
     </inferredMetricsTieBreakers>
 </document>

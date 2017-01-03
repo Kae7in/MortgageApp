@@ -63,7 +63,7 @@ class MortgageDetailVC: UIViewController, ChartViewDelegate {
     func layoutNavigationBar() {
         let nav = self.navigationController?.navigationBar
         nav?.barStyle = UIBarStyle.black
-        nav?.tintColor = UIColor(rgbColorCodeRed: 238, green: 87, blue: 106, alpha: 1.0)
+        nav?.tintColor = UIColor(rgbColorCodeRed: 208, green: 2, blue: 27, alpha: 1.0)
         self.navigationItem.title = "Mortgage Balance"
         nav?.titleTextAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Light", size: 20.0)!, NSForegroundColorAttributeName: UIColor(rgbColorCodeRed: 155, green: 155, blue: 155, alpha: 1.0)]
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "addbutton"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(extraPaymentButtonAction(sender:)))
@@ -71,7 +71,7 @@ class MortgageDetailVC: UIViewController, ChartViewDelegate {
         
         segment.addTarget(self, action: #selector(changeBalanceType), for: .valueChanged)
         segment.sizeToFit()
-        segment.tintColor = UIColor(rgbColorCodeRed: 238, green: 87, blue: 106, alpha: 1.0)
+        segment.tintColor = UIColor(rgbColorCodeRed: 208, green: 2, blue: 27, alpha: 1.0)
         segment.selectedSegmentIndex = 0
 //        self.navigationItem.titleView = segment
         let f = self.navigationController!.navigationBar.frame
@@ -149,10 +149,10 @@ class MortgageDetailVC: UIViewController, ChartViewDelegate {
         let chartDataSet = LineChartDataSet(values: dataEntries, label: "Amortization")
         chartDataSet.drawValuesEnabled = false
         chartDataSet.drawCirclesEnabled = false
-        chartDataSet.setColor(NSUIColor(cgColor: UIColor(rgbColorCodeRed: 238, green: 87, blue: 106, alpha: 1).cgColor))
+        chartDataSet.setColor(NSUIColor(cgColor: UIColor(rgbColorCodeRed: 208, green: 2, blue: 27, alpha: 1).cgColor))
         chartDataSet.lineWidth = 4.0
         
-        let fromColor = UIColor(rgbColorCodeRed: 238, green: 87, blue: 106, alpha: 0.1)
+        let fromColor = UIColor(rgbColorCodeRed: 208, green: 2, blue: 27, alpha: 0.1)
         let gradientColors = [fromColor.cgColor, UIColor.white.cgColor] as CFArray
         let gradient = CGGradient(colorsSpace: nil, colors: gradientColors, locations: nil)
         chartDataSet.fillAlpha = 1.0

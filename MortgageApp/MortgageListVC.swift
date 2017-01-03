@@ -34,7 +34,7 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     func layoutViews() {
         layoutNavigationBar()
         
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     
@@ -127,8 +127,15 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         let mortgage = self.mortgageData.mortgages[indexPath.row]
         
         cell.textLabel?.text = mortgage.name
+        cell.detailTextLabel?.text = "$" + String(Int(mortgage.totalInterestSavings())) + " saved"
+        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         
         return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80.0
     }
     
     

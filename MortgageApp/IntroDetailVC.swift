@@ -17,7 +17,9 @@ class IntroDetailVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        setBackgroundColors()
+//        setBackgroundColors()
+        self.view.backgroundColor = UIColor.white
+        self.navigationController?.navigationBar.topItem?.title = "Extra Monthly Payment"
     }
     
     func setBackgroundColors() {
