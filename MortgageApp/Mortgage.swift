@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import FirebaseDatabase
+import FirebaseAuth
 
 class Mortgage: NSObject {
     var name: String = ""
@@ -127,6 +129,38 @@ class Mortgage: NSObject {
             amortization.interestSaved = originalInterest.subtracting(currentInterest)
         }
     }
+    
+    func save() {
+        var ref = FIRDatabase.database().reference()
+        
+        // Get current user
+        let user = FIRAuth.auth()?.currentUser!
+        
+        // Get user's mortgages list
+        ref = ref.child("mortgages/\(user!.uid)").child(self.name)
+        
+        // Create reflection of mortgage object
+        let mirrored_object = Mirror(reflecting: self)
+        
+        // Skip these attributes
+        let attributes_not_allowed: [String] = ["extras", "paymentSchedule", "originalMortgage", "startDate"]
+        
+        // Save the mortgage object's necessary attributes
+        for (_, attr) in mirrored_object.children.enumerated() {
+            if let property_name = attr.label as String! {
+                if attributes_not_allowed.contains(property_name) { continue }
+                
+                ref.child(property_name).setValue(attr.value)
+            }
+        }
+        
+        // Add date attribute
+        let dateF = DateFormatter()
+        dateF.dateFormat = "MMMM dd yyyy"
+        let str = dateF.string(from: self.startDate)
+        ref.child("startDate").setValue(str)
+    }
+    
 }
 
 

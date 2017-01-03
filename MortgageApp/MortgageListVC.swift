@@ -7,18 +7,22 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var mortgageData = MortgageData()
+    var ref: FIRDatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.ref = FIRDatabase.database().reference()
+        loadMortgages()
         layoutViews()
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,7 +33,54 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func layoutViews() {
         layoutNavigationBar()
+        
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
+    
+    
+    func loadMortgages() {
+        let userID = FIRAuth.auth()?.currentUser?.uid
+        let mortgage_ref = self.ref.child("mortgages").child(userID!)
+        let query = mortgage_ref.queryOrderedByKey()
+        
+        query.observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            for (_, mortgage_dict) in value! {
+                let dict = mortgage_dict as! NSDictionary
+                let mortgage = Mortgage()
+                
+                mortgage.name = dict["name"] as! String
+                mortgage.salePrice = NSDecimalNumber(decimal: (dict["salePrice"] as! NSNumber).decimalValue)
+                mortgage.interestRate = NSDecimalNumber(decimal: (dict["interestRate"] as! NSNumber).decimalValue)
+                mortgage.downPayment = dict["downPayment"] as! String
+                mortgage.propertyTaxRate = NSDecimalNumber(decimal: (dict["propertyTaxRate"] as! NSNumber).decimalValue)
+                mortgage.homeInsurance = NSDecimalNumber(decimal: (dict["homeInsurance"] as! NSNumber).decimalValue)
+                mortgage.adjustFixedRateMonths = Int(dict["adjustFixedRateMonths"] as! Int)
+                mortgage.adjustInitialCap = NSDecimalNumber(decimal: (dict["adjustInitialCap"] as! NSNumber).decimalValue)
+                mortgage.adjustPeriodicCap = NSDecimalNumber(decimal: (dict["adjustPeriodicCap"] as! NSNumber).decimalValue)
+                mortgage.adjustLifetimeCap = NSDecimalNumber(decimal: (dict["adjustLifetimeCap"] as! NSNumber).decimalValue)
+                mortgage.adjustIntervalMonths = Int(dict["adjustIntervalMonths"] as! Int)
+                mortgage.totalLoanCost = NSDecimalNumber(decimal: (dict["totalLoanCost"] as! NSNumber).decimalValue)
+                mortgage.numberOfPayments = Int(dict["numberOfPayments"] as! Int)
+                mortgage.monthlyPayment = NSDecimalNumber(decimal: (dict["monthlyPayment"] as! NSNumber).decimalValue)
+                
+                // Add date
+                let dateString = dict["startDate"] as! String
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MMMM dd yyyy"
+                mortgage.startDate = dateFormatter.date(from: dateString)!
+
+                // TODO: Add extras
+                let extras: [Dictionary<String, Int>] = []
+                mortgage.extras = extras
+                
+                self.mortgageData.mortgages.append(mortgage)
+            }
+            self.tableView.reloadData()
+        })
+    }
+    
     
     func layoutNavigationBar() {
         let nav = self.navigationController?.navigationBar
@@ -52,10 +103,9 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         } else if segue.identifier! == "toMortgageDetail" {
             if let cellIndexPath = sender as? IndexPath {
                 let cellIndex = cellIndexPath.row
-                
                 let mortgage = self.mortgageData.mortgages[cellIndex]
-                
                 let mortgageDetailVC = segue.destination as! MortgageDetailVC
+                
                 mortgageDetailVC.mortgage = mortgage
             }
         }
@@ -74,8 +124,9 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
+        let mortgage = self.mortgageData.mortgages[indexPath.row]
         
-        cell.textLabel?.text = String(indexPath.row)
+        cell.textLabel?.text = mortgage.name
         
         return cell
     }

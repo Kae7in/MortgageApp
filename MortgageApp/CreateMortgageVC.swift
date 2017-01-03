@@ -82,34 +82,7 @@ class CreateMortgageVC: UIViewController {
         m.loanTermMonths = Int(self.termYears.text!)! * 12
         m.downPayment = self.downPercent.text! + "%"
         
-        // Get current user
-        let user = FIRAuth.auth()?.currentUser!
-        
-        // Get user's mortgages list
-        let ref = self.ref.child("mortgages/\(user!.uid)").child(m.name)
-        
-        // Create reflection of mortgage object
-        let mirrored_object = Mirror(reflecting: m)
-        
-        // Skip these attributes
-        let attributes_not_allowed: [String] = ["extras", "paymentSchedule", "originalMortgage", "startDate"]
-        
-        // Save the mortgage object's necessary attributes
-        for (_, attr) in mirrored_object.children.enumerated() {
-            if let property_name = attr.label as String! {
-                if attributes_not_allowed.contains(property_name) { continue }
-                
-                ref.child(property_name).setValue(attr.value)
-            }
-        }
-        
-        // Add date attribute
-        let dateF = DateFormatter()
-        dateF.dateFormat = "MMMM dd yyyy"
-        let str = dateF.string(from: m.startDate)
-        ref.child("startDate").setValue(str)
-        
-        // TODO: Add extras attribute
+        m.save()
         
         return m
     }
