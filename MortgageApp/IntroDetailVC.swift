@@ -19,19 +19,32 @@ class IntroDetailVC: UIViewController {
         // Do any additional setup after loading the view.
 //        setBackgroundColors()
         self.view.backgroundColor = UIColor.white
-        self.navigationController?.navigationBar.topItem?.title = "Extra Monthly Payment"
+        
+        self.addTitleLabel()
     }
     
-    func setBackgroundColors() {
-        let gradient = CAGradientLayer()
-        gradient.frame = view.bounds
-        gradient.colors = [UIColor.init(rgbColorCodeRed: 39, green: 227, blue: 233, alpha: 1).cgColor, UIColor.init(rgbColorCodeRed: 0, green: 148, blue: 180, alpha: 1).cgColor]
-        gradient.startPoint = CGPoint(x: 0.5, y: 0.0)
-        gradient.endPoint = CGPoint(x: 0.5, y: 1.0)
-        view.layer.insertSublayer(gradient, at: 0)
-        //use startPoint and endPoint to change direction of gradient (http://stackoverflow.com/a/20387923/2057171)
+    func addTitleLabel() {
+        let label = UILabel(frame: CGRect.zero)
         
-        UIApplication.shared.statusBarStyle = .lightContent
+        let string = "Making Extra Payments"
+        let defaultFontAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Light", size: 20.0)!, NSForegroundColorAttributeName: UIColor.init(rgbColorCodeRed: 155, green: 155, blue: 155, alpha: 1)]
+        let attributedString = NSMutableAttributedString(string: string, attributes: defaultFontAttributes)
+        label.attributedText = attributedString
+        label.textAlignment = NSTextAlignment.center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(label)
+        
+        let widthConstraint = NSLayoutConstraint(item: label, attribute: .width, relatedBy: .equal,
+                                                 toItem: nil, attribute: .notAnAttribute , multiplier: 1.0, constant: 250)
+        
+        let heightConstraint = NSLayoutConstraint(item: label, attribute: .height, relatedBy: .equal,
+                                                  toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 100)
+        
+        let xConstraint = NSLayoutConstraint(item: label, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0)
+        
+        let yConstraint = NSLayoutConstraint(item: label, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 0.15, constant: 0)
+        
+        NSLayoutConstraint.activate([widthConstraint, heightConstraint, xConstraint, yConstraint])
     }
     
     func animate(label: UILabel, startValue: NSDecimalNumber, endValue: NSDecimalNumber, interval: TimeInterval, dollars: Bool = true) {

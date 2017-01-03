@@ -15,6 +15,7 @@ import FirebaseDatabase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let DEBUG = true
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -23,6 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRApp.configure()
         FIRDatabase.database().persistenceEnabled = true
         
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+        UINavigationBar.appearance().isTranslucent = true
+        
+        UINavigationBar.appearance().tintColor = UIColor.black
+        
         let userAuthenticated: Bool = FIRAuth.auth()?.currentUser != nil
         if !userAuthenticated {
             let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "login")
@@ -30,13 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window!.rootViewController = rootViewController
         }
-        
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
-        UINavigationBar.appearance().isTranslucent = true
-        
-        UINavigationBar.appearance().tintColor = UIColor.black
         
         return true
     }
