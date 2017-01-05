@@ -22,9 +22,14 @@ class MortgageCalculator: NSObject {
         if (mortgage.extras.count > 0) {
             for i in 0..<mortgage.extras.count {
                 var extra = mortgage.extras[i]
-                if (loanMonth >= extra["startMonth"]! && loanMonth <= extra["endMonth"]! ) {
-                    if ((loanMonth - extra["startMonth"]!) % extra["extraIntervalMonths"]! == 0) {
-                        totalExtra += extra["extraAmount"]! * 100
+                let startMonth: Int = extra["startMonth"] as! Int
+                let endMonth: Int = extra["endMonth"] as! Int
+                let extraIntervalMonths: Int = extra["extraIntervalMonths"] as! Int
+                let extraAmount: Int = extra["extraAmount"] as! Int
+                
+                if (loanMonth >= startMonth && loanMonth <= endMonth) {
+                    if ((loanMonth - startMonth) % extraIntervalMonths == 0) {
+                        totalExtra += extraAmount * 100
                     }
                 }
             }

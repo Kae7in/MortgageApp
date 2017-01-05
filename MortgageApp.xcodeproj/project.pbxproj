@@ -30,6 +30,9 @@
 		1A8D4A241E1C2495000D2592 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D4A231E1C2495000D2592 /* CustomTableViewCell.swift */; };
 		1A8D4A251E1C2495000D2592 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D4A231E1C2495000D2592 /* CustomTableViewCell.swift */; };
 		1A8D4A261E1C2495000D2592 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D4A231E1C2495000D2592 /* CustomTableViewCell.swift */; };
+		1A8D4A281E1C754B000D2592 /* Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D4A271E1C754B000D2592 /* Extra.swift */; };
+		1A8D4A291E1C754B000D2592 /* Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D4A271E1C754B000D2592 /* Extra.swift */; };
+		1A8D4A2A1E1C754B000D2592 /* Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8D4A271E1C754B000D2592 /* Extra.swift */; };
 		1AABB4871DFA06A9006A3B91 /* Amortization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AABB4861DFA06A9006A3B91 /* Amortization.swift */; };
 		1AB349A91DFF5A1500E76049 /* IntroPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349A81DFF5A1500E76049 /* IntroPVC.swift */; };
 		1AB349AB1DFF5C9100E76049 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB349AA1DFF5C9100E76049 /* CustomColors.swift */; };
@@ -94,6 +97,7 @@
 		1A7DE08C1E099EB300E29CED /* EditPaymentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPaymentVC.swift; sourceTree = "<group>"; };
 		1A80FF7A1DFF0D3800193664 /* MortgageDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MortgageDetailVC.swift; sourceTree = "<group>"; };
 		1A8D4A231E1C2495000D2592 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		1A8D4A271E1C754B000D2592 /* Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extra.swift; sourceTree = "<group>"; };
 		1AABB4861DFA06A9006A3B91 /* Amortization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Amortization.swift; sourceTree = "<group>"; };
 		1AB349A81DFF5A1500E76049 /* IntroPVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroPVC.swift; sourceTree = "<group>"; };
 		1AB349AA1DFF5C9100E76049 /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 				1A36D4571DF86CC00093A411 /* MortgageCalculator.swift */,
 				1A36D45B1DF895070093A411 /* Mortgage.swift */,
 				1AABB4861DFA06A9006A3B91 /* Amortization.swift */,
+				1A8D4A271E1C754B000D2592 /* Extra.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -583,6 +588,7 @@
 				1A80FF7B1DFF0D3800193664 /* MortgageDetailVC.swift in Sources */,
 				1AB349BF1E00A0AD00E76049 /* View6.swift in Sources */,
 				1AB349AF1E006DDD00E76049 /* View1.swift in Sources */,
+				1A8D4A281E1C754B000D2592 /* Extra.swift in Sources */,
 				1AB349B71E0096F800E76049 /* View2.swift in Sources */,
 				1A7DE08D1E099EB300E29CED /* EditPaymentVC.swift in Sources */,
 			);
@@ -594,6 +600,7 @@
 			files = (
 				1A8D4A251E1C2495000D2592 /* CustomTableViewCell.swift in Sources */,
 				1AF882D91E1AC013000CA84F /* MortgageListVC.swift in Sources */,
+				1A8D4A291E1C754B000D2592 /* Extra.swift in Sources */,
 				1A36D43E1DF86AF40093A411 /* MortgageAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -604,6 +611,7 @@
 			files = (
 				1A8D4A261E1C2495000D2592 /* CustomTableViewCell.swift in Sources */,
 				1AF882DA1E1AC013000CA84F /* MortgageListVC.swift in Sources */,
+				1A8D4A2A1E1C754B000D2592 /* Extra.swift in Sources */,
 				1A36D4491DF86AF50093A411 /* MortgageAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

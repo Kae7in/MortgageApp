@@ -16,7 +16,7 @@ class Mortgage: NSObject {
     var salePrice: NSDecimalNumber = 200000
     var interestRate: NSDecimalNumber = 3.6
     var downPayment: String = "20%"
-    var extras: [Dictionary<String,Int>] = []
+    var extras: [Dictionary<String,Any>] = []
     var propertyTaxRate: NSDecimalNumber = 0
     var homeInsurance: NSDecimalNumber = 0
     var adjustFixedRateMonths: Int = 0
@@ -137,18 +137,18 @@ class Mortgage: NSObject {
     }
     
     func save() {
-        var ref = FIRDatabase.database().reference()
+        let ref = FIRDatabase.database().reference()
         
         // Get current user
         let user = FIRAuth.auth()?.currentUser!
         
         // Get user's mortgages list
-        ref = ref.child("mortgages/\(user!.uid)").child(self.name)
+        let mortgages_ref = ref.child("mortgages/\(user!.uid)").child(self.name)
         
         // Create reflection of mortgage object
         let mirrored_object = Mirror(reflecting: self)
         
-        // Skip these attributes
+        // Skip these attributes (extras will be processed outside of this loop
         let attributes_not_allowed: [String] = ["extras", "paymentSchedule", "originalMortgage", "startDate"]
         
         // Save the mortgage object's necessary attributes
@@ -156,7 +156,7 @@ class Mortgage: NSObject {
             if let property_name = attr.label as String! {
                 if attributes_not_allowed.contains(property_name) { continue }
                 
-                ref.child(property_name).setValue(attr.value)
+                mortgages_ref.child(property_name).setValue(attr.value)
             }
         }
         
@@ -164,7 +164,25 @@ class Mortgage: NSObject {
         let dateF = DateFormatter()
         dateF.dateFormat = "MMMM dd yyyy"
         let str = dateF.string(from: self.startDate)
-        ref.child("startDate").setValue(str)
+        mortgages_ref.child("startDate").setValue(str)
+        
+        // Add extra payments, if any
+        for extra in self.extras {
+            var extra_ref = ref.child("mortgages").child(user!.uid).child(self.name).child("extraPayments")
+            
+            if let unique_id = extra["unique_id"] {
+                let uid = unique_id as! String
+                extra_ref.child(uid).setValue(extra)
+            } else {
+                // This is a new extra! Give it a unique_id
+                extra_ref = extra_ref.childByAutoId()
+                extra_ref.child("unique_id").setValue(extra_ref.key)
+                extra_ref.child("startMonth").setValue(extra["startMonth"] as! Int)
+                extra_ref.child("endMonth").setValue(extra["endMonth"] as! Int)
+                extra_ref.child("extraIntervalMonths").setValue(extra["extraIntervalMonths"] as! Int)
+                extra_ref.child("extraAmount").setValue(extra["extraAmount"] as! Int)
+            }
+        }
     }
     
 }

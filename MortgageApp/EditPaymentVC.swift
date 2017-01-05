@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class EditPaymentVC: UIViewController {
     
-    var m: Mortgage? = nil
+    var mortgage: Mortgage? = nil
+    var newMortgage: Mortgage!
     var newM: Mortgage? = nil
     var mc: MortgageCalculator = MortgageCalculator()
+    var ref: FIRDatabaseReference!
 
     @IBOutlet weak var navbar: UINavigationItem!
     
@@ -31,6 +34,7 @@ class EditPaymentVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        ref = FIRDatabase.database().reference()
         
         layoutViews()
     }
@@ -54,13 +58,6 @@ class EditPaymentVC: UIViewController {
         navbar.rightBarButtonItem?.action = #selector(saveButton(sender:))
         navbar.leftBarButtonItem?.target = self
         navbar.leftBarButtonItem?.action = #selector(cancelButton(sender:))
-    }
-    
-    func updateLabels() {
-//        let yearsSaved = self.m!.monthsSaved() / 12
-//        let remainingMonthsSaved = self.m!.monthsSaved() % 12
-        //principal.text = "$" + String(describing: m!.loanAmount())
-        //interest.text = "$" + String(describing: m!.totalLoanCost).components(separatedBy: ".")[0]
     }
     
     func updatePrincipalBalanceLabel(value: NSDecimalNumber) {
@@ -112,28 +109,31 @@ class EditPaymentVC: UIViewController {
             extras = [["startMonth":1, "endMonth":1, "extraIntervalMonths":1, "extraAmount":Int(extraPaymentSlider.value)]]  // TODO: Use current period as start months
         }
         
-        let newMortgage = calculateNewMortgageFromExtras(mortgage: self.m!, newExtras: extras)
+        self.newMortgage = calculateNewMortgageFromExtras(mortgage: self.mortgage!, newExtras: extras)
         
         updateExtraPaymentLabel(value: self.extraPaymentSlider.value)
         updatePrincipalBalanceLabel(value: newMortgage.paymentSchedule.first!.remainingLoanBalance)  // TODO: Use current period
         updateInterestBalanceLabel(value: newMortgage.totalLoanCost)
         updateTimeBalanceLabels(monthsLeft: newMortgage.paymentSchedule.count)  // TODO: Subtract today's date from the paymentSchedule
         updateInterestSavingsLabel(value: newMortgage.totalInterestSavings())
-        updateTimeSavingsLabels(months: newMortgage.originalMortgage!.paymentSchedule.count - newMortgage.paymentSchedule.count)
+        updateTimeSavingsLabels(months: newMortgage.originalMortgage!.loanTermMonths - newMortgage.paymentSchedule.count)
         updateInterestSavingsLabel(value: newMortgage.totalInterestSavings())
     }
     
     func calculateNewMortgageFromExtras(mortgage: Mortgage, newExtras: [Dictionary<String, Int>]) -> Mortgage {
-        var newMortgage = Mortgage(mortgage)
+        var newM = Mortgage(mortgage)
         for extra in newExtras {
-            newMortgage.extras.append(extra)
+            newM.extras.append(extra)
         }
-        newMortgage = mc.calculateMortgage(mortgage: newMortgage)
-        return newMortgage
+        newM = mc.calculateMortgage(mortgage: newM)
+        return newM
     }
     
     func saveButton(sender: UIBarButtonItem) {
-        
+        if self.mortgage?.extras.count != self.newMortgage.extras.count {
+            self.newMortgage.save()
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     func cancelButton(sender: UIBarButtonItem) {

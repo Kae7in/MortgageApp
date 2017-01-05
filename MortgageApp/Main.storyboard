@@ -277,6 +277,25 @@
             </objects>
             <point key="canvasLocation" x="1414" y="799"/>
         </scene>
+        <!--Chat-->
+        <scene sceneID="Udw-69-NC3">
+            <objects>
+                <viewController id="tg6-mZ-rwo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tBa-o6-rFx"/>
+                        <viewControllerLayoutGuide type="bottom" id="U5S-sW-zQQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="brZ-Mk-LSM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chat" id="khT-XK-Xm4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDJ-5N-SMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2023" y="771"/>
+        </scene>
         <!--Settings-->
         <scene sceneID="jdY-UM-Jl2">
             <objects>
@@ -1920,6 +1939,7 @@
                         <segue destination="253-ad-U9a" kind="relationship" relationship="viewControllers" id="qWu-I3-gqC"/>
                         <segue destination="RTc-1k-U30" kind="relationship" relationship="viewControllers" id="yL4-iA-fNg"/>
                         <segue destination="IlT-lD-UHF" kind="relationship" relationship="viewControllers" id="epX-p8-F38"/>
+                        <segue destination="tg6-mZ-rwo" kind="relationship" relationship="viewControllers" id="uw3-Nz-QQL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aG-Ft-iIx" userLabel="First Responder" sceneMemberID="firstResponder"/>

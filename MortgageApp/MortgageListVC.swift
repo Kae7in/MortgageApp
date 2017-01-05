@@ -44,6 +44,8 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         let query = mortgage_ref.queryOrderedByKey()
         
         query.observeSingleEvent(of: .value, with: { (snapshot) in
+            if snapshot.value is NSNull { return }
+            
             // Get user value
             let value = snapshot.value as? NSDictionary
             for (_, mortgage_dict) in value! {
@@ -71,10 +73,16 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                 dateFormatter.dateFormat = "MMMM dd yyyy"
                 mortgage.startDate = dateFormatter.date(from: dateString)!
 
-                // TODO: Add extras
-                let extras: [Dictionary<String, Int>] = []
-                mortgage.extras = extras
+                // Load extras, if any
+                if let extras_dict = dict["extraPayments"] {
+                    let extras = extras_dict as! NSDictionary
+                    for (_, value) in extras {
+                        let extra = value as! Dictionary<String, Any>
+                        mortgage.extras.append(extra)
+                    }
+                }
                 
+                // Place in the data cache
                 self.mortgageData.mortgages.append(mortgage)
             }
             self.tableView.reloadData()
