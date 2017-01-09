@@ -134,7 +134,7 @@ class MortgageDetailVC: UIViewController, ChartViewDelegate {
             j = j < 0 ? 0 : j
             var yValue = NSDecimalNumber(value: 0.0)
             
-            if j > self.mortgage!.paymentSchedule.count {
+            if j >= self.mortgage!.numberOfPayments {
                 yValue = 0
                 dataEntry = ChartDataEntry(x: Double(i), y: Double(yValue), data: nil)
             } else if type == "Total" {
