@@ -27,9 +27,11 @@ class CreateMortgageVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.ref = FIRDatabase.database().reference()
+        
+        self.hideKeyboardWhenTappedAround()
     }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

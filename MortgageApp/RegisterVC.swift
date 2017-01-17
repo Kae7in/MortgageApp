@@ -23,7 +23,10 @@ class RegisterVC: UIViewController {
         super.viewDidLoad()
 
         self.ref = FIRDatabase.database().reference()
+        
+        self.hideKeyboardWhenTappedAround()
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -76,15 +79,5 @@ class RegisterVC: UIViewController {
         
         return true
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

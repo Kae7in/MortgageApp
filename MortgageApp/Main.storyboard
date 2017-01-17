@@ -47,17 +47,17 @@
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDP-Vv-PJw">
-                                <rect key="frame" x="168" y="414" width="38" height="30"/>
+                                <rect key="frame" x="160" y="414" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="SIGN IN"/>
                                 <connections>
                                     <action selector="loginButtonAction:" destination="4iX-U8-B3F" eventType="touchUpInside" id="sub-kD-o7x"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q03-ST-AKM">
-                                <rect key="frame" x="159" y="482" width="57" height="30"/>
+                                <rect key="frame" x="160" y="482" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Register"/>
+                                <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="registerButtonAction:" destination="4iX-U8-B3F" eventType="touchUpInside" id="xy0-KS-BWP"/>
                                 </connections>
@@ -115,9 +115,9 @@
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJu-hC-iJJ">
-                                <rect key="frame" x="163" y="435" width="49" height="30"/>
+                                <rect key="frame" x="102" y="435" width="171" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit"/>
+                                <state key="normal" title="CREATE NEW ACCOUNT"/>
                                 <connections>
                                     <action selector="submitButtonAction:" destination="y9J-kC-tJq" eventType="touchUpInside" id="fKh-MY-Y2T"/>
                                 </connections>
@@ -1987,7 +1987,7 @@
         <image name="successbutton" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2Ff-PQ-5kL"/>
         <segue reference="Qqo-0O-R8G"/>
+        <segue reference="685-4k-jfu"/>
     </inferredMetricsTieBreakers>
 </document>
