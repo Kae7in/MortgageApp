@@ -58,9 +58,11 @@ class LoginVC: UIViewController {
         return true
     }
     
-    @IBAction func registerButtonAction(_ sender: UIButton) {
-        // Segue to the registration screen
-        performSegue(withIdentifier: "toRegister", sender: sender)
+    
+    @IBAction func signUpButtonAction(_ sender: UIButton) {
+        // Go back to the sign up screen
+        self.dismiss(animated: true) {
+        }
     }
     
 }

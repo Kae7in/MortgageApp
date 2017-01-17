@@ -19,7 +19,7 @@
         <!--LoginVC-->
         <scene sceneID="Xzj-rP-lvF">
             <objects>
-                <viewController storyboardIdentifier="login" id="4iX-U8-B3F" customClass="LoginVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4iX-U8-B3F" customClass="LoginVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9JT-xC-Gk5"/>
                         <viewControllerLayoutGuide type="bottom" id="0ZN-rl-62i"/>
@@ -55,11 +55,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q03-ST-AKM">
-                                <rect key="frame" x="160" y="482" width="55" height="30"/>
+                                <rect key="frame" x="162" y="482" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign Up"/>
+                                <state key="normal" title="Sign up"/>
                                 <connections>
-                                    <action selector="registerButtonAction:" destination="4iX-U8-B3F" eventType="touchUpInside" id="xy0-KS-BWP"/>
+                                    <action selector="signUpButtonAction:" destination="4iX-U8-B3F" eventType="touchUpInside" id="OVj-vY-ecm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -77,17 +77,16 @@
                     <connections>
                         <outlet property="emailField" destination="BTk-Xh-iON" id="h2y-Zg-vaJ"/>
                         <outlet property="passwordField" destination="ZQy-uX-95K" id="YVQ-rw-LGO"/>
-                        <segue destination="y9J-kC-tJq" kind="show" identifier="toRegister" id="43T-ac-GKW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jOR-OJ-lIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-58" y="1561"/>
+            <point key="canvasLocation" x="1025" y="1559"/>
         </scene>
         <!--RegisterVC-->
         <scene sceneID="6qO-eA-rZq">
             <objects>
-                <viewController id="y9J-kC-tJq" customClass="RegisterVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signUp" id="y9J-kC-tJq" customClass="RegisterVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Aqx-FZ-akS"/>
                         <viewControllerLayoutGuide type="bottom" id="C9h-Rw-m4x"/>
@@ -140,6 +139,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHg-kT-sUg">
+                                <rect key="frame" x="164" y="499" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign in"/>
+                                <connections>
+                                    <action selector="signInButtonAction:" destination="y9J-kC-tJq" eventType="touchUpInside" id="6Mn-EI-OGP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -163,11 +170,12 @@
                         <outlet property="passwordField" destination="tJ0-GG-mnk" id="bqP-BI-XED"/>
                         <outlet property="usernameField" destination="pA8-0B-gN7" id="YIH-ml-gpC"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toCreateMortgage" id="685-4k-jfu"/>
+                        <segue destination="4iX-U8-B3F" kind="show" identifier="toSignIn" id="7BF-JS-IVE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yop-5Z-arb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="1560.2698650674663"/>
+            <point key="canvasLocation" x="81" y="1558"/>
         </scene>
         <!--Create MortgageVC-->
         <scene sceneID="tne-QT-ifu">

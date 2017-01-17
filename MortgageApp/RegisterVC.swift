@@ -79,5 +79,11 @@ class RegisterVC: UIViewController {
         
         return true
     }
+    
+    
+    @IBAction func signInButtonAction(_ sender: UIButton) {
+        // Segue to the sign in screen
+        performSegue(withIdentifier: "toSignIn", sender: sender)
+    }
 
 }
