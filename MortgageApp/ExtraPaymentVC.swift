@@ -1,5 +1,5 @@
 //
-//  EditPaymentVC.swift
+//  ExtraPaymentVC.swift
 //  MortgageApp
 //
 //  Created by Kaelin Hooper on 12/20/16.
@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseDatabase
 
-class EditPaymentVC: UIViewController {
+class ExtraPaymentVC: UIViewController {
     
     var mortgage: Mortgage? = nil
     var newMortgage: Mortgage!
@@ -31,26 +31,29 @@ class EditPaymentVC: UIViewController {
     @IBOutlet weak var extraPaymentLabel: UILabel!
     @IBOutlet weak var paymentTypeControl: UISegmentedControl!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        ref = FIRDatabase.database().reference()
         
+        ref = FIRDatabase.database().reference()
         layoutViews()
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         layoutViews()
     }
     
+    
     func layoutViews() {
         layoutNavigationBar()
     }
+    
     
     func layoutNavigationBar() {
         navbar.title = "Extra Payment"
@@ -60,13 +63,16 @@ class EditPaymentVC: UIViewController {
         navbar.leftBarButtonItem?.action = #selector(cancelButton(sender:))
     }
     
+    
     func updatePrincipalBalanceLabel(value: NSDecimalNumber) {
         self.principalBalance.text! = "$" + String(describing: value).components(separatedBy: ".").first!
     }
     
+    
     func updateInterestBalanceLabel(value: NSDecimalNumber) {
         self.interestBalance.text! = "$" + String(describing: value).components(separatedBy: ".").first!
     }
+    
     
     func updateTimeBalanceLabels(monthsLeft: Int) {
         let yearsLeft = monthsLeft / 12
@@ -76,13 +82,16 @@ class EditPaymentVC: UIViewController {
         self.monthsBalance.text! = String(monthsRemainder) + "mo"
     }
     
+    
     func updateExtraPaymentLabel(value: Float) {
         extraPaymentLabel.text = "$" + String(Int(value))
     }
     
+    
     func updateInterestSavingsLabel(value: NSDecimalNumber) {
         interestSavings.text = "$" + String(describing: value).components(separatedBy: ".")[0]
     }
+    
     
     func updateTimeSavingsLabels(months: Int) {
         let yearsSaved = months / 12
@@ -92,13 +101,21 @@ class EditPaymentVC: UIViewController {
         self.monthsSavings.text! = String(monthsSavedRemainder) + "mo"
     }
     
-    @IBAction func sliderChanged(_ sender: UISlider) {
+    
+    @IBAction func sliderTouchUpInside(_ sender: UISlider) {
         updateMortgageMetrics()
     }
+    
+    
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        updateExtraPaymentLabel(value: self.extraPaymentSlider.value)
+    }
+    
     
     @IBAction func paymentTypeChanged(_ sender: UISegmentedControl) {
         updateMortgageMetrics()
     }
+    
     
     func updateMortgageMetrics() {
         var extras = [Dictionary<String, Int>]()
@@ -120,7 +137,8 @@ class EditPaymentVC: UIViewController {
         updateInterestSavingsLabel(value: newMortgage.totalInterestSavings())
     }
     
-    func calculateNewMortgageFromExtras(mortgage: Mortgage, newExtras: [Dictionary<String, Int>]) -> Mortgage {
+    
+    func calculateNewMortgageFromExtras(mortgage: Mortgage, newExtras: [Dictionary<String, Any>]) -> Mortgage {
         var newM = Mortgage(mortgage)
         for extra in newExtras {
             newM.extras.append(extra)
@@ -129,26 +147,17 @@ class EditPaymentVC: UIViewController {
         return newM
     }
     
+    
     func saveButton(sender: UIBarButtonItem) {
         if self.mortgage?.extras.count != self.newMortgage.extras.count {
             self.newMortgage.save()
-            self.navigationController?.popViewController(animated: true)
+            _ = self.navigationController?.popViewController(animated: true)
         }
     }
+    
     
     func cancelButton(sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

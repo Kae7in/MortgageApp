@@ -17,20 +17,18 @@ class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func loginButtonAction(_ sender: UIButton) {
-        let email: String = emailField.text!
-        let password: String = passwordField.text!
-        
-        if validateCredentialsFormat(email: email, password: password) {
+        if validateFields() {
+            let email: String = emailField.text!
+            let password: String = passwordField.text!
+            
+            // Attempt Firebase user sign-in
             FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
                 if user != nil {
                     let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
@@ -38,28 +36,26 @@ class LoginVC: UIViewController {
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate
                     appDelegate.window!.rootViewController = rootViewController
                 } else if error != nil {
-                    // TODO: Do something
+                    // TODO
                 }
             })
         }
     }
     
-    func validateCredentialsFormat(email: String, password: String) -> Bool {
+    
+    /* Validate the login fields (e.g. fields not empty) */
+    func validateFields() -> Bool {
+        let email: String = emailField.text!
+        let password: String = passwordField.text!
+        
+        if email == "" || password == "" { return false }
+        
         return true
     }
     
     @IBAction func registerButtonAction(_ sender: UIButton) {
+        // Segue to the registration screen
         performSegue(withIdentifier: "toRegister", sender: sender)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

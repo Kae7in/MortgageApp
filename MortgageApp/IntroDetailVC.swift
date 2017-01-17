@@ -13,15 +13,14 @@ class IntroDetailVC: UIViewController {
     var mortgage: Mortgage? = nil
     var pageController: IntroPVC? = nil
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-//        setBackgroundColors()
-        self.view.backgroundColor = UIColor.white
         
+        self.view.backgroundColor = UIColor.white
         self.addTitleLabel()
     }
+    
     
     func addTitleLabel() {
         let label = UILabel(frame: CGRect.zero)
@@ -46,6 +45,7 @@ class IntroDetailVC: UIViewController {
         
         NSLayoutConstraint.activate([widthConstraint, heightConstraint, xConstraint, yConstraint])
     }
+    
     
     func animate(label: UILabel, startValue: NSDecimalNumber, endValue: NSDecimalNumber, interval: TimeInterval, dollars: Bool = true) {
         var counter = startValue
@@ -88,21 +88,10 @@ class IntroDetailVC: UIViewController {
             counter = counter.adding(NSDecimalNumber(value: increment))
         }
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

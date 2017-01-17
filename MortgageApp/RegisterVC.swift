@@ -22,35 +22,33 @@ class RegisterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         self.ref = FIRDatabase.database().reference()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func submitButtonAction(_ sender: UIButton) {
-        let email: String = emailField.text!
-        let username: String = usernameField.text!.lowercased()
-        let password: String = passwordField.text!
-        let confirmPassword: String = confirmPasswordField.text!
-        
-        if validateCredentialsFormat(email: email, username: username, password: password, confirmPassword: confirmPassword) {
+        if validateFields() {
+            let email: String = emailField.text!
+            let username: String = usernameField.text!.lowercased()
+            let password: String = passwordField.text!
+            
+            // Attempt to create new Firebase User
             FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                 if user != nil {
                     // Associate username with uuid
                     self.ref.child("usernames").child(username).setValue(user!.uid)
                     
-                    // Associate uuid with email and username
+                    // Add fields to uuid entry
                     let userRef = self.ref.child("users").child(user!.uid)
                     userRef.child("email").setValue(email)
                     userRef.child("username").setValue(username)
                     
                     self.performSegue(withIdentifier: "toCreateMortgage", sender: nil)
                 } else if error != nil {
-                    // TODO: Do something
+                    // TODO
                 }
             })
         }
@@ -59,14 +57,21 @@ class RegisterVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier! == "toCreateMortgage" {
+            // Segue to creating the user's first mortgage
             let createVC = segue.destination as! CreateMortgageVC
             createVC.goingToIntro = true
         }
     }
     
     
-    func validateCredentialsFormat(email: String, username: String, password: String, confirmPassword: String) -> Bool {
-        if email == "" || username == "" || password == "" { return false }
+    /* Validate the login fields (e.g. fields not empty) */
+    func validateFields() -> Bool {
+        let email: String = emailField.text!
+        let username: String = usernameField.text!.lowercased()
+        let password: String = passwordField.text!
+        let confirmPassword: String = confirmPasswordField.text!
+        
+        if email == "" || username == "" || password == "" || confirmPassword == "" { return false }
         if password != confirmPassword { return false }
         
         return true

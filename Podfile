@@ -6,7 +6,6 @@ target 'MortgageApp' do
   use_frameworks!
 
   # Pods for MortgageApp
-  pod 'Charts'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'

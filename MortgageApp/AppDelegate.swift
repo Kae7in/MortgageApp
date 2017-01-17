@@ -21,9 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // Firebase Setup
         FIRApp.configure()
         FIRDatabase.database().persistenceEnabled = true
         
+        // Visual/theme changes before launch
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
@@ -31,14 +33,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().tintColor = UIColor.black
         
+        // Navigation logic
         let userAuthenticated: Bool = FIRAuth.auth()?.currentUser != nil
         if !userAuthenticated {
+            // navigate to the login screen
             let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "login")
             
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window!.rootViewController = rootViewController
         }
         
+        // Navigate to previous location (Mortgage List View if fresh app startup -- will change to chat view later)
         return true
     }
 

@@ -15,21 +15,23 @@ class View1: IntroDetailVC {
     @IBOutlet weak var interestLabel: UILabel!
     @IBOutlet weak var balanceLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let mc = MortgageCalculator()
-        mortgage = mc.calculateMortgage(mortgage: mortgage!)
         
+        let mc = MortgageCalculator()
+        self.mortgage = mc.calculateMortgage(mortgage: mortgage!)
         formatMessage()
         displayMortgageData()
     }
+    
     
     @IBAction func nextIntroVC(_ sender: UIButton) {
         if let secondViewController = pageController?.orderedViewControllers[1] {
             pageController!.setViewControllers([secondViewController], direction: .forward, animated: true, completion: nil)
         }
     }
+    
     
     func formatMessage() {
         let string = message.text!
@@ -45,6 +47,7 @@ class View1: IntroDetailVC {
         message.sizeToFit()
     }
     
+    
     func displayMortgageData() {
         var value: NSDecimalNumber = self.mortgage!.loanAmount()
         animate(label: principalLabel, startValue: NSDecimalNumber(value: 0.0), endValue: value, interval: 0.001)
@@ -55,24 +58,11 @@ class View1: IntroDetailVC {
     }
     
     
-    
-    
     // TODO: Produce all the necessary mortgage data
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

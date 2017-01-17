@@ -315,25 +315,6 @@
             </objects>
             <point key="canvasLocation" x="-1134" y="905"/>
         </scene>
-        <!--Overview-->
-        <scene sceneID="TfA-ro-qNZ">
-            <objects>
-                <viewController id="RTc-1k-U30" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="WJ7-jw-CcY"/>
-                        <viewControllerLayoutGuide type="bottom" id="lPz-0M-Lfe"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ml9-Yz-Cna">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Overview" id="I2S-Go-wVV"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gIH-Ym-YRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-418" y="762"/>
-        </scene>
         <!--IntroPVC-->
         <scene sceneID="eqs-tL-EWL">
             <objects>
@@ -1720,29 +1701,18 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCe-12-oSI" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="-0.5" y="268" width="375" height="350"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="350" id="Aje-EQ-0DN"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oJU-Em-p4O" firstAttribute="top" secondItem="OzI-xy-Euo" secondAttribute="bottom" constant="80" id="1lb-qQ-RmE"/>
-                            <constraint firstItem="gsi-43-0kQ" firstAttribute="top" secondItem="gCe-12-oSI" secondAttribute="bottom" id="Ern-JR-Rug"/>
                             <constraint firstItem="Kg6-Ca-1JA" firstAttribute="top" secondItem="6xI-sR-OgQ" secondAttribute="bottom" constant="-5" id="NuX-lY-ax7"/>
-                            <constraint firstItem="gCe-12-oSI" firstAttribute="centerX" secondItem="cWg-EM-SpG" secondAttribute="centerX" id="Yhh-WL-nLr"/>
                             <constraint firstItem="Kg6-Ca-1JA" firstAttribute="centerX" secondItem="cWg-EM-SpG" secondAttribute="centerX" id="bhW-Qb-oey"/>
                             <constraint firstItem="oJU-Em-p4O" firstAttribute="centerX" secondItem="cWg-EM-SpG" secondAttribute="centerX" id="d8j-e2-lfy"/>
-                            <constraint firstItem="gCe-12-oSI" firstAttribute="width" secondItem="cWg-EM-SpG" secondAttribute="width" id="khQ-Gh-WoU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="balance" destination="6xI-sR-OgQ" id="Uww-H7-Ic5"/>
                         <outlet property="balanceCents" destination="n9n-2k-SI7" id="56i-jX-ZDH"/>
-                        <outlet property="lineChart" destination="gCe-12-oSI" id="Ibc-BW-3qU"/>
                         <outlet property="monthsLeftLabel" destination="i7j-MN-n4j" id="EtO-Jg-N7X"/>
                         <outlet property="yearsLeftLabel" destination="ylh-4Z-tfE" id="SYK-yM-WK6"/>
                         <segue destination="GKe-tz-T08" kind="presentation" identifier="toEditPayment" id="MaU-6s-t71"/>
@@ -1752,10 +1722,10 @@
             </objects>
             <point key="canvasLocation" x="2084" y="37"/>
         </scene>
-        <!--Edit PaymentVC-->
+        <!--Extra PaymentVC-->
         <scene sceneID="tL6-Mh-4Dg">
             <objects>
-                <viewController id="GKe-tz-T08" customClass="EditPaymentVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GKe-tz-T08" customClass="ExtraPaymentVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wrw-wv-Dm6"/>
                         <viewControllerLayoutGuide type="bottom" id="2E6-gD-gBP"/>
@@ -1817,7 +1787,8 @@
                                 <rect key="frame" x="32" y="482" width="310" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="sliderChanged:" destination="GKe-tz-T08" eventType="touchUpInside" id="T8U-Rw-ONF"/>
+                                    <action selector="sliderTouchUpInside:" destination="GKe-tz-T08" eventType="touchUpInside" id="795-9N-hRB"/>
+                                    <action selector="sliderValueChanged:" destination="GKe-tz-T08" eventType="valueChanged" id="1ij-Bu-hBU"/>
                                 </connections>
                             </slider>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LOu-ah-n0S">
@@ -1882,18 +1853,24 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="center" fixedFrame="YES" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="oP3-kS-kZd">
-                                <rect key="frame" x="143" y="196" width="88" height="21"/>
+                            <stackView opaque="NO" contentMode="center" fixedFrame="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oP3-kS-kZd">
+                                <rect key="frame" x="143" y="196" width="120" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0yr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bp1-ka-0Ei">
-                                        <rect key="frame" x="0.0" y="0.0" width="35.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0yr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bp1-ka-0Ei">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="4mn-6l-G83"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0mo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRh-89-NSv">
-                                        <rect key="frame" x="52.5" y="0.0" width="35.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0mo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRh-89-NSv">
+                                        <rect key="frame" x="60" y="0.0" width="60" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="gQi-7C-iIb"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1937,9 +1914,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="253-ad-U9a" kind="relationship" relationship="viewControllers" id="qWu-I3-gqC"/>
-                        <segue destination="RTc-1k-U30" kind="relationship" relationship="viewControllers" id="yL4-iA-fNg"/>
-                        <segue destination="IlT-lD-UHF" kind="relationship" relationship="viewControllers" id="epX-p8-F38"/>
                         <segue destination="tg6-mZ-rwo" kind="relationship" relationship="viewControllers" id="uw3-Nz-QQL"/>
+                        <segue destination="IlT-lD-UHF" kind="relationship" relationship="viewControllers" id="epX-p8-F38"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aG-Ft-iIx" userLabel="First Responder" sceneMemberID="firstResponder"/>

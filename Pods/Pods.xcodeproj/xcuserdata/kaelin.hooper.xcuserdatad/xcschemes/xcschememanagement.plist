@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Charts.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,22 +37,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>41F39BDF56EA937D853E71FC03FC00E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4BCDCED8FC44F2DC831241592EC6827D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ADB2421A7918840706CD7B0604417EC9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F307B842FF76B2DE6C55DB67C0885325</key>
 		<dict>
 			<key>primary</key>
 			<true/>
