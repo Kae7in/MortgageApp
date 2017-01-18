@@ -49,7 +49,7 @@ class RegisterVC: UIViewController {
                     userRef.child("email").setValue(email)
                     userRef.child("username").setValue(username)
                     
-                    self.performSegue(withIdentifier: "toCreateMortgage", sender: nil)
+                    self.performSegue(withIdentifier: "toCreateMortgage2", sender: nil)
                 } else if error != nil {
                     // TODO
                 }
@@ -59,9 +59,9 @@ class RegisterVC: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier! == "toCreateMortgage" {
+        if segue.identifier! == "toCreateMortgage2" {
             // Segue to creating the user's first mortgage
-            let createVC = segue.destination as! CreateMortgageVC
+            let createVC = segue.destination as! CreateMortgageFVC
             createVC.goingToIntro = true
         }
     }
