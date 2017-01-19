@@ -16,24 +16,24 @@ class CreateMortgageFVC: FormViewController {
     var goingToIntro: Bool = false  // This flag should be set to true if this is the first ever mortgage the user has created
     var mortgageData = MortgageData()  // List of mortgages the previous UITableView will use as data
     var ref: FIRDatabaseReference!
+    var formHasLoadedOnce = false  // TODO: Get rid of this hacky way of reloading the form when extra payment rows have been added
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.ref = FIRDatabase.database().reference()
-        layoutForm()
+        self.layoutForm()
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidLoad()
         
-        print(self.mortgage.extras.count)
-        print("HAHA")
-        for payment in self.mortgage.extras {
-            print(payment)
+        if formHasLoadedOnce {
+            self.layoutForm()
         }
+        self.formHasLoadedOnce = true
     }
     
     
@@ -112,14 +112,21 @@ class CreateMortgageFVC: FormViewController {
                 row.placeholder = "Blah"
             }
             +++ Section("Additional Payment History")
-            <<< ButtonRow("Add Extra Payment") { (row: ButtonRow) in
+            form.last!.tag = "additional_payment_history"
+            for extra in self.mortgage.extras {
+                self.form.last! <<< LabelRow() { row in
+                    // TODO: Enable swipe to delete/edit actions on these rows using editActionsForRowAtIndexPath UITableViewDelegate method
+                    row.title = "Extra Payment"
+                    row.value = String(extra["extraAmount"] as! Int)
+                }
+            }
+            form.last! <<< ButtonRow("Add Extra Payment") { (row: ButtonRow) in
                 row.title = row.tag
                 row.presentationMode = .segueName(segueName: "toCreateExtraPayment", onDismiss: nil)
             }
             +++ Section()
             <<< ButtonRow("Done.") { (row: ButtonRow) in
                 row.title = row.tag
-                // row.presentationMode = .segueName(segueName: "RowsExampleViewControllerSegue", onDismiss: nil)
             }
             .onCellSelection({ (cell, row) in
                 self.done()
