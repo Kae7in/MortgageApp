@@ -67,6 +67,7 @@ class CreateMortgageVC: UIViewController {
         return true
     }
     
+    
     func createAndSaveMortgage() -> Mortgage {
         let principalAmount = NSDecimalNumber(value: Double(self.principal.text!)!)
         let interestRate = NSDecimalNumber(value: Double(self.apr.text!)!)
@@ -84,6 +85,7 @@ class CreateMortgageVC: UIViewController {
         return m
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // if this is the first ever mortgage the user has created
         if segue.identifier! == "toIntro" {
@@ -98,4 +100,3 @@ class CreateMortgageVC: UIViewController {
     }
     
 }
-

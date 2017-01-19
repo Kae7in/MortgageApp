@@ -114,7 +114,7 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier! == "toCreateMortgage" {
             // User selected the add mortgage button
-            let dest: CreateMortgageVC = segue.destination as! CreateMortgageVC
+            let dest: CreateMortgageFVC = segue.destination as! CreateMortgageFVC
             dest.mortgageData = self.mortgageData
         } else if segue.identifier! == "toMortgageDetail" {
             // User selected a cell
@@ -177,7 +177,7 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 
 /* 
- Local mortgage data cache.
+ Local Cache for passing mortgage data back from the ExtraPaymentVC to this one
  */
 class MortgageData {
     // This is where all of the loaded mortgages will be stored.

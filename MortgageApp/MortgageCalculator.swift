@@ -207,7 +207,7 @@ class MortgageCalculator: NSObject {
         mortgage.paymentSchedule = amortizations
         mortgage.setOriginalPaymentSchedule()
         mortgage.numberOfPayments = mortgage.paymentSchedule.count
-        mortgage.monthlyPayment = mortgage.paymentSchedule[0].scheduledMonthlyPayment
+        mortgage.monthlyPayment = mortgage.paymentSchedule[0].scheduledMonthlyPayment  // TODO: Make this the current month's payment (e.g. what if the user is creating an ARM mortgage after having it for 10 years? Could be a different monthly payment)
         mortgage.calculateAdditionalMetrics()
     }
     

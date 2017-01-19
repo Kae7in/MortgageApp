@@ -29,7 +29,7 @@ class Mortgage: NSObject {
     var paymentSchedule = [Amortization]()
     var originalMortgage: Mortgage? = nil
     var numberOfPayments: Int = 360
-    var monthlyPayment: NSDecimalNumber = 0
+    var monthlyPayment: NSDecimalNumber = -1
     
     override init() {
         super.init()
@@ -137,6 +137,15 @@ class Mortgage: NSObject {
     }
     
     func save() {
+        // If this is the first time this mortgage has been saved,
+        // run it through the calculator because otherwise the monthly payment
+        // won't be there.
+        // TODO: THIS IS HACKY. FIX THIS.
+        if self.monthlyPayment.compare(NSDecimalNumber(value: 0)) == ComparisonResult.orderedAscending {
+            let mc = MortgageCalculator()
+            _ = mc.calculateMortgage(mortgage: self)
+        }
+        
         let ref = FIRDatabase.database().reference()
         
         // Get current user

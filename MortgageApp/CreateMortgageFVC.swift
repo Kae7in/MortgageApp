@@ -12,6 +12,7 @@ import FirebaseDatabase
 
 class CreateMortgageFVC: FormViewController {
     
+    let mortgage = Mortgage()
     var goingToIntro: Bool = false  // This flag should be set to true if this is the first ever mortgage the user has created
     var mortgageData = MortgageData()  // List of mortgages the previous UITableView will use as data
     var ref: FIRDatabaseReference!
@@ -22,6 +23,17 @@ class CreateMortgageFVC: FormViewController {
         
         self.ref = FIRDatabase.database().reference()
         layoutForm()
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidLoad()
+        
+        print(self.mortgage.extras.count)
+        print("HAHA")
+        for payment in self.mortgage.extras {
+            print(payment)
+        }
     }
     
     
@@ -73,6 +85,9 @@ class CreateMortgageFVC: FormViewController {
                 formatter.dateStyle = .short
                 $0.dateFormatter = formatter
             }
+            .onChange({ (row) in
+                // TODO: Update all extra payments (if any) to reflect this change
+            })
             +++ Section("Additional Details")
             <<< DecimalRow(){
                 $0.title = "Home Insurance (monthly)"
@@ -154,19 +169,18 @@ class CreateMortgageFVC: FormViewController {
         let interestRate: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["interest_rate"] as! Double)
         let startDate: Date? = valuesDictionary["start_date"] as? Date
         
-        // Create Mortgage instance
-        let m = Mortgage()
-        m.name = name!
-        m.salePrice = principal!
-        m.interestRate = interestRate!
-        m.loanTermMonths = loanTerm! * 12
+        // Assign fields of mortgage instance
+        self.mortgage.name = name!
+        self.mortgage.salePrice = principal!
+        self.mortgage.interestRate = interestRate!
+        self.mortgage.loanTermMonths = loanTerm! * 12
         let downPercent: NSDecimalNumber? = downPayment?.dividing(by: principal!).multiplying(by: NSDecimalNumber(value: 100))
-        m.downPayment = downPercent!.stringValue + "%"
-        m.startDate = startDate!
+        self.mortgage.downPayment = downPercent!.stringValue + "%"
+        self.mortgage.startDate = startDate!
         
-        m.save()
+        self.mortgage.save()
         
-        return m
+        return mortgage
     }
     
     
@@ -176,6 +190,11 @@ class CreateMortgageFVC: FormViewController {
             let introPVC = segue.destination as! IntroPVC
             introPVC.mortgage = self.mortgageData.mortgages.last!
             self.goingToIntro = false
+        } else if segue.identifier! == "toCreateExtraPayment" {
+            let createExtraPaymentFVC = segue.destination as! CreateExtraPaymentFVC
+            
+            self.mortgage.startDate = self.form.rowBy(tag: "start_date")?.baseValue as! Date
+            createExtraPaymentFVC.mortgage = self.mortgage
         }
         
         let backItem = UIBarButtonItem()
