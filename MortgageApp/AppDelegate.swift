@@ -38,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !userAuthenticated {
             // navigate to the login screen
             let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "signUp")
+            //let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "debug")
             
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window!.rootViewController = rootViewController

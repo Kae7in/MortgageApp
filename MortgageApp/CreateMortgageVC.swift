@@ -37,21 +37,6 @@ class CreateMortgageVC: UIViewController {
     }
     
     
-    @IBAction func logoutButtonAction(_ sender: UIButton) {
-        // Logout of Firebase
-        try! FIRAuth.auth()?.signOut()  // TODO: Add failure catch
-        
-        // Manually transition back to login view
-        let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "signUp")
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        UIView.transition(with: appDelegate.window!, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: {
-            appDelegate.window!.rootViewController = rootViewController
-        }) { (completed) in
-            
-        }
-    }
-    
-    
     @IBAction func mortgageSubmitted(_ sender: UIButton) {
         if validateInput() {
             let m = createAndSaveMortgage()

@@ -11,6 +11,12 @@
 		1A1067E01E031F6F00729426 /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A1067DD1E031F6F00729426 /* SF-UI-Display-Regular.otf */; };
 		1A1067E11E031F6F00729426 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A1067DE1E031F6F00729426 /* SF-UI-Display-Thin.otf */; };
 		1A1067E21E031F6F00729426 /* SF-UI-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A1067DF1E031F6F00729426 /* SF-UI-Display-Ultralight.otf */; };
+		1A1427E81E2FFFAA00D52F90 /* CreateExtraPaymentFVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1427E71E2FFFAA00D52F90 /* CreateExtraPaymentFVC.swift */; };
+		1A1427E91E2FFFAA00D52F90 /* CreateExtraPaymentFVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1427E71E2FFFAA00D52F90 /* CreateExtraPaymentFVC.swift */; };
+		1A1427EA1E2FFFAA00D52F90 /* CreateExtraPaymentFVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1427E71E2FFFAA00D52F90 /* CreateExtraPaymentFVC.swift */; };
+		1A1427ED1E306ADA00D52F90 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1427EC1E306ADA00D52F90 /* SettingsVC.swift */; };
+		1A1427EE1E306ADA00D52F90 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1427EC1E306ADA00D52F90 /* SettingsVC.swift */; };
+		1A1427EF1E306ADA00D52F90 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1427EC1E306ADA00D52F90 /* SettingsVC.swift */; };
 		1A36D4291DF86AF40093A411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D4281DF86AF40093A411 /* AppDelegate.swift */; };
 		1A36D42B1DF86AF40093A411 /* CreateMortgageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D42A1DF86AF40093A411 /* CreateMortgageVC.swift */; };
 		1A36D4301DF86AF40093A411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A36D42F1DF86AF40093A411 /* Assets.xcassets */; };
@@ -77,6 +83,8 @@
 		1A1067DD1E031F6F00729426 /* SF-UI-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Regular.otf"; sourceTree = "<group>"; };
 		1A1067DE1E031F6F00729426 /* SF-UI-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.otf"; sourceTree = "<group>"; };
 		1A1067DF1E031F6F00729426 /* SF-UI-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Ultralight.otf"; sourceTree = "<group>"; };
+		1A1427E71E2FFFAA00D52F90 /* CreateExtraPaymentFVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateExtraPaymentFVC.swift; sourceTree = "<group>"; };
+		1A1427EC1E306ADA00D52F90 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		1A36D4251DF86AF40093A411 /* MortgageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MortgageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A36D4281DF86AF40093A411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A36D42A1DF86AF40093A411 /* CreateMortgageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMortgageVC.swift; sourceTree = "<group>"; };
@@ -184,6 +192,8 @@
 				1AF882D71E1AC013000CA84F /* MortgageListVC.swift */,
 				1A36D42A1DF86AF40093A411 /* CreateMortgageVC.swift */,
 				1A410D701E2EE8660007B5C0 /* CreateMortgageFVC.swift */,
+				1A1427E71E2FFFAA00D52F90 /* CreateExtraPaymentFVC.swift */,
+				1A1427EC1E306ADA00D52F90 /* SettingsVC.swift */,
 				1AB349C61E00AA9F00E76049 /* Intro */,
 				1A80FF7A1DFF0D3800193664 /* MortgageDetailVC.swift */,
 				1A7DE08C1E099EB300E29CED /* ExtraPaymentVC.swift */,
@@ -572,6 +582,7 @@
 				1A8D4A241E1C2495000D2592 /* CustomTableViewCell.swift in Sources */,
 				1AB349C31E00A10600E76049 /* View7.swift in Sources */,
 				1A5BB8031E16C9D000B55D11 /* LoginVC.swift in Sources */,
+				1A1427ED1E306ADA00D52F90 /* SettingsVC.swift in Sources */,
 				1A36D4291DF86AF40093A411 /* AppDelegate.swift in Sources */,
 				1AB349BB1E009FA400E76049 /* View4.swift in Sources */,
 				1A36D4581DF86CC00093A411 /* MortgageCalculator.swift in Sources */,
@@ -583,6 +594,7 @@
 				1A410D6D1E2EC15B0007B5C0 /* CustomExtensions.swift in Sources */,
 				1AB349A91DFF5A1500E76049 /* IntroPVC.swift in Sources */,
 				1AB349B91E009F3300E76049 /* View3.swift in Sources */,
+				1A1427E81E2FFFAA00D52F90 /* CreateExtraPaymentFVC.swift in Sources */,
 				1AF882D81E1AC013000CA84F /* MortgageListVC.swift in Sources */,
 				1A80FF7B1DFF0D3800193664 /* MortgageDetailVC.swift in Sources */,
 				1AB349BF1E00A0AD00E76049 /* View6.swift in Sources */,
@@ -597,10 +609,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A410D6E1E2EC15B0007B5C0 /* CustomExtensions.swift in Sources */,
+				1A1427E91E2FFFAA00D52F90 /* CreateExtraPaymentFVC.swift in Sources */,
 				1A8D4A251E1C2495000D2592 /* CustomTableViewCell.swift in Sources */,
 				1AF882D91E1AC013000CA84F /* MortgageListVC.swift in Sources */,
 				1A36D43E1DF86AF40093A411 /* MortgageAppTests.swift in Sources */,
 				1A410D751E2EEA300007B5C0 /* CreateMortgageFVC.swift in Sources */,
+				1A1427EE1E306ADA00D52F90 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,10 +623,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A410D6F1E2EC15B0007B5C0 /* CustomExtensions.swift in Sources */,
+				1A1427EA1E2FFFAA00D52F90 /* CreateExtraPaymentFVC.swift in Sources */,
 				1A8D4A261E1C2495000D2592 /* CustomTableViewCell.swift in Sources */,
 				1AF882DA1E1AC013000CA84F /* MortgageListVC.swift in Sources */,
 				1A36D4491DF86AF50093A411 /* MortgageAppUITests.swift in Sources */,
 				1A410D761E2EEA310007B5C0 /* CreateMortgageFVC.swift in Sources */,
+				1A1427EF1E306ADA00D52F90 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
