@@ -12,16 +12,38 @@ import Eureka
 class CreateExtraPaymentFVC: FormViewController {
     
     var mortgage: Mortgage!
+    var navBar: UINavigationBar!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.layoutNavigationBar()
         layoutForm()
     }
     
     
+    func layoutNavigationBar() {
+        self.navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: UIApplication.shared.statusBarFrame.height + 44))
+        self.view.addSubview(navBar)
+        let navItem = UINavigationItem(title: "Create Mortgage")
+        let cancelItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(cancel))
+        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: #selector(done))
+        navItem.leftBarButtonItem = cancelItem
+        navItem.rightBarButtonItem = doneItem
+        self.navBar.setItems([navItem], animated: false)
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navBar.isTranslucent = false
+        self.automaticallyAdjustsScrollViewInsets = false
+    }
+    
+    
     func layoutForm() {
-        self.form = Section()
+        self.form = Section(){ section in
+                var header = HeaderFooterView<UIView>(.class)
+                header.height = { self.navBar.frame.height }
+                section.header = header
+            }
             <<< SegmentedRow<String>("segments") {
                 $0.options = ["One Time", "Recurring"]
                 $0.value = "One Time"
@@ -60,13 +82,24 @@ class CreateExtraPaymentFVC: FormViewController {
                 $0.hidden = "$segments != 'Recurring'"
                 $0.value = 1
             }
-            <<< ButtonRow("Done.") { (row: ButtonRow) in
-                row.title = row.tag
-            }
-            .onCellSelection({ (cell, row) in
-                self.packageUpExtraPayment()
-                self.dismiss(animated: true, completion: {})
-            })
+    }
+    
+    
+    func done() {
+        if validInput() {
+            self.packageUpExtraPayment()
+            self.dismiss(animated: true, completion: {})
+        }
+    }
+    
+    
+    func cancel() {
+        self.dismiss(animated: true, completion: {})
+    }
+    
+    
+    func validInput() -> Bool {
+        return true
     }
     
     

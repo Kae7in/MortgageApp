@@ -17,12 +17,14 @@ class CreateMortgageFVC: FormViewController {
     var mortgageData = MortgageData()  // List of mortgages the previous UITableView will use as data
     var ref: FIRDatabaseReference!
     var formHasLoadedOnce = false  // TODO: Get rid of this hacky way of reloading the form when extra payment rows have been added
+    var navBar: UINavigationBar!
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.ref = FIRDatabase.database().reference()
+        self.layoutNavigationBar()
         self.layoutForm()
     }
     
@@ -37,8 +39,27 @@ class CreateMortgageFVC: FormViewController {
     }
     
     
+    func layoutNavigationBar() {
+        self.navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: UIApplication.shared.statusBarFrame.height + 44))
+        self.view.addSubview(navBar)
+        let navItem = UINavigationItem(title: "Create Mortgage")
+        let cancelItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(cancel))
+        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: #selector(done))
+        navItem.leftBarButtonItem = cancelItem
+        navItem.rightBarButtonItem = doneItem
+        self.navBar.setItems([navItem], animated: false)
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navBar.isTranslucent = false
+        self.automaticallyAdjustsScrollViewInsets = false
+    }
+    
+    
     func layoutForm() {
-        self.form = Section("Basics")
+        self.form = Section("Basics"){ section in
+                var header = HeaderFooterView<UIView>(.class)
+                header.height = { self.navBar.frame.height }
+                section.header = header
+            }
             <<< SegmentedRow<String>("segments") {
                 $0.options = ["Fixed Rate", "Adjustable Rate"]
                 $0.value = "Fixed Rate"
@@ -124,13 +145,6 @@ class CreateMortgageFVC: FormViewController {
                 row.title = row.tag
                 row.presentationMode = .segueName(segueName: "toCreateExtraPayment", onDismiss: nil)
             }
-            +++ Section()
-            <<< ButtonRow("Done.") { (row: ButtonRow) in
-                row.title = row.tag
-            }
-            .onCellSelection({ (cell, row) in
-                self.done()
-            })
     }
     
     
@@ -149,6 +163,11 @@ class CreateMortgageFVC: FormViewController {
                 })
             }
         }
+    }
+    
+    
+    func cancel() {
+        self.dismiss(animated: true, completion: {})
     }
     
     

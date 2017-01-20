@@ -18,7 +18,6 @@
 		1A1427EE1E306ADA00D52F90 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1427EC1E306ADA00D52F90 /* SettingsVC.swift */; };
 		1A1427EF1E306ADA00D52F90 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1427EC1E306ADA00D52F90 /* SettingsVC.swift */; };
 		1A36D4291DF86AF40093A411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D4281DF86AF40093A411 /* AppDelegate.swift */; };
-		1A36D42B1DF86AF40093A411 /* CreateMortgageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D42A1DF86AF40093A411 /* CreateMortgageVC.swift */; };
 		1A36D4301DF86AF40093A411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A36D42F1DF86AF40093A411 /* Assets.xcassets */; };
 		1A36D4331DF86AF40093A411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A36D4311DF86AF40093A411 /* LaunchScreen.storyboard */; };
 		1A36D43E1DF86AF40093A411 /* MortgageAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D43D1DF86AF40093A411 /* MortgageAppTests.swift */; };
@@ -87,7 +86,6 @@
 		1A1427EC1E306ADA00D52F90 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		1A36D4251DF86AF40093A411 /* MortgageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MortgageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A36D4281DF86AF40093A411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A36D42A1DF86AF40093A411 /* CreateMortgageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMortgageVC.swift; sourceTree = "<group>"; };
 		1A36D42F1DF86AF40093A411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A36D4321DF86AF40093A411 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A36D4341DF86AF40093A411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 				1A5BB8041E16CD3600B55D11 /* RegisterVC.swift */,
 				1A8D4A231E1C2495000D2592 /* CustomTableViewCell.swift */,
 				1AF882D71E1AC013000CA84F /* MortgageListVC.swift */,
-				1A36D42A1DF86AF40093A411 /* CreateMortgageVC.swift */,
 				1A410D701E2EE8660007B5C0 /* CreateMortgageFVC.swift */,
 				1A1427E71E2FFFAA00D52F90 /* CreateExtraPaymentFVC.swift */,
 				1A1427EC1E306ADA00D52F90 /* SettingsVC.swift */,
@@ -578,7 +575,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AABB4871DFA06A9006A3B91 /* Amortization.swift in Sources */,
-				1A36D42B1DF86AF40093A411 /* CreateMortgageVC.swift in Sources */,
 				1A8D4A241E1C2495000D2592 /* CustomTableViewCell.swift in Sources */,
 				1AB349C31E00A10600E76049 /* View7.swift in Sources */,
 				1A5BB8031E16C9D000B55D11 /* LoginVC.swift in Sources */,
