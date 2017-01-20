@@ -33,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().tintColor = UIColor.black
         
+        UITabBar.appearance().tintColor = UIColor.black
+        
         // Navigation logic
         let userAuthenticated: Bool = FIRAuth.auth()?.currentUser != nil
         if !userAuthenticated {

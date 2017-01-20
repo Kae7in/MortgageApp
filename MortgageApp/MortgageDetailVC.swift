@@ -60,11 +60,10 @@ class MortgageDetailVC: UIViewController {
     func layoutNavigationBar() {
         let nav = self.navigationController?.navigationBar
         nav?.barStyle = UIBarStyle.black
-        nav?.tintColor = UIColor(rgbColorCodeRed: 208, green: 2, blue: 27, alpha: 1.0)
+        nav?.tintColor = UIColor.black
         self.navigationItem.title = "Balance"
-        nav?.titleTextAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Light", size: 20.0)!, NSForegroundColorAttributeName: UIColor(rgbColorCodeRed: 155, green: 155, blue: 155, alpha: 1.0)]
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "addbutton"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(extraPaymentButtonAction(sender:)))
-        self.navigationItem.rightBarButtonItem?.imageInsets = UIEdgeInsets(top: 15.0, left: 30.0, bottom: 15.0, right: 0.0)
+        nav?.titleTextAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Light", size: 20.0)!, NSForegroundColorAttributeName: UIColor.black]
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu") , style: UIBarButtonItemStyle.plain, target: self, action: #selector(toAmortizationTables))
     }
     
     
@@ -73,13 +72,18 @@ class MortgageDetailVC: UIViewController {
     }
     
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    @IBAction func addPaymentButtonAction(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "toEditPayment", sender: self)
     }
     
     
-    func extraPaymentButtonAction(sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "toEditPayment", sender: sender)
+    func toAmortizationTables() {
+        self.performSegue(withIdentifier: "toAmortizationTables", sender: self)
+    }
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     

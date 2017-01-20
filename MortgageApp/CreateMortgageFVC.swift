@@ -16,13 +16,14 @@ class CreateMortgageFVC: FormViewController {
     var goingToIntro: Bool = false  // This flag should be set to true if this is the first ever mortgage the user has created
     var mortgageData = MortgageData()  // List of mortgages the previous UITableView will use as data
     var ref: FIRDatabaseReference!
-    var formHasLoadedOnce = false  // TODO: Get rid of this hacky way of reloading the form when extra payment rows have been added
+    var formHasLoadedOnce = false
     var navBar: UINavigationBar!
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("viewDidLoad")
         self.ref = FIRDatabase.database().reference()
         self.layoutNavigationBar()
         self.layoutForm()
@@ -32,8 +33,9 @@ class CreateMortgageFVC: FormViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidLoad()
         
+        print("viewDidAppear")
         if formHasLoadedOnce {
-            self.layoutForm()
+            self.layoutForm()  // TODO: Get rid of this hacky way of reloading the form when extra payment rows have been added
         }
         self.formHasLoadedOnce = true
     }
@@ -132,19 +134,22 @@ class CreateMortgageFVC: FormViewController {
                 row.title = "Blah"
                 row.placeholder = "Blah"
             }
-            +++ Section("Additional Payment History")
-            form.last!.tag = "additional_payment_history"
-            for extra in self.mortgage.extras {
-                self.form.last! <<< LabelRow() { row in
-                    // TODO: Enable swipe to delete/edit actions on these rows using editActionsForRowAtIndexPath UITableViewDelegate method
-                    row.title = "Extra Payment"
-                    row.value = String(extra["extraAmount"] as! Int)
+            +++ Section("Additional Payment History"){
+                // TODO: Enable swipe to delete/edit actions on these rows using editActionsForRowAtIndexPath UITableViewDelegate method
+                $0.tag = "additional_payment_history"
+                for extra in self.mortgage.extras {
+                    $0 <<< LabelRow() { row in
+                        row.title = "Extra Payment"
+                        row.value = String(extra["extraAmount"] as! Int)  // TODO: Show start date and/or end date instead of amount
+                    }
                 }
             }
             form.last! <<< ButtonRow("Add Extra Payment") { (row: ButtonRow) in
                 row.title = row.tag
-                row.presentationMode = .segueName(segueName: "toCreateExtraPayment", onDismiss: nil)
             }
+            .onCellSelection({ (cell, row) in
+                self.performSegue(withIdentifier: "toCreateExtraPayment", sender: nil)
+            })
     }
     
     
