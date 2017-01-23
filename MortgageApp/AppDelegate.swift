@@ -26,9 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRDatabase.database().persistenceEnabled = true
         
         // Visual/theme changes before launch
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+//        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+//        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().barTintColor = UIColor.customGrey()
+//        UINavigationBar.appearance().backgroundColor = UIColor(rgbColorCodeRed: 247, green: 247, blue: 247, alpha: 1.0)
         UINavigationBar.appearance().isTranslucent = true
         
         UINavigationBar.appearance().tintColor = UIColor.black

@@ -59,10 +59,8 @@ class MortgageDetailVC: UIViewController {
     
     func layoutNavigationBar() {
         let nav = self.navigationController?.navigationBar
-        nav?.barStyle = UIBarStyle.black
         nav?.tintColor = UIColor.black
         self.navigationItem.title = "Balance"
-        nav?.titleTextAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Light", size: 20.0)!, NSForegroundColorAttributeName: UIColor.black]
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu") , style: UIBarButtonItemStyle.plain, target: self, action: #selector(toAmortizationTables))
     }
     
@@ -73,7 +71,7 @@ class MortgageDetailVC: UIViewController {
     
     
     @IBAction func addPaymentButtonAction(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "toEditPayment", sender: self)
+        self.performSegue(withIdentifier: "toExtraPayment", sender: self)
     }
     
     
@@ -88,9 +86,14 @@ class MortgageDetailVC: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dest = segue.destination as! ExtraPaymentVC
-        
-        dest.mortgage = self.mortgage
+        if segue.identifier == "toExtraPayment" {
+            let dest = segue.destination as! ExtraPaymentVC
+            dest.mortgage = self.mortgage
+        } else if segue.identifier == "toAmortizationTables" {
+            let dest = segue.destination as! AmortizationFVC
+            dest.mortgage = self.mortgage
+            dest.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        }
     }
 
 }

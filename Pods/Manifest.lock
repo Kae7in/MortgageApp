@@ -1,4 +1,5 @@
 PODS:
+  - BSGridCollectionViewLayout (1.1.1)
   - Eureka (2.0.0-beta.1)
   - Firebase/Auth (3.10.0):
     - Firebase/Core
@@ -41,12 +42,14 @@ PODS:
   - GTMSessionFetcher/Core (1.1.7)
 
 DEPENDENCIES:
+  - BSGridCollectionViewLayout (~> 1.1.0)
   - Eureka (~> 2.0.0-beta.1)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
 
 SPEC CHECKSUMS:
+  BSGridCollectionViewLayout: d7304dcb35c6b3b4420c527e9f9b77ff322250f3
   Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
   Firebase: 387f37c7dca894a02708da9ff35ba147040eae9e
   FirebaseAnalytics: 9c67af0ebeb8d2146c9b4ea2616439affa947b58
@@ -59,6 +62,6 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
 
-PODFILE CHECKSUM: 354251b39a2113e5e1c6a0eedcd7e7cc2840baf9
+PODFILE CHECKSUM: f0555513d4f8c507eea4e26e88c674328af23f8d
 
 COCOAPODS: 1.1.1

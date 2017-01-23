@@ -7,285 +7,296 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		034F80EC837A155A77F38361B6BD6E67 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA469B6EE366F74C0643AB844ACF8830 /* Validation.swift */; };
-		04F003689B60125346DDDFF43DAADE81 /* Pods-MortgageApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B82CE2A8F47187F5578C6FEDF31EDA3 /* Pods-MortgageApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0663F21E91FD40DD55F248D70E2B6F63 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D38AA9DA61EC2DBBC5FB3297E00D5C1 /* Row.swift */; };
-		07340F15BACBA601736DBB2ABF1ABC35 /* GTMSessionFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = F185E5664F37F5C7B3F214968913897E /* GTMSessionFetcherLogging.m */; };
-		0749EC40D3519957D43A1040F9662F71 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E40A1476E7F71E262C1739B11D4ABA8F /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07C0E1B303CDA3055827C429352E4763 /* Eureka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18D71BAB1923EEEEE17CFCF8865AD69F /* Eureka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		081C9655DCBDE20D3CD2928B6D27B84F /* MultipleSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAAB60D978524AA9F6E827E37E8B61 /* MultipleSelectorViewController.swift */; };
-		0A20BA0694544A723D19F3B31497AA22 /* RuleURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3CF91DD0F6E15AAE43668A9D106DF /* RuleURL.swift */; };
-		0CF04E8CACF30C49068A2A23FDD62FBB /* SwitchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B8F60FBE9BFD1579E3FCF347C68FA3 /* SwitchRow.swift */; };
-		11F0D0CB930604B4DAAE93FEA3904826 /* GTMNSDictionary+URLArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = B2A0B290DBD1B504FA438575BFDC3B59 /* GTMNSDictionary+URLArguments.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		17CF21D19CC486B52F9025A0FB15B667 /* RowControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D6ED9FD93DB62058B2322C030AED0 /* RowControllerType.swift */; };
-		188D37BE684D152DBF28D1A19CB4F0BA /* PushRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E48DD9D19083C9F79761E3FF1E7CE69 /* PushRow.swift */; };
-		18EB997AC9E1DB890F564886BD402EAD /* SelectableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D15BDB9BA8CB0F0B86E4CC8F96151 /* SelectableSection.swift */; };
-		1962E976387CAEF3C3FEBA706DE8338A /* MultipleSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839648AD7187674A33C8EA54EE6991B3 /* MultipleSelectorRow.swift */; };
-		197157CE3C03C879F25B541359548B9E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525BAB329E925A64CC40CBD0FB155D1 /* Helpers.swift */; };
-		1BF69D3262D9E7BCE3AE768533161CFE /* NavigationAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB9A26E94CB8E30E9CDB7B424BB86D /* NavigationAccessoryView.swift */; };
-		1ED67707C258751E7888DAC2AB3D8501 /* GTMSessionFetcherLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 6055B30687648EE642E411916719DBDE /* GTMSessionFetcherLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		034F80EC837A155A77F38361B6BD6E67 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E004AF42EC02BC9B569A79B12C57B29E /* Validation.swift */; };
+		0663F21E91FD40DD55F248D70E2B6F63 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199BCF883668A2D4E688CEB97E195C6 /* Row.swift */; };
+		07340F15BACBA601736DBB2ABF1ABC35 /* GTMSessionFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 42484940434755152C1E5D2CB5A2AC0C /* GTMSessionFetcherLogging.m */; };
+		0749EC40D3519957D43A1040F9662F71 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ABBBD0597BE0072127836A21D7D8D4C7 /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07C0E1B303CDA3055827C429352E4763 /* Eureka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 308809BB6F640DFC7C61E51300BBFA48 /* Eureka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		081C9655DCBDE20D3CD2928B6D27B84F /* MultipleSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F7F285A07F09F68C7EEDF10D28C27 /* MultipleSelectorViewController.swift */; };
+		0A20BA0694544A723D19F3B31497AA22 /* RuleURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F854F373F8FD35898549EA418545A81 /* RuleURL.swift */; };
+		0CF04E8CACF30C49068A2A23FDD62FBB /* SwitchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987E9AF964EC5E7C42261A66EAEF8124 /* SwitchRow.swift */; };
+		11F0D0CB930604B4DAAE93FEA3904826 /* GTMNSDictionary+URLArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = 80280FE84891D1B2728A8F2D32542FA3 /* GTMNSDictionary+URLArguments.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17CF21D19CC486B52F9025A0FB15B667 /* RowControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA96A10D1E4FE05A831D656602B0168 /* RowControllerType.swift */; };
+		188D37BE684D152DBF28D1A19CB4F0BA /* PushRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F0D8E2B9BA1D610D92CFDA495DEA4 /* PushRow.swift */; };
+		18EB997AC9E1DB890F564886BD402EAD /* SelectableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409786A325F3953B523574DF446CDE6 /* SelectableSection.swift */; };
+		1962E976387CAEF3C3FEBA706DE8338A /* MultipleSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB1F75474FB4C09E293DAD5CDF818AA /* MultipleSelectorRow.swift */; };
+		197157CE3C03C879F25B541359548B9E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D13BFAF5523E995B5A6D645789C875 /* Helpers.swift */; };
+		1BF69D3262D9E7BCE3AE768533161CFE /* NavigationAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18CD4E8CBDD78153B3A5461E6E72987 /* NavigationAccessoryView.swift */; };
+		1ED67707C258751E7888DAC2AB3D8501 /* GTMSessionFetcherLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = C81195D715B0C24EA3B07D222A964A8A /* GTMSessionFetcherLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F9B999DFAA1052294448B64C77434B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1698F9A4AE357BAEECB356D8902C9E4D /* Foundation.framework */; };
-		274A0946844B4BDEAA9C66D16F4D6638 /* RuleLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168537E7B4BA0A7193785228310BCB5A /* RuleLength.swift */; };
-		2894B1B84AD8464300463F01D6671515 /* BaseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923418B6ABB81260DDB784E66333369 /* BaseRow.swift */; };
-		2AC11AADC16DD50F3C122E080027B0B0 /* RuleRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1CE14D54C02315AF9B5F8619EC6C4 /* RuleRequired.swift */; };
-		2DF1D2A7FDCB8403D76162E5E94D471C /* SelectableRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB792B1CEBDCDB66CB7E5B0818B81ED6 /* SelectableRowType.swift */; };
-		2EA998FF3BA8B43AD2CBFD20217784EB /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B2D7F7A5FFB2307FE84F9953E453B /* ButtonRow.swift */; };
-		2EFC826FB30ECD27C98CE7F3707E9012 /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 431055892AD3D3C270A2E1897CD8F961 /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		3185C0AF2C79E04DDA0B76FD50D05561 /* Eureka.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6304D3EDF867A6D510AAD2CB21AA5A1 /* Eureka.bundle */; };
-		32CF9BB4493C89CB01FFADD6DB754927 /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91263500D6B99F4F99C40D8E8461B9AA /* GoogleToolboxForMac-dummy.m */; };
-		362CEB31FF646FFA058013C6CC73DABC /* HeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22FBE95382691B394BA275A19E01D4D /* HeaderFooterView.swift */; };
-		378D202D64D7A141AB67663E789FA54D /* LabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7934343DBA7625ECD9B41079BFC30 /* LabelRow.swift */; };
-		380C785F98D63C7BD5ED39053D6562E9 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874EF5D6E9DFC410F5BA170CF37DA95D /* Form.swift */; };
-		39B9AF905697B761591D02D5E02FFCB3 /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40736DECE12ACB76E6C67BDBBAFFA0D /* SelectorViewController.swift */; };
+		274A0946844B4BDEAA9C66D16F4D6638 /* RuleLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C2BEADE3C778FE4C21E051C5A872A /* RuleLength.swift */; };
+		2894B1B84AD8464300463F01D6671515 /* BaseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733F4FBA421BAD1704D203EE7280D8F9 /* BaseRow.swift */; };
+		2AC11AADC16DD50F3C122E080027B0B0 /* RuleRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC43FE29AF3BA395518276BCBD4A2427 /* RuleRequired.swift */; };
+		2DF1D2A7FDCB8403D76162E5E94D471C /* SelectableRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABACC47440945BF8E3BAA529A0F1B5 /* SelectableRowType.swift */; };
+		2EA998FF3BA8B43AD2CBFD20217784EB /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7816D66E4C46DCBA100A77BA694034 /* ButtonRow.swift */; };
+		2EFC826FB30ECD27C98CE7F3707E9012 /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE1CC1EB64C1C7AA29D577CE0B168E0 /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3185C0AF2C79E04DDA0B76FD50D05561 /* Eureka.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F9E59FE182CCACF839796F864C66EF0A /* Eureka.bundle */; };
+		32CF9BB4493C89CB01FFADD6DB754927 /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F1D1431ADCFE95A054F9D55D7179DE /* GoogleToolboxForMac-dummy.m */; };
+		362CEB31FF646FFA058013C6CC73DABC /* HeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71A24F53D0C190F18CADCD9F583A1B2 /* HeaderFooterView.swift */; };
+		378D202D64D7A141AB67663E789FA54D /* LabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCCAFAF2FCA416B0FFAF701048F85D7 /* LabelRow.swift */; };
+		380C785F98D63C7BD5ED39053D6562E9 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DD392A7097D109C9DBAE30A3E24F2F /* Form.swift */; };
+		39B9AF905697B761591D02D5E02FFCB3 /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7391A06B945E7378533AD4460CBE4F3F /* SelectorViewController.swift */; };
 		412DAC9E95520921A5211E19B2CABB70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1698F9A4AE357BAEECB356D8902C9E4D /* Foundation.framework */; };
-		4A37980C75DCCB4309E5A4D39633BF05 /* RowProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40912E98968257F47F69716FF5A3075F /* RowProtocols.swift */; };
-		4C0C430C74FD0ADC96D90E58F9AB37F4 /* TextAreaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13D33C4894468A66B0C13F6D713338 /* TextAreaRow.swift */; };
-		4E52362D826CC8B93BBE8B5864066C82 /* OptionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119265C9CD00B2FD8B4213CE1A544884 /* OptionsRow.swift */; };
-		4F2AB5BFF7D9DE66B8B242ACE69AE0D9 /* GTMDebugThreadValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CF4EA257797152E0C29CE65A7E01B9E /* GTMDebugThreadValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5584C6BA4CCF3F5F4D266D6764A3783B /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A399E976E51C1528F7BA175EE8D9A22 /* Section.swift */; };
-		5B92D1D5ECFEBA99F4C67864E1397A6D /* GTMNSString+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = 227F17EC17D1CA79019C8B9496F082A3 /* GTMNSString+URLArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		5EC7334F080BE482D98AD5C076BD7D4C /* PickerInlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE979FEAF6CA2361F95C7D9CBE19746 /* PickerInlineRow.swift */; };
-		60B7F597141DB5B2D19558DF01DFC1B8 /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C609AB03C1F97E263DA6C99E799168 /* CellType.swift */; };
-		64F31B70A6E5E6963518A01C285B435F /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DCDE1875739200178CF8D93886C284 /* GTMSessionFetcher.m */; };
+		4A37980C75DCCB4309E5A4D39633BF05 /* RowProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE618170061F8A32048299E391765600 /* RowProtocols.swift */; };
+		4C0C430C74FD0ADC96D90E58F9AB37F4 /* TextAreaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8BD2B0DC0E64EAB454AB2CC2A816B0 /* TextAreaRow.swift */; };
+		4E52362D826CC8B93BBE8B5864066C82 /* OptionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC15B5DD0A1EA024C78AB6E54324220 /* OptionsRow.swift */; };
+		4F2AB5BFF7D9DE66B8B242ACE69AE0D9 /* GTMDebugThreadValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 51CF8D153A49CF3CA98D39C97C482BA4 /* GTMDebugThreadValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5584C6BA4CCF3F5F4D266D6764A3783B /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8398235A221C1FE915DF30E648FBA565 /* Section.swift */; };
+		5B92D1D5ECFEBA99F4C67864E1397A6D /* GTMNSString+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = 8490F32A6CE04CCE0FAB0040EAB549CF /* GTMNSString+URLArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5EC7334F080BE482D98AD5C076BD7D4C /* PickerInlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE99F12A7C0E26C00A5231B58B238E1F /* PickerInlineRow.swift */; };
+		60B7F597141DB5B2D19558DF01DFC1B8 /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8024D95FAFA47393BEA1A72D076E0204 /* CellType.swift */; };
+		64F31B70A6E5E6963518A01C285B435F /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 02326C18457D14C828FD2CBB046474F4 /* GTMSessionFetcher.m */; };
 		65B56BD3DBC9B81BB008219D0BA735A9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D51AF8B6E0F481593FCF260BFB999A0 /* Security.framework */; };
-		66D2023A877EBFD52E4E1C15ED887527 /* PopoverSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28ECA576C85A749FC26845502214A4 /* PopoverSelectorRow.swift */; };
-		66E6F3D3704360EE70A2BA227C19ABC4 /* Pods-MortgageApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E30AFE5C6A2C2593C4E855ACF74AA065 /* Pods-MortgageApp-dummy.m */; };
-		6EA6DFC4473A9B2DB6B8A42EA986BA5B /* GTMSessionFetcher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E4D0D92F5B5E247139DAF7AFFEFBDF /* GTMSessionFetcher-dummy.m */; };
-		6FA79DECFD53550668E4A61AF0B08E68 /* StepperRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C2682A5C5BB9D0917558046136651 /* StepperRow.swift */; };
-		7A8FBDE62A4BD3D0C375A6160FBE0ED3 /* FieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F7E81F6115A89ED0F062A1649B763 /* FieldRow.swift */; };
-		7A96647E526A36C9CBF714EE9661BBB3 /* SliderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F280F48CCFE739AFA584893F7800965F /* SliderRow.swift */; };
-		7EFE374DF078F735CF525C6AC1251F71 /* AlertRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B183A8F4933D1EA049761DEBFE712FD /* AlertRow.swift */; };
-		818B729716B3A3BC2E50D998F65AA116 /* DateFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38910D22808E69B7F39005BA90E189EB /* DateFieldRow.swift */; };
-		82FC241E5B93AEF32FC2765F8CC8F2E7 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DB0A03F79861908384E6BBF8C67299 /* Core.swift */; };
-		85FF667A47F8D4DE82837B244C57B3C8 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260264D1980DACB399F3B16218AEA641 /* Operators.swift */; };
-		8852FD9AFC242520924D98BE9C4E2477 /* GTMSessionFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = A9384A9B9FA2242ED18A06E8BEEFC2C9 /* GTMSessionFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B3D40F6022D6E6BDF38B5545B38A2C4 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295E73F1A8CB152A34A45ECD6A340FE /* Protocols.swift */; };
-		8EB17810A5730131D22B04871EB2EF86 /* FieldsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB07300CB13B088BDDEEA9D6519C4B57 /* FieldsRow.swift */; };
-		946DBE5935C9D90DAC22550F3EBAF9D1 /* RuleRegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B69D2B6A3F0A3443E9444BE0018A9 /* RuleRegExp.swift */; };
-		95C69447F517DB81437EDE0003486963 /* GTMSessionFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1758938B9F95BF4124813EE073E88B40 /* GTMSessionFetcherService.m */; };
-		961C9FE5FADC72D0A1DB876AF0834739 /* RuleClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CCAD1F0F5C4F09CFE2A65CD4293CD0 /* RuleClosure.swift */; };
+		66D2023A877EBFD52E4E1C15ED887527 /* PopoverSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC3FF821E1732F1F921CA9B96EBA103 /* PopoverSelectorRow.swift */; };
+		6EA6DFC4473A9B2DB6B8A42EA986BA5B /* GTMSessionFetcher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E077367C003E472599D116688984CA01 /* GTMSessionFetcher-dummy.m */; };
+		6FA79DECFD53550668E4A61AF0B08E68 /* StepperRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C3E3AE834C439987008463809D5A /* StepperRow.swift */; };
+		7A8FBDE62A4BD3D0C375A6160FBE0ED3 /* FieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F1EB85CA1FC4A308D70856604FCF3 /* FieldRow.swift */; };
+		7A96647E526A36C9CBF714EE9661BBB3 /* SliderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0650D63CDD6FBABE9B691691A04245D6 /* SliderRow.swift */; };
+		7EFE374DF078F735CF525C6AC1251F71 /* AlertRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BE798175FAFFDA22CB72D68F0862FB /* AlertRow.swift */; };
+		818B729716B3A3BC2E50D998F65AA116 /* DateFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DF0FA1B8FBD839C284D55E5A35DD2F /* DateFieldRow.swift */; };
+		82FC241E5B93AEF32FC2765F8CC8F2E7 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88940DA417993040D127B8DDB0BE6826 /* Core.swift */; };
+		85FF667A47F8D4DE82837B244C57B3C8 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F912E2E04A03A9188467242D3B652 /* Operators.swift */; };
+		8852FD9AFC242520924D98BE9C4E2477 /* GTMSessionFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 22426F015AEEACAA9ED70E74487ACCF2 /* GTMSessionFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B3D40F6022D6E6BDF38B5545B38A2C4 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A109968BC5FB48DB461EE427193A35BD /* Protocols.swift */; };
+		8EB17810A5730131D22B04871EB2EF86 /* FieldsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443ADC63E9A3F161837FFC4C5B12A3DB /* FieldsRow.swift */; };
+		907D779765F9E18C2D4B924B80D9501A /* GridCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3150C30B624F70F07D8C745A5D179A7 /* GridCollectionViewLayout.swift */; };
+		944A91471418238BD7E52E7AF266F3FA /* Pods-MortgageApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B82CE2A8F47187F5578C6FEDF31EDA3 /* Pods-MortgageApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		946DBE5935C9D90DAC22550F3EBAF9D1 /* RuleRegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67762E282017FC1A0600D526ED8D3FAE /* RuleRegExp.swift */; };
+		95C69447F517DB81437EDE0003486963 /* GTMSessionFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 325A8AD638328C49D4E11A901679A71A /* GTMSessionFetcherService.m */; };
+		961C9FE5FADC72D0A1DB876AF0834739 /* RuleClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B90A2E13380C96D454972BAD579F8 /* RuleClosure.swift */; };
 		967551D370060AE0F4BC86BA2FE66E6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1698F9A4AE357BAEECB356D8902C9E4D /* Foundation.framework */; };
-		A43EECA0E036098BD01ED456F43799D2 /* ButtonRowWithPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9643EADCAB80B16201AE30A2D15D9154 /* ButtonRowWithPresent.swift */; };
-		A4871ECA5485794F6AB396141847E8E7 /* InlineRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D13A1B11DE9E5AAD13CB30A8392684 /* InlineRowType.swift */; };
-		A6ADA5015850563CC2082C85F91BDAFD /* SelectorAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286F9689AC6F1C207D8634331E1AC86 /* SelectorAlertController.swift */; };
-		A71869CF6BD3EA25E59BF11021D67746 /* RuleEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB3A8956A747E5E5013295FF14E96E /* RuleEmail.swift */; };
-		A74E045E42BCDD35A6E35C5F170321B4 /* SegmentedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312F7F10DEFD5629349E6B7FD95D21A9 /* SegmentedRow.swift */; };
+		A43EECA0E036098BD01ED456F43799D2 /* ButtonRowWithPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C09D9BE7AD5D28E1FF8A9B9E6D13753 /* ButtonRowWithPresent.swift */; };
+		A4871ECA5485794F6AB396141847E8E7 /* InlineRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE48260C5C9259EC6A656C5F32CAF5 /* InlineRowType.swift */; };
+		A6ADA5015850563CC2082C85F91BDAFD /* SelectorAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D73A0958AC3D0D96012A428A3E25C /* SelectorAlertController.swift */; };
+		A71869CF6BD3EA25E59BF11021D67746 /* RuleEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1262690D312D3FE4F9D5DA217BE0DF36 /* RuleEmail.swift */; };
+		A74E045E42BCDD35A6E35C5F170321B4 /* SegmentedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD48E74520D44EAC8D1AFE43EDDA58A /* SegmentedRow.swift */; };
 		A8E40F64E84FFF77A29D9BE890D1FAE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1698F9A4AE357BAEECB356D8902C9E4D /* Foundation.framework */; };
-		AA509F0AC2FB6CB8C18934454F8FA0F6 /* RowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2281B9F1587FB71AA6FBEDD0F9A16474 /* RowType.swift */; };
+		AA509F0AC2FB6CB8C18934454F8FA0F6 /* RowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61D997F5D8B68D56784B548BAB642C /* RowType.swift */; };
 		ACD858D6C212A3F2F0281263CCBC0D46 /* Pods-MortgageAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07453C3321EA3F630081B3B838B615CB /* Pods-MortgageAppTests-dummy.m */; };
 		B02CBD3403FD10C8FE0D4780AF6FAE5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1698F9A4AE357BAEECB356D8902C9E4D /* Foundation.framework */; };
-		B05C496A6F67CE9F60DC711F402AB20A /* GTMDebugSelectorValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 45531679FFB8F09F9002F06AF453E741 /* GTMDebugSelectorValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B0B6E7AF3530C966687B5A9B54656FE7 /* SelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC76C11B6F67EED890F23AAA86C5294 /* SelectorRow.swift */; };
-		B0C3C583B9E00FF6C234619045E1AE99 /* ListCheckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB2A7E32C8272BBA28A0E81981E8A67 /* ListCheckRow.swift */; };
-		B9A04CBBF007CB8AAF75D61C5EF4D81F /* GTMMethodCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = 1508307F78BCDCEC1517A2553E15347E /* GTMMethodCheck.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD7345A2B1BCE6CA4C291E705826E1C3 /* PickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9668AC41F777D83897FA8258553175 /* PickerRow.swift */; };
-		C34E24520624B382515A0F58185E6926 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = F28D176FA70DF76D40A9788C5960D43D /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B05C496A6F67CE9F60DC711F402AB20A /* GTMDebugSelectorValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = D7D177BFC4FE5FFDF6813253894C7B57 /* GTMDebugSelectorValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0B6E7AF3530C966687B5A9B54656FE7 /* SelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09F76875F8E5E5CC75D46FE09C89AEB /* SelectorRow.swift */; };
+		B0C3C583B9E00FF6C234619045E1AE99 /* ListCheckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425A52BA4F49CB9F13F788A822F5238 /* ListCheckRow.swift */; };
+		B50C211F72FFCE3660D9A1CDADFB0AA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1698F9A4AE357BAEECB356D8902C9E4D /* Foundation.framework */; };
+		B9A04CBBF007CB8AAF75D61C5EF4D81F /* GTMMethodCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = 0337EFF66824C69FAEDC05B481BB2F29 /* GTMMethodCheck.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD7345A2B1BCE6CA4C291E705826E1C3 /* PickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809BCF8EBE144B4D5B529A264C2B5C81 /* PickerRow.swift */; };
+		C34E24520624B382515A0F58185E6926 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 16298341664A95E16393FA57B2C959AC /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C89AF62E2D7E0225306655D513BE1796 /* Pods-MortgageAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D036F318320D172C24109AB0A9C055 /* Pods-MortgageAppUITests-dummy.m */; };
-		C9DF0516E214282A15FF10AA75FE34DF /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF539CBC0F599C0A38AE4C739BE09C2D /* Cell.swift */; };
-		CBF71B0FF4EFF4AEBB660488DAA15596 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1698F9A4AE357BAEECB356D8902C9E4D /* Foundation.framework */; };
+		C9DF0516E214282A15FF10AA75FE34DF /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD3753F2F04188E835B708D5805DEAE /* Cell.swift */; };
 		CC354898FDC9CD0A2A4A378B476F50DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFC4C47DAC64625B79ED69D7C85EBC7 /* UIKit.framework */; };
-		CCE47794953C5D52EA2B77C07D5DAE6B /* DecimalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83894A5508AC295E5109734F506830AD /* DecimalFormatter.swift */; };
-		D28734EDC84B2A7FBC4D5DCF95177BF8 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 5862BA4D0A98E4F2E9A1AA2109567F67 /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D32A19D6DCF9C97FF52A32064E98D31B /* ActionSheetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DBC1296F156045A612046D7C3AAC20 /* ActionSheetRow.swift */; };
-		D3F381B45ADFDDE51CA31F1E141236CA /* GTMSessionFetcher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9F0568C7B57F590EFEB8E1767FFDB99 /* GTMSessionFetcher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D44D50A0F4B440E2F734B40650D8D3E6 /* Eureka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD951586825C71DBB2C7F8053553A71 /* Eureka-dummy.m */; };
-		DA2F5A299DC9A8ECC5F73A66172E64BC /* GTMNSString+URLArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = CC2880F0DEBB41EB729F44DDB17F10A2 /* GTMNSString+URLArguments.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCE47794953C5D52EA2B77C07D5DAE6B /* DecimalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB28C621CA981EADDB3D0E1B6385A3D0 /* DecimalFormatter.swift */; };
+		D28734EDC84B2A7FBC4D5DCF95177BF8 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 96CAF635D89567E38EC8C93386084901 /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D32A19D6DCF9C97FF52A32064E98D31B /* ActionSheetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89423266D33E9F0AF396FFF990B254E4 /* ActionSheetRow.swift */; };
+		D3F381B45ADFDDE51CA31F1E141236CA /* GTMSessionFetcher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 745B05C53221FA3A4E1D689FAD9A3E9C /* GTMSessionFetcher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D44D50A0F4B440E2F734B40650D8D3E6 /* Eureka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F302ABBE7BBD22EBDACC0CBC645988 /* Eureka-dummy.m */; };
+		DA2F5A299DC9A8ECC5F73A66172E64BC /* GTMNSString+URLArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = 880AF901065F22BFE47B18BDD9F59ED7 /* GTMNSString+URLArguments.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC7D3959F46E2F63B2C4ADF5AE9633A1 /* Pods-MortgageAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C14D4CA5E1EA8B4AA274951B227255 /* Pods-MortgageAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DC9647DB284A9DFF08032C74B129C751 /* CheckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B083EDEB3C15DE2671B88241F4E3547 /* CheckRow.swift */; };
-		DEA0ED61EE365AA71BD69BEC1A499A6A /* GenericMultipleSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEE4CCE081BF9AD7F26A3919E17DA89 /* GenericMultipleSelectorRow.swift */; };
-		DF9559C3822E3C6119BE43E4EDFD7EEE /* GTMSessionFetcherService.h in Headers */ = {isa = PBXBuildFile; fileRef = F9EBD61CB76EB9FCDF2CD34090AEEA95 /* GTMSessionFetcherService.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E173F29FA92E88C68BC87C595774AE4B /* DatePickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D04B4A3BF10484F46DF76951228F5 /* DatePickerRow.swift */; };
+		DC9647DB284A9DFF08032C74B129C751 /* CheckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72B3080C5BB6426F29F6C27419E6DB8 /* CheckRow.swift */; };
+		DEA0ED61EE365AA71BD69BEC1A499A6A /* GenericMultipleSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64AAE8AF6D5CAC195C97267615CBE54 /* GenericMultipleSelectorRow.swift */; };
+		DF9559C3822E3C6119BE43E4EDFD7EEE /* GTMSessionFetcherService.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A93E734EE5ED1BF2C91D65D97CFCF63 /* GTMSessionFetcherService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E173F29FA92E88C68BC87C595774AE4B /* DatePickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F051F5F61BA6FD514A90D0D9B5300E /* DatePickerRow.swift */; };
+		E1A8F79B77CB20AD43FD33D8DF3E7A1B /* BSGridCollectionViewLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53B5B92767FC603C8622B96BB2C7B6F0 /* BSGridCollectionViewLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E731FC01B5406F6372A7B6AA582E4D64 /* Pods-MortgageApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E30AFE5C6A2C2593C4E855ACF74AA065 /* Pods-MortgageApp-dummy.m */; };
 		E7C820F319FF84336B5141479140BC8D /* Pods-MortgageAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A5A785BEC22D7C63732D7FBA8A43A33 /* Pods-MortgageAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E7D23D2F163A34BEC60FD54BCCC22C76 /* GTMNSDictionary+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD174F868D5BC611A7A2CBB1360A4C2 /* GTMNSDictionary+URLArguments.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		EA441B0FF3815E28448729890243DC3D /* DateInlineFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAABA295536B3DF7AAA0F5B410D12F0 /* DateInlineFieldRow.swift */; };
-		EAF1099915C9BFC7DB0705844B8A62F3 /* RuleRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263766EB9EEF2E616853A3CE638FAE87 /* RuleRange.swift */; };
-		EE133A6D74F712F3352268F720BC1717 /* PresenterRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AAF25819223881AE572892AC259CDF /* PresenterRowType.swift */; };
-		F09EDD53B94234F5F8DAC4DCD5CD969E /* GTMSessionUploadFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = C6E8C70A36209BF30CF01F865DC87A88 /* GTMSessionUploadFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F1D480A83F3306E5912A23EC45A2E4C4 /* DateInlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE66A58D3B68D1D1AB2B82FF720E1470 /* DateInlineRow.swift */; };
-		F4E294C07EE32FFCDCF7FF4D71D850BD /* GTMSessionUploadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3303FB85BEF091BE20806E51575A1EA7 /* GTMSessionUploadFetcher.m */; };
-		F65CDA7D8F8B9EF18F5B20E5C706F3EC /* DateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490B6B562E098CABF0C11B8505D1183E /* DateRow.swift */; };
+		E7D23D2F163A34BEC60FD54BCCC22C76 /* GTMNSDictionary+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F91BA02E221CD743397F6A59DF6FEC5 /* GTMNSDictionary+URLArguments.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EA441B0FF3815E28448729890243DC3D /* DateInlineFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A6BCE59E4CA5C6E6370F3BF13D335F /* DateInlineFieldRow.swift */; };
+		EAF1099915C9BFC7DB0705844B8A62F3 /* RuleRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DB3CFE698F90BE2FF0D3A52DC1BEF6 /* RuleRange.swift */; };
+		EBB9EEF4D17B1394B91905B94BBE4F99 /* BSGridCollectionViewLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F883033710CE68FB83C7516432A3E5 /* BSGridCollectionViewLayout-dummy.m */; };
+		EE133A6D74F712F3352268F720BC1717 /* PresenterRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B2E541D8E8642333FFE5F959469EF7 /* PresenterRowType.swift */; };
+		EFC0323C37446EB6DD55D332CA353D93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1698F9A4AE357BAEECB356D8902C9E4D /* Foundation.framework */; };
+		F09EDD53B94234F5F8DAC4DCD5CD969E /* GTMSessionUploadFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = AAE068E88E0DC3F4F4D0E57CA01A0E36 /* GTMSessionUploadFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1D480A83F3306E5912A23EC45A2E4C4 /* DateInlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDF46CF484CDB28B7F972D11E87C6 /* DateInlineRow.swift */; };
+		F4E294C07EE32FFCDCF7FF4D71D850BD /* GTMSessionUploadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6892A4E2141713C66B5B5F690E7474 /* GTMSessionUploadFetcher.m */; };
+		F65CDA7D8F8B9EF18F5B20E5C706F3EC /* DateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5ABB77642071E7D1DF419254D9036E /* DateRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		655A07871CDDE4360220A79D40479218 /* PBXContainerItemProxy */ = {
+		06B4BC58A0117F15C3FC3D4D9B4EC1CD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C052BEBFBD0AB5218CC64BA3450F6547;
 			remoteInfo = GTMSessionFetcher;
 		};
-		76E866E0236F054DB24208D14B234B80 /* PBXContainerItemProxy */ = {
+		06CC05AE9A2D9506EB5889318E5037AE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 107A9565F9DF88517DFD3E28C05B2B96;
-			remoteInfo = GoogleToolboxForMac;
+			remoteGlobalIDString = 6930D5D0C3440426432777093903702D;
+			remoteInfo = BSGridCollectionViewLayout;
 		};
-		B678E48AB4EC966A9D57AE9850872591 /* PBXContainerItemProxy */ = {
+		3BC97EAA82AB7659E212B28CDF31AB13 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EE774F234E810C0DD8263855D7A1A166;
 			remoteInfo = Eureka;
 		};
+		E0FEB117BC24BBE725E91BD39B83F839 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 107A9565F9DF88517DFD3E28C05B2B96;
+			remoteInfo = GoogleToolboxForMac;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0181BA17B9C1E225B85F31ADBB0EC99C /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02326C18457D14C828FD2CBB046474F4 /* GTMSessionFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcher.m; path = Source/GTMSessionFetcher.m; sourceTree = "<group>"; };
+		0337EFF66824C69FAEDC05B481BB2F29 /* GTMMethodCheck.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMMethodCheck.h; path = DebugUtils/GTMMethodCheck.h; sourceTree = "<group>"; };
+		0409786A325F3953B523574DF446CDE6 /* SelectableSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectableSection.swift; path = Source/Core/SelectableSection.swift; sourceTree = "<group>"; };
+		04A1494A0BD91FFEE259C766D31829A7 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
+		0650D63CDD6FBABE9B691691A04245D6 /* SliderRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SliderRow.swift; path = Source/Rows/SliderRow.swift; sourceTree = "<group>"; };
+		07176A344C060411E50768CE38507B4F /* Pods_MortgageApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MortgageApp.framework; path = "Pods-MortgageApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07453C3321EA3F630081B3B838B615CB /* Pods-MortgageAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MortgageAppTests-dummy.m"; sourceTree = "<group>"; };
-		0A9371ED3B8ADFA7BAAD12B2A9A98937 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
-		0AE979FEAF6CA2361F95C7D9CBE19746 /* PickerInlineRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PickerInlineRow.swift; path = Source/Rows/PickerInlineRow.swift; sourceTree = "<group>"; };
-		0B083EDEB3C15DE2671B88241F4E3547 /* CheckRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckRow.swift; path = Source/Rows/CheckRow.swift; sourceTree = "<group>"; };
+		0A93E734EE5ED1BF2C91D65D97CFCF63 /* GTMSessionFetcherService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcherService.h; path = Source/GTMSessionFetcherService.h; sourceTree = "<group>"; };
 		0B82CE2A8F47187F5578C6FEDF31EDA3 /* Pods-MortgageApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MortgageApp-umbrella.h"; sourceTree = "<group>"; };
+		0DCCAFAF2FCA416B0FFAF701048F85D7 /* LabelRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelRow.swift; path = Source/Rows/LabelRow.swift; sourceTree = "<group>"; };
 		0F4E38925362FBCA252A498CA5F24C47 /* Pods-MortgageAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MortgageAppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		119265C9CD00B2FD8B4213CE1A544884 /* OptionsRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionsRow.swift; path = Source/Rows/Common/OptionsRow.swift; sourceTree = "<group>"; };
+		112D73A0958AC3D0D96012A428A3E25C /* SelectorAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorAlertController.swift; path = Source/Rows/Controllers/SelectorAlertController.swift; sourceTree = "<group>"; };
+		1262690D312D3FE4F9D5DA217BE0DF36 /* RuleEmail.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleEmail.swift; path = Source/Validations/RuleEmail.swift; sourceTree = "<group>"; };
+		14A91A57DB6C5E9D7C7C68C0FC7D347E /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
 		14EEF0E5D64B6BE45A8BC596EBCD7FEC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14F7934343DBA7625ECD9B41079BFC30 /* LabelRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelRow.swift; path = Source/Rows/LabelRow.swift; sourceTree = "<group>"; };
-		1508307F78BCDCEC1517A2553E15347E /* GTMMethodCheck.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMMethodCheck.h; path = DebugUtils/GTMMethodCheck.h; sourceTree = "<group>"; };
-		168537E7B4BA0A7193785228310BCB5A /* RuleLength.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleLength.swift; path = Source/Validations/RuleLength.swift; sourceTree = "<group>"; };
+		150F4EEBCD2CB29C37BDC4DB3FEFC446 /* Eureka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Eureka.xcconfig; sourceTree = "<group>"; };
+		16298341664A95E16393FA57B2C959AC /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
 		1698F9A4AE357BAEECB356D8902C9E4D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		1758938B9F95BF4124813EE073E88B40 /* GTMSessionFetcherService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcherService.m; path = Source/GTMSessionFetcherService.m; sourceTree = "<group>"; };
-		182F7E81F6115A89ED0F062A1649B763 /* FieldRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldRow.swift; path = Source/Rows/Common/FieldRow.swift; sourceTree = "<group>"; };
-		18D71BAB1923EEEEE17CFCF8865AD69F /* Eureka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-umbrella.h"; sourceTree = "<group>"; };
-		19E710A2F6B9A372F08EDD6AD7018B81 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		1AD48E74520D44EAC8D1AFE43EDDA58A /* SegmentedRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedRow.swift; path = Source/Rows/SegmentedRow.swift; sourceTree = "<group>"; };
+		1BD3753F2F04188E835B708D5805DEAE /* Cell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cell.swift; path = Source/Core/Cell.swift; sourceTree = "<group>"; };
+		1E759821C6473B1C63157F6C29B2DDFB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		214EB8C4F4D76190D4D408677C758D40 /* Pods-MortgageAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MortgageAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		21EAAF834644EDBE4C60E483E78A92F7 /* Pods-MortgageAppUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MortgageAppUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		227F17EC17D1CA79019C8B9496F082A3 /* GTMNSString+URLArguments.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSString+URLArguments.m"; path = "Foundation/GTMNSString+URLArguments.m"; sourceTree = "<group>"; };
-		2281B9F1587FB71AA6FBEDD0F9A16474 /* RowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowType.swift; path = Source/Core/RowType.swift; sourceTree = "<group>"; };
-		22EF532EDEF7FFCE490957E84A817D2D /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		239D15BDB9BA8CB0F0B86E4CC8F96151 /* SelectableSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectableSection.swift; path = Source/Core/SelectableSection.swift; sourceTree = "<group>"; };
-		25CCAD1F0F5C4F09CFE2A65CD4293CD0 /* RuleClosure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleClosure.swift; path = Source/Validations/RuleClosure.swift; sourceTree = "<group>"; };
-		260264D1980DACB399F3B16218AEA641 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Source/Core/Operators.swift; sourceTree = "<group>"; };
-		263766EB9EEF2E616853A3CE638FAE87 /* RuleRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleRange.swift; path = Source/Validations/RuleRange.swift; sourceTree = "<group>"; };
-		26E4D0D92F5B5E247139DAF7AFFEFBDF /* GTMSessionFetcher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTMSessionFetcher-dummy.m"; sourceTree = "<group>"; };
-		29A3CF91DD0F6E15AAE43668A9D106DF /* RuleURL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleURL.swift; path = Source/Validations/RuleURL.swift; sourceTree = "<group>"; };
-		2A843511AC41755D38E1529E1F59E914 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2DD1E53D3A4630AB9EB15EC8A02DB2DB /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
-		2F850A5C68084BD94FEE29DF4ED1F626 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
-		312F7F10DEFD5629349E6B7FD95D21A9 /* SegmentedRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedRow.swift; path = Source/Rows/SegmentedRow.swift; sourceTree = "<group>"; };
-		32DB0A03F79861908384E6BBF8C67299 /* Core.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Core.swift; path = Source/Core/Core.swift; sourceTree = "<group>"; };
-		3303FB85BEF091BE20806E51575A1EA7 /* GTMSessionUploadFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionUploadFetcher.m; path = Source/GTMSessionUploadFetcher.m; sourceTree = "<group>"; };
-		35D13A1B11DE9E5AAD13CB30A8392684 /* InlineRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InlineRowType.swift; path = Source/Core/InlineRowType.swift; sourceTree = "<group>"; };
-		38910D22808E69B7F39005BA90E189EB /* DateFieldRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFieldRow.swift; path = Source/Rows/Common/DateFieldRow.swift; sourceTree = "<group>"; };
-		3A3421D482F4ABF2600E20793B01CD05 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
+		22426F015AEEACAA9ED70E74487ACCF2 /* GTMSessionFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcher.h; path = Source/GTMSessionFetcher.h; sourceTree = "<group>"; };
+		2425A52BA4F49CB9F13F788A822F5238 /* ListCheckRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ListCheckRow.swift; path = Source/Rows/SelectableRows/ListCheckRow.swift; sourceTree = "<group>"; };
+		27954537D20B71F588639545B9C60EFE /* Pods_MortgageAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MortgageAppTests.framework; path = "Pods-MortgageAppTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F4C01D60E3E7114D8A5150F2897A4C5 /* Eureka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Eureka.modulemap; sourceTree = "<group>"; };
+		308809BB6F640DFC7C61E51300BBFA48 /* Eureka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-umbrella.h"; sourceTree = "<group>"; };
+		3213FDD87288DF6E3E63E87A99CDA3B4 /* Pods_MortgageAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MortgageAppUITests.framework; path = "Pods-MortgageAppUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		325A8AD638328C49D4E11A901679A71A /* GTMSessionFetcherService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcherService.m; path = Source/GTMSessionFetcherService.m; sourceTree = "<group>"; };
+		329C5049F68213D932172FED0F0A4A15 /* GTMSessionFetcher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GTMSessionFetcher.modulemap; sourceTree = "<group>"; };
+		3A3C2BEADE3C778FE4C21E051C5A872A /* RuleLength.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleLength.swift; path = Source/Validations/RuleLength.swift; sourceTree = "<group>"; };
 		3D61B4FF6AAF0721257B5104122C49C2 /* Pods-MortgageApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MortgageApp-resources.sh"; sourceTree = "<group>"; };
-		3FCC4612817B00BAE59D3993373932FD /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
-		40912E98968257F47F69716FF5A3075F /* RowProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowProtocols.swift; path = Source/Core/RowProtocols.swift; sourceTree = "<group>"; };
-		431055892AD3D3C270A2E1897CD8F961 /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
+		42484940434755152C1E5D2CB5A2AC0C /* GTMSessionFetcherLogging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcherLogging.m; path = Source/GTMSessionFetcherLogging.m; sourceTree = "<group>"; };
+		432F912E2E04A03A9188467242D3B652 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Source/Core/Operators.swift; sourceTree = "<group>"; };
 		43FF82828776C46071A9C4450517C3EC /* Pods-MortgageAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MortgageAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		44B1CE14D54C02315AF9B5F8619EC6C4 /* RuleRequired.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleRequired.swift; path = Source/Validations/RuleRequired.swift; sourceTree = "<group>"; };
-		45531679FFB8F09F9002F06AF453E741 /* GTMDebugSelectorValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMDebugSelectorValidation.h; path = DebugUtils/GTMDebugSelectorValidation.h; sourceTree = "<group>"; };
-		490B6B562E098CABF0C11B8505D1183E /* DateRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateRow.swift; path = Source/Rows/DateRow.swift; sourceTree = "<group>"; };
-		4A399E976E51C1528F7BA175EE8D9A22 /* Section.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Section.swift; path = Source/Core/Section.swift; sourceTree = "<group>"; };
+		443ADC63E9A3F161837FFC4C5B12A3DB /* FieldsRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldsRow.swift; path = Source/Rows/FieldsRow.swift; sourceTree = "<group>"; };
+		44D105A3EB9BDFC6573E12F69034266F /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
 		4A5A785BEC22D7C63732D7FBA8A43A33 /* Pods-MortgageAppUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MortgageAppUITests-umbrella.h"; sourceTree = "<group>"; };
-		4BE98FB593044D3436B75E8BAF103D65 /* Eureka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-prefix.pch"; sourceTree = "<group>"; };
-		50AAF25819223881AE572892AC259CDF /* PresenterRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresenterRowType.swift; path = Source/Core/PresenterRowType.swift; sourceTree = "<group>"; };
-		55A6B23D8E78EA6CD9C1C6E7A948F13B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		57DB3A8956A747E5E5013295FF14E96E /* RuleEmail.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleEmail.swift; path = Source/Validations/RuleEmail.swift; sourceTree = "<group>"; };
-		5862BA4D0A98E4F2E9A1AA2109567F67 /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
-		5EF51821557C31FEE8E4F1F2CE7B1EFA /* Pods_MortgageApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MortgageApp.framework; path = "Pods-MortgageApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F268AB433677C8551D3536B705028B2 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMSessionFetcher.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6055B30687648EE642E411916719DBDE /* GTMSessionFetcherLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcherLogging.h; path = Source/GTMSessionFetcherLogging.h; sourceTree = "<group>"; };
-		6090638E890BC27F5504D95C03E41C3F /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
-		6525BAB329E925A64CC40CBD0FB155D1 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Source/Core/Helpers.swift; sourceTree = "<group>"; };
-		66DD996F7E498BCEB9F1EB398074E3F7 /* Pods_MortgageAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MortgageAppTests.framework; path = "Pods-MortgageAppTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E48DD9D19083C9F79761E3FF1E7CE69 /* PushRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PushRow.swift; path = Source/Rows/PushRow.swift; sourceTree = "<group>"; };
+		4C09D9BE7AD5D28E1FF8A9B9E6D13753 /* ButtonRowWithPresent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonRowWithPresent.swift; path = Source/Rows/ButtonRowWithPresent.swift; sourceTree = "<group>"; };
+		5199BCF883668A2D4E688CEB97E195C6 /* Row.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Row.swift; path = Source/Core/Row.swift; sourceTree = "<group>"; };
+		51B2E541D8E8642333FFE5F959469EF7 /* PresenterRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresenterRowType.swift; path = Source/Core/PresenterRowType.swift; sourceTree = "<group>"; };
+		51CF8D153A49CF3CA98D39C97C482BA4 /* GTMDebugThreadValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMDebugThreadValidation.h; path = DebugUtils/GTMDebugThreadValidation.h; sourceTree = "<group>"; };
+		53B5B92767FC603C8622B96BB2C7B6F0 /* BSGridCollectionViewLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BSGridCollectionViewLayout-umbrella.h"; sourceTree = "<group>"; };
+		57C7530EA862C5D1445F83086CF8E31A /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		5BA96A10D1E4FE05A831D656602B0168 /* RowControllerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowControllerType.swift; path = Source/Core/RowControllerType.swift; sourceTree = "<group>"; };
+		5F9F0D8E2B9BA1D610D92CFDA495DEA4 /* PushRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PushRow.swift; path = Source/Rows/PushRow.swift; sourceTree = "<group>"; };
+		6251F7E2BCF087FBD4F7CD9550BFAFA6 /* BSGridCollectionViewLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BSGridCollectionViewLayout.modulemap; sourceTree = "<group>"; };
+		674B7A100259F70BA4DAC002A122F111 /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
+		67762E282017FC1A0600D526ED8D3FAE /* RuleRegExp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleRegExp.swift; path = Source/Validations/RuleRegExp.swift; sourceTree = "<group>"; };
+		67BE798175FAFFDA22CB72D68F0862FB /* AlertRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertRow.swift; path = Source/Rows/AlertRow.swift; sourceTree = "<group>"; };
+		67E0C3E3AE834C439987008463809D5A /* StepperRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StepperRow.swift; path = Source/Rows/StepperRow.swift; sourceTree = "<group>"; };
+		6F33E489868E3AD41C38E4D22DF5FFC0 /* BSGridCollectionViewLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BSGridCollectionViewLayout.xcconfig; sourceTree = "<group>"; };
+		6FB1F75474FB4C09E293DAD5CDF818AA /* MultipleSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipleSelectorRow.swift; path = Source/Rows/MultipleSelectorRow.swift; sourceTree = "<group>"; };
+		72D13BFAF5523E995B5A6D645789C875 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Source/Core/Helpers.swift; sourceTree = "<group>"; };
+		733F4FBA421BAD1704D203EE7280D8F9 /* BaseRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseRow.swift; path = Source/Core/BaseRow.swift; sourceTree = "<group>"; };
+		7391A06B945E7378533AD4460CBE4F3F /* SelectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorViewController.swift; path = Source/Rows/Controllers/SelectorViewController.swift; sourceTree = "<group>"; };
+		745B05C53221FA3A4E1D689FAD9A3E9C /* GTMSessionFetcher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMSessionFetcher-umbrella.h"; sourceTree = "<group>"; };
 		74D359187EECC0FF431C7280843EB296 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74FE48260C5C9259EC6A656C5F32CAF5 /* InlineRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InlineRowType.swift; path = Source/Core/InlineRowType.swift; sourceTree = "<group>"; };
+		76F302ABBE7BBD22EBDACC0CBC645988 /* Eureka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Eureka-dummy.m"; sourceTree = "<group>"; };
 		79C14D4CA5E1EA8B4AA274951B227255 /* Pods-MortgageAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MortgageAppTests-umbrella.h"; sourceTree = "<group>"; };
-		7A1B69D2B6A3F0A3443E9444BE0018A9 /* RuleRegExp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleRegExp.swift; path = Source/Validations/RuleRegExp.swift; sourceTree = "<group>"; };
 		7C6B12C12E83133E258ACB74EB75D36B /* Pods-MortgageApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MortgageApp.debug.xcconfig"; sourceTree = "<group>"; };
-		7CF4EA257797152E0C29CE65A7E01B9E /* GTMDebugThreadValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMDebugThreadValidation.h; path = DebugUtils/GTMDebugThreadValidation.h; sourceTree = "<group>"; };
 		7D51AF8B6E0F481593FCF260BFB999A0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		7DB55DBC3E76464680E9F16FE19C0A6E /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMSessionFetcher.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD48E9225C7ACD0634EEDE08328D124 /* Pods-MortgageAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MortgageAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7F76920773D36A448BBEA5872CA6BB41 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		80C609AB03C1F97E263DA6C99E799168 /* CellType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CellType.swift; path = Source/Core/CellType.swift; sourceTree = "<group>"; };
-		83894A5508AC295E5109734F506830AD /* DecimalFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecimalFormatter.swift; path = Source/Rows/Common/DecimalFormatter.swift; sourceTree = "<group>"; };
-		839648AD7187674A33C8EA54EE6991B3 /* MultipleSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipleSelectorRow.swift; path = Source/Rows/MultipleSelectorRow.swift; sourceTree = "<group>"; };
-		874EF5D6E9DFC410F5BA170CF37DA95D /* Form.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Form.swift; path = Source/Core/Form.swift; sourceTree = "<group>"; };
-		89DCDE1875739200178CF8D93886C284 /* GTMSessionFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcher.m; path = Source/GTMSessionFetcher.m; sourceTree = "<group>"; };
-		8B183A8F4933D1EA049761DEBFE712FD /* AlertRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertRow.swift; path = Source/Rows/AlertRow.swift; sourceTree = "<group>"; };
-		8C93321D3A159355E370B3CE14DC089C /* Pods_MortgageAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MortgageAppUITests.framework; path = "Pods-MortgageAppUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D38AA9DA61EC2DBBC5FB3297E00D5C1 /* Row.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Row.swift; path = Source/Core/Row.swift; sourceTree = "<group>"; };
+		8024D95FAFA47393BEA1A72D076E0204 /* CellType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CellType.swift; path = Source/Core/CellType.swift; sourceTree = "<group>"; };
+		80280FE84891D1B2728A8F2D32542FA3 /* GTMNSDictionary+URLArguments.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSDictionary+URLArguments.h"; path = "Foundation/GTMNSDictionary+URLArguments.h"; sourceTree = "<group>"; };
+		809BCF8EBE144B4D5B529A264C2B5C81 /* PickerRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PickerRow.swift; path = Source/Rows/PickerRow.swift; sourceTree = "<group>"; };
+		80DB3CFE698F90BE2FF0D3A52DC1BEF6 /* RuleRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleRange.swift; path = Source/Validations/RuleRange.swift; sourceTree = "<group>"; };
+		811D9147DEA904EAC031A3095E606FB8 /* BSGridCollectionViewLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BSGridCollectionViewLayout-prefix.pch"; sourceTree = "<group>"; };
+		8398235A221C1FE915DF30E648FBA565 /* Section.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Section.swift; path = Source/Core/Section.swift; sourceTree = "<group>"; };
+		8490F32A6CE04CCE0FAB0040EAB549CF /* GTMNSString+URLArguments.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSString+URLArguments.m"; path = "Foundation/GTMNSString+URLArguments.m"; sourceTree = "<group>"; };
+		880AF901065F22BFE47B18BDD9F59ED7 /* GTMNSString+URLArguments.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSString+URLArguments.h"; path = "Foundation/GTMNSString+URLArguments.h"; sourceTree = "<group>"; };
+		88940DA417993040D127B8DDB0BE6826 /* Core.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Core.swift; path = Source/Core/Core.swift; sourceTree = "<group>"; };
+		89423266D33E9F0AF396FFF990B254E4 /* ActionSheetRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionSheetRow.swift; path = Source/Rows/ActionSheetRow.swift; sourceTree = "<group>"; };
+		8A190D08C5E72F0D02D2D66B4FF22092 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
 		8ECBC80FB8CFFF06CC0AF26ED6DDE271 /* Pods-MortgageAppUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MortgageAppUITests-frameworks.sh"; sourceTree = "<group>"; };
-		91263500D6B99F4F99C40D8E8461B9AA /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
-		925C2682A5C5BB9D0917558046136651 /* StepperRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StepperRow.swift; path = Source/Rows/StepperRow.swift; sourceTree = "<group>"; };
+		8F854F373F8FD35898549EA418545A81 /* RuleURL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleURL.swift; path = Source/Validations/RuleURL.swift; sourceTree = "<group>"; };
+		8F91BA02E221CD743397F6A59DF6FEC5 /* GTMNSDictionary+URLArguments.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSDictionary+URLArguments.m"; path = "Foundation/GTMNSDictionary+URLArguments.m"; sourceTree = "<group>"; };
+		9115F0669AB594EC3DB60013B90E9659 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9643EADCAB80B16201AE30A2D15D9154 /* ButtonRowWithPresent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonRowWithPresent.swift; path = Source/Rows/ButtonRowWithPresent.swift; sourceTree = "<group>"; };
+		96CAF635D89567E38EC8C93386084901 /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		9738A49E8D537DA9D1D71974CEFEB00D /* Pods-MortgageApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MortgageApp-frameworks.sh"; sourceTree = "<group>"; };
 		97EA1F7DB4792A1E979F79AA69953ED6 /* Pods-MortgageAppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MortgageAppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		98FE66E87F132506017AADA9C46C1336 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
-		9BB2A7E32C8272BBA28A0E81981E8A67 /* ListCheckRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ListCheckRow.swift; path = Source/Rows/SelectableRows/ListCheckRow.swift; sourceTree = "<group>"; };
-		9CC66538D62B5834029DACD80ED506C6 /* GTMSessionFetcher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMSessionFetcher-prefix.pch"; sourceTree = "<group>"; };
-		9CEE4CCE081BF9AD7F26A3919E17DA89 /* GenericMultipleSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericMultipleSelectorRow.swift; path = Source/Rows/Common/GenericMultipleSelectorRow.swift; sourceTree = "<group>"; };
+		97F1D1431ADCFE95A054F9D55D7179DE /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
+		987E9AF964EC5E7C42261A66EAEF8124 /* SwitchRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchRow.swift; path = Source/Rows/SwitchRow.swift; sourceTree = "<group>"; };
+		9A63EA46F26BBAB7964AE36CE0A31009 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		9B7816D66E4C46DCBA100A77BA694034 /* ButtonRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonRow.swift; path = Source/Rows/ButtonRow.swift; sourceTree = "<group>"; };
+		9C8DE66887A2CAF5AE91A337A4E0423D /* GTMSessionFetcher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTMSessionFetcher.xcconfig; sourceTree = "<group>"; };
 		9D5F1D2F9107481AF457FCDDCC569021 /* Pods-MortgageAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MortgageAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		9FAB9A26E94CB8E30E9CDB7B424BB86D /* NavigationAccessoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationAccessoryView.swift; path = Source/Core/NavigationAccessoryView.swift; sourceTree = "<group>"; };
-		A055544E82A69396CB1D3FCBC35B2B74 /* Eureka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Eureka.xcconfig; sourceTree = "<group>"; };
-		A22FBE95382691B394BA275A19E01D4D /* HeaderFooterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeaderFooterView.swift; path = Source/Core/HeaderFooterView.swift; sourceTree = "<group>"; };
+		9EA5C7B7FFD6C680B4215044251FA0A2 /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
+		9FE1CC1EB64C1C7AA29D577CE0B168E0 /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
+		A109968BC5FB48DB461EE427193A35BD /* Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = Source/Rows/Common/Protocols.swift; sourceTree = "<group>"; };
 		A5D036F318320D172C24109AB0A9C055 /* Pods-MortgageAppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MortgageAppUITests-dummy.m"; sourceTree = "<group>"; };
-		A9384A9B9FA2242ED18A06E8BEEFC2C9 /* GTMSessionFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcher.h; path = Source/GTMSessionFetcher.h; sourceTree = "<group>"; };
-		AA469B6EE366F74C0643AB844ACF8830 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Core/Validation.swift; sourceTree = "<group>"; };
-		ABD951586825C71DBB2C7F8053553A71 /* Eureka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Eureka-dummy.m"; sourceTree = "<group>"; };
-		AF13D33C4894468A66B0C13F6D713338 /* TextAreaRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextAreaRow.swift; path = Source/Rows/TextAreaRow.swift; sourceTree = "<group>"; };
-		AF539CBC0F599C0A38AE4C739BE09C2D /* Cell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cell.swift; path = Source/Core/Cell.swift; sourceTree = "<group>"; };
-		AFC76C11B6F67EED890F23AAA86C5294 /* SelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorRow.swift; path = Source/Rows/Common/SelectorRow.swift; sourceTree = "<group>"; };
-		B2A0B290DBD1B504FA438575BFDC3B59 /* GTMNSDictionary+URLArguments.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSDictionary+URLArguments.h"; path = "Foundation/GTMNSDictionary+URLArguments.h"; sourceTree = "<group>"; };
+		AAE068E88E0DC3F4F4D0E57CA01A0E36 /* GTMSessionUploadFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionUploadFetcher.h; path = Source/GTMSessionUploadFetcher.h; sourceTree = "<group>"; };
+		ABBBD0597BE0072127836A21D7D8D4C7 /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
+		AE618170061F8A32048299E391765600 /* RowProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowProtocols.swift; path = Source/Core/RowProtocols.swift; sourceTree = "<group>"; };
+		AF0CA6227148405AB4D586332F8E8011 /* Eureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Eureka.framework; path = Eureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B21F7F285A07F09F68C7EEDF10D28C27 /* MultipleSelectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipleSelectorViewController.swift; path = Source/Rows/Controllers/MultipleSelectorViewController.swift; sourceTree = "<group>"; };
+		B2A6BCE59E4CA5C6E6370F3BF13D335F /* DateInlineFieldRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateInlineFieldRow.swift; path = Source/Rows/Common/DateInlineFieldRow.swift; sourceTree = "<group>"; };
+		B3150C30B624F70F07D8C745A5D179A7 /* GridCollectionViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GridCollectionViewLayout.swift; path = Pod/Classes/GridCollectionViewLayout.swift; sourceTree = "<group>"; };
 		B496374C51F535F0415ABC6126F32029 /* Pods-MortgageAppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MortgageAppTests-frameworks.sh"; sourceTree = "<group>"; };
 		B7DB61C279F82076EB4EF0474D821DD4 /* Pods-MortgageAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MortgageAppTests.modulemap"; sourceTree = "<group>"; };
-		BB9668AC41F777D83897FA8258553175 /* PickerRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PickerRow.swift; path = Source/Rows/PickerRow.swift; sourceTree = "<group>"; };
-		BC09F89596F170132C34EFBE33DC4AD5 /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
-		BC8B2D7F7A5FFB2307FE84F9953E453B /* ButtonRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonRow.swift; path = Source/Rows/ButtonRow.swift; sourceTree = "<group>"; };
-		BCD174F868D5BC611A7A2CBB1360A4C2 /* GTMNSDictionary+URLArguments.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSDictionary+URLArguments.m"; path = "Foundation/GTMNSDictionary+URLArguments.m"; sourceTree = "<group>"; };
+		B9DF0FA1B8FBD839C284D55E5A35DD2F /* DateFieldRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFieldRow.swift; path = Source/Rows/Common/DateFieldRow.swift; sourceTree = "<group>"; };
+		BC43FE29AF3BA395518276BCBD4A2427 /* RuleRequired.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleRequired.swift; path = Source/Validations/RuleRequired.swift; sourceTree = "<group>"; };
+		BC61D997F5D8B68D56784B548BAB642C /* RowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowType.swift; path = Source/Core/RowType.swift; sourceTree = "<group>"; };
+		BF6892A4E2141713C66B5B5F690E7474 /* GTMSessionUploadFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionUploadFetcher.m; path = Source/GTMSessionUploadFetcher.m; sourceTree = "<group>"; };
+		C07F0D816281C6AD067850FAECF28635 /* BSGridCollectionViewLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BSGridCollectionViewLayout.framework; path = BSGridCollectionViewLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2DD392A7097D109C9DBAE30A3E24F2F /* Form.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Form.swift; path = Source/Core/Form.swift; sourceTree = "<group>"; };
 		C31B0B67070FB1AECF1A2BF6400A6831 /* Pods-MortgageAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MortgageAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		C5AC250CE366E86200171B70B6FD281C /* Pods-MortgageAppTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MortgageAppTests-resources.sh"; sourceTree = "<group>"; };
-		C677CE03586CECA3156D21E1ECFA077F /* GTMSessionFetcher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GTMSessionFetcher.modulemap; sourceTree = "<group>"; };
-		C6E8C70A36209BF30CF01F865DC87A88 /* GTMSessionUploadFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionUploadFetcher.h; path = Source/GTMSessionUploadFetcher.h; sourceTree = "<group>"; };
-		C81D3659D8D5382E186ABF9C2C8F61AD /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
-		C83D6ED9FD93DB62058B2322C030AED0 /* RowControllerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowControllerType.swift; path = Source/Core/RowControllerType.swift; sourceTree = "<group>"; };
-		C9F0568C7B57F590EFEB8E1767FFDB99 /* GTMSessionFetcher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMSessionFetcher-umbrella.h"; sourceTree = "<group>"; };
-		CB792B1CEBDCDB66CB7E5B0818B81ED6 /* SelectableRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectableRowType.swift; path = Source/Core/SelectableRowType.swift; sourceTree = "<group>"; };
-		CC2880F0DEBB41EB729F44DDB17F10A2 /* GTMNSString+URLArguments.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSString+URLArguments.h"; path = "Foundation/GTMNSString+URLArguments.h"; sourceTree = "<group>"; };
-		CDAABA295536B3DF7AAA0F5B410D12F0 /* DateInlineFieldRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateInlineFieldRow.swift; path = Source/Rows/Common/DateInlineFieldRow.swift; sourceTree = "<group>"; };
+		C72B3080C5BB6426F29F6C27419E6DB8 /* CheckRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckRow.swift; path = Source/Rows/CheckRow.swift; sourceTree = "<group>"; };
+		C81195D715B0C24EA3B07D222A964A8A /* GTMSessionFetcherLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcherLogging.h; path = Source/GTMSessionFetcherLogging.h; sourceTree = "<group>"; };
+		C958DF7BC92EB575AFE244A9512DBBBE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA1BE4D690C9E5E2F18C1CA7E27DA2BC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDFC4C47DAC64625B79ED69D7C85EBC7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		CE46CA71B818590A8111C34B92FD8669 /* GTMSessionFetcher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTMSessionFetcher.xcconfig; sourceTree = "<group>"; };
-		CECAAB60D978524AA9F6E827E37E8B61 /* MultipleSelectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipleSelectorViewController.swift; path = Source/Rows/Controllers/MultipleSelectorViewController.swift; sourceTree = "<group>"; };
-		D286F9689AC6F1C207D8634331E1AC86 /* SelectorAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorAlertController.swift; path = Source/Rows/Controllers/SelectorAlertController.swift; sourceTree = "<group>"; };
+		CE99F12A7C0E26C00A5231B58B238E1F /* PickerInlineRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PickerInlineRow.swift; path = Source/Rows/PickerInlineRow.swift; sourceTree = "<group>"; };
+		CEC15B5DD0A1EA024C78AB6E54324220 /* OptionsRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionsRow.swift; path = Source/Rows/Common/OptionsRow.swift; sourceTree = "<group>"; };
+		D09F76875F8E5E5CC75D46FE09C89AEB /* SelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorRow.swift; path = Source/Rows/Common/SelectorRow.swift; sourceTree = "<group>"; };
 		D2A31584DD425E1D6AAD3466F09B91AC /* Pods-MortgageAppUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MortgageAppUITests-resources.sh"; sourceTree = "<group>"; };
+		D2F051F5F61BA6FD514A90D0D9B5300E /* DatePickerRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerRow.swift; path = Source/Rows/DatePickerRow.swift; sourceTree = "<group>"; };
 		D553598974B223F60F6BDFACC7401CCE /* Pods-MortgageApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MortgageApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		D6304D3EDF867A6D510AAD2CB21AA5A1 /* Eureka.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Eureka.bundle; path = Source/Resources/Eureka.bundle; sourceTree = "<group>"; };
-		DE66A58D3B68D1D1AB2B82FF720E1470 /* DateInlineRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateInlineRow.swift; path = Source/Rows/DateInlineRow.swift; sourceTree = "<group>"; };
+		D7D177BFC4FE5FFDF6813253894C7B57 /* GTMDebugSelectorValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMDebugSelectorValidation.h; path = DebugUtils/GTMDebugSelectorValidation.h; sourceTree = "<group>"; };
+		DA1BDF46CF484CDB28B7F972D11E87C6 /* DateInlineRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateInlineRow.swift; path = Source/Rows/DateInlineRow.swift; sourceTree = "<group>"; };
+		DBC3FF821E1732F1F921CA9B96EBA103 /* PopoverSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopoverSelectorRow.swift; path = Source/Rows/PopoverSelectorRow.swift; sourceTree = "<group>"; };
+		DC5B90A2E13380C96D454972BAD579F8 /* RuleClosure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleClosure.swift; path = Source/Validations/RuleClosure.swift; sourceTree = "<group>"; };
+		E004AF42EC02BC9B569A79B12C57B29E /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Core/Validation.swift; sourceTree = "<group>"; };
+		E077367C003E472599D116688984CA01 /* GTMSessionFetcher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTMSessionFetcher-dummy.m"; sourceTree = "<group>"; };
 		E15D735D1695A70CA470D8B7B30ACA23 /* Pods-MortgageApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MortgageApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E30AFE5C6A2C2593C4E855ACF74AA065 /* Pods-MortgageApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MortgageApp-dummy.m"; sourceTree = "<group>"; };
-		E40736DECE12ACB76E6C67BDBBAFFA0D /* SelectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorViewController.swift; path = Source/Rows/Controllers/SelectorViewController.swift; sourceTree = "<group>"; };
-		E40A1476E7F71E262C1739B11D4ABA8F /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
-		E7B8F60FBE9BFD1579E3FCF347C68FA3 /* SwitchRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchRow.swift; path = Source/Rows/SwitchRow.swift; sourceTree = "<group>"; };
-		E923418B6ABB81260DDB784E66333369 /* BaseRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseRow.swift; path = Source/Core/BaseRow.swift; sourceTree = "<group>"; };
-		E9DBC1296F156045A612046D7C3AAC20 /* ActionSheetRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionSheetRow.swift; path = Source/Rows/ActionSheetRow.swift; sourceTree = "<group>"; };
-		EA28ECA576C85A749FC26845502214A4 /* PopoverSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopoverSelectorRow.swift; path = Source/Rows/PopoverSelectorRow.swift; sourceTree = "<group>"; };
-		EA3487CBFDE01EBA6E6EBA9CB9C7EA3C /* Eureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Eureka.framework; path = Eureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E64AAE8AF6D5CAC195C97267615CBE54 /* GenericMultipleSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericMultipleSelectorRow.swift; path = Source/Rows/Common/GenericMultipleSelectorRow.swift; sourceTree = "<group>"; };
+		E78F1EB85CA1FC4A308D70856604FCF3 /* FieldRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldRow.swift; path = Source/Rows/Common/FieldRow.swift; sourceTree = "<group>"; };
+		E7F883033710CE68FB83C7516432A3E5 /* BSGridCollectionViewLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BSGridCollectionViewLayout-dummy.m"; sourceTree = "<group>"; };
+		EA8BD2B0DC0E64EAB454AB2CC2A816B0 /* TextAreaRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextAreaRow.swift; path = Source/Rows/TextAreaRow.swift; sourceTree = "<group>"; };
+		EB0D46CF9D8B62FF2AB0DF352A2A4C03 /* GTMSessionFetcher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMSessionFetcher-prefix.pch"; sourceTree = "<group>"; };
+		EB28C621CA981EADDB3D0E1B6385A3D0 /* DecimalFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecimalFormatter.swift; path = Source/Rows/Common/DecimalFormatter.swift; sourceTree = "<group>"; };
+		ECABACC47440945BF8E3BAA529A0F1B5 /* SelectableRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectableRowType.swift; path = Source/Core/SelectableRowType.swift; sourceTree = "<group>"; };
 		ED2B0232A11C08BEA8A6535E48AC1D90 /* Pods-MortgageAppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MortgageAppUITests.modulemap"; sourceTree = "<group>"; };
-		EF9D04B4A3BF10484F46DF76951228F5 /* DatePickerRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerRow.swift; path = Source/Rows/DatePickerRow.swift; sourceTree = "<group>"; };
+		F02EB2BF98B266AA6EF051E3207496B0 /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
 		F04B08B2DA52C760DB5B0C3ADE233C35 /* Pods-MortgageApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MortgageApp.release.xcconfig"; sourceTree = "<group>"; };
-		F185E5664F37F5C7B3F214968913897E /* GTMSessionFetcherLogging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcherLogging.m; path = Source/GTMSessionFetcherLogging.m; sourceTree = "<group>"; };
-		F280F48CCFE739AFA584893F7800965F /* SliderRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SliderRow.swift; path = Source/Rows/SliderRow.swift; sourceTree = "<group>"; };
-		F28D176FA70DF76D40A9788C5960D43D /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
-		F295E73F1A8CB152A34A45ECD6A340FE /* Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = Source/Rows/Common/Protocols.swift; sourceTree = "<group>"; };
+		F1126C259744A5D3B8FD5F1236804639 /* Eureka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-prefix.pch"; sourceTree = "<group>"; };
+		F18CD4E8CBDD78153B3A5461E6E72987 /* NavigationAccessoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationAccessoryView.swift; path = Source/Core/NavigationAccessoryView.swift; sourceTree = "<group>"; };
+		F1A79CBCE490B45FB186DE26893F2923 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		F24B9C19DC3DA5C88F6414E70125D971 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
 		F2D6B89A1945740B4D394E7213614766 /* Pods-MortgageApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MortgageApp.modulemap"; sourceTree = "<group>"; };
+		F5DF3476382BAED83EA08D1232FE227E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F661DC1DB1CA13308F5B03FB127677C6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F837919572A6B904BA35CA8C795F5637 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9EBD61CB76EB9FCDF2CD34090AEEA95 /* GTMSessionFetcherService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcherService.h; path = Source/GTMSessionFetcherService.h; sourceTree = "<group>"; };
-		FAC2D2F8848A0595B6195A0CB79E4618 /* Eureka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Eureka.modulemap; sourceTree = "<group>"; };
-		FB07300CB13B088BDDEEA9D6519C4B57 /* FieldsRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldsRow.swift; path = Source/Rows/FieldsRow.swift; sourceTree = "<group>"; };
-		FFD386BD91FB8D1EF915AE285FAF4E84 /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
+		F71A24F53D0C190F18CADCD9F583A1B2 /* HeaderFooterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeaderFooterView.swift; path = Source/Core/HeaderFooterView.swift; sourceTree = "<group>"; };
+		F9E59FE182CCACF839796F864C66EF0A /* Eureka.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Eureka.bundle; path = Source/Resources/Eureka.bundle; sourceTree = "<group>"; };
+		FE5ABB77642071E7D1DF419254D9036E /* DateRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateRow.swift; path = Source/Rows/DateRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		64F06ADDC2A1DB5BB69816B336BE0EB0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CBF71B0FF4EFF4AEBB660488DAA15596 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6AE88E96161DE195EAAF0A3B6375EA50 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -311,6 +322,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AFF4C149E4DB9F7B900B3C55722FEB38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC0323C37446EB6DD55D332CA353D93 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0DD60D6B4C850E3EDCAAF797E1D4A6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,44 +347,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD0C2B7505D61447D90C63668464C7E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B50C211F72FFCE3660D9A1CDADFB0AA4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0002ED1587995BE9E92E46C7C728EB64 /* Core */ = {
+		02B1EF413B9C455BF0385949CE2641AE /* FirebaseDatabase */ = {
 			isa = PBXGroup;
 			children = (
-				A9384A9B9FA2242ED18A06E8BEEFC2C9 /* GTMSessionFetcher.h */,
-				89DCDE1875739200178CF8D93886C284 /* GTMSessionFetcher.m */,
-				6055B30687648EE642E411916719DBDE /* GTMSessionFetcherLogging.h */,
-				F185E5664F37F5C7B3F214968913897E /* GTMSessionFetcherLogging.m */,
-				F9EBD61CB76EB9FCDF2CD34090AEEA95 /* GTMSessionFetcherService.h */,
-				1758938B9F95BF4124813EE073E88B40 /* GTMSessionFetcherService.m */,
-				C6E8C70A36209BF30CF01F865DC87A88 /* GTMSessionUploadFetcher.h */,
-				3303FB85BEF091BE20806E51575A1EA7 /* GTMSessionUploadFetcher.m */,
+				AF71522E713BC3328FF87E0A7DE7C609 /* Frameworks */,
 			);
-			name = Core;
+			name = FirebaseDatabase;
+			path = FirebaseDatabase;
 			sourceTree = "<group>";
 		};
-		08FF62FAAFEF2B7A97F848D69DC966C8 /* Frameworks */ = {
+		094960A179C5A58C5F91102997026312 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C81D3659D8D5382E186ABF9C2C8F61AD /* FirebaseAuth.framework */,
+				2F4C01D60E3E7114D8A5150F2897A4C5 /* Eureka.modulemap */,
+				150F4EEBCD2CB29C37BDC4DB3FEFC446 /* Eureka.xcconfig */,
+				76F302ABBE7BBD22EBDACC0CBC645988 /* Eureka-dummy.m */,
+				F1126C259744A5D3B8FD5F1236804639 /* Eureka-prefix.pch */,
+				308809BB6F640DFC7C61E51300BBFA48 /* Eureka-umbrella.h */,
+				C958DF7BC92EB575AFE244A9512DBBBE /* Info.plist */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/Eureka";
 			sourceTree = "<group>";
 		};
 		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				1C4E67CBDC955497435049997C205D94 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		12EAFD567FFC3DC5847AC4ADD24B86DE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2DD1E53D3A4630AB9EB15EC8A02DB2DB /* FirebaseDatabase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -398,6 +417,15 @@
 			path = "Target Support Files/Pods-MortgageApp";
 			sourceTree = "<group>";
 		};
+		22013DCB96E0D3A3930ACAA755E1797F /* FirebaseAuth */ = {
+			isa = PBXGroup;
+			children = (
+				4A39A2BD9CA2E1538F2BD11C9407B969 /* Frameworks */,
+			);
+			name = FirebaseAuth;
+			path = FirebaseAuth;
+			sourceTree = "<group>";
+		};
 		2314021EB668E06B25F41DBF6F4BBE25 /* Pods-MortgageAppTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,102 +444,78 @@
 			path = "Target Support Files/Pods-MortgageAppTests";
 			sourceTree = "<group>";
 		};
-		247F561684B90C1F15246C5387E873A4 /* DebugUtils */ = {
+		23397E43E340FC94BCABC0940C5FC9B7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				45531679FFB8F09F9002F06AF453E741 /* GTMDebugSelectorValidation.h */,
-				7CF4EA257797152E0C29CE65A7E01B9E /* GTMDebugThreadValidation.h */,
-				1508307F78BCDCEC1517A2553E15347E /* GTMMethodCheck.h */,
+				04A1494A0BD91FFEE259C766D31829A7 /* Firebase.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		2C7C8829E55FF4F3DEF93D168DA8D4EA /* NSString+URLArguments */ = {
+			isa = PBXGroup;
+			children = (
+				880AF901065F22BFE47B18BDD9F59ED7 /* GTMNSString+URLArguments.h */,
+				8490F32A6CE04CCE0FAB0040EAB549CF /* GTMNSString+URLArguments.m */,
+			);
+			name = "NSString+URLArguments";
+			sourceTree = "<group>";
+		};
+		336596F8120ACE4F86F759A4FA54C57F /* DebugUtils */ = {
+			isa = PBXGroup;
+			children = (
+				D7D177BFC4FE5FFDF6813253894C7B57 /* GTMDebugSelectorValidation.h */,
+				51CF8D153A49CF3CA98D39C97C482BA4 /* GTMDebugThreadValidation.h */,
+				0337EFF66824C69FAEDC05B481BB2F29 /* GTMMethodCheck.h */,
 			);
 			name = DebugUtils;
 			sourceTree = "<group>";
 		};
-		2805F740419620E2889730236D7DB4B9 /* Support Files */ = {
+		35FF70562EFAB33C3BDC9E502DE35F48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FAC2D2F8848A0595B6195A0CB79E4618 /* Eureka.modulemap */,
-				A055544E82A69396CB1D3FCBC35B2B74 /* Eureka.xcconfig */,
-				ABD951586825C71DBB2C7F8053553A71 /* Eureka-dummy.m */,
-				4BE98FB593044D3436B75E8BAF103D65 /* Eureka-prefix.pch */,
-				18D71BAB1923EEEEE17CFCF8865AD69F /* Eureka-umbrella.h */,
-				F837919572A6B904BA35CA8C795F5637 /* Info.plist */,
+				57C7530EA862C5D1445F83086CF8E31A /* GoogleInterchangeUtilities.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Eureka";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		329872C3F04906C678CF15B799AC238B /* Support Files */ = {
+		3B3350AF550A1CBB802A1CF75AB2CE5A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C677CE03586CECA3156D21E1ECFA077F /* GTMSessionFetcher.modulemap */,
-				CE46CA71B818590A8111C34B92FD8669 /* GTMSessionFetcher.xcconfig */,
-				26E4D0D92F5B5E247139DAF7AFFEFBDF /* GTMSessionFetcher-dummy.m */,
-				9CC66538D62B5834029DACD80ED506C6 /* GTMSessionFetcher-prefix.pch */,
-				C9F0568C7B57F590EFEB8E1767FFDB99 /* GTMSessionFetcher-umbrella.h */,
-				2A843511AC41755D38E1529E1F59E914 /* Info.plist */,
+				329C5049F68213D932172FED0F0A4A15 /* GTMSessionFetcher.modulemap */,
+				9C8DE66887A2CAF5AE91A337A4E0423D /* GTMSessionFetcher.xcconfig */,
+				E077367C003E472599D116688984CA01 /* GTMSessionFetcher-dummy.m */,
+				EB0D46CF9D8B62FF2AB0DF352A2A4C03 /* GTMSessionFetcher-prefix.pch */,
+				745B05C53221FA3A4E1D689FAD9A3E9C /* GTMSessionFetcher-umbrella.h */,
+				1E759821C6473B1C63157F6C29B2DDFB /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/GTMSessionFetcher";
 			sourceTree = "<group>";
 		};
-		41F1161ADED3B659E151ED479C58ED90 /* Resources */ = {
+		43CAD65BD362FF64929979A6F8EFF384 /* FirebaseAnalytics */ = {
 			isa = PBXGroup;
 			children = (
-				D6304D3EDF867A6D510AAD2CB21AA5A1 /* Eureka.bundle */,
+				D0BD8F0176E8BFFEE3BEB664AACF0AFB /* Frameworks */,
 			);
-			name = Resources;
+			name = FirebaseAnalytics;
+			path = FirebaseAnalytics;
 			sourceTree = "<group>";
 		};
-		4B7638E338D16F186A0E600C6EB8F372 /* Frameworks */ = {
+		4A39A2BD9CA2E1538F2BD11C9407B969 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3FCC4612817B00BAE59D3993373932FD /* GoogleSymbolUtilities.framework */,
+				14A91A57DB6C5E9D7C7C68C0FC7D347E /* FirebaseAuth.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4CEBDD44A2062CC7780836261765DE1B /* Frameworks */ = {
+		5EE8A77A247B3891678A531662ECE8EA /* Defines */ = {
 			isa = PBXGroup;
 			children = (
-				3A3421D482F4ABF2600E20793B01CD05 /* FirebaseCore.framework */,
+				96CAF635D89567E38EC8C93386084901 /* GTMDefines.h */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5354EB3B512DC598B6DC3C77C70BA03A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C0C13C4557D545630CB81B85B1BF3EE0 /* Eureka */,
-				A57D3BEB12173BCBE1A12A78EEC29F96 /* Firebase */,
-				AEFCC74CE7F96132D45559956D281B7A /* FirebaseAnalytics */,
-				E58DE934DC5B1482F18055FAC7E1F1FC /* FirebaseAuth */,
-				5520B2E40963FEB3E21DD859388C6E9D /* FirebaseCore */,
-				947F0235677DB1E1E676C6A15ECE5B55 /* FirebaseDatabase */,
-				78C47F8549AC4244291A6CA1EB20BB99 /* FirebaseInstanceID */,
-				D222D7C0FC8F74ABAF0694011FCA1DB0 /* GoogleInterchangeUtilities */,
-				61065725E1F1EE4E1BF95DA38A1CB924 /* GoogleSymbolUtilities */,
-				9256BEC2B767B22B902B7261E74CA833 /* GoogleToolboxForMac */,
-				D7543B2E96017B2C5840EC92893BCBAA /* GTMSessionFetcher */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		5520B2E40963FEB3E21DD859388C6E9D /* FirebaseCore */ = {
-			isa = PBXGroup;
-			children = (
-				4CEBDD44A2062CC7780836261765DE1B /* Frameworks */,
-			);
-			name = FirebaseCore;
-			path = FirebaseCore;
-			sourceTree = "<group>";
-		};
-		61065725E1F1EE4E1BF95DA38A1CB924 /* GoogleSymbolUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				4B7638E338D16F186A0E600C6EB8F372 /* Frameworks */,
-			);
-			name = GoogleSymbolUtilities;
-			path = GoogleSymbolUtilities;
+			name = Defines;
 			sourceTree = "<group>";
 		};
 		61A03A63698EDE65B6BB293EB0B69151 /* Pods-MortgageAppUITests */ = {
@@ -532,30 +536,33 @@
 			path = "Target Support Files/Pods-MortgageAppUITests";
 			sourceTree = "<group>";
 		};
-		6FEED9F6EBD9EA870C0DDEB2EF48D6AA /* Defines */ = {
+		61FBA2F4A3822B7F166288B0416EEDFB /* FirebaseInstanceID */ = {
 			isa = PBXGroup;
 			children = (
-				5862BA4D0A98E4F2E9A1AA2109567F67 /* GTMDefines.h */,
-			);
-			name = Defines;
-			sourceTree = "<group>";
-		};
-		78C47F8549AC4244291A6CA1EB20BB99 /* FirebaseInstanceID */ = {
-			isa = PBXGroup;
-			children = (
-				2F850A5C68084BD94FEE29DF4ED1F626 /* FIRInstanceID.h */,
-				D0B095B03CAD81BF0C080ED26D0E3431 /* Frameworks */,
+				44D105A3EB9BDFC6573E12F69034266F /* FIRInstanceID.h */,
+				C32CF44F680D75F75D5822E35E1CD1FC /* Frameworks */,
 			);
 			name = FirebaseInstanceID;
 			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
-		7AEF68B576176D50B72483973E097240 /* Core */ = {
+		621846F957ADD2E225B2C6A77653CAFD /* GTMSessionFetcher */ = {
 			isa = PBXGroup;
 			children = (
-				0A9371ED3B8ADFA7BAAD12B2A9A98937 /* Firebase.h */,
+				80775F14BFEFB38653DEAA348FB4BB25 /* Core */,
+				3B3350AF550A1CBB802A1CF75AB2CE5A /* Support Files */,
 			);
-			name = Core;
+			name = GTMSessionFetcher;
+			path = GTMSessionFetcher;
+			sourceTree = "<group>";
+		};
+		63F5CD8F63697133749E0E84AF4A0129 /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				A8EB439E62A04B0DDCB8E3740C11C6A7 /* Frameworks */,
+			);
+			name = GoogleSymbolUtilities;
+			path = GoogleSymbolUtilities;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -563,225 +570,271 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				5354EB3B512DC598B6DC3C77C70BA03A /* Pods */,
-				A9A6B65AA421436C7D4D717A6EB14780 /* Products */,
+				83C22C12A087FC5452ED8F1C7319D0FE /* Pods */,
+				EAE3F6774F68CAD190BC9458132C066D /* Products */,
 				FBBDC970EA7E7E94E47DAC2889105501 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9256BEC2B767B22B902B7261E74CA833 /* GoogleToolboxForMac */ = {
+		80775F14BFEFB38653DEAA348FB4BB25 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				247F561684B90C1F15246C5387E873A4 /* DebugUtils */,
-				6FEED9F6EBD9EA870C0DDEB2EF48D6AA /* Defines */,
-				A747AD0A3BCB812ED96D135BABB898F4 /* NSData+zlib */,
-				E27DCC40880070488E48A557E25982D4 /* NSDictionary+URLArguments */,
-				D74F65250EB7F3C780FE3F95D5F8D749 /* NSString+URLArguments */,
-				F24852468B4172DC895CA111A93107D8 /* Support Files */,
+				22426F015AEEACAA9ED70E74487ACCF2 /* GTMSessionFetcher.h */,
+				02326C18457D14C828FD2CBB046474F4 /* GTMSessionFetcher.m */,
+				C81195D715B0C24EA3B07D222A964A8A /* GTMSessionFetcherLogging.h */,
+				42484940434755152C1E5D2CB5A2AC0C /* GTMSessionFetcherLogging.m */,
+				0A93E734EE5ED1BF2C91D65D97CFCF63 /* GTMSessionFetcherService.h */,
+				325A8AD638328C49D4E11A901679A71A /* GTMSessionFetcherService.m */,
+				AAE068E88E0DC3F4F4D0E57CA01A0E36 /* GTMSessionUploadFetcher.h */,
+				BF6892A4E2141713C66B5B5F690E7474 /* GTMSessionUploadFetcher.m */,
 			);
-			name = GoogleToolboxForMac;
-			path = GoogleToolboxForMac;
+			name = Core;
 			sourceTree = "<group>";
 		};
-		947F0235677DB1E1E676C6A15ECE5B55 /* FirebaseDatabase */ = {
+		80A7D743FABC68E56B2D64D6F40E5BE8 /* Eureka */ = {
 			isa = PBXGroup;
 			children = (
-				12EAFD567FFC3DC5847AC4ADD24B86DE /* Frameworks */,
-			);
-			name = FirebaseDatabase;
-			path = FirebaseDatabase;
-			sourceTree = "<group>";
-		};
-		A26F7848CFE55D1A97E9452E989AD195 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7F76920773D36A448BBEA5872CA6BB41 /* GoogleInterchangeUtilities.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A57D3BEB12173BCBE1A12A78EEC29F96 /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				7AEF68B576176D50B72483973E097240 /* Core */,
-			);
-			name = Firebase;
-			path = Firebase;
-			sourceTree = "<group>";
-		};
-		A747AD0A3BCB812ED96D135BABB898F4 /* NSData+zlib */ = {
-			isa = PBXGroup;
-			children = (
-				F28D176FA70DF76D40A9788C5960D43D /* GTMNSData+zlib.h */,
-				431055892AD3D3C270A2E1897CD8F961 /* GTMNSData+zlib.m */,
-			);
-			name = "NSData+zlib";
-			sourceTree = "<group>";
-		};
-		A9A6B65AA421436C7D4D717A6EB14780 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EA3487CBFDE01EBA6E6EBA9CB9C7EA3C /* Eureka.framework */,
-				22EF532EDEF7FFCE490957E84A817D2D /* GoogleToolboxForMac.framework */,
-				5F268AB433677C8551D3536B705028B2 /* GTMSessionFetcher.framework */,
-				5EF51821557C31FEE8E4F1F2CE7B1EFA /* Pods_MortgageApp.framework */,
-				66DD996F7E498BCEB9F1EB398074E3F7 /* Pods_MortgageAppTests.framework */,
-				8C93321D3A159355E370B3CE14DC089C /* Pods_MortgageAppUITests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		AEFCC74CE7F96132D45559956D281B7A /* FirebaseAnalytics */ = {
-			isa = PBXGroup;
-			children = (
-				C66D4D8D60005FA39B9BB59CB87392A8 /* Frameworks */,
-			);
-			name = FirebaseAnalytics;
-			path = FirebaseAnalytics;
-			sourceTree = "<group>";
-		};
-		C0C13C4557D545630CB81B85B1BF3EE0 /* Eureka */ = {
-			isa = PBXGroup;
-			children = (
-				E9DBC1296F156045A612046D7C3AAC20 /* ActionSheetRow.swift */,
-				8B183A8F4933D1EA049761DEBFE712FD /* AlertRow.swift */,
-				E923418B6ABB81260DDB784E66333369 /* BaseRow.swift */,
-				BC8B2D7F7A5FFB2307FE84F9953E453B /* ButtonRow.swift */,
-				9643EADCAB80B16201AE30A2D15D9154 /* ButtonRowWithPresent.swift */,
-				AF539CBC0F599C0A38AE4C739BE09C2D /* Cell.swift */,
-				80C609AB03C1F97E263DA6C99E799168 /* CellType.swift */,
-				0B083EDEB3C15DE2671B88241F4E3547 /* CheckRow.swift */,
-				32DB0A03F79861908384E6BBF8C67299 /* Core.swift */,
-				38910D22808E69B7F39005BA90E189EB /* DateFieldRow.swift */,
-				CDAABA295536B3DF7AAA0F5B410D12F0 /* DateInlineFieldRow.swift */,
-				DE66A58D3B68D1D1AB2B82FF720E1470 /* DateInlineRow.swift */,
-				EF9D04B4A3BF10484F46DF76951228F5 /* DatePickerRow.swift */,
-				490B6B562E098CABF0C11B8505D1183E /* DateRow.swift */,
-				83894A5508AC295E5109734F506830AD /* DecimalFormatter.swift */,
-				182F7E81F6115A89ED0F062A1649B763 /* FieldRow.swift */,
-				FB07300CB13B088BDDEEA9D6519C4B57 /* FieldsRow.swift */,
-				874EF5D6E9DFC410F5BA170CF37DA95D /* Form.swift */,
-				9CEE4CCE081BF9AD7F26A3919E17DA89 /* GenericMultipleSelectorRow.swift */,
-				A22FBE95382691B394BA275A19E01D4D /* HeaderFooterView.swift */,
-				6525BAB329E925A64CC40CBD0FB155D1 /* Helpers.swift */,
-				35D13A1B11DE9E5AAD13CB30A8392684 /* InlineRowType.swift */,
-				14F7934343DBA7625ECD9B41079BFC30 /* LabelRow.swift */,
-				9BB2A7E32C8272BBA28A0E81981E8A67 /* ListCheckRow.swift */,
-				839648AD7187674A33C8EA54EE6991B3 /* MultipleSelectorRow.swift */,
-				CECAAB60D978524AA9F6E827E37E8B61 /* MultipleSelectorViewController.swift */,
-				9FAB9A26E94CB8E30E9CDB7B424BB86D /* NavigationAccessoryView.swift */,
-				260264D1980DACB399F3B16218AEA641 /* Operators.swift */,
-				119265C9CD00B2FD8B4213CE1A544884 /* OptionsRow.swift */,
-				0AE979FEAF6CA2361F95C7D9CBE19746 /* PickerInlineRow.swift */,
-				BB9668AC41F777D83897FA8258553175 /* PickerRow.swift */,
-				EA28ECA576C85A749FC26845502214A4 /* PopoverSelectorRow.swift */,
-				50AAF25819223881AE572892AC259CDF /* PresenterRowType.swift */,
-				F295E73F1A8CB152A34A45ECD6A340FE /* Protocols.swift */,
-				6E48DD9D19083C9F79761E3FF1E7CE69 /* PushRow.swift */,
-				8D38AA9DA61EC2DBBC5FB3297E00D5C1 /* Row.swift */,
-				C83D6ED9FD93DB62058B2322C030AED0 /* RowControllerType.swift */,
-				40912E98968257F47F69716FF5A3075F /* RowProtocols.swift */,
-				2281B9F1587FB71AA6FBEDD0F9A16474 /* RowType.swift */,
-				25CCAD1F0F5C4F09CFE2A65CD4293CD0 /* RuleClosure.swift */,
-				57DB3A8956A747E5E5013295FF14E96E /* RuleEmail.swift */,
-				168537E7B4BA0A7193785228310BCB5A /* RuleLength.swift */,
-				263766EB9EEF2E616853A3CE638FAE87 /* RuleRange.swift */,
-				7A1B69D2B6A3F0A3443E9444BE0018A9 /* RuleRegExp.swift */,
-				44B1CE14D54C02315AF9B5F8619EC6C4 /* RuleRequired.swift */,
-				29A3CF91DD0F6E15AAE43668A9D106DF /* RuleURL.swift */,
-				4A399E976E51C1528F7BA175EE8D9A22 /* Section.swift */,
-				312F7F10DEFD5629349E6B7FD95D21A9 /* SegmentedRow.swift */,
-				CB792B1CEBDCDB66CB7E5B0818B81ED6 /* SelectableRowType.swift */,
-				239D15BDB9BA8CB0F0B86E4CC8F96151 /* SelectableSection.swift */,
-				D286F9689AC6F1C207D8634331E1AC86 /* SelectorAlertController.swift */,
-				AFC76C11B6F67EED890F23AAA86C5294 /* SelectorRow.swift */,
-				E40736DECE12ACB76E6C67BDBBAFFA0D /* SelectorViewController.swift */,
-				F280F48CCFE739AFA584893F7800965F /* SliderRow.swift */,
-				925C2682A5C5BB9D0917558046136651 /* StepperRow.swift */,
-				E7B8F60FBE9BFD1579E3FCF347C68FA3 /* SwitchRow.swift */,
-				AF13D33C4894468A66B0C13F6D713338 /* TextAreaRow.swift */,
-				AA469B6EE366F74C0643AB844ACF8830 /* Validation.swift */,
-				41F1161ADED3B659E151ED479C58ED90 /* Resources */,
-				2805F740419620E2889730236D7DB4B9 /* Support Files */,
+				89423266D33E9F0AF396FFF990B254E4 /* ActionSheetRow.swift */,
+				67BE798175FAFFDA22CB72D68F0862FB /* AlertRow.swift */,
+				733F4FBA421BAD1704D203EE7280D8F9 /* BaseRow.swift */,
+				9B7816D66E4C46DCBA100A77BA694034 /* ButtonRow.swift */,
+				4C09D9BE7AD5D28E1FF8A9B9E6D13753 /* ButtonRowWithPresent.swift */,
+				1BD3753F2F04188E835B708D5805DEAE /* Cell.swift */,
+				8024D95FAFA47393BEA1A72D076E0204 /* CellType.swift */,
+				C72B3080C5BB6426F29F6C27419E6DB8 /* CheckRow.swift */,
+				88940DA417993040D127B8DDB0BE6826 /* Core.swift */,
+				B9DF0FA1B8FBD839C284D55E5A35DD2F /* DateFieldRow.swift */,
+				B2A6BCE59E4CA5C6E6370F3BF13D335F /* DateInlineFieldRow.swift */,
+				DA1BDF46CF484CDB28B7F972D11E87C6 /* DateInlineRow.swift */,
+				D2F051F5F61BA6FD514A90D0D9B5300E /* DatePickerRow.swift */,
+				FE5ABB77642071E7D1DF419254D9036E /* DateRow.swift */,
+				EB28C621CA981EADDB3D0E1B6385A3D0 /* DecimalFormatter.swift */,
+				E78F1EB85CA1FC4A308D70856604FCF3 /* FieldRow.swift */,
+				443ADC63E9A3F161837FFC4C5B12A3DB /* FieldsRow.swift */,
+				C2DD392A7097D109C9DBAE30A3E24F2F /* Form.swift */,
+				E64AAE8AF6D5CAC195C97267615CBE54 /* GenericMultipleSelectorRow.swift */,
+				F71A24F53D0C190F18CADCD9F583A1B2 /* HeaderFooterView.swift */,
+				72D13BFAF5523E995B5A6D645789C875 /* Helpers.swift */,
+				74FE48260C5C9259EC6A656C5F32CAF5 /* InlineRowType.swift */,
+				0DCCAFAF2FCA416B0FFAF701048F85D7 /* LabelRow.swift */,
+				2425A52BA4F49CB9F13F788A822F5238 /* ListCheckRow.swift */,
+				6FB1F75474FB4C09E293DAD5CDF818AA /* MultipleSelectorRow.swift */,
+				B21F7F285A07F09F68C7EEDF10D28C27 /* MultipleSelectorViewController.swift */,
+				F18CD4E8CBDD78153B3A5461E6E72987 /* NavigationAccessoryView.swift */,
+				432F912E2E04A03A9188467242D3B652 /* Operators.swift */,
+				CEC15B5DD0A1EA024C78AB6E54324220 /* OptionsRow.swift */,
+				CE99F12A7C0E26C00A5231B58B238E1F /* PickerInlineRow.swift */,
+				809BCF8EBE144B4D5B529A264C2B5C81 /* PickerRow.swift */,
+				DBC3FF821E1732F1F921CA9B96EBA103 /* PopoverSelectorRow.swift */,
+				51B2E541D8E8642333FFE5F959469EF7 /* PresenterRowType.swift */,
+				A109968BC5FB48DB461EE427193A35BD /* Protocols.swift */,
+				5F9F0D8E2B9BA1D610D92CFDA495DEA4 /* PushRow.swift */,
+				5199BCF883668A2D4E688CEB97E195C6 /* Row.swift */,
+				5BA96A10D1E4FE05A831D656602B0168 /* RowControllerType.swift */,
+				AE618170061F8A32048299E391765600 /* RowProtocols.swift */,
+				BC61D997F5D8B68D56784B548BAB642C /* RowType.swift */,
+				DC5B90A2E13380C96D454972BAD579F8 /* RuleClosure.swift */,
+				1262690D312D3FE4F9D5DA217BE0DF36 /* RuleEmail.swift */,
+				3A3C2BEADE3C778FE4C21E051C5A872A /* RuleLength.swift */,
+				80DB3CFE698F90BE2FF0D3A52DC1BEF6 /* RuleRange.swift */,
+				67762E282017FC1A0600D526ED8D3FAE /* RuleRegExp.swift */,
+				BC43FE29AF3BA395518276BCBD4A2427 /* RuleRequired.swift */,
+				8F854F373F8FD35898549EA418545A81 /* RuleURL.swift */,
+				8398235A221C1FE915DF30E648FBA565 /* Section.swift */,
+				1AD48E74520D44EAC8D1AFE43EDDA58A /* SegmentedRow.swift */,
+				ECABACC47440945BF8E3BAA529A0F1B5 /* SelectableRowType.swift */,
+				0409786A325F3953B523574DF446CDE6 /* SelectableSection.swift */,
+				112D73A0958AC3D0D96012A428A3E25C /* SelectorAlertController.swift */,
+				D09F76875F8E5E5CC75D46FE09C89AEB /* SelectorRow.swift */,
+				7391A06B945E7378533AD4460CBE4F3F /* SelectorViewController.swift */,
+				0650D63CDD6FBABE9B691691A04245D6 /* SliderRow.swift */,
+				67E0C3E3AE834C439987008463809D5A /* StepperRow.swift */,
+				987E9AF964EC5E7C42261A66EAEF8124 /* SwitchRow.swift */,
+				EA8BD2B0DC0E64EAB454AB2CC2A816B0 /* TextAreaRow.swift */,
+				E004AF42EC02BC9B569A79B12C57B29E /* Validation.swift */,
+				BBAC16C1002CFB3F7431A523F549AD83 /* Resources */,
+				094960A179C5A58C5F91102997026312 /* Support Files */,
 			);
 			name = Eureka;
 			path = Eureka;
 			sourceTree = "<group>";
 		};
-		C66D4D8D60005FA39B9BB59CB87392A8 /* Frameworks */ = {
+		83C22C12A087FC5452ED8F1C7319D0FE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				19E710A2F6B9A372F08EDD6AD7018B81 /* FirebaseAnalytics.framework */,
+				F21EDCB68A331DECCA32B909EEECBF02 /* BSGridCollectionViewLayout */,
+				80A7D743FABC68E56B2D64D6F40E5BE8 /* Eureka */,
+				ED7B908458413D88740751F15AA94EE3 /* Firebase */,
+				43CAD65BD362FF64929979A6F8EFF384 /* FirebaseAnalytics */,
+				22013DCB96E0D3A3930ACAA755E1797F /* FirebaseAuth */,
+				D913AD543EE5FE36AB432B2DA7DBECD0 /* FirebaseCore */,
+				02B1EF413B9C455BF0385949CE2641AE /* FirebaseDatabase */,
+				61FBA2F4A3822B7F166288B0416EEDFB /* FirebaseInstanceID */,
+				A6A7B30C6F184BC761122862B3B186D4 /* GoogleInterchangeUtilities */,
+				63F5CD8F63697133749E0E84AF4A0129 /* GoogleSymbolUtilities */,
+				92803E59C089A99DA78332B5E47345B7 /* GoogleToolboxForMac */,
+				621846F957ADD2E225B2C6A77653CAFD /* GTMSessionFetcher */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		D0B095B03CAD81BF0C080ED26D0E3431 /* Frameworks */ = {
+		92803E59C089A99DA78332B5E47345B7 /* GoogleToolboxForMac */ = {
 			isa = PBXGroup;
 			children = (
-				98FE66E87F132506017AADA9C46C1336 /* FirebaseInstanceID.framework */,
+				336596F8120ACE4F86F759A4FA54C57F /* DebugUtils */,
+				5EE8A77A247B3891678A531662ECE8EA /* Defines */,
+				D3B7729811D6CDB7F9865DBDECC58444 /* NSData+zlib */,
+				A32B41C72689F0D507A6FFB20375AF38 /* NSDictionary+URLArguments */,
+				2C7C8829E55FF4F3DEF93D168DA8D4EA /* NSString+URLArguments */,
+				9CBE26CB9446A705800108029BC1DBB7 /* Support Files */,
 			);
-			name = Frameworks;
+			name = GoogleToolboxForMac;
+			path = GoogleToolboxForMac;
 			sourceTree = "<group>";
 		};
-		D222D7C0FC8F74ABAF0694011FCA1DB0 /* GoogleInterchangeUtilities */ = {
+		9CBE26CB9446A705800108029BC1DBB7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A26F7848CFE55D1A97E9452E989AD195 /* Frameworks */,
+				F02EB2BF98B266AA6EF051E3207496B0 /* GoogleToolboxForMac.modulemap */,
+				9EA5C7B7FFD6C680B4215044251FA0A2 /* GoogleToolboxForMac.xcconfig */,
+				97F1D1431ADCFE95A054F9D55D7179DE /* GoogleToolboxForMac-dummy.m */,
+				674B7A100259F70BA4DAC002A122F111 /* GoogleToolboxForMac-prefix.pch */,
+				ABBBD0597BE0072127836A21D7D8D4C7 /* GoogleToolboxForMac-umbrella.h */,
+				F5DF3476382BAED83EA08D1232FE227E /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleToolboxForMac";
+			sourceTree = "<group>";
+		};
+		A32B41C72689F0D507A6FFB20375AF38 /* NSDictionary+URLArguments */ = {
+			isa = PBXGroup;
+			children = (
+				80280FE84891D1B2728A8F2D32542FA3 /* GTMNSDictionary+URLArguments.h */,
+				8F91BA02E221CD743397F6A59DF6FEC5 /* GTMNSDictionary+URLArguments.m */,
+			);
+			name = "NSDictionary+URLArguments";
+			sourceTree = "<group>";
+		};
+		A6A7B30C6F184BC761122862B3B186D4 /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				35FF70562EFAB33C3BDC9E502DE35F48 /* Frameworks */,
 			);
 			name = GoogleInterchangeUtilities;
 			path = GoogleInterchangeUtilities;
 			sourceTree = "<group>";
 		};
-		D74F65250EB7F3C780FE3F95D5F8D749 /* NSString+URLArguments */ = {
+		A8EB439E62A04B0DDCB8E3740C11C6A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CC2880F0DEBB41EB729F44DDB17F10A2 /* GTMNSString+URLArguments.h */,
-				227F17EC17D1CA79019C8B9496F082A3 /* GTMNSString+URLArguments.m */,
+				8A190D08C5E72F0D02D2D66B4FF22092 /* GoogleSymbolUtilities.framework */,
 			);
-			name = "NSString+URLArguments";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D7543B2E96017B2C5840EC92893BCBAA /* GTMSessionFetcher */ = {
+		AF71522E713BC3328FF87E0A7DE7C609 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0002ED1587995BE9E92E46C7C728EB64 /* Core */,
-				329872C3F04906C678CF15B799AC238B /* Support Files */,
+				F1A79CBCE490B45FB186DE26893F2923 /* FirebaseDatabase.framework */,
 			);
-			name = GTMSessionFetcher;
-			path = GTMSessionFetcher;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E27DCC40880070488E48A557E25982D4 /* NSDictionary+URLArguments */ = {
+		BBAC16C1002CFB3F7431A523F549AD83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B2A0B290DBD1B504FA438575BFDC3B59 /* GTMNSDictionary+URLArguments.h */,
-				BCD174F868D5BC611A7A2CBB1360A4C2 /* GTMNSDictionary+URLArguments.m */,
+				F9E59FE182CCACF839796F864C66EF0A /* Eureka.bundle */,
 			);
-			name = "NSDictionary+URLArguments";
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		E58DE934DC5B1482F18055FAC7E1F1FC /* FirebaseAuth */ = {
+		C32CF44F680D75F75D5822E35E1CD1FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				08FF62FAAFEF2B7A97F848D69DC966C8 /* Frameworks */,
+				9115F0669AB594EC3DB60013B90E9659 /* FirebaseInstanceID.framework */,
 			);
-			name = FirebaseAuth;
-			path = FirebaseAuth;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F24852468B4172DC895CA111A93107D8 /* Support Files */ = {
+		C6B68E165122CE0F2CEB23A48BC4E16B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BC09F89596F170132C34EFBE33DC4AD5 /* GoogleToolboxForMac.modulemap */,
-				6090638E890BC27F5504D95C03E41C3F /* GoogleToolboxForMac.xcconfig */,
-				91263500D6B99F4F99C40D8E8461B9AA /* GoogleToolboxForMac-dummy.m */,
-				FFD386BD91FB8D1EF915AE285FAF4E84 /* GoogleToolboxForMac-prefix.pch */,
-				E40A1476E7F71E262C1739B11D4ABA8F /* GoogleToolboxForMac-umbrella.h */,
-				55A6B23D8E78EA6CD9C1C6E7A948F13B /* Info.plist */,
+				6251F7E2BCF087FBD4F7CD9550BFAFA6 /* BSGridCollectionViewLayout.modulemap */,
+				6F33E489868E3AD41C38E4D22DF5FFC0 /* BSGridCollectionViewLayout.xcconfig */,
+				E7F883033710CE68FB83C7516432A3E5 /* BSGridCollectionViewLayout-dummy.m */,
+				811D9147DEA904EAC031A3095E606FB8 /* BSGridCollectionViewLayout-prefix.pch */,
+				53B5B92767FC603C8622B96BB2C7B6F0 /* BSGridCollectionViewLayout-umbrella.h */,
+				CA1BE4D690C9E5E2F18C1CA7E27DA2BC /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/GoogleToolboxForMac";
+			path = "../Target Support Files/BSGridCollectionViewLayout";
+			sourceTree = "<group>";
+		};
+		D0BD8F0176E8BFFEE3BEB664AACF0AFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A63EA46F26BBAB7964AE36CE0A31009 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3B7729811D6CDB7F9865DBDECC58444 /* NSData+zlib */ = {
+			isa = PBXGroup;
+			children = (
+				16298341664A95E16393FA57B2C959AC /* GTMNSData+zlib.h */,
+				9FE1CC1EB64C1C7AA29D577CE0B168E0 /* GTMNSData+zlib.m */,
+			);
+			name = "NSData+zlib";
+			sourceTree = "<group>";
+		};
+		D913AD543EE5FE36AB432B2DA7DBECD0 /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				F203805F72E51FE72957C8CF5BE54358 /* Frameworks */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		EAE3F6774F68CAD190BC9458132C066D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C07F0D816281C6AD067850FAECF28635 /* BSGridCollectionViewLayout.framework */,
+				AF0CA6227148405AB4D586332F8E8011 /* Eureka.framework */,
+				0181BA17B9C1E225B85F31ADBB0EC99C /* GoogleToolboxForMac.framework */,
+				7DB55DBC3E76464680E9F16FE19C0A6E /* GTMSessionFetcher.framework */,
+				07176A344C060411E50768CE38507B4F /* Pods_MortgageApp.framework */,
+				27954537D20B71F588639545B9C60EFE /* Pods_MortgageAppTests.framework */,
+				3213FDD87288DF6E3E63E87A99CDA3B4 /* Pods_MortgageAppUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED7B908458413D88740751F15AA94EE3 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				23397E43E340FC94BCABC0940C5FC9B7 /* Core */,
+			);
+			name = Firebase;
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		F203805F72E51FE72957C8CF5BE54358 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F24B9C19DC3DA5C88F6414E70125D971 /* FirebaseCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F21EDCB68A331DECCA32B909EEECBF02 /* BSGridCollectionViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				B3150C30B624F70F07D8C745A5D179A7 /* GridCollectionViewLayout.swift */,
+				C6B68E165122CE0F2CEB23A48BC4E16B /* Support Files */,
+			);
+			name = BSGridCollectionViewLayout;
+			path = BSGridCollectionViewLayout;
 			sourceTree = "<group>";
 		};
 		FBBDC970EA7E7E94E47DAC2889105501 /* Targets Support Files */ = {
@@ -825,6 +878,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B71C6C57579D48F5B7F182C253C80D6C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				944A91471418238BD7E52E7AF266F3FA /* Pods-MortgageApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB0A1DF130E97C4755B09863D7F1AD5F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -848,11 +909,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3C072B086BBD22EA6C3E26DFA602F7E /* Headers */ = {
+		CFC7DE9487BDF04C0097335A51099FDA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04F003689B60125346DDDFF43DAADE81 /* Pods-MortgageApp-umbrella.h in Headers */,
+				E1A8F79B77CB20AD43FD33D8DF3E7A1B /* BSGridCollectionViewLayout-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -873,27 +934,7 @@
 			);
 			name = GoogleToolboxForMac;
 			productName = GoogleToolboxForMac;
-			productReference = 22EF532EDEF7FFCE490957E84A817D2D /* GoogleToolboxForMac.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		10D915B0EEDFAD038819B7CA404AA3AC /* Pods-MortgageApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E7D42CF371E8ADFB315B5EF914EE9D3D /* Build configuration list for PBXNativeTarget "Pods-MortgageApp" */;
-			buildPhases = (
-				DA3A0B07F8BFD3C2C59AFC2975BE6D37 /* Sources */,
-				64F06ADDC2A1DB5BB69816B336BE0EB0 /* Frameworks */,
-				C3C072B086BBD22EA6C3E26DFA602F7E /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				62EA7A80D5F9A56A9F3F5F0436BD4003 /* PBXTargetDependency */,
-				137EA35C0671AF37A285FA3AB2799429 /* PBXTargetDependency */,
-				40F47A112041B248C029F4F9EE31E87F /* PBXTargetDependency */,
-			);
-			name = "Pods-MortgageApp";
-			productName = "Pods-MortgageApp";
-			productReference = 5EF51821557C31FEE8E4F1F2CE7B1EFA /* Pods_MortgageApp.framework */;
+			productReference = 0181BA17B9C1E225B85F31ADBB0EC99C /* GoogleToolboxForMac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		4BCDCED8FC44F2DC831241592EC6827D /* Pods-MortgageAppUITests */ = {
@@ -910,7 +951,45 @@
 			);
 			name = "Pods-MortgageAppUITests";
 			productName = "Pods-MortgageAppUITests";
-			productReference = 8C93321D3A159355E370B3CE14DC089C /* Pods_MortgageAppUITests.framework */;
+			productReference = 3213FDD87288DF6E3E63E87A99CDA3B4 /* Pods_MortgageAppUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6930D5D0C3440426432777093903702D /* BSGridCollectionViewLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14389705DF1DDADD75464255690FF1BA /* Build configuration list for PBXNativeTarget "BSGridCollectionViewLayout" */;
+			buildPhases = (
+				33EBF2E3B9D0B6FC62E2E1EB02061745 /* Sources */,
+				FD0C2B7505D61447D90C63668464C7E8 /* Frameworks */,
+				CFC7DE9487BDF04C0097335A51099FDA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BSGridCollectionViewLayout;
+			productName = BSGridCollectionViewLayout;
+			productReference = C07F0D816281C6AD067850FAECF28635 /* BSGridCollectionViewLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7091964207D115F3EC6EAEE016EF0650 /* Pods-MortgageApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7D56A0B6EBB1CE69D66298738C277DF /* Build configuration list for PBXNativeTarget "Pods-MortgageApp" */;
+			buildPhases = (
+				054675B2FF56505577C62F55F9CAB839 /* Sources */,
+				AFF4C149E4DB9F7B900B3C55722FEB38 /* Frameworks */,
+				B71C6C57579D48F5B7F182C253C80D6C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AF8EBC479B01A3D6A634F113A15C47F /* PBXTargetDependency */,
+				42813556DE666B282A2BC939D76E3C2A /* PBXTargetDependency */,
+				3D69DC0A6E959BA103E2A31EE2AA4149 /* PBXTargetDependency */,
+				CAF8A9F09B4FEC0EE53386F972DB7937 /* PBXTargetDependency */,
+			);
+			name = "Pods-MortgageApp";
+			productName = "Pods-MortgageApp";
+			productReference = 07176A344C060411E50768CE38507B4F /* Pods_MortgageApp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C052BEBFBD0AB5218CC64BA3450F6547 /* GTMSessionFetcher */ = {
@@ -927,7 +1006,7 @@
 			);
 			name = GTMSessionFetcher;
 			productName = GTMSessionFetcher;
-			productReference = 5F268AB433677C8551D3536B705028B2 /* GTMSessionFetcher.framework */;
+			productReference = 7DB55DBC3E76464680E9F16FE19C0A6E /* GTMSessionFetcher.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EE774F234E810C0DD8263855D7A1A166 /* Eureka */ = {
@@ -945,7 +1024,7 @@
 			);
 			name = Eureka;
 			productName = Eureka;
-			productReference = EA3487CBFDE01EBA6E6EBA9CB9C7EA3C /* Eureka.framework */;
+			productReference = AF0CA6227148405AB4D586332F8E8011 /* Eureka.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		FA2DEB2EC9E2F0FC1C6FBFD049B98B6E /* Pods-MortgageAppTests */ = {
@@ -962,7 +1041,7 @@
 			);
 			name = "Pods-MortgageAppTests";
 			productName = "Pods-MortgageAppTests";
-			productReference = 66DD996F7E498BCEB9F1EB398074E3F7 /* Pods_MortgageAppTests.framework */;
+			productReference = 27954537D20B71F588639545B9C60EFE /* Pods_MortgageAppTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -982,14 +1061,15 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = A9A6B65AA421436C7D4D717A6EB14780 /* Products */;
+			productRefGroup = EAE3F6774F68CAD190BC9458132C066D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				6930D5D0C3440426432777093903702D /* BSGridCollectionViewLayout */,
 				EE774F234E810C0DD8263855D7A1A166 /* Eureka */,
 				107A9565F9DF88517DFD3E28C05B2B96 /* GoogleToolboxForMac */,
 				C052BEBFBD0AB5218CC64BA3450F6547 /* GTMSessionFetcher */,
-				10D915B0EEDFAD038819B7CA404AA3AC /* Pods-MortgageApp */,
+				7091964207D115F3EC6EAEE016EF0650 /* Pods-MortgageApp */,
 				FA2DEB2EC9E2F0FC1C6FBFD049B98B6E /* Pods-MortgageAppTests */,
 				4BCDCED8FC44F2DC831241592EC6827D /* Pods-MortgageAppUITests */,
 			);
@@ -1008,6 +1088,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		054675B2FF56505577C62F55F9CAB839 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E731FC01B5406F6372A7B6AA582E4D64 /* Pods-MortgageApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		222F0DC2D2D238CAB82346DE258E5472 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1024,6 +1112,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C89AF62E2D7E0225306655D513BE1796 /* Pods-MortgageAppUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33EBF2E3B9D0B6FC62E2E1EB02061745 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB9EEF4D17B1394B91905B94BBE4F99 /* BSGridCollectionViewLayout-dummy.m in Sources */,
+				907D779765F9E18C2D4B924B80D9501A /* GridCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1113,41 +1210,72 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DA3A0B07F8BFD3C2C59AFC2975BE6D37 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				66E6F3D3704360EE70A2BA227C19ABC4 /* Pods-MortgageApp-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		137EA35C0671AF37A285FA3AB2799429 /* PBXTargetDependency */ = {
+		3D69DC0A6E959BA103E2A31EE2AA4149 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GTMSessionFetcher;
 			target = C052BEBFBD0AB5218CC64BA3450F6547 /* GTMSessionFetcher */;
-			targetProxy = 655A07871CDDE4360220A79D40479218 /* PBXContainerItemProxy */;
+			targetProxy = 06B4BC58A0117F15C3FC3D4D9B4EC1CD /* PBXContainerItemProxy */;
 		};
-		40F47A112041B248C029F4F9EE31E87F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GoogleToolboxForMac;
-			target = 107A9565F9DF88517DFD3E28C05B2B96 /* GoogleToolboxForMac */;
-			targetProxy = 76E866E0236F054DB24208D14B234B80 /* PBXContainerItemProxy */;
-		};
-		62EA7A80D5F9A56A9F3F5F0436BD4003 /* PBXTargetDependency */ = {
+		42813556DE666B282A2BC939D76E3C2A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Eureka;
 			target = EE774F234E810C0DD8263855D7A1A166 /* Eureka */;
-			targetProxy = B678E48AB4EC966A9D57AE9850872591 /* PBXContainerItemProxy */;
+			targetProxy = 3BC97EAA82AB7659E212B28CDF31AB13 /* PBXContainerItemProxy */;
+		};
+		9AF8EBC479B01A3D6A634F113A15C47F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BSGridCollectionViewLayout;
+			target = 6930D5D0C3440426432777093903702D /* BSGridCollectionViewLayout */;
+			targetProxy = 06CC05AE9A2D9506EB5889318E5037AE /* PBXContainerItemProxy */;
+		};
+		CAF8A9F09B4FEC0EE53386F972DB7937 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleToolboxForMac;
+			target = 107A9565F9DF88517DFD3E28C05B2B96 /* GoogleToolboxForMac */;
+			targetProxy = E0FEB117BC24BBE725E91BD39B83F839 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		073743E63FE2FD9B5208BE84C5FCB5CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F33E489868E3AD41C38E4D22DF5FFC0 /* BSGridCollectionViewLayout.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BSGridCollectionViewLayout/BSGridCollectionViewLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BSGridCollectionViewLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BSGridCollectionViewLayout/BSGridCollectionViewLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BSGridCollectionViewLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		2027CE8814A12015C76E5F21355C4803 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A055544E82A69396CB1D3FCBC35B2B74 /* Eureka.xcconfig */;
+			baseConfigurationReference = 150F4EEBCD2CB29C37BDC4DB3FEFC446 /* Eureka.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1178,9 +1306,45 @@
 			};
 			name = Debug;
 		};
+		39EB9D8D40F9C4D40FDB20F112EC3EEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C6B12C12E83133E258ACB74EB75D36B /* Pods-MortgageApp.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MortgageApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MortgageApp/Pods-MortgageApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MortgageApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		3AF861AEADA89A377F12178D493BED95 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6090638E890BC27F5504D95C03E41C3F /* GoogleToolboxForMac.xcconfig */;
+			baseConfigurationReference = 9EA5C7B7FFD6C680B4215044251FA0A2 /* GoogleToolboxForMac.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1256,7 +1420,7 @@
 		};
 		6E4CBAD6C31766BDAE04EBD1910DCD8F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A055544E82A69396CB1D3FCBC35B2B74 /* Eureka.xcconfig */;
+			baseConfigurationReference = 150F4EEBCD2CB29C37BDC4DB3FEFC446 /* Eureka.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1321,7 +1485,39 @@
 			};
 			name = Debug;
 		};
-		6FCF9BC0A7292515EF96E3B1411175EC /* Release */ = {
+		881B19BB9961D509DACE94450066151E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EA5C7B7FFD6C680B4215044251FA0A2 /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AE28CBAD3CDC3395F3721E04908643CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F04B08B2DA52C760DB5B0C3ADE233C35 /* Pods-MortgageApp.release.xcconfig */;
 			buildSettings = {
@@ -1350,38 +1546,6 @@
 				PRODUCT_NAME = Pods_MortgageApp;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		881B19BB9961D509DACE94450066151E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6090638E890BC27F5504D95C03E41C3F /* GoogleToolboxForMac.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = GoogleToolboxForMac;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1465,7 +1629,7 @@
 		};
 		B9C7324D0ADEABED7BC7B2D9C608C5E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE46CA71B818590A8111C34B92FD8669 /* GTMSessionFetcher.xcconfig */;
+			baseConfigurationReference = 9C8DE66887A2CAF5AE91A337A4E0423D /* GTMSessionFetcher.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1530,9 +1694,41 @@
 			};
 			name = Debug;
 		};
+		ECBBF5338A31E56FB22ACFB52119E530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F33E489868E3AD41C38E4D22DF5FFC0 /* BSGridCollectionViewLayout.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BSGridCollectionViewLayout/BSGridCollectionViewLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BSGridCollectionViewLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BSGridCollectionViewLayout/BSGridCollectionViewLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BSGridCollectionViewLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		ED969C86CBBA712335D5E741625E75B6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE46CA71B818590A8111C34B92FD8669 /* GTMSessionFetcher.xcconfig */;
+			baseConfigurationReference = 9C8DE66887A2CAF5AE91A337A4E0423D /* GTMSessionFetcher.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1597,45 +1793,18 @@
 			};
 			name = Release;
 		};
-		FC997CA2EBE547EB2CC02FFE54311899 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C6B12C12E83133E258ACB74EB75D36B /* Pods-MortgageApp.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MortgageApp/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MortgageApp/Pods-MortgageApp.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MortgageApp;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		14389705DF1DDADD75464255690FF1BA /* Build configuration list for PBXNativeTarget "BSGridCollectionViewLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				073743E63FE2FD9B5208BE84C5FCB5CB /* Debug */,
+				ECBBF5338A31E56FB22ACFB52119E530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1690,11 +1859,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E7D42CF371E8ADFB315B5EF914EE9D3D /* Build configuration list for PBXNativeTarget "Pods-MortgageApp" */ = {
+		D7D56A0B6EBB1CE69D66298738C277DF /* Build configuration list for PBXNativeTarget "Pods-MortgageApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FC997CA2EBE547EB2CC02FFE54311899 /* Debug */,
-				6FCF9BC0A7292515EF96E3B1411175EC /* Release */,
+				39EB9D8D40F9C4D40FDB20F112EC3EEF /* Debug */,
+				AE28CBAD3CDC3395F3721E04908643CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

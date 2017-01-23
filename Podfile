@@ -11,6 +11,7 @@ target 'MortgageApp' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Eureka', '~> 2.0.0-beta.1'
+  pod "BSGridCollectionViewLayout", "~> 1.1.0"
 
   target 'MortgageAppTests' do
     inherit! :search_paths

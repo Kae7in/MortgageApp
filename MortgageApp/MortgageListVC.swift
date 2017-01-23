@@ -23,6 +23,7 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
 
         self.ref = FIRDatabase.database().reference()
+        
         loadMortgages()
         layoutViews()
     }
@@ -42,7 +43,7 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         nav?.barStyle = UIBarStyle.black
         nav?.tintColor = UIColor(rgbColorCodeRed: 238, green: 87, blue: 106, alpha: 1.0)
         self.navigationItem.title = "Mortgages"
-        nav?.titleTextAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Light", size: 20.0)!, NSForegroundColorAttributeName: UIColor(rgbColorCodeRed: 155, green: 155, blue: 155, alpha: 1.0)]
+        nav?.titleTextAttributes = [NSFontAttributeName: UIFont(name: ".SFUIDisplay-Medium", size: 18.0)!, NSForegroundColorAttributeName: UIColor.black]
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "addbutton"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(addMortgage))
         self.navigationItem.rightBarButtonItem?.imageInsets = UIEdgeInsets(top: 15.0, left: 30.0, bottom: 15.0, right: 0.0)
         
@@ -125,6 +126,7 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                 
                 // Pass the mortgage associated with that cell to the mortgage detail view controller
                 mortgageDetailVC.mortgage = mortgage
+                mortgageDetailVC.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             }
         }
     }

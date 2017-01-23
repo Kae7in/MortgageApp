@@ -23,7 +23,6 @@ class CreateMortgageFVC: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("viewDidLoad")
         self.ref = FIRDatabase.database().reference()
         self.layoutNavigationBar()
         self.layoutForm()
@@ -33,7 +32,6 @@ class CreateMortgageFVC: FormViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidLoad()
         
-        print("viewDidAppear")
         if formHasLoadedOnce {
             self.layoutForm()  // TODO: Get rid of this hacky way of reloading the form when extra payment rows have been added
         }
@@ -43,6 +41,7 @@ class CreateMortgageFVC: FormViewController {
     
     func layoutNavigationBar() {
         self.navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: UIApplication.shared.statusBarFrame.height + 44))
+        navBar.isTranslucent = true
         self.view.addSubview(navBar)
         let navItem = UINavigationItem(title: "Create Mortgage")
         let cancelItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(cancel))

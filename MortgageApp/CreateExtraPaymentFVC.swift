@@ -25,6 +25,7 @@ class CreateExtraPaymentFVC: FormViewController {
     
     func layoutNavigationBar() {
         self.navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: UIApplication.shared.statusBarFrame.height + 44))
+        navBar.isTranslucent = true
         self.view.addSubview(navBar)
         let navItem = UINavigationItem(title: "Create Mortgage")
         let cancelItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(cancel))
