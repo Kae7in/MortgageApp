@@ -90,7 +90,7 @@ class MortgageDetailVC: UIViewController {
             let dest = segue.destination as! ExtraPaymentVC
             dest.mortgage = self.mortgage
         } else if segue.identifier == "toAmortizationTables" {
-            let dest = segue.destination as! AmortizationFVC
+            let dest = segue.destination as! AmortizationVC
             dest.mortgage = self.mortgage
             dest.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         }

@@ -1,0 +1,6 @@
+framework module GlyuckDataGrid {
+  umbrella header "GlyuckDataGrid-umbrella.h"
+
+  export *
+  module * { export * }
+}

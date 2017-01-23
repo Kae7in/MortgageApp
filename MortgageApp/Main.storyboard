@@ -1386,7 +1386,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="hP8-L3-s1v">
-                                                <rect key="frame" x="0.0" y="123" width="295" height="103"/>
+                                                <rect key="frame" x="0.5" y="123" width="295" height="103"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="rRE-kE-8ty">
                                                         <rect key="frame" x="0.0" y="0.0" width="147.5" height="103"/>
@@ -1780,7 +1780,7 @@
                                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="DNR-GQ-oM9">
                                             <color key="tintColor" red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="4A011D4A-6D46-4B6D-AF2E-A4CF63DD80C8" style="plain" id="ASl-7A-NaO">
+                                        <barButtonItem key="rightBarButtonItem" image="655021F0-30D8-4CEA-A811-43B758823F9F" style="plain" id="ASl-7A-NaO">
                                             <inset key="imageInsets" minX="30" minY="15" maxX="0.0" maxY="15"/>
                                             <color key="tintColor" red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
@@ -1862,10 +1862,10 @@
             </objects>
             <point key="canvasLocation" x="3036" y="36"/>
         </scene>
-        <!--AmortizationFVC-->
+        <!--AmortizationVC-->
         <scene sceneID="NAh-87-vMt">
             <objects>
-                <viewController id="ULF-pY-Zc1" customClass="AmortizationFVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ULF-pY-Zc1" customClass="AmortizationVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OMA-po-hWX"/>
                         <viewControllerLayoutGuide type="bottom" id="ZN6-5Y-vge"/>
@@ -1960,7 +1960,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="4A011D4A-6D46-4B6D-AF2E-A4CF63DD80C8" width="60" height="60">
+        <image name="655021F0-30D8-4CEA-A811-43B758823F9F" width="60" height="60">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
