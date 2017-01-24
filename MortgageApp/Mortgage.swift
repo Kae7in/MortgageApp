@@ -113,6 +113,7 @@ class Mortgage: NSObject {
         for amortization in paymentSchedule {
             calculateRemainingLoanCostForPeriod(amortization: amortization)
             calculateInterestSavedForPeriod(amortization: amortization)
+            calculateTotalInterestSavedUpToPeriod(amortization: amortization)  // This call MUST come after calculateInterestSavedForPeriod() call
         }
     }
     
@@ -133,6 +134,17 @@ class Mortgage: NSObject {
             let originalInterest = originalMortgage!.paymentSchedule[periodIndex].interest
             let currentInterest = paymentSchedule[periodIndex].interest
             amortization.interestSaved = originalInterest.subtracting(currentInterest)
+        }
+    }
+    
+    private func calculateTotalInterestSavedUpToPeriod(amortization: Amortization) {
+        if !paymentSchedule.isEmpty && !originalMortgage!.paymentSchedule.isEmpty {
+            let periodIndex = amortization.loanMonth - 1
+            if periodIndex > 0 {
+                amortization.interestSavedToDate = amortization.interestSaved.adding(self.paymentSchedule[periodIndex-1].interestSavedToDate)
+            } else {
+                amortization.interestSavedToDate = amortization.interestSaved
+            }
         }
     }
     

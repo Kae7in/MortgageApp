@@ -21,7 +21,7 @@ class AmortizationVC: UIViewController, UIToolbarDelegate, DataGridViewDataSourc
         super.viewDidLoad()
         
         let mc = MortgageCalculator()
-        _ = mc.calculateMortgage(mortgage: self.mortgage!.originalMortgage!)  // To populate the original mortgage's paymentSchedule
+        self.mortgage!.originalMortgage! = mc.calculateMortgage(mortgage: self.mortgage!.originalMortgage!)  // To populate the original mortgage's paymentSchedule
         
         self.navigationItem.title = "Amortization"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Today", style: .plain, target: nil, action: nil)
@@ -82,11 +82,7 @@ class AmortizationVC: UIViewController, UIToolbarDelegate, DataGridViewDataSourc
     
     // You'll need to tell number of columns in data grid view
     func numberOfColumnsInDataGridView(_ dataGridView: DataGridView) -> Int {
-        if self.segmentedControl.selectedSegmentIndex == 2 {
-            return 2
-        } else {
-            return 4
-        }
+        return 4
     }
     
     // And number of rows
@@ -115,7 +111,7 @@ class AmortizationVC: UIViewController, UIToolbarDelegate, DataGridViewDataSourc
             case 3:
                 string = "BALANCE"
             default:
-                string = "error"
+                string = "ERROR"
             }
         } else if self.segmentedControl.selectedSegmentIndex == 1 {
             switch column {
@@ -128,32 +124,34 @@ class AmortizationVC: UIViewController, UIToolbarDelegate, DataGridViewDataSourc
             case 3:
                 string = "BALANCE"
             default:
-                string = "error"
+                string = "ERROR"
             }
         } else if self.segmentedControl.selectedSegmentIndex == 2 {
             switch column {
             case 0:
-                string = "PAYMENT"
+                string = "ORIGINAL INTEREST"
             case 1:
-                string = "INTEREST"
+                string = "NEW INTEREST"
             case 2:
                 string = "SAVED TODAY"
             case 3:
                 string = "SAVED TOTAL"
             default:
-                string = "error"
+                string = "ERROR"
             }
         }
         
         return string
     }
     
+    
     // And for text for content cells
     func dataGridView(_ dataGridView: DataGridView, textForCellAtIndexPath indexPath: IndexPath) -> String {
+        let originalPaymentScheduleCount = self.mortgage?.originalMortgage?.paymentSchedule.count
         let paymentScheduleCount = self.mortgage?.paymentSchedule.count
         let row: Int = indexPath.dataGridRow
         
-        if row > paymentScheduleCount! { return "$0" }
+        if row >= originalPaymentScheduleCount! { return "$0" }
         
         if self.segmentedControl.selectedSegmentIndex == 0 {
             if indexPath.dataGridColumn == 0 {  // (original) MONTHLY PAYMENT
@@ -170,33 +168,39 @@ class AmortizationVC: UIViewController, UIToolbarDelegate, DataGridViewDataSourc
                 return "$" + String(balance!)
             }
         } else if self.segmentedControl.selectedSegmentIndex == 1 {
-            if indexPath.dataGridColumn == 0 {  // (original) MONTHLY PAYMENT
+            if row >= paymentScheduleCount! { return "$0" }
+            
+            if indexPath.dataGridColumn == 0 {  // MONTHLY PAYMENT
                 let monthlyPayment: Int? = self.mortgage?.paymentSchedule[row].scheduledMonthlyPayment.intValue
                 return "$" + String(monthlyPayment!)
-            } else if indexPath.dataGridColumn == 1 {  // (original) PRINCIPAL
+            } else if indexPath.dataGridColumn == 1 {  // PRINCIPAL
                 let principal: Int? = self.mortgage?.paymentSchedule[row].principal.intValue
                 return "$" + String(principal!)
-            } else if indexPath.dataGridColumn == 2 {  // (original) INTEREST
+            } else if indexPath.dataGridColumn == 2 {  // INTEREST
                 let interest: Int? = self.mortgage?.paymentSchedule[row].interest.intValue
                 return "$" + String(interest!)
-            } else if indexPath.dataGridColumn == 3 {  // (original) BALANCE (P)
+            } else if indexPath.dataGridColumn == 3 {  // BALANCE (P)
                 let balance: Int? = self.mortgage?.paymentSchedule[row].remainingLoanBalance.intValue
                 return "$" + String(balance!)
             }
         } else if self.segmentedControl.selectedSegmentIndex == 2 {
-            if indexPath.dataGridColumn == 0 {  // SAVED TODAY
-                let oldInterest: NSDecimalNumber? = self.mortgage?.originalMortgage?.paymentSchedule[row].interest
-                let newInterest: NSDecimalNumber? = self.mortgage?.paymentSchedule[row].interest
-                let difference: Int = newInterest!.subtracting(oldInterest!).intValue
-                return "$" + String(difference)
-            } else if indexPath.dataGridColumn == 1 {  // TOTAL SAVED
-                let oldInterest: NSDecimalNumber? = self.mortgage?.originalMortgage?.paymentSchedule[row].interestSaved
-                let newInterest: NSDecimalNumber? = self.mortgage?.paymentSchedule[row].interestSaved
-                let difference: Int = newInterest!.subtracting(oldInterest!).intValue
-                return "$" + String(difference)
+            if indexPath.dataGridColumn == 0 {  // (original) INTEREST PAYMENT
+                return "$" + self.mortgage!.originalMortgage!.paymentSchedule[row].interest.stringValue
+            } else if indexPath.dataGridColumn == 1 {  // INTEREST PAYMENT
+                if row >= paymentScheduleCount! { return "$0" }
+                return "$" + self.mortgage!.paymentSchedule[row].interest.stringValue
+            } else if indexPath.dataGridColumn == 2 {  // SAVED TODAY
+                if row >= paymentScheduleCount! { return "$0" }
+                return "$" + self.mortgage!.paymentSchedule[row].interestSaved.stringValue
+            } else if indexPath.dataGridColumn == 3 {  // TOTAL SAVED
+                if row >= paymentScheduleCount! {
+                    return "$" + self.mortgage!.paymentSchedule[paymentScheduleCount! - 1].interestSavedToDate.stringValue
+                } else {
+                    return "$" + self.mortgage!.paymentSchedule[row].interestSavedToDate.stringValue
+                }
             }
         }
         
-        return "h"
+        return "ERROR"
     }
 }

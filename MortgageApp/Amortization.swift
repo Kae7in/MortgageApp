@@ -16,6 +16,7 @@ class Amortization: NSObject {
     var interestLoanYearToDate: NSDecimalNumber = 0.0
     var interestRate: NSDecimalNumber = 0.0
     var interestSaved: NSDecimalNumber = 0.0
+    var interestSavedToDate: NSDecimalNumber = 0.0
     var interestToDate: NSDecimalNumber = 0.0
     var loanMonth: Int = 0
     var loanYear: Int = 0
