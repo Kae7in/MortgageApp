@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import UserNotifications
 
 class SettingsVC: UIViewController {
 
@@ -35,4 +36,8 @@ class SettingsVC: UIViewController {
         }
     }
     
+    
+    @IBAction func removeAllPendingNotificationsButton(_ sender: UIButton) {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
 }

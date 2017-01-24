@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseDatabase
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,15 +27,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRDatabase.database().persistenceEnabled = true
         
         // Visual/theme changes before launch
-//        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-//        UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().barTintColor = UIColor.customGrey()
-//        UINavigationBar.appearance().backgroundColor = UIColor(rgbColorCodeRed: 247, green: 247, blue: 247, alpha: 1.0)
         UINavigationBar.appearance().isTranslucent = true
-        
         UINavigationBar.appearance().tintColor = UIColor.black
-        
         UITabBar.appearance().tintColor = UIColor.black
+        
+        let center = UNUserNotificationCenter.current()
+        let options: UNAuthorizationOptions = [.alert, .sound]
+        center.requestAuthorization(options: options) { (granted, error) in
+            if !granted {
+                print("Notification Permissions Denied")
+            }
+        }
         
         // Navigation logic
         let userAuthenticated: Bool = FIRAuth.auth()?.currentUser != nil
@@ -42,6 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // navigate to the login screen
             let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "signUp")
             //let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "debug")
+            //navigationController!.pushViewController(storyboard!.instantiateViewControllerWithIdentifier("View Controller Identifier") as UIViewController, animated: true)
             
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window!.rootViewController = rootViewController

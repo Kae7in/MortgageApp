@@ -9,6 +9,7 @@
 import UIKit
 import Eureka
 import FirebaseDatabase
+import UserNotifications
 
 class CreateMortgageFVC: FormViewController {
     
@@ -155,9 +156,11 @@ class CreateMortgageFVC: FormViewController {
     func done() {
         if validInput() {
             let m = createAndSaveMortgage()
+            UNNotificationRequest.setPaymentReminderNotification(mortgage: m)
             
             // Save to local cache that the previous view can access
             self.mortgageData.mortgages.append(m)
+            
             
             // if this is the first ever mortgage the user has created
             if self.goingToIntro {
@@ -191,6 +194,7 @@ class CreateMortgageFVC: FormViewController {
     
     
     func createAndSaveMortgage() -> Mortgage {
+        // Extract data from form
         let valuesDictionary = self.form.values()
         let name: String? = valuesDictionary["mortgage_name"] as? String
         let principal: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["sale_price"] as! Double)
@@ -199,7 +203,7 @@ class CreateMortgageFVC: FormViewController {
         let interestRate: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["interest_rate"] as! Double)
         let startDate: Date? = valuesDictionary["start_date"] as? Date
         
-        // Assign fields of mortgage instance
+        // Assign data to mortgage instance properties
         self.mortgage.name = name!
         self.mortgage.salePrice = principal!
         self.mortgage.interestRate = interestRate!

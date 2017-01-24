@@ -256,6 +256,14 @@
                                     <action selector="logoutButton:" destination="IlT-lD-UHF" eventType="touchUpInside" id="8Te-8S-JTU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnl-RV-Tck">
+                                <rect key="frame" x="75" y="377" width="227" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Remove All Pending Notifications"/>
+                                <connections>
+                                    <action selector="removeAllPendingNotificationsButton:" destination="IlT-lD-UHF" eventType="touchUpInside" id="LEW-HQ-Gxa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1905,7 +1913,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="253-ad-U9a" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mortgages" image="house" id="IcX-w7-FGl"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gAk-ar-knE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gAk-ar-knE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

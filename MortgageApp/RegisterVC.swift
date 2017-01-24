@@ -19,6 +19,7 @@ class RegisterVC: UIViewController {
     
     var ref: FIRDatabaseReference!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +32,7 @@ class RegisterVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     
     @IBAction func submitButtonAction(_ sender: UIButton) {
         if validateFields() {
@@ -51,7 +53,7 @@ class RegisterVC: UIViewController {
                     
                     self.performSegue(withIdentifier: "toCreateMortgage", sender: nil)
                 } else if error != nil {
-                    // TODO
+                    // TODO: Implement proper error response
                 }
             })
         }
@@ -85,5 +87,5 @@ class RegisterVC: UIViewController {
         // Segue to the sign in screen
         performSegue(withIdentifier: "toSignIn", sender: sender)
     }
-
+    
 }
