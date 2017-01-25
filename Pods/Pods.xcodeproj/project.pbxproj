@@ -29,19 +29,20 @@
 		1F9B999DFAA1052294448B64C77434B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1698F9A4AE357BAEECB356D8902C9E4D /* Foundation.framework */; };
 		26D312AC788B6AE629D321C7C6854F85 /* BorderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820A03BB9F7B065ECD0186335526959B /* BorderHelper.swift */; };
 		274A0946844B4BDEAA9C66D16F4D6638 /* RuleLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621C8715F66D4AEC6E54D735D70316C0 /* RuleLength.swift */; };
+		2800212DF62EF68E22AF1631D29B5A2F /* Pods-MortgageAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A5A785BEC22D7C63732D7FBA8A43A33 /* Pods-MortgageAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2894B1B84AD8464300463F01D6671515 /* BaseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C607FB5AFE42766EDE7A4A0161AD99C /* BaseRow.swift */; };
 		2AC11AADC16DD50F3C122E080027B0B0 /* RuleRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC64377D50EBDF07854620A0AC5094 /* RuleRequired.swift */; };
 		2DF1D2A7FDCB8403D76162E5E94D471C /* SelectableRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74937DD13F970EACC4A1284219A405B2 /* SelectableRowType.swift */; };
 		2EA998FF3BA8B43AD2CBFD20217784EB /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927805540B4EC2823FB1B4C9AED6A267 /* ButtonRow.swift */; };
 		2EFC826FB30ECD27C98CE7F3707E9012 /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C886F2D4F0BB845FE090CA2A9C1AC /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		2F85D0B5F93214B80071DE59AD4BA76C /* DataGridViewRowHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9415034EB8CCB5FDD5157737BF0088AE /* DataGridViewRowHeaderCell.swift */; };
+		30973AF9DC0327CD11BCF695335DAF88 /* Pods-MortgageAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D036F318320D172C24109AB0A9C055 /* Pods-MortgageAppUITests-dummy.m */; };
 		3185C0AF2C79E04DDA0B76FD50D05561 /* Eureka.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B3163D25DAA0FADAFBA97A06C9296821 /* Eureka.bundle */; };
 		32CF9BB4493C89CB01FFADD6DB754927 /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5679833217F8472BDBE8E437902CEE7F /* GoogleToolboxForMac-dummy.m */; };
 		362CEB31FF646FFA058013C6CC73DABC /* HeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECDAF8459235197B2BB3CA9C03CA9F2 /* HeaderFooterView.swift */; };
 		378D202D64D7A141AB67663E789FA54D /* LabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D6CAEF4F937CFB7C3800C0CADB0FFD /* LabelRow.swift */; };
 		380C785F98D63C7BD5ED39053D6562E9 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3233CC58B1C86960F02371F9E7EA817A /* Form.swift */; };
 		39B9AF905697B761591D02D5E02FFCB3 /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281E1A6642C70CD6D26370DA5BFB8955 /* SelectorViewController.swift */; };
-		412DAC9E95520921A5211E19B2CABB70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1698F9A4AE357BAEECB356D8902C9E4D /* Foundation.framework */; };
 		479641A8F2EE44F5B9C1A85651F33DB1 /* GlyuckDataGrid-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B7AD95BDE30650E378F4054BF7D627B /* GlyuckDataGrid-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A37980C75DCCB4309E5A4D39633BF05 /* RowProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F84D7E236B46BB8E930757699130E10 /* RowProtocols.swift */; };
 		4C0C430C74FD0ADC96D90E58F9AB37F4 /* TextAreaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE07320ED3F5B8D3D65C443C6A35AC3D /* TextAreaRow.swift */; };
@@ -65,6 +66,7 @@
 		7EFE374DF078F735CF525C6AC1251F71 /* AlertRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4820F62B7204AACCC6A5BA069BA4A9 /* AlertRow.swift */; };
 		818B729716B3A3BC2E50D998F65AA116 /* DateFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153363347D221BA8177401CBD8BFE02 /* DateFieldRow.swift */; };
 		82FC241E5B93AEF32FC2765F8CC8F2E7 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B74980CCA4E5A53852579128B2015 /* Core.swift */; };
+		8532F4E28CE15CAC258B14D337978A21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1698F9A4AE357BAEECB356D8902C9E4D /* Foundation.framework */; };
 		85A2A3CDADFFE7042DB6712FAB52F29B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFC4C47DAC64625B79ED69D7C85EBC7 /* UIKit.framework */; };
 		85FF667A47F8D4DE82837B244C57B3C8 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50BBE7D95EF12555D0098DAB37098C2 /* Operators.swift */; };
 		87192C1D41F48AE04C566E7D6C2F76EC /* DataGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F708B7737AB76FA018EEEC59803295EB /* DataGridView.swift */; };
@@ -81,11 +83,9 @@
 		A6ADA5015850563CC2082C85F91BDAFD /* SelectorAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3E10B972411D476D0CE785668A4C10 /* SelectorAlertController.swift */; };
 		A71869CF6BD3EA25E59BF11021D67746 /* RuleEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB776DE33ED4BAECE5633765C7E43F73 /* RuleEmail.swift */; };
 		A74E045E42BCDD35A6E35C5F170321B4 /* SegmentedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F333E568C9008463EAC7A97ED0F06A1A /* SegmentedRow.swift */; };
-		A8E40F64E84FFF77A29D9BE890D1FAE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1698F9A4AE357BAEECB356D8902C9E4D /* Foundation.framework */; };
 		A9BF0D7D85E27B39617D358923125FF4 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBD3D623BCCF1474955351131AB8FB0 /* CollectionViewDataSource.swift */; };
 		AA43D76183863FA83ED2D60A588CCE65 /* DataGridViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228D56B59A0B12F5F230B8D6B7BD4401 /* DataGridViewLayout.swift */; };
 		AA509F0AC2FB6CB8C18934454F8FA0F6 /* RowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77704035F75EFF14D184C1393FC5643A /* RowType.swift */; };
-		ACD858D6C212A3F2F0281263CCBC0D46 /* Pods-MortgageAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07453C3321EA3F630081B3B838B615CB /* Pods-MortgageAppTests-dummy.m */; };
 		B02CBD3403FD10C8FE0D4780AF6FAE5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1698F9A4AE357BAEECB356D8902C9E4D /* Foundation.framework */; };
 		B05C496A6F67CE9F60DC711F402AB20A /* GTMDebugSelectorValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = D534F39CBEF80BB8DD009AC5C22D7C4E /* GTMDebugSelectorValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0B6E7AF3530C966687B5A9B54656FE7 /* SelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C930F6BAC468DE7DEB9CB1430359A6F /* SelectorRow.swift */; };
@@ -96,9 +96,9 @@
 		BECEBD2076B2F66A7742CF3F5738932A /* Pods-MortgageApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B82CE2A8F47187F5578C6FEDF31EDA3 /* Pods-MortgageApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C319B328FA0F78C41D163C6C83C72ED9 /* DataGridViewColumnHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4CC4CB43F6E388377B425055A0265D /* DataGridViewColumnHeaderCell.swift */; };
 		C34E24520624B382515A0F58185E6926 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = F3B2211945D918FEAA2E97DB78FA9A48 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C89AF62E2D7E0225306655D513BE1796 /* Pods-MortgageAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D036F318320D172C24109AB0A9C055 /* Pods-MortgageAppUITests-dummy.m */; };
 		C96452A45DA034ECB65C3C8F57D16C6B /* Pods-MortgageApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E30AFE5C6A2C2593C4E855ACF74AA065 /* Pods-MortgageApp-dummy.m */; };
 		C9DF0516E214282A15FF10AA75FE34DF /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24AD90FE9E1E4A0FC0208DA138EE55B /* Cell.swift */; };
+		CBF7A4E30DD630C48107008C7D54BA26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1698F9A4AE357BAEECB356D8902C9E4D /* Foundation.framework */; };
 		CC354898FDC9CD0A2A4A378B476F50DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFC4C47DAC64625B79ED69D7C85EBC7 /* UIKit.framework */; };
 		CCE47794953C5D52EA2B77C07D5DAE6B /* DecimalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AA7BA2900E3F6DF158490346ECE66 /* DecimalFormatter.swift */; };
 		D066FCFB3280A2BB5BA21545300C9192 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1698F9A4AE357BAEECB356D8902C9E4D /* Foundation.framework */; };
@@ -108,12 +108,11 @@
 		D3F381B45ADFDDE51CA31F1E141236CA /* GTMSessionFetcher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 43DE419B317BF4FA17EC17DBE9DD8EB7 /* GTMSessionFetcher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D44D50A0F4B440E2F734B40650D8D3E6 /* Eureka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A00A524A02C77F4B7E04E9F4F96EFC /* Eureka-dummy.m */; };
 		DA2F5A299DC9A8ECC5F73A66172E64BC /* GTMNSString+URLArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = FA7D7B217E7F40938A89F8C469353338 /* GTMNSString+URLArguments.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DC7D3959F46E2F63B2C4ADF5AE9633A1 /* Pods-MortgageAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C14D4CA5E1EA8B4AA274951B227255 /* Pods-MortgageAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC9647DB284A9DFF08032C74B129C751 /* CheckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED43BE2F4111EC7F7DA82832CCD4EE6A /* CheckRow.swift */; };
 		DEA0ED61EE365AA71BD69BEC1A499A6A /* GenericMultipleSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983FD9BB96BA6D67ABD5A43228FFD3ED /* GenericMultipleSelectorRow.swift */; };
 		DF9559C3822E3C6119BE43E4EDFD7EEE /* GTMSessionFetcherService.h in Headers */ = {isa = PBXBuildFile; fileRef = A198A732EFDBE060E39EECBE6CA99173 /* GTMSessionFetcherService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E173F29FA92E88C68BC87C595774AE4B /* DatePickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D560D188F37861131ADD04A1989C2 /* DatePickerRow.swift */; };
-		E7C820F319FF84336B5141479140BC8D /* Pods-MortgageAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A5A785BEC22D7C63732D7FBA8A43A33 /* Pods-MortgageAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6B4E31D635E8A89E872498D8400DE7A /* Pods-MortgageAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C14D4CA5E1EA8B4AA274951B227255 /* Pods-MortgageAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7D23D2F163A34BEC60FD54BCCC22C76 /* GTMNSDictionary+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = 216515550955E27B6C00526E72EA65DB /* GTMNSDictionary+URLArguments.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		EA441B0FF3815E28448729890243DC3D /* DateInlineFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571766A51C34804A4589A6EC45BB6E15 /* DateInlineFieldRow.swift */; };
 		EAF1099915C9BFC7DB0705844B8A62F3 /* RuleRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8965C4DA2965CBB426F457A8130373EA /* RuleRange.swift */; };
@@ -123,10 +122,18 @@
 		F4E294C07EE32FFCDCF7FF4D71D850BD /* GTMSessionUploadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 932692E5F2D6C342C6855EF358ACDBD9 /* GTMSessionUploadFetcher.m */; };
 		F59AF0A9CCA6984124A7C204A2430267 /* UILabel+AppearanceSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = 080DD5ECB119AED61CC27C10D76D254E /* UILabel+AppearanceSelectors.m */; };
 		F65CDA7D8F8B9EF18F5B20E5C706F3EC /* DateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A74CC157A2B3B33CF248AD7027EF7 /* DateRow.swift */; };
+		F6C7DA53F86C22FFAC4F72EAEBFF1267 /* Pods-MortgageAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07453C3321EA3F630081B3B838B615CB /* Pods-MortgageAppTests-dummy.m */; };
 		FF6F676C6FF3E33D642DB4ACEFA2D4D8 /* GlyuckDataGrid-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F12E97FADA2D6C6539EC60EE69EF73ED /* GlyuckDataGrid-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		03EDAEBD257B14AF5A7AC5CF5B3BA387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 107A9565F9DF88517DFD3E28C05B2B96;
+			remoteInfo = GoogleToolboxForMac;
+		};
 		0650EA5BFEF1F7369B8D414F82EA9462 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -141,12 +148,47 @@
 			remoteGlobalIDString = EE774F234E810C0DD8263855D7A1A166;
 			remoteInfo = Eureka;
 		};
+		366B79DC69719D69C50FA17F2D0FDDF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C052BEBFBD0AB5218CC64BA3450F6547;
+			remoteInfo = GTMSessionFetcher;
+		};
+		508FC53EA669D37AE2C32ABC8B9E6557 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE774F234E810C0DD8263855D7A1A166;
+			remoteInfo = Eureka;
+		};
+		869D2D9F84E217CF72CCCD015D7ED4DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 107A9565F9DF88517DFD3E28C05B2B96;
+			remoteInfo = GoogleToolboxForMac;
+		};
 		8CE8992210A96C185E67124FEF3928F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 50C02233FF61B0CEA3A2FC8EE185A01D;
 			remoteInfo = GlyuckDataGrid;
+		};
+		A627C876690ED237A0672C613E7FA36A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50C02233FF61B0CEA3A2FC8EE185A01D;
+			remoteInfo = GlyuckDataGrid;
+		};
+		ACC57D6897353010623035DFBF521B28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C052BEBFBD0AB5218CC64BA3450F6547;
+			remoteInfo = GTMSessionFetcher;
 		};
 		BDD264EE7E21E408CEC134E8D8B0448C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -337,20 +379,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4F855CE8C8B8130C05DE9EBA71573664 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBF7A4E30DD630C48107008C7D54BA26 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6AE88E96161DE195EAAF0A3B6375EA50 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1F9B999DFAA1052294448B64C77434B1 /* Foundation.framework in Frameworks */,
 				65B56BD3DBC9B81BB008219D0BA735A9 /* Security.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9A19EC5682D58C48A220DC2B9C442367 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				412DAC9E95520921A5211E19B2CABB70 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,19 +413,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DEBDE66C2645D2B565B22F08FEABFDDB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A8E40F64E84FFF77A29D9BE890D1FAE0 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E7F78F07B412BCE8624C24840175D3D4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D066FCFB3280A2BB5BA21545300C9192 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70811B49214173E0E57E3CE42C3D09C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8532F4E28CE15CAC258B14D337978A21 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -915,14 +957,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		68D42183CB2FB0E9D0855E15D531A4CC /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DC7D3959F46E2F63B2C4ADF5AE9633A1 /* Pods-MortgageAppTests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		82D993B88C10479096F17ADDEAB85D94 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -932,6 +966,22 @@
 				1ED67707C258751E7888DAC2AB3D8501 /* GTMSessionFetcherLogging.h in Headers */,
 				DF9559C3822E3C6119BE43E4EDFD7EEE /* GTMSessionFetcherService.h in Headers */,
 				F09EDD53B94234F5F8DAC4DCD5CD969E /* GTMSessionUploadFetcher.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA9987091B7BCE825AD8F54850E6E76 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2800212DF62EF68E22AF1631D29B5A2F /* Pods-MortgageAppUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EFE1ECCD5951CC4C443C0A96418D11F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6B4E31D635E8A89E872498D8400DE7A /* Pods-MortgageAppTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -958,14 +1008,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C201C17C0965E1E1BE7AE5F80C8588AA /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E7C820F319FF84336B5141479140BC8D /* Pods-MortgageAppUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -984,23 +1026,6 @@
 			name = GoogleToolboxForMac;
 			productName = GoogleToolboxForMac;
 			productReference = CBAAD11D2624F5D46FD9B87C7D322240 /* GoogleToolboxForMac.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		4BCDCED8FC44F2DC831241592EC6827D /* Pods-MortgageAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6DEA8E0380AB60D59E2ED70A200880B0 /* Build configuration list for PBXNativeTarget "Pods-MortgageAppUITests" */;
-			buildPhases = (
-				336C2184E183A341F69D5C472DD3DE41 /* Sources */,
-				DEBDE66C2645D2B565B22F08FEABFDDB /* Frameworks */,
-				C201C17C0965E1E1BE7AE5F80C8588AA /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-MortgageAppUITests";
-			productName = "Pods-MortgageAppUITests";
-			productReference = 6D053A6582A9185DF48B1DA8B05679B0 /* Pods_MortgageAppUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		50C02233FF61B0CEA3A2FC8EE185A01D /* GlyuckDataGrid */ = {
@@ -1035,6 +1060,27 @@
 			name = GTMSessionFetcher;
 			productName = GTMSessionFetcher;
 			productReference = 0DB2FF250BAAB7E12D801AF6FB70970C /* GTMSessionFetcher.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C802653666523ACB72DB8A6405671008 /* Pods-MortgageAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6C8765ECFB17C2394D2E19485CA9E77 /* Build configuration list for PBXNativeTarget "Pods-MortgageAppUITests" */;
+			buildPhases = (
+				9296F69B7664F667A239B0C59F5851D3 /* Sources */,
+				F70811B49214173E0E57E3CE42C3D09C /* Frameworks */,
+				9BA9987091B7BCE825AD8F54850E6E76 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				965282D903FB3411A5ED611932AB1790 /* PBXTargetDependency */,
+				EB7089F8E121E437DDD51E6BCED2A11F /* PBXTargetDependency */,
+				9699CCE89F70407922D8C2BAC0CA13B7 /* PBXTargetDependency */,
+				82060914013C3616E1FF311B44C6A971 /* PBXTargetDependency */,
+			);
+			name = "Pods-MortgageAppUITests";
+			productName = "Pods-MortgageAppUITests";
+			productReference = 6D053A6582A9185DF48B1DA8B05679B0 /* Pods_MortgageAppUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DB9AE2123A60FD2D03A7C5F06A43D5B6 /* Pods-MortgageApp */ = {
@@ -1076,17 +1122,19 @@
 			productReference = 498B551452F0D368C429645AF855C19A /* Eureka.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FA2DEB2EC9E2F0FC1C6FBFD049B98B6E /* Pods-MortgageAppTests */ = {
+		F2F115242E9C31595EDE9869D1CB62E3 /* Pods-MortgageAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66070043863B951389B1BF48BCC2FAFC /* Build configuration list for PBXNativeTarget "Pods-MortgageAppTests" */;
+			buildConfigurationList = A78C20FCE685B9EAD78FB020B12DAB09 /* Build configuration list for PBXNativeTarget "Pods-MortgageAppTests" */;
 			buildPhases = (
-				733757286808E8C01C2F4763044F6FCB /* Sources */,
-				9A19EC5682D58C48A220DC2B9C442367 /* Frameworks */,
-				68D42183CB2FB0E9D0855E15D531A4CC /* Headers */,
+				D1F287813B7A252E5308FBE2B6337624 /* Sources */,
+				4F855CE8C8B8130C05DE9EBA71573664 /* Frameworks */,
+				9EFE1ECCD5951CC4C443C0A96418D11F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				452FFCA3723FB5AD6E3D611904C075E0 /* PBXTargetDependency */,
+				AF9980072C0B767907C34D61A53DFC0A /* PBXTargetDependency */,
 			);
 			name = "Pods-MortgageAppTests";
 			productName = "Pods-MortgageAppTests";
@@ -1119,8 +1167,8 @@
 				107A9565F9DF88517DFD3E28C05B2B96 /* GoogleToolboxForMac */,
 				C052BEBFBD0AB5218CC64BA3450F6547 /* GTMSessionFetcher */,
 				DB9AE2123A60FD2D03A7C5F06A43D5B6 /* Pods-MortgageApp */,
-				FA2DEB2EC9E2F0FC1C6FBFD049B98B6E /* Pods-MortgageAppTests */,
-				4BCDCED8FC44F2DC831241592EC6827D /* Pods-MortgageAppUITests */,
+				F2F115242E9C31595EDE9869D1CB62E3 /* Pods-MortgageAppTests */,
+				C802653666523ACB72DB8A6405671008 /* Pods-MortgageAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1167,22 +1215,6 @@
 				2EFC826FB30ECD27C98CE7F3707E9012 /* GTMNSData+zlib.m in Sources */,
 				E7D23D2F163A34BEC60FD54BCCC22C76 /* GTMNSDictionary+URLArguments.m in Sources */,
 				5B92D1D5ECFEBA99F4C67864E1397A6D /* GTMNSString+URLArguments.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		336C2184E183A341F69D5C472DD3DE41 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C89AF62E2D7E0225306655D513BE1796 /* Pods-MortgageAppUITests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		733757286808E8C01C2F4763044F6FCB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ACD858D6C212A3F2F0281263CCBC0D46 /* Pods-MortgageAppTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1252,6 +1284,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9296F69B7664F667A239B0C59F5851D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30973AF9DC0327CD11BCF695335DAF88 /* Pods-MortgageAppUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		94ACCE840600E68875780F46CCCE1760 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1272,6 +1312,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D1F287813B7A252E5308FBE2B6337624 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6C7DA53F86C22FFAC4F72EAEBFF1267 /* Pods-MortgageAppTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1281,11 +1329,35 @@
 			target = EE774F234E810C0DD8263855D7A1A166 /* Eureka */;
 			targetProxy = 2D648F349E9E01193499FFF79F09450B /* PBXContainerItemProxy */;
 		};
+		452FFCA3723FB5AD6E3D611904C075E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMSessionFetcher;
+			target = C052BEBFBD0AB5218CC64BA3450F6547 /* GTMSessionFetcher */;
+			targetProxy = 366B79DC69719D69C50FA17F2D0FDDF7 /* PBXContainerItemProxy */;
+		};
+		82060914013C3616E1FF311B44C6A971 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleToolboxForMac;
+			target = 107A9565F9DF88517DFD3E28C05B2B96 /* GoogleToolboxForMac */;
+			targetProxy = 03EDAEBD257B14AF5A7AC5CF5B3BA387 /* PBXContainerItemProxy */;
+		};
 		93BD87CFF733203730C3E090452ACF5A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GTMSessionFetcher;
 			target = C052BEBFBD0AB5218CC64BA3450F6547 /* GTMSessionFetcher */;
 			targetProxy = 0650EA5BFEF1F7369B8D414F82EA9462 /* PBXContainerItemProxy */;
+		};
+		965282D903FB3411A5ED611932AB1790 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Eureka;
+			target = EE774F234E810C0DD8263855D7A1A166 /* Eureka */;
+			targetProxy = 508FC53EA669D37AE2C32ABC8B9E6557 /* PBXContainerItemProxy */;
+		};
+		9699CCE89F70407922D8C2BAC0CA13B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GlyuckDataGrid;
+			target = 50C02233FF61B0CEA3A2FC8EE185A01D /* GlyuckDataGrid */;
+			targetProxy = A627C876690ED237A0672C613E7FA36A /* PBXContainerItemProxy */;
 		};
 		9DEB48FC6E27E2F8EC75CC7619FA31FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1293,15 +1365,62 @@
 			target = 50C02233FF61B0CEA3A2FC8EE185A01D /* GlyuckDataGrid */;
 			targetProxy = 8CE8992210A96C185E67124FEF3928F2 /* PBXContainerItemProxy */;
 		};
+		AF9980072C0B767907C34D61A53DFC0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleToolboxForMac;
+			target = 107A9565F9DF88517DFD3E28C05B2B96 /* GoogleToolboxForMac */;
+			targetProxy = 869D2D9F84E217CF72CCCD015D7ED4DF /* PBXContainerItemProxy */;
+		};
 		E934F69A779F1D51CCBE13B0CEAA789E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleToolboxForMac;
 			target = 107A9565F9DF88517DFD3E28C05B2B96 /* GoogleToolboxForMac */;
 			targetProxy = BDD264EE7E21E408CEC134E8D8B0448C /* PBXContainerItemProxy */;
 		};
+		EB7089F8E121E437DDD51E6BCED2A11F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMSessionFetcher;
+			target = C052BEBFBD0AB5218CC64BA3450F6547 /* GTMSessionFetcher */;
+			targetProxy = ACC57D6897353010623035DFBF521B28 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1C47FA0F875A0BC4EF28768F770BA311 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C31B0B67070FB1AECF1A2BF6400A6831 /* Pods-MortgageAppTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MortgageAppTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MortgageAppTests/Pods-MortgageAppTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MortgageAppTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		2027CE8814A12015C76E5F21355C4803 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E73C632D422450082A187D8215B7BD81 /* Eureka.xcconfig */;
@@ -1435,6 +1554,42 @@
 			};
 			name = Debug;
 		};
+		53714C6DB6C01BFF089513FF9092345C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DD48E9225C7ACD0634EEDE08328D124 /* Pods-MortgageAppUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MortgageAppUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MortgageAppUITests/Pods-MortgageAppUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MortgageAppUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1511,41 +1666,6 @@
 			};
 			name = Release;
 		};
-		6EA0873ED8197121B662085151C38496 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7DD48E9225C7ACD0634EEDE08328D124 /* Pods-MortgageAppUITests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MortgageAppUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MortgageAppUITests/Pods-MortgageAppUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MortgageAppUITests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		881B19BB9961D509DACE94450066151E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6D06BB6575B6DD72D234C735EBCD4717 /* GoogleToolboxForMac.xcconfig */;
@@ -1572,41 +1692,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B2B3555E4C04A152FCFDB1BBF2EFFDD8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F4E38925362FBCA252A498CA5F24C47 /* Pods-MortgageAppUITests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MortgageAppUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MortgageAppUITests/Pods-MortgageAppUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MortgageAppUITests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1685,6 +1770,41 @@
 			};
 			name = Debug;
 		};
+		BB8ACB99E70EB2BF63E594C1B75A3A21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F4E38925362FBCA252A498CA5F24C47 /* Pods-MortgageAppUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MortgageAppUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MortgageAppUITests/Pods-MortgageAppUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MortgageAppUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		C0C11E3C43DAAC7E0E052EBCE7322F17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C6B12C12E83133E258ACB74EB75D36B /* Pods-MortgageApp.debug.xcconfig */;
@@ -1721,7 +1841,7 @@
 			};
 			name = Debug;
 		};
-		C1F3A58040CA42701DB1C2F8737681D5 /* Debug */ = {
+		CF7A523C4544F4E4013CCC3A4D500BFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 43FF82828776C46071A9C4450517C3EC /* Pods-MortgageAppTests.debug.xcconfig */;
 			buildSettings = {
@@ -1820,41 +1940,6 @@
 			};
 			name = Release;
 		};
-		FAA7E0384D77BC05AB062273DFB55063 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C31B0B67070FB1AECF1A2BF6400A6831 /* Pods-MortgageAppTests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MortgageAppTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MortgageAppTests/Pods-MortgageAppTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MortgageAppTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1885,29 +1970,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66070043863B951389B1BF48BCC2FAFC /* Build configuration list for PBXNativeTarget "Pods-MortgageAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C1F3A58040CA42701DB1C2F8737681D5 /* Debug */,
-				FAA7E0384D77BC05AB062273DFB55063 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6DEA8E0380AB60D59E2ED70A200880B0 /* Build configuration list for PBXNativeTarget "Pods-MortgageAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6EA0873ED8197121B662085151C38496 /* Debug */,
-				B2B3555E4C04A152FCFDB1BBF2EFFDD8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		7E69BC6F2D3A6E7D50D08BCC847F9D01 /* Build configuration list for PBXNativeTarget "GlyuckDataGrid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38B185B09A13CE7E593F703496042920 /* Debug */,
 				E820386AFE5D0192F0B8DC437E8FFC20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6C8765ECFB17C2394D2E19485CA9E77 /* Build configuration list for PBXNativeTarget "Pods-MortgageAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53714C6DB6C01BFF089513FF9092345C /* Debug */,
+				BB8ACB99E70EB2BF63E594C1B75A3A21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A78C20FCE685B9EAD78FB020B12DAB09 /* Build configuration list for PBXNativeTarget "Pods-MortgageAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF7A523C4544F4E4013CCC3A4D500BFA /* Debug */,
+				1C47FA0F875A0BC4EF28768F770BA311 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

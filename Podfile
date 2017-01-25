@@ -16,11 +16,17 @@ target 'MortgageApp' do
   target 'MortgageAppTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
   end
 
   target 'MortgageAppUITests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Firebase/Auth'
+    pod 'Eureka', '~> 2.0.0-beta.1'
+    pod "GlyuckDataGrid"
+    pod 'Firebase/Database'
   end
 
 end
