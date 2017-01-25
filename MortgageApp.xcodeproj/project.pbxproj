@@ -766,7 +766,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 361665E4A68BCB7623A2CE65 /* Pods-MortgageApp.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 47P2F7XFH5;
 				INFOPLIST_FILE = MortgageApp/Info.plist;
@@ -781,7 +781,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 55F65F6B9B39C856DCD36446 /* Pods-MortgageApp.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 47P2F7XFH5;
 				INFOPLIST_FILE = MortgageApp/Info.plist;
@@ -796,7 +796,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A3E27CC53BEBDDD432DC524D /* Pods-MortgageAppTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MortgageAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -811,7 +811,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AFF1B03AE1DC6E1728B6FD22 /* Pods-MortgageAppTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MortgageAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -826,7 +826,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 226F37C3A03A63A923EAB14F /* Pods-MortgageAppUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				INFOPLIST_FILE = MortgageAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kw.MortgageAppUITests;
@@ -840,7 +840,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6C4CB58B544BA95AAC291678 /* Pods-MortgageAppUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				INFOPLIST_FILE = MortgageAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kw.MortgageAppUITests;
