@@ -12,7 +12,6 @@
 		1A0D37391E354FCA005B9114 /* AmortizationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0D37381E354FCA005B9114 /* AmortizationVC.swift */; };
 		1A0D373A1E354FCA005B9114 /* AmortizationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0D37381E354FCA005B9114 /* AmortizationVC.swift */; };
 		1A0D373B1E354FCA005B9114 /* AmortizationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0D37381E354FCA005B9114 /* AmortizationVC.swift */; };
-		1A1067DC1E031E8F00729426 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A36D4341DF86AF40093A411 /* Info.plist */; };
 		1A1067E01E031F6F00729426 /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A1067DD1E031F6F00729426 /* SF-UI-Display-Regular.otf */; };
 		1A1067E11E031F6F00729426 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A1067DE1E031F6F00729426 /* SF-UI-Display-Thin.otf */; };
 		1A1067E21E031F6F00729426 /* SF-UI-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A1067DF1E031F6F00729426 /* SF-UI-Display-Ultralight.otf */; };
@@ -362,7 +361,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Kaelin Hooper";
 				TargetAttributes = {
 					1A36D4241DF86AF40093A411 = {
@@ -414,7 +413,6 @@
 				1A1067E01E031F6F00729426 /* SF-UI-Display-Regular.otf in Resources */,
 				1A1067E21E031F6F00729426 /* SF-UI-Display-Ultralight.otf in Resources */,
 				1A1067E11E031F6F00729426 /* SF-UI-Display-Thin.otf in Resources */,
-				1A1067DC1E031E8F00729426 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,6 +766,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 361665E4A68BCB7623A2CE65 /* Pods-MortgageApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 47P2F7XFH5;
 				INFOPLIST_FILE = MortgageApp/Info.plist;
@@ -782,6 +781,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 55F65F6B9B39C856DCD36446 /* Pods-MortgageApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 47P2F7XFH5;
 				INFOPLIST_FILE = MortgageApp/Info.plist;
