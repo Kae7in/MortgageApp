@@ -179,13 +179,15 @@ class CreateMortgageFVC: FormViewController {
     
     
     func validInput() -> Bool {
-        let valuesDictionary = self.form.values()
-        let name: String? = valuesDictionary["mortgage_name"] as? String
-        let principal: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["sale_price"] as! Double)
-        let downPayment: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["down_payment"] as! Double)
-        let loanTerm: Int? = valuesDictionary["loan_term"] as? Int
-        let interestRate: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["interest_rate"] as! Double)
-        let startDate: Date? = valuesDictionary["start_date"] as? Date
+        // Handle unused variables
+//        let valuesDictionary = self.form.values()
+//
+//        let name: String? = valuesDictionary["mortgage_name"] as? String
+//        let principal: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["sale_price"] as! Double)
+//        let downPayment: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["down_payment"] as! Double)
+//        let loanTerm: Int? = valuesDictionary["loan_term"] as? Int
+//        let interestRate: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["interest_rate"] as! Double)
+//        let startDate: Date? = valuesDictionary["start_date"] as? Date
         
         // TODO: Validate these values
         
