@@ -16,6 +16,8 @@ target 'MortgageApp' do
   target 'MortgageAppTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
   end
 
   target 'MortgageAppUITests' do
