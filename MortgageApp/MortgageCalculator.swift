@@ -102,7 +102,7 @@ class MortgageCalculator: NSObject {
     func calculateAmortizations(mortgage: Mortgage) {
         // To avoid rounding errors, all dollars will be converted to cents and converted back to dollars
         var remainingLoanAmountInCents = mortgage.loanAmount().multiplying(by: NSDecimalNumber(value: 100))
-        var monthlyPropertyTaxInCents = calculatePropertyTax(mortgage: mortgage)
+        let monthlyPropertyTaxInCents = calculatePropertyTax(mortgage: mortgage)
         var amortizations = [Amortization]()
         var previousAmortization: Amortization? = nil
         var loanMonth = 0
@@ -110,11 +110,11 @@ class MortgageCalculator: NSObject {
         var loanYearRollUpSummary = [String: NSDecimalNumber]()
         var currentInterestRate = calculateInterestRate(mortgage: mortgage, loanMonth: 1)
         var currentMonthlyPaymentInCents = calculateMonthlyPayment(loanAmount: remainingLoanAmountInCents, loanTermMonths: mortgage.loanTermMonths, interestRate: currentInterestRate)
-        var rollupSummaryFields = ["interest", "principal", "extra", "principalTotal", "propertyTax", "paymentTotal"]
+        let rollupSummaryFields = ["interest", "principal", "extra", "principalTotal", "propertyTax", "paymentTotal"]
         
         while remainingLoanAmountInCents.compare(NSDecimalNumber(value: 1)) == ComparisonResult.orderedSame || remainingLoanAmountInCents.compare(NSDecimalNumber(value: 1)) == ComparisonResult.orderedDescending {
             loanMonth += 1
-            var amortization = Amortization()
+            let amortization = Amortization()
             
             if needsInterestReset(mortgage: mortgage, loanMonth: loanMonth) {
                 currentInterestRate = calculateInterestRate(mortgage: mortgage, loanMonth: loanMonth)
@@ -148,7 +148,7 @@ class MortgageCalculator: NSObject {
             
             amortization.loanMonth = loanMonth
             amortization.loanYear = loanYear
-            rollupSummaryFields.map({ (field: String) in
+            _ = rollupSummaryFields.map({ (field: String) in
                 if loanYearRollUpSummary[field] != nil {
                     loanYearRollUpSummary[field] = loanYearRollUpSummary[field]?.adding(amortization.value(forKey: field) as! NSDecimalNumber)
                 } else {
@@ -163,7 +163,7 @@ class MortgageCalculator: NSObject {
                 loanYear += 1
             }
             
-            rollupSummaryFields.map({ (field: String) in
+            _ = rollupSummaryFields.map({ (field: String) in
                 if previousAmortization != nil {
                     let prev: NSDecimalNumber = previousAmortization!.value(forKey: field + "ToDate") as! NSDecimalNumber
                     let cur: NSDecimalNumber = amortization.value(forKey: field) as! NSDecimalNumber
@@ -184,8 +184,8 @@ class MortgageCalculator: NSObject {
         let additionalFieldsToProcess = ["scheduledMonthlyPayment", "remainingLoanBalance"]
         
         for i in 0..<amortizations.count {
-            var amortization = amortizations[i]
-            rollupSummaryFields.map({ (field: String) in
+            let amortization = amortizations[i]
+            _ = rollupSummaryFields.map({ (field: String) in
                 var temp: NSDecimalNumber = amortization.value(forKey: field) as! NSDecimalNumber
                 amortization.setValue(roundDecimals(num: temp.dividing(by: NSDecimalNumber(value: 100))), forKey: field)
                 temp = amortization.value(forKey: field + "ToDate") as! NSDecimalNumber
@@ -194,12 +194,12 @@ class MortgageCalculator: NSObject {
                 amortization.setValue(roundDecimals(num: temp.dividing(by: NSDecimalNumber(value: 100))), forKey: field + "LoanYearToDate")
             })
             
-            additionalFieldsToProcess.map({ (field: String) in
+            _ = additionalFieldsToProcess.map({ (field: String) in
                 let temp = amortization.value(forKey: field) as! NSDecimalNumber
                 let val = roundDecimals(num: temp.dividing(by: NSDecimalNumber(value: 100)))
                 amortization.setValue(val, forKey: field)
             })
-
+            
             mortgage.totalLoanCost = mortgage.totalLoanCost.adding(amortization.interest)
         }
         
