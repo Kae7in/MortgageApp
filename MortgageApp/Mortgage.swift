@@ -31,9 +31,11 @@ class Mortgage: NSObject {
     var numberOfPayments: Int = 360
     var monthlyPayment: NSDecimalNumber = -1
     
+    
     override init() {
         super.init()
     }
+    
     
     init(_ mortgage: Mortgage) {
         self.name = mortgage.name
@@ -57,6 +59,7 @@ class Mortgage: NSObject {
         self.monthlyPayment = mortgage.monthlyPayment
     }
     
+    
     func loanAmount() -> NSDecimalNumber {
         var str = self.downPayment
         let i = str.characters.index(of: "%")!
@@ -64,6 +67,7 @@ class Mortgage: NSObject {
         let loanAmount = self.salePrice.subtracting(self.salePrice.multiplying(by: downPercent.dividing(by: 100)))
         return loanAmount
     }
+    
     
     func totalInterestSavings() -> NSDecimalNumber {
         setOriginalPaymentSchedule()
@@ -76,6 +80,7 @@ class Mortgage: NSObject {
         return result
     }
     
+    
     func interestSavedForRange(start: Int, end: Int) -> NSDecimalNumber {
         var interestSaved7Years = NSDecimalNumber(value: 0.0)
         for i in start..<end {
@@ -84,9 +89,11 @@ class Mortgage: NSObject {
         return interestSaved7Years
     }
     
+    
     func monthsSaved() -> Int {
         return self.originalMortgage!.numberOfPayments - self.numberOfPayments
     }
+    
     
     // TODO: Bake this into the original amortization calculation
     func setOriginalPaymentSchedule() {
@@ -108,6 +115,7 @@ class Mortgage: NSObject {
         }
     }
     
+    
     // TODO: Bake this into the original amortization calculation
     func calculateAdditionalMetrics() {
         for amortization in paymentSchedule {
@@ -116,6 +124,7 @@ class Mortgage: NSObject {
             calculateTotalInterestSavedUpToPeriod(amortization: amortization)  // This call MUST come after calculateInterestSavedForPeriod() call
         }
     }
+    
     
     private func calculateRemainingLoanCostForPeriod(amortization: Amortization) {
         var remainingLoanCost = self.totalLoanCost.subtracting(amortization.interestToDate)
@@ -128,6 +137,7 @@ class Mortgage: NSObject {
         amortization.remainingLoanCost = remainingLoanCost
     }
     
+    
     private func calculateInterestSavedForPeriod(amortization: Amortization) {
         if !paymentSchedule.isEmpty && !originalMortgage!.paymentSchedule.isEmpty {
             let periodIndex = amortization.loanMonth - 1
@@ -136,6 +146,7 @@ class Mortgage: NSObject {
             amortization.interestSaved = originalInterest.subtracting(currentInterest)
         }
     }
+    
     
     private func calculateTotalInterestSavedUpToPeriod(amortization: Amortization) {
         if !paymentSchedule.isEmpty && !originalMortgage!.paymentSchedule.isEmpty {
@@ -147,6 +158,20 @@ class Mortgage: NSObject {
             }
         }
     }
+    
+    
+    private func periodForDate(date: Date) -> Int {
+        let today: Date = Date()
+        let period = today.months(from: self.startDate) + 1
+        
+        return period > 360 ? 360 : period
+    }
+    
+    
+    func currentPeriod() -> Int {
+        return self.periodForDate(date: Date())
+    }
+    
     
     func save() {
         // If this is the first time this mortgage has been saved,
