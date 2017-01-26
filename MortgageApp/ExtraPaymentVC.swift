@@ -121,15 +121,23 @@ class ExtraPaymentVC: UIViewController {
         var extras = [Dictionary<String, Int>]()
         
         if paymentTypeControl.selectedSegmentIndex == 0 {
-            extras = [["startMonth":1, "endMonth":360, "extraIntervalMonths":1, "extraAmount":Int(extraPaymentSlider.value)]]  // TODO: Use current period as startMonth
+            extras = [["startMonth":self.mortgage!.currentPeriod(),
+                       "endMonth":360,
+                       "extraIntervalMonths":1,
+                       "extraAmount":Int(extraPaymentSlider.value)]]
         } else {
-            extras = [["startMonth":1, "endMonth":1, "extraIntervalMonths":1, "extraAmount":Int(extraPaymentSlider.value)]]  // TODO: Use current period as start months
+            extras = [["startMonth":self.mortgage!.currentPeriod(),
+                       "endMonth":self.mortgage!.currentPeriod(),
+                       "extraIntervalMonths":1,
+                       "extraAmount":Int(extraPaymentSlider.value)]]
         }
+        
+        print(extras)
         
         self.newMortgage = calculateNewMortgageFromExtras(mortgage: self.mortgage!, newExtras: extras)
         
         updateExtraPaymentLabel(value: self.extraPaymentSlider.value)
-        updatePrincipalBalanceLabel(value: newMortgage.paymentSchedule.first!.remainingLoanBalance)  // TODO: Use current period
+        updatePrincipalBalanceLabel(value: newMortgage.paymentSchedule[self.mortgage!.currentPeriod() - 1].remainingLoanBalance)
         updateInterestBalanceLabel(value: newMortgage.totalLoanCost)
         updateTimeBalanceLabels(monthsLeft: newMortgage.paymentSchedule.count)  // TODO: Subtract today's date from the paymentSchedule
         updateInterestSavingsLabel(value: newMortgage.totalInterestSavings())
