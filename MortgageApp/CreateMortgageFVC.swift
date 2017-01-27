@@ -148,7 +148,7 @@ class CreateMortgageFVC: FormViewController {
                 row.title = row.tag
             }
             .onCellSelection({ (cell, row) in
-                self.performSegue(withIdentifier: "toCreateExtraPayment", sender: nil)
+                self.showPreviousExtraPayments()
             })
     }
     
@@ -219,6 +219,14 @@ class CreateMortgageFVC: FormViewController {
         return mortgage
     }
     
+    private func showPreviousExtraPayments() {
+        let storyboard = UIStoryboard.init(name: "PreviousExtraPayments", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "CreateExtraPaymentFVC") as! CreateExtraPaymentFVC
+        self.mortgage.startDate = self.form.rowBy(tag: "start_date")?.baseValue as! Date  // TODO: Why are we modifying the mortgate object here and now?
+        controller.mortgage = self.mortgage
+        self.present(controller, animated: true) {
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // if this is the first ever mortgage the user has created

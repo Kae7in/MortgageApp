@@ -89,31 +89,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <segue destination="db2-tL-6Ed" kind="show" identifier="toCreateExtraPayment" id="Fxr-5w-yTv"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lz5-Ow-enz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="766" y="805"/>
-        </scene>
-        <!--Create Extra PaymentFVC-->
-        <scene sceneID="KPp-yu-dMX">
-            <objects>
-                <viewController id="db2-tL-6Ed" customClass="CreateExtraPaymentFVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="caY-KR-KbF"/>
-                        <viewControllerLayoutGuide type="bottom" id="3Xi-84-k3J"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uzK-4k-jEI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T0V-sR-icj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1674" y="805"/>
         </scene>
         <!--RegisterVC-->
         <scene sceneID="6qO-eA-rZq">

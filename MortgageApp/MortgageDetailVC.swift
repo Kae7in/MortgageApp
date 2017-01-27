@@ -71,11 +71,12 @@ class MortgageDetailVC: UIViewController {
     
     
     @IBAction func addPaymentButtonAction(_ sender: UIButton) {
-        let storyboard = UIStoryboard.init(name: "Payments", bundle: nil)
+        let storyboard = UIStoryboard.init(name: "ExtraPayments", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "ExtraPaymentVC") as! ExtraPaymentVC
         controller.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         controller.mortgage = self.mortgage
-        self.navigationController?.pushViewController(controller, animated: true)
+        self.present(controller, animated: true) {
+        }
     }
     
     
