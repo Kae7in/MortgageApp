@@ -77,7 +77,9 @@ class RegisterVC: UIViewController {
         let controller = storyboard.instantiateViewController(withIdentifier: "CreateMortgageFVC") as! CreateMortgageFVC
         controller.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         controller.goingToIntro = true
-        self.navigationController?.pushViewController(controller, animated: true)
+        let navController = UINavigationController.init(rootViewController: controller)
+        self.present(navController, animated: true) {
+        }
     }
     
     @IBAction func signInButtonAction(_ sender: UIButton) {

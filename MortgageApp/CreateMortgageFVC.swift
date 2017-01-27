@@ -164,14 +164,13 @@ class CreateMortgageFVC: FormViewController {
             
             // if this is the first ever mortgage the user has created
             if self.goingToIntro {
-                // TODO: Reference "Onboarding" storyboard
-//                let storyboard = UIStoryboard.init(name: "Onboarding", bundle: nil)
-//                let controller = storyboard.instantiateViewController(withIdentifier: "IntroVC1") as! IntroPVC
-//                controller.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-                //                introPVC.mortgage = self.mortgageData.mortgages.last!
-                //                self.goingToIntro = false
-//                self.present(controller, animated: true) {
-//                }
+                let storyboard = UIStoryboard.init(name: "Onboarding", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "IntroPVC") as! IntroPVC
+                controller.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+                controller.mortgage = self.mortgageData.mortgages.last!
+                self.goingToIntro = false
+                self.present(controller, animated: true) {
+                }
             } else {
                 self.dismiss(animated: true, completion: {
                 })

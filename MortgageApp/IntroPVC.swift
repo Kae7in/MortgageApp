@@ -27,7 +27,7 @@ class IntroPVC: UIPageViewController {
     
     
     private func newIntroVC(num: Int) -> UIViewController {
-        let vc: IntroDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "IntroVC\(num)") as! IntroDetailVC
+        let vc: IntroDetailVC = UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(withIdentifier: "IntroVC\(num)") as! IntroDetailVC
         vc.mortgage = mortgage
         vc.pageController = self
         return vc as UIViewController
