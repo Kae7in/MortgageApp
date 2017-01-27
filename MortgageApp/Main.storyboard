@@ -361,7 +361,6 @@
                         <outlet property="monthsLeftLabel" destination="i7j-MN-n4j" id="EtO-Jg-N7X"/>
                         <outlet property="yearsLeftLabel" destination="ylh-4Z-tfE" id="SYK-yM-WK6"/>
                         <segue destination="GKe-tz-T08" kind="presentation" identifier="toExtraPayment" id="MaU-6s-t71"/>
-                        <segue destination="ULF-pY-Zc1" kind="show" identifier="toAmortizationTables" id="LIF-9q-1gQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Goy-Y6-Bib" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -548,24 +547,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2IU-rA-Luw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3036" y="36"/>
-        </scene>
-        <!--AmortizationVC-->
-        <scene sceneID="NAh-87-vMt">
-            <objects>
-                <viewController id="ULF-pY-Zc1" customClass="AmortizationVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OMA-po-hWX"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZN6-5Y-vge"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fh1-bj-eEf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sRd-fT-lpQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2791" y="805"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Awc-yD-keB">

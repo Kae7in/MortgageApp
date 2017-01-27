@@ -76,9 +76,12 @@ class MortgageDetailVC: UIViewController {
     
     
     func toAmortizationTables() {
-        self.performSegue(withIdentifier: "toAmortizationTables", sender: self)
-    }
-    
+        let storyboard = UIStoryboard.init(name: "Amortization", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "AmortizationVC") as! AmortizationVC
+        controller.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        controller.mortgage = self.mortgage
+        self.navigationController?.pushViewController(controller, animated: true)
+    }    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -89,10 +92,6 @@ class MortgageDetailVC: UIViewController {
         if segue.identifier == "toExtraPayment" {
             let dest = segue.destination as! ExtraPaymentVC
             dest.mortgage = self.mortgage
-        } else if segue.identifier == "toAmortizationTables" {
-            let dest = segue.destination as! AmortizationVC
-            dest.mortgage = self.mortgage
-            dest.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         }
     }
 
