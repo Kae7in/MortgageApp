@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let userAuthenticated: Bool = FIRAuth.auth()?.currentUser != nil
         if !userAuthenticated {
             // navigate to the login screen
-            let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "signUp")
+            let rootViewController: UIViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "signUp")
             //let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "debug")
             //navigationController!.pushViewController(storyboard!.instantiateViewControllerWithIdentifier("View Controller Identifier") as UIViewController, animated: true)
             

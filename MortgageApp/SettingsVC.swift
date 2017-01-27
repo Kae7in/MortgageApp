@@ -27,7 +27,7 @@ class SettingsVC: UIViewController {
         try! FIRAuth.auth()?.signOut()  // TODO: Add failure catch
         
         // Manually transition back to login view
-        let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "signUp")
+        let rootViewController: UIViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "signUp")
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         UIView.transition(with: appDelegate.window!, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: {
             appDelegate.window!.rootViewController = rootViewController

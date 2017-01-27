@@ -108,18 +108,14 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     /* Target of rightBarButtomItem (add button for creating a new morgage) */
     func addMortgage() {
-        performSegue(withIdentifier: "toCreateMortgage", sender: nil)
-    }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier! == "toCreateMortgage" {
-            // User selected the add mortgage button
-            let dest: CreateMortgageFVC = segue.destination as! CreateMortgageFVC
-            dest.mortgageData = self.mortgageData
+        // User selected the add mortgage button
+        let storyboard = UIStoryboard.init(name: "CreateMortgage", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "CreateMortgageFVC") as! CreateMortgageFVC
+        controller.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        controller.mortgageData = self.mortgageData
+        self.present(controller, animated: true) {
         }
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

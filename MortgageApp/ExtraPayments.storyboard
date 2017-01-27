@@ -123,17 +123,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Sff-e7-kAQ">
-                                <rect key="frame" x="245" y="337" width="86" height="21"/>
+                                <rect key="frame" x="245" y="337" width="87" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0yr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ef-gX-c7i">
-                                        <rect key="frame" x="0.0" y="0.0" width="35.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0mo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlA-Bf-M4D">
-                                        <rect key="frame" x="50.5" y="0.0" width="35.5" height="20.5"/>
+                                        <rect key="frame" x="51" y="0.0" width="36" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -145,7 +145,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0yr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fo-kB-wF2">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="eHx-1a-kUd"/>
                                         </constraints>
@@ -154,7 +154,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0mo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQo-W4-eKT">
-                                        <rect key="frame" x="60" y="0.0" width="60" height="20.5"/>
+                                        <rect key="frame" x="60" y="0.0" width="60" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="Pme-QI-pMp"/>
                                         </constraints>

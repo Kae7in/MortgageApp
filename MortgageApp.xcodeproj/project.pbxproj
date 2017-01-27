@@ -110,6 +110,10 @@
 		83A138181E3BF4F900F67EBF /* MortgageDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A138161E3BF4F900F67EBF /* MortgageDetail.storyboard */; };
 		83A1381C1E3BF8B600F67EBF /* PreviousExtraPayments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A1381B1E3BF8B600F67EBF /* PreviousExtraPayments.storyboard */; };
 		83A1381D1E3BF8B600F67EBF /* PreviousExtraPayments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A1381B1E3BF8B600F67EBF /* PreviousExtraPayments.storyboard */; };
+		83A138201E3BFCF200F67EBF /* CreateMortgage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A1381F1E3BFCF200F67EBF /* CreateMortgage.storyboard */; };
+		83A138211E3BFCF200F67EBF /* CreateMortgage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A1381F1E3BFCF200F67EBF /* CreateMortgage.storyboard */; };
+		83A138291E3BFEF500F67EBF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A138281E3BFEF500F67EBF /* Login.storyboard */; };
+		83A1382A1E3BFEF500F67EBF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A138281E3BFEF500F67EBF /* Login.storyboard */; };
 		9101B69E65A77A193E63F839 /* Pods_MortgageAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC64DA83D2664394F9645E6 /* Pods_MortgageAppTests.framework */; };
 		D0D4EAD7B6014BECB5CC9200 /* Pods_MortgageAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88664985621365C37BA174D5 /* Pods_MortgageAppUITests.framework */; };
 		FDBCEB14AC085B6713E3B68A /* Pods_MortgageApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D6722F3434C4D27B742890 /* Pods_MortgageApp.framework */; };
@@ -186,6 +190,8 @@
 		83A138131E3BEF6800F67EBF /* ExtraPayments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExtraPayments.storyboard; sourceTree = "<group>"; };
 		83A138161E3BF4F900F67EBF /* MortgageDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MortgageDetail.storyboard; sourceTree = "<group>"; };
 		83A1381B1E3BF8B600F67EBF /* PreviousExtraPayments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PreviousExtraPayments.storyboard; sourceTree = "<group>"; };
+		83A1381F1E3BFCF200F67EBF /* CreateMortgage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateMortgage.storyboard; sourceTree = "<group>"; };
+		83A138281E3BFEF500F67EBF /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		88664985621365C37BA174D5 /* Pods_MortgageAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MortgageAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E27CC53BEBDDD432DC524D /* Pods-MortgageAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MortgageAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MortgageAppTests/Pods-MortgageAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AFF1B03AE1DC6E1728B6FD22 /* Pods-MortgageAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MortgageAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MortgageAppTests/Pods-MortgageAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -244,12 +250,12 @@
 		1A36D4271DF86AF40093A411 /* MortgageApp */ = {
 			isa = PBXGroup;
 			children = (
+				83A138221E3BFD2A00F67EBF /* Controllers */,
 				1A36D4561DF86C560093A411 /* Models */,
 				833F9AF51E3958820050D9D8 /* Views */,
 				833F9AE81E3956310050D9D8 /* Extensions */,
 				1A36D4281DF86AF40093A411 /* AppDelegate.swift */,
 				1A36D42F1DF86AF40093A411 /* Assets.xcassets */,
-				1AF882D31E19CB64000CA84F /* Main.storyboard */,
 				1A36D4311DF86AF40093A411 /* LaunchScreen.storyboard */,
 				1AB349C71E01B7F600E76049 /* Supporting Files */,
 				1AEC02891E01D35F000B473A /* MortgageApp-Bridging-Header.h */,
@@ -339,14 +345,18 @@
 		833F9AF51E3958820050D9D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				833F9AF81E3959630050D9D8 /* Mortgage */,
-				83A138121E3BEF4400F67EBF /* Payments */,
-				83A1380E1E3BCD9300F67EBF /* Amortization */,
-				83A1380A1E3BC81B00F67EBF /* Onboarding */,
-				833F9AF91E39597A0050D9D8 /* Table Cells */,
-				833F9AF71E3958F10050D9D8 /* Settings */,
-				833F9AF61E3958A20050D9D8 /* Login */,
+				83A138271E3BFEA900F67EBF /* Amortization */,
+				83A138241E3BFDD100F67EBF /* CreateMortgage */,
+				83A138121E3BEF4400F67EBF /* ExtraPayments */,
 				1AB349C61E00AA9F00E76049 /* Intro */,
+				833F9AF61E3958A20050D9D8 /* Login */,
+				83A138261E3BFE8C00F67EBF /* Main */,
+				833F9AF81E3959630050D9D8 /* Mortgage */,
+				83A138251E3BFDE900F67EBF /* MortgageDetail */,
+				83A1380A1E3BC81B00F67EBF /* Onboarding */,
+				83A138231E3BFDB900F67EBF /* PreviousPayments */,
+				833F9AF71E3958F10050D9D8 /* Settings */,
+				833F9AF91E39597A0050D9D8 /* Table Cells */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -354,6 +364,7 @@
 		833F9AF61E3958A20050D9D8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				83A138281E3BFEF500F67EBF /* Login.storyboard */,
 				1A5BB8021E16C9D000B55D11 /* LoginVC.swift */,
 				1A5BB8041E16CD3600B55D11 /* RegisterVC.swift */,
 			);
@@ -371,10 +382,6 @@
 		833F9AF81E3959630050D9D8 /* Mortgage */ = {
 			isa = PBXGroup;
 			children = (
-				83A1381A1E3BF54F00F67EBF /* Detail */,
-				1AF882D71E1AC013000CA84F /* MortgageListVC.swift */,
-				1A410D701E2EE8660007B5C0 /* CreateMortgageFVC.swift */,
-				1A0D37381E354FCA005B9114 /* AmortizationVC.swift */,
 			);
 			name = Mortgage;
 			sourceTree = "<group>";
@@ -405,32 +412,65 @@
 			name = Onboarding;
 			sourceTree = "<group>";
 		};
-		83A1380E1E3BCD9300F67EBF /* Amortization */ = {
+		83A138121E3BEF4400F67EBF /* ExtraPayments */ = {
 			isa = PBXGroup;
 			children = (
-				83A1380F1E3BCDA800F67EBF /* Amortization.storyboard */,
-			);
-			name = Amortization;
-			sourceTree = "<group>";
-		};
-		83A138121E3BEF4400F67EBF /* Payments */ = {
-			isa = PBXGroup;
-			children = (
-				1A7DE08C1E099EB300E29CED /* ExtraPaymentVC.swift */,
 				83A138131E3BEF6800F67EBF /* ExtraPayments.storyboard */,
-				1A1427E71E2FFFAA00D52F90 /* PreviousExtraPaymentsVC.swift */,
-				83A1381B1E3BF8B600F67EBF /* PreviousExtraPayments.storyboard */,
+				1A7DE08C1E099EB300E29CED /* ExtraPaymentVC.swift */,
 			);
-			name = Payments;
+			name = ExtraPayments;
 			sourceTree = "<group>";
 		};
-		83A1381A1E3BF54F00F67EBF /* Detail */ = {
+		83A138221E3BFD2A00F67EBF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		83A138231E3BFDB900F67EBF /* PreviousPayments */ = {
+			isa = PBXGroup;
+			children = (
+				83A1381B1E3BF8B600F67EBF /* PreviousExtraPayments.storyboard */,
+				1A1427E71E2FFFAA00D52F90 /* PreviousExtraPaymentsVC.swift */,
+			);
+			name = PreviousPayments;
+			sourceTree = "<group>";
+		};
+		83A138241E3BFDD100F67EBF /* CreateMortgage */ = {
+			isa = PBXGroup;
+			children = (
+				83A1381F1E3BFCF200F67EBF /* CreateMortgage.storyboard */,
+				1A410D701E2EE8660007B5C0 /* CreateMortgageFVC.swift */,
+			);
+			name = CreateMortgage;
+			sourceTree = "<group>";
+		};
+		83A138251E3BFDE900F67EBF /* MortgageDetail */ = {
 			isa = PBXGroup;
 			children = (
 				83A138161E3BF4F900F67EBF /* MortgageDetail.storyboard */,
 				1A80FF7A1DFF0D3800193664 /* MortgageDetailVC.swift */,
 			);
-			name = Detail;
+			name = MortgageDetail;
+			sourceTree = "<group>";
+		};
+		83A138261E3BFE8C00F67EBF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1AF882D31E19CB64000CA84F /* Main.storyboard */,
+				1AF882D71E1AC013000CA84F /* MortgageListVC.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		83A138271E3BFEA900F67EBF /* Amortization */ = {
+			isa = PBXGroup;
+			children = (
+				83A1380F1E3BCDA800F67EBF /* Amortization.storyboard */,
+				1A0D37381E354FCA005B9114 /* AmortizationVC.swift */,
+			);
+			name = Amortization;
 			sourceTree = "<group>";
 		};
 		AAD8C2128B2EC71F24400278 /* Frameworks */ = {
@@ -560,7 +600,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A138201E3BFCF200F67EBF /* CreateMortgage.storyboard in Resources */,
 				1A36D4331DF86AF40093A411 /* LaunchScreen.storyboard in Resources */,
+				83A138291E3BFEF500F67EBF /* Login.storyboard in Resources */,
 				83A138101E3BCDA800F67EBF /* Amortization.storyboard in Resources */,
 				1A5BB7FF1E16C3E400B55D11 /* GoogleService-Info.plist in Resources */,
 				83A138171E3BF4F900F67EBF /* MortgageDetail.storyboard in Resources */,
@@ -602,7 +644,9 @@
 				1AF882D61E19CB64000CA84F /* Main.storyboard in Resources */,
 				833F9B031E3959F80050D9D8 /* SF-UI-Display-Thin.otf in Resources */,
 				83A138111E3BCDA800F67EBF /* Amortization.storyboard in Resources */,
+				83A138211E3BFCF200F67EBF /* CreateMortgage.storyboard in Resources */,
 				83A138151E3BEF6800F67EBF /* ExtraPayments.storyboard in Resources */,
+				83A1382A1E3BFEF500F67EBF /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

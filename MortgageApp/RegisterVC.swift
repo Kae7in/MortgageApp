@@ -51,7 +51,7 @@ class RegisterVC: UIViewController {
                     userRef.child("email").setValue(email)
                     userRef.child("username").setValue(username)
                     
-                    self.performSegue(withIdentifier: "toCreateMortgage", sender: nil)
+                    self.showCreateMortgage()
                 } else if error != nil {
                     // TODO: Implement proper error response
                 }
@@ -82,6 +82,12 @@ class RegisterVC: UIViewController {
         return true
     }
     
+    private func showCreateMortgage() {
+        let storyboard = UIStoryboard.init(name: "CreateMortgage", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "CreateMortgageFVC") as! CreateMortgageFVC
+        controller.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
     
     @IBAction func signInButtonAction(_ sender: UIButton) {
         // Segue to the sign in screen
