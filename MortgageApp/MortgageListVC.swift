@@ -117,17 +117,6 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             // User selected the add mortgage button
             let dest: CreateMortgageFVC = segue.destination as! CreateMortgageFVC
             dest.mortgageData = self.mortgageData
-        } else if segue.identifier! == "toMortgageDetail" {
-            // User selected a cell
-            if let cellIndexPath = sender as? IndexPath {
-                let cellIndex = cellIndexPath.row
-                let mortgage = self.mortgageData.mortgages[cellIndex]
-                let mortgageDetailVC = segue.destination as! MortgageDetailVC
-                
-                // Pass the mortgage associated with that cell to the mortgage detail view controller
-                mortgageDetailVC.mortgage = mortgage
-                mortgageDetailVC.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-            }
         }
     }
     
@@ -172,7 +161,16 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // UITableViewDelegate method
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toMortgageDetail", sender: indexPath)
+        
+        // Show mortgate detail
+        let mortgage = self.mortgageData.mortgages[indexPath.row]
+        let storyboard = UIStoryboard.init(name: "MortgageDetail", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "MortgageDetailVC") as! MortgageDetailVC
+        
+        // Pass the mortgage associated with that cell to the mortgage detail view controller
+        controller.mortgage = mortgage
+        controller.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 
 }

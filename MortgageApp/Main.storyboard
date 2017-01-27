@@ -265,107 +265,6 @@
             </objects>
             <point key="canvasLocation" x="-1134" y="905"/>
         </scene>
-        <!--Mortgage DetailVC-->
-        <scene sceneID="kY9-RO-0XG">
-            <objects>
-                <viewController id="vWg-Be-mbr" customClass="MortgageDetailVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OzI-xy-Euo"/>
-                        <viewControllerLayoutGuide type="bottom" id="gsi-43-0kQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cWg-EM-SpG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Kg6-Ca-1JA">
-                                <rect key="frame" x="149" y="209" width="78" height="24"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0yr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylh-4Z-tfE">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0mo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7j-MN-n4j">
-                                        <rect key="frame" x="37" y="0.0" width="41" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="oJU-Em-p4O">
-                                <rect key="frame" x="95.5" y="144" width="185.5" height="64.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmB-VT-ANt">
-                                        <rect key="frame" x="0.0" y="24.5" width="19" height="40"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="$">
-                                                <attributes>
-                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" metaFont="system" size="34"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xI-sR-OgQ">
-                                        <rect key="frame" x="19" y="0.0" width="157" height="70"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="---,---">
-                                                <attributes>
-                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" metaFont="system" size="60"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9n-2k-SI7">
-                                        <rect key="frame" x="176" y="24.5" width="9.5" height="40"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content=".">
-                                                <attributes>
-                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" metaFont="system" size="34"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfz-r5-szB">
-                                <rect key="frame" x="142" y="361" width="91" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Payment"/>
-                                <connections>
-                                    <action selector="addPaymentButtonAction:" destination="vWg-Be-mbr" eventType="touchUpInside" id="8I0-ZC-LV0"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="oJU-Em-p4O" firstAttribute="top" secondItem="OzI-xy-Euo" secondAttribute="bottom" constant="80" id="1lb-qQ-RmE"/>
-                            <constraint firstItem="Kg6-Ca-1JA" firstAttribute="top" secondItem="6xI-sR-OgQ" secondAttribute="bottom" constant="-5" id="NuX-lY-ax7"/>
-                            <constraint firstItem="Kg6-Ca-1JA" firstAttribute="centerX" secondItem="cWg-EM-SpG" secondAttribute="centerX" id="bhW-Qb-oey"/>
-                            <constraint firstItem="oJU-Em-p4O" firstAttribute="centerX" secondItem="cWg-EM-SpG" secondAttribute="centerX" id="d8j-e2-lfy"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="balance" destination="6xI-sR-OgQ" id="Uww-H7-Ic5"/>
-                        <outlet property="balanceCents" destination="n9n-2k-SI7" id="56i-jX-ZDH"/>
-                        <outlet property="monthsLeftLabel" destination="i7j-MN-n4j" id="EtO-Jg-N7X"/>
-                        <outlet property="yearsLeftLabel" destination="ylh-4Z-tfE" id="SYK-yM-WK6"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Goy-Y6-Bib" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2084" y="37"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Awc-yD-keB">
             <objects>
@@ -436,7 +335,6 @@
                     <navigationItem key="navigationItem" id="LK5-e9-gxP"/>
                     <connections>
                         <outlet property="tableView" destination="Ec0-I4-Hms" id="2JH-t1-Jn1"/>
-                        <segue destination="vWg-Be-mbr" kind="show" identifier="toMortgageDetail" id="Qqo-0O-R8G"/>
                         <segue destination="JKi-8p-B8v" kind="presentation" identifier="toCreateMortgage" id="wqJ-17-YWK"/>
                     </connections>
                 </viewController>
