@@ -221,7 +221,7 @@ class CreateMortgageFVC: FormViewController {
     
     private func showPreviousExtraPayments() {
         let storyboard = UIStoryboard.init(name: "PreviousExtraPayments", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "CreateExtraPaymentFVC") as! CreateExtraPaymentFVC
+        let controller = storyboard.instantiateViewController(withIdentifier: "PreviousExtraPaymentsVC") as! PreviousExtraPaymentsVC
         self.mortgage.startDate = self.form.rowBy(tag: "start_date")?.baseValue as! Date  // TODO: Why are we modifying the mortgate object here and now?
         controller.mortgage = self.mortgage
         self.present(controller, animated: true) {
@@ -234,11 +234,6 @@ class CreateMortgageFVC: FormViewController {
             let introPVC = segue.destination as! IntroPVC
             introPVC.mortgage = self.mortgageData.mortgages.last!
             self.goingToIntro = false
-        } else if segue.identifier! == "toCreateExtraPayment" {
-            let createExtraPaymentFVC = segue.destination as! CreateExtraPaymentFVC
-            
-            self.mortgage.startDate = self.form.rowBy(tag: "start_date")?.baseValue as! Date
-            createExtraPaymentFVC.mortgage = self.mortgage
         }
         
         let backItem = UIBarButtonItem()

@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Create Extra PaymentFVC-->
+        <!--Previous Extra PaymentsVC-->
         <scene sceneID="vY9-jU-LLe">
             <objects>
-                <viewController storyboardIdentifier="CreateExtraPaymentFVC" id="XuC-oJ-x0E" customClass="CreateExtraPaymentFVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PreviousExtraPaymentsVC" id="XuC-oJ-x0E" customClass="PreviousExtraPaymentsVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v6M-FU-t4d"/>
                         <viewControllerLayoutGuide type="bottom" id="0QK-bP-ZMh"/>
