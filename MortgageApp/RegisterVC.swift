@@ -58,17 +58,7 @@ class RegisterVC: UIViewController {
             })
         }
     }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier! == "toCreateMortgage" {
-            // Segue to creating the user's first mortgage
-            let createVC = segue.destination as! CreateMortgageFVC
-            createVC.goingToIntro = true
-        }
-    }
-    
-    
+        
     /* Validate the login fields (e.g. fields not empty) */
     func validateFields() -> Bool {
         let email: String = emailField.text!
@@ -86,12 +76,16 @@ class RegisterVC: UIViewController {
         let storyboard = UIStoryboard.init(name: "CreateMortgage", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "CreateMortgageFVC") as! CreateMortgageFVC
         controller.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        controller.goingToIntro = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func signInButtonAction(_ sender: UIButton) {
         // Segue to the sign in screen
-        performSegue(withIdentifier: "toSignIn", sender: sender)
+        let controller = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "signIn")
+        controller.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
+        self.present(controller, animated: true) {
+        }
     }
     
 }

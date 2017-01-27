@@ -12,7 +12,7 @@
         <!--LoginVC-->
         <scene sceneID="lKk-kK-lzR">
             <objects>
-                <viewController storyboardIdentifier="LoginVC" id="MYS-gU-qp5" customClass="LoginVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signIn" id="MYS-gU-qp5" customClass="LoginVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9fg-CD-JiF"/>
                         <viewControllerLayoutGuide type="bottom" id="7mz-8y-65b"/>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sze-tE-Gf9">
-                                <rect key="frame" x="-1" y="243" width="376" height="41"/>
+                                <rect key="frame" x="-0.5" y="243" width="375" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="WPa-n2-shq"/>
                                 </constraints>
@@ -31,7 +31,7 @@
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FYD-11-brN">
-                                <rect key="frame" x="-1" y="284" width="376" height="41"/>
+                                <rect key="frame" x="-0.5" y="284" width="375" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="g4J-w8-VGm"/>
                                 </constraints>
@@ -89,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aTb-Ih-bBf">
-                                <rect key="frame" x="-1" y="243" width="376" height="41"/>
+                                <rect key="frame" x="-0.5" y="243" width="375" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="bfm-oU-MCk"/>
                                 </constraints>

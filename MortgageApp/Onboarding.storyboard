@@ -806,33 +806,6 @@
             </objects>
             <point key="canvasLocation" x="5609" y="1559"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="8hQ-uh-9nk">
-            <objects>
-                <viewController id="POF-Zk-vnS" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sod-6Q-MXN"/>
-                        <viewControllerLayoutGuide type="bottom" id="GnW-4v-Qvr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wfG-um-6AH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recommended to create a single view controller and then custom views" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0g-Gb-sId">
-                                <rect key="frame" x="16" y="28" width="548" height="236"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wp2-Ut-Sxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5638" y="2266"/>
-        </scene>
         <!--View5-->
         <scene sceneID="Ir9-AU-FuT">
             <objects>

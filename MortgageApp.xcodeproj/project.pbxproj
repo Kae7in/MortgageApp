@@ -250,7 +250,6 @@
 		1A36D4271DF86AF40093A411 /* MortgageApp */ = {
 			isa = PBXGroup;
 			children = (
-				83A138221E3BFD2A00F67EBF /* Controllers */,
 				1A36D4561DF86C560093A411 /* Models */,
 				833F9AF51E3958820050D9D8 /* Views */,
 				833F9AE81E3956310050D9D8 /* Extensions */,
@@ -292,7 +291,7 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		1AB349C61E00AA9F00E76049 /* Intro */ = {
+		1AB349C61E00AA9F00E76049 /* IntroNeedsCleanup */ = {
 			isa = PBXGroup;
 			children = (
 				1AB349A81DFF5A1500E76049 /* IntroPVC.swift */,
@@ -305,7 +304,7 @@
 				1AB349BE1E00A0AD00E76049 /* View6.swift */,
 				1AB349C21E00A10600E76049 /* View7.swift */,
 			);
-			name = Intro;
+			name = IntroNeedsCleanup;
 			sourceTree = "<group>";
 		};
 		1AB349C71E01B7F600E76049 /* Supporting Files */ = {
@@ -348,10 +347,8 @@
 				83A138271E3BFEA900F67EBF /* Amortization */,
 				83A138241E3BFDD100F67EBF /* CreateMortgage */,
 				83A138121E3BEF4400F67EBF /* ExtraPayments */,
-				1AB349C61E00AA9F00E76049 /* Intro */,
 				833F9AF61E3958A20050D9D8 /* Login */,
 				83A138261E3BFE8C00F67EBF /* Main */,
-				833F9AF81E3959630050D9D8 /* Mortgage */,
 				83A138251E3BFDE900F67EBF /* MortgageDetail */,
 				83A1380A1E3BC81B00F67EBF /* Onboarding */,
 				83A138231E3BFDB900F67EBF /* PreviousPayments */,
@@ -379,13 +376,6 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
-		833F9AF81E3959630050D9D8 /* Mortgage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Mortgage;
-			sourceTree = "<group>";
-		};
 		833F9AF91E39597A0050D9D8 /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +397,7 @@
 		83A1380A1E3BC81B00F67EBF /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				1AB349C61E00AA9F00E76049 /* IntroNeedsCleanup */,
 				83A1380B1E3BC83E00F67EBF /* Onboarding.storyboard */,
 			);
 			name = Onboarding;
@@ -419,13 +410,6 @@
 				1A7DE08C1E099EB300E29CED /* ExtraPaymentVC.swift */,
 			);
 			name = ExtraPayments;
-			sourceTree = "<group>";
-		};
-		83A138221E3BFD2A00F67EBF /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Controllers;
 			sourceTree = "<group>";
 		};
 		83A138231E3BFDB900F67EBF /* PreviousPayments */ = {

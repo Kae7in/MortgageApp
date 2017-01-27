@@ -164,7 +164,14 @@ class CreateMortgageFVC: FormViewController {
             
             // if this is the first ever mortgage the user has created
             if self.goingToIntro {
-                performSegue(withIdentifier: "toIntro", sender: nil)
+                // TODO: Reference "Onboarding" storyboard
+//                let storyboard = UIStoryboard.init(name: "Onboarding", bundle: nil)
+//                let controller = storyboard.instantiateViewController(withIdentifier: "IntroVC1") as! IntroPVC
+//                controller.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+                //                introPVC.mortgage = self.mortgageData.mortgages.last!
+                //                self.goingToIntro = false
+//                self.present(controller, animated: true) {
+//                }
             } else {
                 self.dismiss(animated: true, completion: {
                 })
@@ -188,7 +195,10 @@ class CreateMortgageFVC: FormViewController {
 //        let loanTerm: Int? = valuesDictionary["loan_term"] as? Int
 //        let interestRate: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["interest_rate"] as! Double)
 //        let startDate: Date? = valuesDictionary["start_date"] as? Date
-        
+//        let backItem = UIBarButtonItem()
+//        backItem.title = ""
+//        navigationItem.backBarButtonItem = backItem
+
         // TODO: Validate these values
         
         return true
@@ -227,20 +237,6 @@ class CreateMortgageFVC: FormViewController {
         self.present(controller, animated: true) {
         }
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // if this is the first ever mortgage the user has created
-        if segue.identifier! == "toIntro" {
-            let introPVC = segue.destination as! IntroPVC
-            introPVC.mortgage = self.mortgageData.mortgages.last!
-            self.goingToIntro = false
-        }
-        
-        let backItem = UIBarButtonItem()
-        backItem.title = ""
-        navigationItem.backBarButtonItem = backItem
-    }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
