@@ -104,6 +104,8 @@
 		83A1380D1E3BC83E00F67EBF /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A1380B1E3BC83E00F67EBF /* Onboarding.storyboard */; };
 		83A138101E3BCDA800F67EBF /* Amortization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A1380F1E3BCDA800F67EBF /* Amortization.storyboard */; };
 		83A138111E3BCDA800F67EBF /* Amortization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A1380F1E3BCDA800F67EBF /* Amortization.storyboard */; };
+		83A138141E3BEF6800F67EBF /* Payments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A138131E3BEF6800F67EBF /* Payments.storyboard */; };
+		83A138151E3BEF6800F67EBF /* Payments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A138131E3BEF6800F67EBF /* Payments.storyboard */; };
 		9101B69E65A77A193E63F839 /* Pods_MortgageAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC64DA83D2664394F9645E6 /* Pods_MortgageAppTests.framework */; };
 		D0D4EAD7B6014BECB5CC9200 /* Pods_MortgageAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88664985621365C37BA174D5 /* Pods_MortgageAppUITests.framework */; };
 		FDBCEB14AC085B6713E3B68A /* Pods_MortgageApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D6722F3434C4D27B742890 /* Pods_MortgageApp.framework */; };
@@ -177,6 +179,7 @@
 		833F9AFD1E3959F80050D9D8 /* SF-UI-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Ultralight.otf"; path = "fonts/SF-UI-Display-Ultralight.otf"; sourceTree = "<group>"; };
 		83A1380B1E3BC83E00F67EBF /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		83A1380F1E3BCDA800F67EBF /* Amortization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Amortization.storyboard; sourceTree = "<group>"; };
+		83A138131E3BEF6800F67EBF /* Payments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Payments.storyboard; sourceTree = "<group>"; };
 		88664985621365C37BA174D5 /* Pods_MortgageAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MortgageAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E27CC53BEBDDD432DC524D /* Pods-MortgageAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MortgageAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MortgageAppTests/Pods-MortgageAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AFF1B03AE1DC6E1728B6FD22 /* Pods-MortgageAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MortgageAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MortgageAppTests/Pods-MortgageAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -330,6 +333,7 @@
 		833F9AF51E3958820050D9D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				83A138121E3BEF4400F67EBF /* Payments */,
 				83A1380E1E3BCD9300F67EBF /* Amortization */,
 				83A1380A1E3BC81B00F67EBF /* Onboarding */,
 				833F9AF91E39597A0050D9D8 /* Table Cells */,
@@ -403,6 +407,14 @@
 				83A1380F1E3BCDA800F67EBF /* Amortization.storyboard */,
 			);
 			name = Amortization;
+			sourceTree = "<group>";
+		};
+		83A138121E3BEF4400F67EBF /* Payments */ = {
+			isa = PBXGroup;
+			children = (
+				83A138131E3BEF6800F67EBF /* Payments.storyboard */,
+			);
+			name = Payments;
 			sourceTree = "<group>";
 		};
 		AAD8C2128B2EC71F24400278 /* Frameworks */ = {
@@ -536,6 +548,7 @@
 				83A138101E3BCDA800F67EBF /* Amortization.storyboard in Resources */,
 				1A5BB7FF1E16C3E400B55D11 /* GoogleService-Info.plist in Resources */,
 				833F9AFE1E3959F80050D9D8 /* SF-UI-Display-Regular.otf in Resources */,
+				83A138141E3BEF6800F67EBF /* Payments.storyboard in Resources */,
 				1A36D4301DF86AF40093A411 /* Assets.xcassets in Resources */,
 				833F9B041E3959F80050D9D8 /* SF-UI-Display-Ultralight.otf in Resources */,
 				833F9B011E3959F80050D9D8 /* SF-UI-Display-Thin.otf in Resources */,
@@ -569,6 +582,7 @@
 				1AF882D61E19CB64000CA84F /* Main.storyboard in Resources */,
 				833F9B031E3959F80050D9D8 /* SF-UI-Display-Thin.otf in Resources */,
 				83A138111E3BCDA800F67EBF /* Amortization.storyboard in Resources */,
+				83A138151E3BEF6800F67EBF /* Payments.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

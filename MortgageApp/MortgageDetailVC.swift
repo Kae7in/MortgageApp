@@ -71,7 +71,11 @@ class MortgageDetailVC: UIViewController {
     
     
     @IBAction func addPaymentButtonAction(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "toExtraPayment", sender: self)
+        let storyboard = UIStoryboard.init(name: "Payments", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ExtraPaymentVC") as! ExtraPaymentVC
+        controller.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        controller.mortgage = self.mortgage
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     
@@ -86,13 +90,4 @@ class MortgageDetailVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toExtraPayment" {
-            let dest = segue.destination as! ExtraPaymentVC
-            dest.mortgage = self.mortgage
-        }
-    }
-
 }
