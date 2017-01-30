@@ -148,7 +148,7 @@ class CreateMortgageFVC: FormViewController {
                 row.title = row.tag
             }
             .onCellSelection({ (cell, row) in
-                self.performSegue(withIdentifier: "toCreateExtraPayment", sender: nil)
+                self.showPreviousExtraPayments()
             })
     }
     
@@ -164,7 +164,13 @@ class CreateMortgageFVC: FormViewController {
             
             // if this is the first ever mortgage the user has created
             if self.goingToIntro {
-                performSegue(withIdentifier: "toIntro", sender: nil)
+                let storyboard = UIStoryboard.init(name: "Onboarding", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "IntroPVC") as! IntroPVC
+                controller.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+                controller.mortgage = self.mortgageData.mortgages.last!
+                self.goingToIntro = false
+                self.present(controller, animated: true) {
+                }
             } else {
                 self.dismiss(animated: true, completion: {
                 })
@@ -188,7 +194,10 @@ class CreateMortgageFVC: FormViewController {
 //        let loanTerm: Int? = valuesDictionary["loan_term"] as? Int
 //        let interestRate: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["interest_rate"] as! Double)
 //        let startDate: Date? = valuesDictionary["start_date"] as? Date
-        
+//        let backItem = UIBarButtonItem()
+//        backItem.title = ""
+//        navigationItem.backBarButtonItem = backItem
+
         // TODO: Validate these values
         
         return true
@@ -219,25 +228,14 @@ class CreateMortgageFVC: FormViewController {
         return mortgage
     }
     
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // if this is the first ever mortgage the user has created
-        if segue.identifier! == "toIntro" {
-            let introPVC = segue.destination as! IntroPVC
-            introPVC.mortgage = self.mortgageData.mortgages.last!
-            self.goingToIntro = false
-        } else if segue.identifier! == "toCreateExtraPayment" {
-            let createExtraPaymentFVC = segue.destination as! CreateExtraPaymentFVC
-            
-            self.mortgage.startDate = self.form.rowBy(tag: "start_date")?.baseValue as! Date
-            createExtraPaymentFVC.mortgage = self.mortgage
+    private func showPreviousExtraPayments() {
+        let storyboard = UIStoryboard.init(name: "PreviousExtraPayments", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "PreviousExtraPaymentsVC") as! PreviousExtraPaymentsVC
+        self.mortgage.startDate = self.form.rowBy(tag: "start_date")?.baseValue as! Date  // TODO: Why are we modifying the mortgate object here and now?
+        controller.mortgage = self.mortgage
+        self.present(controller, animated: true) {
         }
-        
-        let backItem = UIBarButtonItem()
-        backItem.title = ""
-        navigationItem.backBarButtonItem = backItem
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

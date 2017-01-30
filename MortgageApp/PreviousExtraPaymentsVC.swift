@@ -1,5 +1,5 @@
 //
-//  CreateExtraPaymentFVC.swift
+//  PreviousExtraPaymentsVC.swift
 //  MortgageApp
 //
 //  Created by Kaelin Hooper on 1/18/17.
@@ -9,7 +9,7 @@
 import UIKit
 import Eureka
 
-class CreateExtraPaymentFVC: FormViewController {
+class PreviousExtraPaymentsVC: FormViewController {
     
     var mortgage: Mortgage!
     var navBar: UINavigationBar!
@@ -27,7 +27,7 @@ class CreateExtraPaymentFVC: FormViewController {
         self.navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: UIApplication.shared.statusBarFrame.height + 44))
         navBar.isTranslucent = true
         self.view.addSubview(navBar)
-        let navItem = UINavigationItem(title: "Create Mortgage")
+        let navItem = UINavigationItem(title: "Extra Payments")
         let cancelItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(cancel))
         let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: #selector(done))
         navItem.leftBarButtonItem = cancelItem
