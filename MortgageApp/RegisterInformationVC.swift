@@ -55,6 +55,14 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
         nextButton.removeHighlight()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toSignIn" {
+            //let controller = segue.destination as! LoginVC
+            // TODO: pass email through
+        }
+    }
+
     // MARK: Gestures
     func facebookLabelTapped(_ gesture: UIGestureRecognizer) {
         print("tap")

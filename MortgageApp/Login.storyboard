@@ -401,6 +401,9 @@
                                         <state key="normal" title="Sign in">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="MYS-gU-qp5" kind="show" id="azY-Lf-Zdr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -423,7 +426,6 @@
                         <outlet property="facebookRegisterLabel" destination="Ahz-Gl-mlU" id="htk-FZ-D2R"/>
                         <outlet property="nextButton" destination="frP-7l-LwK" id="FJj-H8-QvU"/>
                         <outlet property="phoneTextField" destination="iBK-Ao-bW7" id="Hl3-Lv-Fym"/>
-                        <segue destination="MYS-gU-qp5" kind="show" identifier="toSignIn" id="Qbd-HD-NfI"/>
                         <segue destination="sHa-wd-unR" kind="show" identifier="toCredentials" id="e3x-jH-Fw5"/>
                     </connections>
                 </viewController>
