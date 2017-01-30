@@ -1,5 +1,5 @@
 //
-//  RegisterVC.swift
+//  RegisterCredentialsVC.swift
 //  MortgageApp
 //
 //  Created by Kaelin Hooper on 12/30/16.
@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class RegisterVC: UIViewController {
+class RegisterCredentialsVC: UIViewController {
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
