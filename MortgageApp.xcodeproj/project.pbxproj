@@ -563,7 +563,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = "Kaelin Hooper";
+				ORGANIZATIONNAME = "Keller Williams Realty, Inc.";
 				TargetAttributes = {
 					1A36D4241DF86AF40093A411 = {
 						CreatedOnToolsVersion = 8.1;
