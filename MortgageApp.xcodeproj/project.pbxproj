@@ -91,16 +91,6 @@
 		833F9AF21E3957580050D9D8 /* UNNotificationRequest+payments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833F9AF11E3957580050D9D8 /* UNNotificationRequest+payments.swift */; };
 		833F9AF31E3957580050D9D8 /* UNNotificationRequest+payments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833F9AF11E3957580050D9D8 /* UNNotificationRequest+payments.swift */; };
 		833F9AF41E3957580050D9D8 /* UNNotificationRequest+payments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833F9AF11E3957580050D9D8 /* UNNotificationRequest+payments.swift */; };
-		833F9AFE1E3959F80050D9D8 /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 833F9AFB1E3959F80050D9D8 /* SF-UI-Display-Regular.otf */; };
-		833F9AFF1E3959F80050D9D8 /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 833F9AFB1E3959F80050D9D8 /* SF-UI-Display-Regular.otf */; };
-		833F9B001E3959F80050D9D8 /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 833F9AFB1E3959F80050D9D8 /* SF-UI-Display-Regular.otf */; };
-		833F9B011E3959F80050D9D8 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 833F9AFC1E3959F80050D9D8 /* SF-UI-Display-Thin.otf */; };
-		833F9B021E3959F80050D9D8 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 833F9AFC1E3959F80050D9D8 /* SF-UI-Display-Thin.otf */; };
-		833F9B031E3959F80050D9D8 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 833F9AFC1E3959F80050D9D8 /* SF-UI-Display-Thin.otf */; };
-		833F9B041E3959F80050D9D8 /* SF-UI-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 833F9AFD1E3959F80050D9D8 /* SF-UI-Display-Ultralight.otf */; };
-		833F9B051E3959F80050D9D8 /* SF-UI-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 833F9AFD1E3959F80050D9D8 /* SF-UI-Display-Ultralight.otf */; };
-		833F9B061E3959F80050D9D8 /* SF-UI-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 833F9AFD1E3959F80050D9D8 /* SF-UI-Display-Ultralight.otf */; };
-		83602B1B1E3FC6E30035C52F /* SFDisplay-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83602B1A1E3FC6E30035C52F /* SFDisplay-Semibold.otf */; };
 		83A1380C1E3BC83E00F67EBF /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A1380B1E3BC83E00F67EBF /* Onboarding.storyboard */; };
 		83A1380D1E3BC83E00F67EBF /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A1380B1E3BC83E00F67EBF /* Onboarding.storyboard */; };
 		83A138101E3BCDA800F67EBF /* Amortization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A1380F1E3BCDA800F67EBF /* Amortization.storyboard */; };
@@ -116,7 +106,6 @@
 		83A138291E3BFEF500F67EBF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A138281E3BFEF500F67EBF /* Login.storyboard */; };
 		83A1382A1E3BFEF500F67EBF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A138281E3BFEF500F67EBF /* Login.storyboard */; };
 		83A1382F1E3C188300F67EBF /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A1382E1E3C188300F67EBF /* RoundedButton.swift */; };
-		83D69AA11E3F92A700905018 /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83D69AA01E3F92A700905018 /* SF-UI-Display-Bold.otf */; };
 		83D69AA31E3FAE7F00905018 /* BorderedInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D69AA21E3FAE7F00905018 /* BorderedInputView.swift */; };
 		83D69AA51E3FB1ED00905018 /* RegisterInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D69AA41E3FB1ED00905018 /* RegisterInformationVC.swift */; };
 		9101B69E65A77A193E63F839 /* Pods_MortgageAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC64DA83D2664394F9645E6 /* Pods_MortgageAppTests.framework */; };
@@ -187,10 +176,6 @@
 		833F9AE91E3956BF0050D9D8 /* UIColor+themes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+themes.swift"; sourceTree = "<group>"; };
 		833F9AED1E3956F10050D9D8 /* UIViewController+keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+keyboard.swift"; sourceTree = "<group>"; };
 		833F9AF11E3957580050D9D8 /* UNNotificationRequest+payments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UNNotificationRequest+payments.swift"; sourceTree = "<group>"; };
-		833F9AFB1E3959F80050D9D8 /* SF-UI-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Regular.otf"; path = "fonts/SF-UI-Display-Regular.otf"; sourceTree = "<group>"; };
-		833F9AFC1E3959F80050D9D8 /* SF-UI-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Thin.otf"; path = "fonts/SF-UI-Display-Thin.otf"; sourceTree = "<group>"; };
-		833F9AFD1E3959F80050D9D8 /* SF-UI-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Ultralight.otf"; path = "fonts/SF-UI-Display-Ultralight.otf"; sourceTree = "<group>"; };
-		83602B1A1E3FC6E30035C52F /* SFDisplay-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFDisplay-Semibold.otf"; path = "fonts/SFDisplay-Semibold.otf"; sourceTree = "<group>"; };
 		83A1380B1E3BC83E00F67EBF /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		83A1380F1E3BCDA800F67EBF /* Amortization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Amortization.storyboard; sourceTree = "<group>"; };
 		83A138131E3BEF6800F67EBF /* ExtraPayments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExtraPayments.storyboard; sourceTree = "<group>"; };
@@ -199,7 +184,6 @@
 		83A1381F1E3BFCF200F67EBF /* CreateMortgage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateMortgage.storyboard; sourceTree = "<group>"; };
 		83A138281E3BFEF500F67EBF /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		83A1382E1E3C188300F67EBF /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
-		83D69AA01E3F92A700905018 /* SF-UI-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Bold.otf"; path = "fonts/SF-UI-Display-Bold.otf"; sourceTree = "<group>"; };
 		83D69AA21E3FAE7F00905018 /* BorderedInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedInputView.swift; sourceTree = "<group>"; };
 		83D69AA41E3FB1ED00905018 /* RegisterInformationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterInformationVC.swift; sourceTree = "<group>"; };
 		88664985621365C37BA174D5 /* Pods_MortgageAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MortgageAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -321,7 +305,6 @@
 		1AB349C71E01B7F600E76049 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				833F9AFA1E3959CF0050D9D8 /* Fonts */,
 				1A36D4341DF86AF40093A411 /* Info.plist */,
 				1A5BB7FE1E16C3E400B55D11 /* GoogleService-Info.plist */,
 			);
@@ -394,18 +377,6 @@
 				1A8D4A231E1C2495000D2592 /* CustomTableViewCell.swift */,
 			);
 			name = "Table Cells";
-			sourceTree = "<group>";
-		};
-		833F9AFA1E3959CF0050D9D8 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				83602B1A1E3FC6E30035C52F /* SFDisplay-Semibold.otf */,
-				83D69AA01E3F92A700905018 /* SF-UI-Display-Bold.otf */,
-				833F9AFB1E3959F80050D9D8 /* SF-UI-Display-Regular.otf */,
-				833F9AFC1E3959F80050D9D8 /* SF-UI-Display-Thin.otf */,
-				833F9AFD1E3959F80050D9D8 /* SF-UI-Display-Ultralight.otf */,
-			);
-			name = Fonts;
 			sourceTree = "<group>";
 		};
 		83A1380A1E3BC81B00F67EBF /* Onboarding */ = {
@@ -608,18 +579,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				83A138201E3BFCF200F67EBF /* CreateMortgage.storyboard in Resources */,
-				83D69AA11E3F92A700905018 /* SF-UI-Display-Bold.otf in Resources */,
 				1A36D4331DF86AF40093A411 /* LaunchScreen.storyboard in Resources */,
 				83A138291E3BFEF500F67EBF /* Login.storyboard in Resources */,
 				83A138101E3BCDA800F67EBF /* Amortization.storyboard in Resources */,
 				1A5BB7FF1E16C3E400B55D11 /* GoogleService-Info.plist in Resources */,
 				83A138171E3BF4F900F67EBF /* MortgageDetail.storyboard in Resources */,
-				833F9AFE1E3959F80050D9D8 /* SF-UI-Display-Regular.otf in Resources */,
-				83602B1B1E3FC6E30035C52F /* SFDisplay-Semibold.otf in Resources */,
 				83A138141E3BEF6800F67EBF /* ExtraPayments.storyboard in Resources */,
 				1A36D4301DF86AF40093A411 /* Assets.xcassets in Resources */,
-				833F9B041E3959F80050D9D8 /* SF-UI-Display-Ultralight.otf in Resources */,
-				833F9B011E3959F80050D9D8 /* SF-UI-Display-Thin.otf in Resources */,
 				1AF882D41E19CB64000CA84F /* Main.storyboard in Resources */,
 				83A1381C1E3BF8B600F67EBF /* PreviousExtraPayments.storyboard in Resources */,
 				83A1380C1E3BC83E00F67EBF /* Onboarding.storyboard in Resources */,
@@ -631,11 +597,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A5BB8001E16C3E400B55D11 /* GoogleService-Info.plist in Resources */,
-				833F9B051E3959F80050D9D8 /* SF-UI-Display-Ultralight.otf in Resources */,
 				1A0D37361E32ABAB005B9114 /* Assets.xcassets in Resources */,
-				833F9AFF1E3959F80050D9D8 /* SF-UI-Display-Regular.otf in Resources */,
 				1AF882D51E19CB64000CA84F /* Main.storyboard in Resources */,
-				833F9B021E3959F80050D9D8 /* SF-UI-Display-Thin.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,14 +607,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A5BB8011E16C3E400B55D11 /* GoogleService-Info.plist in Resources */,
-				833F9B061E3959F80050D9D8 /* SF-UI-Display-Ultralight.otf in Resources */,
 				1A0D37371E32ABAB005B9114 /* Assets.xcassets in Resources */,
 				83A138181E3BF4F900F67EBF /* MortgageDetail.storyboard in Resources */,
-				833F9B001E3959F80050D9D8 /* SF-UI-Display-Regular.otf in Resources */,
 				83A1380D1E3BC83E00F67EBF /* Onboarding.storyboard in Resources */,
 				83A1381D1E3BF8B600F67EBF /* PreviousExtraPayments.storyboard in Resources */,
 				1AF882D61E19CB64000CA84F /* Main.storyboard in Resources */,
-				833F9B031E3959F80050D9D8 /* SF-UI-Display-Thin.otf in Resources */,
 				83A138111E3BCDA800F67EBF /* Amortization.storyboard in Resources */,
 				83A138211E3BFCF200F67EBF /* CreateMortgage.storyboard in Resources */,
 				83A138151E3BEF6800F67EBF /* ExtraPayments.storyboard in Resources */,
