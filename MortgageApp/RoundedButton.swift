@@ -14,8 +14,16 @@ class RoundedButton:UIButton {
         self.layoutIfNeeded()
         layer.cornerRadius = self.frame.height / 2.0
         layer.masksToBounds = true
-        backgroundColor = UIColor.primaryButton()
         setTitleColor(UIColor.white, for: UIControlState.normal)
         titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightSemibold)
+        removeHighlight()
+    }
+    
+    func highlight() {
+        backgroundColor = UIColor.primaryButtonHiglight()
+    }
+    
+    func removeHighlight() {
+        backgroundColor = UIColor.primaryButton()
     }
 }

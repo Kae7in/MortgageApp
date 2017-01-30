@@ -42,4 +42,8 @@ extension UIColor {
     static func primaryButton(alpha: CGFloat = 1.0) -> UIColor {
         return UIColor(rgbColorCodeRed: 227, green: 71, blue: 52, alpha: 1.0)
     }
+    
+    static func primaryButtonHiglight(alpha: CGFloat = 1.0) -> UIColor {
+        return UIColor(rgbColorCodeRed: 177, green: 21, blue: 2, alpha: 1.0)
+    }
 }

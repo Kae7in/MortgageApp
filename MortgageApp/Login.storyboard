@@ -195,96 +195,187 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RZp-5W-HlG" userLabel="First Name Container" customClass="BorderedInputView" customModule="MortgageApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="218" width="343" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ufd-gx-woE">
+                                <rect key="frame" x="127" y="50" width="120" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="akh-82-jpl"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="gtu-1i-amn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="72"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nLX-hy-v2r">
+                                <rect key="frame" x="28" y="203" width="320" height="220"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="f-icon" translatesAutoresizingMaskIntoConstraints="NO" id="C4y-mw-782">
-                                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CNP-cs-02z" userLabel="First Name">
-                                        <rect key="frame" x="64" y="0.0" width="280" height="36"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZp-5W-HlG" userLabel="First Name Container" customClass="BorderedInputView" customModule="MortgageApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="f-icon" translatesAutoresizingMaskIntoConstraints="NO" id="C4y-mw-782">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="IKC-nu-62e"/>
+                                                    <constraint firstAttribute="width" constant="36" id="ZW5-Yj-Bwb"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CNP-cs-02z" userLabel="First Name">
+                                                <rect key="frame" x="64" y="0.0" width="280" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="DX6-Vj-Ruk"/>
+                                                    <constraint firstAttribute="width" constant="280" id="JcM-XC-j25"/>
+                                                    <constraint firstAttribute="height" constant="44" id="eY8-db-NUb"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="namePhonePad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="edh-Hy-vIH" id="Vqw-rE-btb"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="eY8-db-NUb"/>
+                                            <constraint firstItem="CNP-cs-02z" firstAttribute="leading" secondItem="C4y-mw-782" secondAttribute="trailing" constant="28" id="Ihk-da-Ydq"/>
+                                            <constraint firstItem="C4y-mw-782" firstAttribute="top" secondItem="RZp-5W-HlG" secondAttribute="top" id="Lyi-se-0w8"/>
+                                            <constraint firstItem="CNP-cs-02z" firstAttribute="top" secondItem="RZp-5W-HlG" secondAttribute="top" id="eCS-QU-aBx"/>
+                                            <constraint firstAttribute="bottom" secondItem="CNP-cs-02z" secondAttribute="bottom" constant="11" id="hSs-R5-ek2"/>
+                                            <constraint firstItem="C4y-mw-782" firstAttribute="leading" secondItem="RZp-5W-HlG" secondAttribute="leading" id="mM9-5I-PJE"/>
+                                            <constraint firstAttribute="height" constant="55" id="vsZ-nd-6Ix"/>
                                         </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="51M-DD-dBS" userLabel="Last Name Container" customClass="BorderedInputView" customModule="MortgageApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="275" width="343" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="l-icon" translatesAutoresizingMaskIntoConstraints="NO" id="g0I-3p-R97">
-                                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="s3B-69-C9P" userLabel="Last Name">
-                                        <rect key="frame" x="64" y="0.0" width="280" height="36"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51M-DD-dBS" userLabel="Last Name Container" customClass="BorderedInputView" customModule="MortgageApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55" width="320" height="55"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="l-icon" translatesAutoresizingMaskIntoConstraints="NO" id="g0I-3p-R97">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="5h3-lb-iLM"/>
+                                                    <constraint firstAttribute="width" constant="36" id="ZeP-MQ-RfE"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="s3B-69-C9P" userLabel="Last Name">
+                                                <rect key="frame" x="64" y="0.0" width="280" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="Bfs-pN-Swu"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="Wry-1G-idO"/>
+                                                    <constraint firstAttribute="width" constant="280" id="ebD-wC-BOM"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="namePhonePad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="edh-Hy-vIH" id="Cx0-Ek-OUc"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="Bfs-pN-Swu"/>
+                                            <constraint firstAttribute="height" constant="55" id="A0W-gv-D5q"/>
+                                            <constraint firstItem="s3B-69-C9P" firstAttribute="leading" secondItem="g0I-3p-R97" secondAttribute="trailing" constant="28" id="NBE-sZ-8sz"/>
+                                            <constraint firstItem="g0I-3p-R97" firstAttribute="leading" secondItem="51M-DD-dBS" secondAttribute="leading" id="TJa-sV-br8"/>
+                                            <constraint firstItem="g0I-3p-R97" firstAttribute="top" secondItem="51M-DD-dBS" secondAttribute="top" id="YHq-6W-stv"/>
+                                            <constraint firstAttribute="bottom" secondItem="s3B-69-C9P" secondAttribute="bottom" constant="11" id="h52-Lc-8OL"/>
+                                            <constraint firstItem="s3B-69-C9P" firstAttribute="top" secondItem="51M-DD-dBS" secondAttribute="top" id="rUa-9o-qhv"/>
                                         </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kii-XG-Ibf" userLabel="Email Container" customClass="BorderedInputView" customModule="MortgageApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="332" width="343" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mail-icon" translatesAutoresizingMaskIntoConstraints="NO" id="MLf-1p-Tp9">
-                                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hNG-Nm-qCN">
-                                        <rect key="frame" x="64" y="0.0" width="280" height="36"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kii-XG-Ibf" userLabel="Email Container" customClass="BorderedInputView" customModule="MortgageApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="110" width="320" height="55"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail-icon" translatesAutoresizingMaskIntoConstraints="NO" id="MLf-1p-Tp9">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="36" id="SWI-Rr-n6Y"/>
+                                                    <constraint firstAttribute="height" constant="36" id="r4s-zi-Xx6"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hNG-Nm-qCN">
+                                                <rect key="frame" x="64" y="0.0" width="280" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="280" id="KEf-Td-AUc"/>
+                                                    <constraint firstAttribute="height" constant="44" id="YAX-Ad-PBA"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="jag-4n-G9O"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="edh-Hy-vIH" id="wcE-Ro-orY"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="YAX-Ad-PBA"/>
+                                            <constraint firstAttribute="bottom" secondItem="hNG-Nm-qCN" secondAttribute="bottom" constant="11" id="10m-6q-OWP"/>
+                                            <constraint firstItem="MLf-1p-Tp9" firstAttribute="leading" secondItem="kii-XG-Ibf" secondAttribute="leading" id="BzM-UA-caw"/>
+                                            <constraint firstAttribute="height" constant="55" id="Ux2-cS-b8C"/>
+                                            <constraint firstItem="hNG-Nm-qCN" firstAttribute="leading" secondItem="MLf-1p-Tp9" secondAttribute="trailing" constant="28" id="end-ft-jYv"/>
+                                            <constraint firstItem="hNG-Nm-qCN" firstAttribute="top" secondItem="kii-XG-Ibf" secondAttribute="top" id="tfl-jq-XWf"/>
+                                            <constraint firstItem="MLf-1p-Tp9" firstAttribute="top" secondItem="kii-XG-Ibf" secondAttribute="top" id="vmq-hc-p20"/>
                                         </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="stO-fr-QS0" userLabel="Phone Container" customClass="BorderedInputView" customModule="MortgageApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="389" width="343" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone-call-icon" translatesAutoresizingMaskIntoConstraints="NO" id="AFk-oX-1ZZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone (optional)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iBK-Ao-bW7">
-                                        <rect key="frame" x="64" y="0.0" width="280" height="36"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stO-fr-QS0" userLabel="Phone Container" customClass="BorderedInputView" customModule="MortgageApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="165" width="320" height="55"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone-call-icon" translatesAutoresizingMaskIntoConstraints="NO" id="AFk-oX-1ZZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="36" id="f9X-IA-Njz"/>
+                                                    <constraint firstAttribute="height" constant="36" id="oSV-dd-ndK"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone (optional)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iBK-Ao-bW7">
+                                                <rect key="frame" x="64" y="0.0" width="280" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="8Rp-RX-Ned"/>
+                                                    <constraint firstAttribute="height" constant="44" id="C2o-68-jUg"/>
+                                                    <constraint firstAttribute="width" constant="280" id="JLd-O1-lqu"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="edh-Hy-vIH" id="ziP-tG-O6s"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="C2o-68-jUg"/>
+                                            <constraint firstAttribute="height" constant="55" id="Lbr-3x-2ZQ"/>
+                                            <constraint firstItem="AFk-oX-1ZZ" firstAttribute="top" secondItem="stO-fr-QS0" secondAttribute="top" id="Tnd-VU-8NA"/>
+                                            <constraint firstItem="AFk-oX-1ZZ" firstAttribute="leading" secondItem="stO-fr-QS0" secondAttribute="leading" id="gdv-qX-e1W"/>
+                                            <constraint firstItem="iBK-Ao-bW7" firstAttribute="leading" secondItem="AFk-oX-1ZZ" secondAttribute="trailing" constant="28" id="rS3-fK-ThN"/>
+                                            <constraint firstItem="iBK-Ao-bW7" firstAttribute="top" secondItem="stO-fr-QS0" secondAttribute="top" id="see-xH-z3J"/>
                                         </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frP-7l-LwK" customClass="RoundedButton" customModule="MortgageApp" customModuleProvider="target">
-                                <rect key="frame" x="71" y="455" width="212" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="1p9-sC-rFu"/>
+                                    <constraint firstAttribute="height" constant="220" id="Gdp-c7-V88"/>
+                                    <constraint firstItem="RZp-5W-HlG" firstAttribute="top" secondItem="nLX-hy-v2r" secondAttribute="top" id="Td5-89-khl"/>
+                                    <constraint firstItem="stO-fr-QS0" firstAttribute="top" secondItem="kii-XG-Ibf" secondAttribute="bottom" id="apQ-jK-KD5"/>
+                                    <constraint firstItem="kii-XG-Ibf" firstAttribute="top" secondItem="51M-DD-dBS" secondAttribute="bottom" id="nJZ-le-Fa2"/>
+                                    <constraint firstItem="51M-DD-dBS" firstAttribute="top" secondItem="RZp-5W-HlG" secondAttribute="bottom" id="rMe-gp-jIa"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frP-7l-LwK" customClass="RoundedButton" customModule="MortgageApp" customModuleProvider="target">
+                                <rect key="frame" x="82" y="452" width="212" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="212" id="Llx-Vk-D87"/>
+                                    <constraint firstAttribute="height" constant="44" id="zFA-AY-3pt"/>
+                                </constraints>
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButtonTouchDown:" destination="edh-Hy-vIH" eventType="touchDown" id="Ldu-XP-ysA"/>
+                                    <action selector="nextButtonTouchUpInside:" destination="edh-Hy-vIH" eventType="touchUpInside" id="pFK-de-R3s"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahz-Gl-mlU">
-                                <rect key="frame" x="66" y="518" width="243" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahz-Gl-mlU">
+                                <rect key="frame" x="66" y="519" width="243" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="243" id="CcH-HM-9x3"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Register with Facebook">
                                         <attributes>
@@ -295,41 +386,43 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWN-kY-IPk" customClass="BlankButton" customModule="MortgageApp" customModuleProvider="target">
-                                <rect key="frame" x="140" y="593" width="98" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <state key="normal" title="Sign in">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ALREADY HAVE AN ACCOUNT?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1E-xT-1dV">
-                                <rect key="frame" x="16" y="564" width="345" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ufd-gx-woE">
-                                <rect key="frame" x="127" y="28" width="120" height="86"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="akh-82-jpl"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="gtu-1i-amn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="72"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ifE-YC-LAd">
+                                <rect key="frame" x="57" y="564.5" width="262" height="55.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALREADY HAVE AN ACCOUNT?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1E-xT-1dV">
+                                        <rect key="frame" x="0.0" y="0.0" width="262" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWN-kY-IPk" customClass="BlankButton" customModule="MortgageApp" customModuleProvider="target">
+                                        <rect key="frame" x="103" y="21.5" width="56" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <state key="normal" title="Sign in">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ufd-gx-woE" firstAttribute="centerX" secondItem="FBX-VN-LES" secondAttribute="centerX" id="i9K-Yp-1QZ"/>
-                            <constraint firstItem="Ufd-gx-woE" firstAttribute="top" secondItem="oJi-kU-tRG" secondAttribute="bottom" constant="8" id="wgz-9O-tkJ"/>
+                            <constraint firstItem="ifE-YC-LAd" firstAttribute="top" secondItem="Ahz-Gl-mlU" secondAttribute="bottom" constant="25" id="07M-hJ-RKz"/>
+                            <constraint firstItem="frP-7l-LwK" firstAttribute="centerX" secondItem="FBX-VN-LES" secondAttribute="centerX" id="5kv-qw-22k"/>
+                            <constraint firstItem="Ahz-Gl-mlU" firstAttribute="centerX" secondItem="FBX-VN-LES" secondAttribute="centerX" id="7A6-fi-dNj"/>
+                            <constraint firstItem="ifE-YC-LAd" firstAttribute="centerX" secondItem="FBX-VN-LES" secondAttribute="centerX" id="DSI-z1-o9B"/>
+                            <constraint firstItem="Ahz-Gl-mlU" firstAttribute="top" secondItem="frP-7l-LwK" secondAttribute="bottom" constant="23" id="QA8-bJ-WIy"/>
+                            <constraint firstItem="Ufd-gx-woE" firstAttribute="top" secondItem="oJi-kU-tRG" secondAttribute="bottom" constant="30" id="R5Q-lR-aus"/>
+                            <constraint firstItem="dkh-bL-eZi" firstAttribute="top" secondItem="ifE-YC-LAd" secondAttribute="bottom" constant="47" id="Sxb-dT-Xq9"/>
+                            <constraint firstItem="nLX-hy-v2r" firstAttribute="centerX" secondItem="FBX-VN-LES" secondAttribute="centerX" id="ebA-iA-D4k"/>
+                            <constraint firstItem="nLX-hy-v2r" firstAttribute="top" secondItem="Ufd-gx-woE" secondAttribute="bottom" constant="69" id="tod-RT-Ddj"/>
+                            <constraint firstItem="Ufd-gx-woE" firstAttribute="centerX" secondItem="FBX-VN-LES" secondAttribute="centerX" id="zUw-iR-BFd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="facebookRegisterLabel" destination="Ahz-Gl-mlU" id="htk-FZ-D2R"/>
                         <outlet property="nextButton" destination="frP-7l-LwK" id="FJj-H8-QvU"/>
+                        <outlet property="phoneTextField" destination="iBK-Ao-bW7" id="Hl3-Lv-Fym"/>
                         <segue destination="MYS-gU-qp5" kind="show" identifier="toSignIn" id="Qbd-HD-NfI"/>
                         <segue destination="sHa-wd-unR" kind="show" identifier="toCredentials" id="e3x-jH-Fw5"/>
                     </connections>
@@ -342,7 +435,7 @@
     <resources>
         <image name="f-icon" width="21" height="34"/>
         <image name="l-icon" width="21" height="34"/>
-        <image name="mail-icon" width="49" height="36"/>
-        <image name="phone-call-icon" width="50" height="50"/>
+        <image name="mail-icon" width="17" height="12"/>
+        <image name="phone-call-icon" width="17" height="17"/>
     </resources>
 </document>

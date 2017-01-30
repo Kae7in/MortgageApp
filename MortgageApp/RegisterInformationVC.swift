@@ -9,11 +9,13 @@
 import UIKit
 
 
-class RegisterInformationVC: UIViewController {
+class RegisterInformationVC: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var nextButton: RoundedButton!
     @IBOutlet weak var facebookRegisterLabel: UILabel!
+    @IBOutlet weak var phoneTextField: UITextField!
     
+    var facebookTapGesture: UITapGestureRecognizer?
     
     override func viewDidLoad() {
         
@@ -31,7 +33,79 @@ class RegisterInformationVC: UIViewController {
         attributeString.addAttribute(NSForegroundColorAttributeName, value: UIColor.black, range: range)
         facebookRegisterLabel.attributedText = attributeString
         
+        // Add gesture for facebook label
+        facebookTapGesture = UITapGestureRecognizer(target: self, action: #selector(facebookLabelTapped(_:)))
+        facebookRegisterLabel.addGestureRecognizer(facebookTapGesture!)
+        
+        addDoneButtonOnKeyboard()
+        
         super.viewDidLoad()
+    }
+    
+    deinit {
+        facebookRegisterLabel.removeGestureRecognizer(facebookTapGesture!)
+    }
+    
+    // MARK: Actions
+    @IBAction func nextButtonTouchDown(_ sender: Any) {
+        nextButton.highlight()
+    }
+    
+    @IBAction func nextButtonTouchUpInside(_ sender: Any) {
+        nextButton.removeHighlight()
+    }
+    
+    // MARK: Gestures
+    func facebookLabelTapped(_ gesture: UIGestureRecognizer) {
+        print("tap")
+    }
+    
+    // MARK: UITextFieldDelegate
+    public func textFieldDidBeginEditing(_ textField: UITextField)
+    {
+        textField.becomeFirstResponder()
+        print(#function)
+    }
+    
+    public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool
+    {
+        print(#function)
+        return true
+    }
+    
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    {
+        print(#function)
+        return true
+    }
+    
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        print(#function)
+        return true
+    }
+    
+    // MARK: Helpers
+    func addDoneButtonOnKeyboard() {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        doneToolbar.barStyle       = UIBarStyle.default
+        let flexSpace              = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let done: UIBarButtonItem  = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector
+            (doneButtonAction))
+        
+        var items = [UIBarButtonItem]()
+        items.append(flexSpace)
+        items.append(done)
+        
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        phoneTextField.inputAccessoryView = doneToolbar
+    }
+    
+    func doneButtonAction() {
+        phoneTextField.resignFirstResponder()
     }
     
 }

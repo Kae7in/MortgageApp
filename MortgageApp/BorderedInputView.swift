@@ -14,7 +14,7 @@ class BorderedInputView: UIView {
         
         // Add border to bottom of view
         let bottomBorder = CALayer()
-        bottomBorder.frame = CGRect(x: 0, y: self.frame.height-1, width: self.frame.width, height: 1.0)
+        bottomBorder.frame = CGRect(x: 0, y: self.frame.height-12, width: self.frame.width, height: 1.0)
         bottomBorder.backgroundColor = UIColor.lineGrey().cgColor
         self.layer.addSublayer(bottomBorder)
     }
