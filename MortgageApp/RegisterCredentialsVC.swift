@@ -93,7 +93,6 @@ class RegisterCredentialsVC: UIViewController {
     
     /* Validate the login fields (e.g. fields not empty) */
     func validateFields() -> Bool {
-        return false // TODO:
         let email: String = emailField.text!
         let username: String = usernameField.text!.lowercased()
         let password: String = passwordField.text!
