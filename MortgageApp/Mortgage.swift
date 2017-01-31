@@ -11,32 +11,82 @@ import FirebaseDatabase
 import FirebaseAuth
 
 class Mortgage: NSObject {
+    
+    /// Name of this mortgage which is used in Firebase and for identifying local notifications related to this mortgage
     var name: String = ""
+    
+    /// Number of months the loan originated with (e.g. 30 year mortgage --> 360 months)
     var loanTermMonths: Int = 360
+    
+    /// Beginning principal amount of the loan minus the down payment; does not change
     var salePrice: NSDecimalNumber = 200000
+    
+    /// Interest rate (not APR) of the loan; can fluctuate in an Adjustable Rate Mortgage
     var interestRate: NSDecimalNumber = 3.6
+    
+    /// Percent of the mortgage principal that the downpayment makes up
     var downPayment: String = "20%"
+    
+    /**
+     List of extra payments
+     extra payment dictionary structure: ["startMonth": 1,
+                                           "endMonth": 360,
+                                           "extraIntervalMonths": 1,
+                                           "extraAmount": 100,
+                                           "unique_id": "f83jSeiqogHJDKsow295Jd"]
+     
+     NOTE: The unique_id property is placed in the dictionary automatically
+     when 'save()' is called.
+     */
     var extras: [Dictionary<String,Any>] = []
+    
+    /// Annual roperty tax rate (ex. .01973 == 1.973%)
     var propertyTaxRate: NSDecimalNumber = 0
+    
+    /// Monthly home insurance amount
     var homeInsurance: NSDecimalNumber = 0
+    
+    /// Number of months from start the rate will not adjust (e.g. 6 means no adjustment will happen until month 7)
     var adjustFixedRateMonths: Int = 0
+    
+    /// The highest adjustment possible on the first rate reset (ex. .25)
     var adjustInitialCap: NSDecimalNumber = 0
+    
+    /// The highest adjustment possible in any given period
     var adjustPeriodicCap: NSDecimalNumber = 0
+    
+    /// The highest adjustment possible over the lifetime of the loan
     var adjustLifetimeCap: NSDecimalNumber = 0
+    
+    /// The interval with which an adjustment reset repeats
     var adjustIntervalMonths: Int = 12
+    
+    /// Start date (MM/DD/YYYY)/first monthly payment of the mortgage
     var startDate = Date()
+    
+    /// Total amount of interest this loan cost, adjusted based on planned extra payments
     var totalLoanCost: NSDecimalNumber = 0
+    
+    /// Payment deteails for each period over the entire lifetime of the mortgage
     var paymentSchedule = [Amortization]()
+    
+    /// A copy of this mortgage instance without extra payments, for ease of comparison purposes
     var originalMortgage: Mortgage? = nil
+    
+    /// Number of payments that must be made until the loan is paid off (decreases when extra payments are made)
     var numberOfPayments: Int = 360
+    
+    /// The standard monthly payment (not including any extra payments)
     var monthlyPayment: NSDecimalNumber = -1
     
     
+    /// Explicit default constructor redefinition required when creating a copy constructor
     override init() {
         super.init()
     }
     
     
+    /// Copy constructor
     init(_ mortgage: Mortgage) {
         self.name = mortgage.name
         self.loanTermMonths = mortgage.loanTermMonths
@@ -60,20 +110,26 @@ class Mortgage: NSObject {
     }
     
     
+    /// The sale price of the loan minus the down payment
     func loanAmount() -> NSDecimalNumber {
-        var str = self.downPayment
+        var str: String = self.downPayment
         let i = str.characters.index(of: "%")!
-        let downPercent = NSDecimalNumber(string: str.substring(to: i))
+        let downPercent: NSDecimalNumber = NSDecimalNumber(string: str.substring(to: i))
+        
+        // self.salePrice - (down payment)
         let loanAmount = self.salePrice.subtracting(self.salePrice.multiplying(by: downPercent.dividing(by: 100)))
+        
         return loanAmount
     }
     
     
+    /// Total amount of interest saved due to extra payments made over the entire life of the loan
     func totalInterestSavings() -> NSDecimalNumber {
-        setOriginalPaymentSchedule()
+        setOriginalPaymentSchedule()  // Load up self.originalMortgage to make savings comparisons easier
         let result = originalMortgage!.totalLoanCost.subtracting(self.totalLoanCost)
         
         if result.compare(NSDecimalNumber(value: 0)) == ComparisonResult.orderedAscending {
+            print("ERROR: Negative savings")
             return NSDecimalNumber(value: 0)
         }
         
@@ -81,21 +137,26 @@ class Mortgage: NSObject {
     }
     
     
+    /// Total amount of interest saved due to extra payments over the specified range of periods [start: inclusive, end: exclusive)
     func interestSavedForRange(start: Int, end: Int) -> NSDecimalNumber {
-        var interestSaved7Years = NSDecimalNumber(value: 0.0)
+        var totalInterestSaved = NSDecimalNumber(value: 0.0)
+        
         for i in start..<end {
-            interestSaved7Years = interestSaved7Years.adding(self.paymentSchedule[i].interestSaved)
+            totalInterestSaved = totalInterestSaved.adding(self.paymentSchedule[i].interestSaved)
         }
-        return interestSaved7Years
+        
+        return totalInterestSaved
     }
     
     
+    /// Total amount of periods/months saved due to extra payments made over the entire life of the loan
     func monthsSaved() -> Int {
         return self.originalMortgage!.numberOfPayments - self.numberOfPayments
     }
     
     
     // TODO: Bake this into the original amortization calculation
+    /// Helper used by MortgageCalculator to initialize self.originalMortgage
     func setOriginalPaymentSchedule() {
         if originalMortgage != nil {
             // originalMortgage has already been set
@@ -116,7 +177,8 @@ class Mortgage: NSObject {
     }
     
     
-    // TODO: Bake this into the original amortization calculation
+    // TODO: Bake this, and it's helpers, into the original amortization calculation
+    /// Helper used by MortgageCalculator to calculate additional information for each Amortization object
     func calculateAdditionalMetrics() {
         for amortization in paymentSchedule {
             calculateRemainingLoanCostForPeriod(amortization: amortization)
@@ -126,6 +188,8 @@ class Mortgage: NSObject {
     }
     
     
+    /// Period-calculation helper used by calculateAdditionalMetrics()
+    /// ; remaining interest to be paid in the given period/month (Amortization)
     private func calculateRemainingLoanCostForPeriod(amortization: Amortization) {
         var remainingLoanCost = self.totalLoanCost.subtracting(amortization.interestToDate)
         let compResult: ComparisonResult = remainingLoanCost.compare(NSDecimalNumber(value: 0))
@@ -138,6 +202,8 @@ class Mortgage: NSObject {
     }
     
     
+    /// Period-calculation helper used by calculateAdditionalMetrics()
+    /// ; interest saved just this period/month (Amortization)
     private func calculateInterestSavedForPeriod(amortization: Amortization) {
         if !paymentSchedule.isEmpty && !originalMortgage!.paymentSchedule.isEmpty {
             let periodIndex = amortization.loanMonth - 1
@@ -148,6 +214,8 @@ class Mortgage: NSObject {
     }
     
     
+    /// Period-calculation helper used by calculateAdditionalMetrics()
+    /// ; total interest saved up up to this period/month (Amortization)
     private func calculateTotalInterestSavedUpToPeriod(amortization: Amortization) {
         if !paymentSchedule.isEmpty && !originalMortgage!.paymentSchedule.isEmpty {
             let periodIndex = amortization.loanMonth - 1
@@ -160,19 +228,30 @@ class Mortgage: NSObject {
     }
     
     
+    /// Returns the period/month for this mortgage given a date
     private func periodForDate(date: Date) -> Int {
         let today: Date = Date()
         let period = today.months(from: self.startDate) + 1
         
-        return period > 360 ? 360 : period
+        if period > 360 {
+            // date is after mortgage payoff
+            return 360
+        } else if period < 0 {
+            // date is before self.startDate
+            return 0
+        } else {
+            return period
+        }
     }
     
     
+    /// Returns the period/month for this mortgage for today's date
     func currentPeriod() -> Int {
         return self.periodForDate(date: Date())
     }
     
     
+    /// Commits this Mortgage instance to the Firebase database
     func save() {
         // If this is the first time this mortgage has been saved,
         // run it through the calculator because otherwise the monthly payment
