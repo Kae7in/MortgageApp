@@ -98,9 +98,6 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="edh-Hy-vIH" id="5qz-5b-txV"/>
-                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Help" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vv-6Q-kf5">
                                                 <rect key="frame" x="270" y="11" width="42" height="21"/>
@@ -199,6 +196,8 @@
                     <navigationItem key="navigationItem" id="mpR-2F-hvb"/>
                     <connections>
                         <outlet property="facebookSignInLabel" destination="udQ-eU-nP7" id="Op0-NC-k2h"/>
+                        <outlet property="passwordField" destination="NfJ-lv-vjM" id="ble-Yq-z2W"/>
+                        <outlet property="usernameField" destination="i6Q-Zr-23z" id="Reb-Za-TbA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cvt-5R-UuN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -381,7 +380,10 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="f7A-3f-yoo" id="Gvc-bj-0yB"/>
+                        <outlet property="confirmPasswordField" destination="ERo-HF-vJz" id="Eoy-Ha-Jpv"/>
                         <outlet property="createAccountButton" destination="UOq-iB-m6R" id="BAp-Uz-9ar"/>
+                        <outlet property="passwordField" destination="QCs-cC-5Y9" id="wSP-kr-9nz"/>
+                        <outlet property="usernameField" destination="DbN-Yh-jwU" id="NS9-d3-UK5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBh-PK-5Ar" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -629,7 +631,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailField" destination="CNP-cs-02z" id="gjU-oy-DxQ"/>
                         <outlet property="facebookRegisterLabel" destination="Ahz-Gl-mlU" id="htk-FZ-D2R"/>
+                        <outlet property="firstNameField" destination="CNP-cs-02z" id="P0Q-ma-xtO"/>
+                        <outlet property="lastNameField" destination="s3B-69-C9P" id="Gxr-qG-grK"/>
                         <outlet property="nextButton" destination="frP-7l-LwK" id="FJj-H8-QvU"/>
                         <outlet property="phoneTextField" destination="iBK-Ao-bW7" id="Hl3-Lv-Fym"/>
                     </connections>

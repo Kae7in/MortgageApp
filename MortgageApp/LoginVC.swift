@@ -10,9 +10,9 @@ import UIKit
 import FirebaseAuth
 
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var facebookSignInLabel: UILabel!
 
@@ -51,10 +51,35 @@ class LoginVC: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: UITextFieldDelegate
+    public func textFieldDidBeginEditing(_ textField: UITextField)
+    {
+        textField.becomeFirstResponder()
+        print(#function)
+    }
     
+    public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool
+    {
+        print(#function)
+        return true
+    }
+    
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    {
+        print(#function)
+        return true
+    }
+    
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        print(#function)
+        return true
+    }
+
     @IBAction func loginButtonAction(_ sender: UIButton) {
         if validateFields() {
-            let email: String = emailField.text!
+            let email: String = usernameField.text!
             let password: String = passwordField.text!
             
             // Attempt Firebase user sign-in
@@ -73,10 +98,10 @@ class LoginVC: UIViewController {
     
     // MARK: Validation
     func validateFields() -> Bool {
-        let email: String = emailField.text!
+        let username: String = usernameField.text!
         let password: String = passwordField.text!
         
-        if email == "" || password == "" { return false }
+        if username == "" || password == "" { return false }
         
         return true
     }

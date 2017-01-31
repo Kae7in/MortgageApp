@@ -13,6 +13,9 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nextButton: RoundedButton!
     @IBOutlet weak var facebookRegisterLabel: UILabel!
+    @IBOutlet weak var firstNameField: UITextField!
+    @IBOutlet weak var lastNameField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     
     var facebookTapGesture: UITapGestureRecognizer?

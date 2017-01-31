@@ -10,9 +10,8 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class RegisterCredentialsVC: UIViewController {
+class RegisterCredentialsVC: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
@@ -59,6 +58,32 @@ class RegisterCredentialsVC: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: UITextFieldDelegate
+    public func textFieldDidBeginEditing(_ textField: UITextField)
+    {
+        textField.becomeFirstResponder()
+        print(#function)
+    }
+    
+    public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool
+    {
+        print(#function)
+        return true
+    }
+    
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    {
+        print(#function)
+        return true
+    }
+    
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        print(#function)
+        return true
+    }
+
     // MARK: Actions
     @IBAction func createAccountButtonTouchDown(_ sender: Any) {
         createAccountButton.highlight()
@@ -68,11 +93,11 @@ class RegisterCredentialsVC: UIViewController {
         createAccountButton.removeHighlight()
         
         if validateFields() {
-            let email: String = emailField.text!
             let username: String = usernameField.text!.lowercased()
             let password: String = passwordField.text!
             
             // Attempt to create new Firebase User
+            let email = "example@example.com"
             FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                 if user != nil {
                     // Associate username with uuid
@@ -93,10 +118,10 @@ class RegisterCredentialsVC: UIViewController {
     
     /* Validate the login fields (e.g. fields not empty) */
     func validateFields() -> Bool {
-        let email: String = emailField.text!
         let username: String = usernameField.text!.lowercased()
         let password: String = passwordField.text!
         let confirmPassword: String = confirmPasswordField.text!
+        let email = "example@example.com"
         
         if email == "" || username == "" || password == "" || confirmPassword == "" { return false }
         if password != confirmPassword { return false }
