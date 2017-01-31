@@ -19,6 +19,7 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         
+        self.navigationController?.navigationBar.isTranslucent = false
         // Construct facebook registration attributes
         let string = NSLocalizedString("Register with Facebook", comment: "Prompt for user to register with Faceobok")
         let attributeString = NSMutableAttributedString(string: string, attributes:
@@ -54,12 +55,15 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
     @IBAction func nextButtonTouchUpInside(_ sender: Any) {
         nextButton.removeHighlight()
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "toSignIn" {
             //let controller = segue.destination as! LoginVC
             // TODO: pass email through
+        } else if segue.identifier == "toRegisterCredentials" {
+            let controller = segue.destination as! RegisterCredentialsVC
+            controller.modalTransitionStyle = UIModalTransitionStyle.coverVertical
         }
     }
 

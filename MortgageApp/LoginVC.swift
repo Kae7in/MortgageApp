@@ -60,9 +60,14 @@ class LoginVC: UIViewController {
     
     
     @IBAction func signUpButtonAction(_ sender: UIButton) {
-        // Go back to the sign up screen
-        self.dismiss(animated: true) {
-        }
+        // navigate to the login screen
+        let rootViewController: UIViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "signUp")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let navigationController = UINavigationController(rootViewController: rootViewController)
+        navigationController.navigationBar.isHidden = true
+        
+        appDelegate.window!.rootViewController = navigationController
     }
     
 }

@@ -91,6 +91,7 @@
 		833F9AF21E3957580050D9D8 /* UNNotificationRequest+payments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833F9AF11E3957580050D9D8 /* UNNotificationRequest+payments.swift */; };
 		833F9AF31E3957580050D9D8 /* UNNotificationRequest+payments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833F9AF11E3957580050D9D8 /* UNNotificationRequest+payments.swift */; };
 		833F9AF41E3957580050D9D8 /* UNNotificationRequest+payments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833F9AF11E3957580050D9D8 /* UNNotificationRequest+payments.swift */; };
+		836C856B1E41091800C01777 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A1382E1E3C188300F67EBF /* RoundedButton.swift */; };
 		83A1380C1E3BC83E00F67EBF /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A1380B1E3BC83E00F67EBF /* Onboarding.storyboard */; };
 		83A1380D1E3BC83E00F67EBF /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A1380B1E3BC83E00F67EBF /* Onboarding.storyboard */; };
 		83A138101E3BCDA800F67EBF /* Amortization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A1380F1E3BCDA800F67EBF /* Amortization.storyboard */; };
@@ -853,6 +854,7 @@
 				831AB2351E39301800863BA0 /* RegisterCredentialsVC.swift in Sources */,
 				1A410D761E2EEA310007B5C0 /* CreateMortgageFVC.swift in Sources */,
 				1A1427EF1E306ADA00D52F90 /* SettingsVC.swift in Sources */,
+				836C856B1E41091800C01777 /* RoundedButton.swift in Sources */,
 				831AB2411E3930AD00863BA0 /* View5.swift in Sources */,
 				831AB23D1E3930AD00863BA0 /* View1.swift in Sources */,
 			);
