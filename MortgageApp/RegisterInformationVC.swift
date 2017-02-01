@@ -78,7 +78,19 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
         } else if segue.identifier == "toRegisterCredentials" {
             let controller = segue.destination as! RegisterCredentialsVC
             
-            // TODO: Create a UserAccount object
+            if userAccount == nil {
+                // Create a new account object since once does not exist yet
+                userAccount = UserAccount(firstName: firstNameField.text!, lastName: lastNameField.text!, email: emailField.text!, phone: phoneTextField.text!)
+            } else {
+                // Update properties as they may have been modified
+                userAccount?.firstName = firstNameField.text!
+                userAccount?.lastName = lastNameField.text!
+                userAccount?.email = emailField.text!
+                userAccount?.phone = phoneTextField.text!
+            }
+            
+            // Pass the user account through for further processing
+            controller.userAccount = userAccount
 
             controller.modalTransitionStyle = UIModalTransitionStyle.coverVertical
         }
@@ -93,7 +105,6 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
     public func textFieldDidBeginEditing(_ textField: UITextField)
     {
         textField.becomeFirstResponder()
-        print(#function)
     }
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool

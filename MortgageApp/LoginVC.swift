@@ -12,10 +12,11 @@ import FirebaseAuth
 
 class LoginVC: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var signInButton: RoundedButton!
     @IBOutlet weak var facebookSignInLabel: UILabel!
-
+    
     var facebookTapGesture: UITapGestureRecognizer?
     
     override func viewDidLoad() {
@@ -39,14 +40,22 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         // Add gesture for facebook label
         facebookTapGesture = UITapGestureRecognizer(target: self, action: #selector(facebookLabelTapped(_:)))
         facebookSignInLabel.addGestureRecognizer(facebookTapGesture!)
-
+        
+        // Disable next button until fields are valid
+        signInButton.enable(enabled: false)
+        
+        // Add field validation to enable/disable fields
+        emailField.addTarget(self, action: #selector(textFieldEditingChanged), for: UIControlEvents.editingChanged)
+        passwordField.addTarget(self, action: #selector(textFieldEditingChanged), for: UIControlEvents.editingChanged)
+        
+        
         self.hideKeyboardWhenTappedAround()
     }
-
+    
     deinit {
         facebookSignInLabel.removeGestureRecognizer(facebookTapGesture!)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -76,37 +85,38 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         print(#function)
         return true
     }
-
-    @IBAction func loginButtonAction(_ sender: UIButton) {
-        if validateFields() {
-            let email: String = usernameField.text!
-            let password: String = passwordField.text!
-            
-            // Attempt Firebase user sign-in
-            FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
-                if user != nil {
-                    let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
-                    
-                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    appDelegate.window!.rootViewController = rootViewController
-                } else if error != nil {
-                    // TODO
-                }
-            })
-        }
-    }
     
-    // MARK: Validation
-    func validateFields() -> Bool {
-        let username: String = usernameField.text!
-        let password: String = passwordField.text!
+    func textFieldEditingChanged() {
         
-        if username == "" || password == "" { return false }
+        var valid = emailField.text?.isValidEmail()
+        let password = passwordField.text!
         
-        return true
+        if (!password.isValidPassword()) {
+            valid = false
+        }
+        
+        signInButton.enable(enabled: valid!)
     }
     
     // MARK: Actions
+    @IBAction func loginButtonAction(_ sender: UIButton) {
+        
+        let email: String = emailField.text!
+        let password: String = passwordField.text!
+        
+        // Attempt Firebase user sign-in
+        FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+            if user != nil {
+                let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
+                
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window!.rootViewController = rootViewController
+            } else if error != nil {
+                // TODO
+            }
+        })
+    }
+    
     @IBAction func signUpButtonAction(_ sender: UIButton) {
         // navigate to the login screen
         let rootViewController: UIViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "signUp")

@@ -18,7 +18,7 @@ class RegisterCredentialsVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var createAccountButton: RoundedButton!
     
-    
+    var userAccount: UserAccount?
     var ref: FIRDatabaseReference!
     
     
@@ -73,23 +73,24 @@ class RegisterCredentialsVC: UIViewController, UITextFieldDelegate {
     @IBAction func submitButtonAction(_ sender: Any) {
         createAccountButton.removeHighlight()
         
-        // TODO: Pass to Firebase
-        
-        let username: String = usernameField.text!.lowercased()
+        assert(userAccount != nil, "A user account should be defined here")
+        userAccount?.username = usernameField.text!
+
         let password: String = passwordField.text!
         
         // Attempt to create new Firebase User
-        let email = "example@example.com"
-        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+        FIRAuth.auth()?.createUser(withEmail: (userAccount?.email)!, password: password, completion: { (user, error) in
             if user != nil {
-                // Associate username with uuid
-                self.ref.child("usernames").child(username).setValue(user!.uid)
                 
-                // Add fields to uuid entry
-                let userRef = self.ref.child("users").child(user!.uid)
-                userRef.child("email").setValue(email)
-                userRef.child("username").setValue(username)
-                
+                // Add additional fields for this user
+                let userRef = self.ref.child(UserAccount.usersField).child(user!.uid)
+                userRef.child(UserAccount.emailField).setValue(self.userAccount?.email)
+                userRef.child(UserAccount.firstNameField).setValue(self.userAccount?.firstName)
+                userRef.child(UserAccount.lastNameField).setValue(self.userAccount?.lastName)
+                userRef.child(UserAccount.phoneField).setValue(self.userAccount?.phone)
+                userRef.child(UserAccount.usernameField).setValue(self.userAccount?.username)
+                userRef.child(UserAccount.timestampField).setValue(FIRServerValue.timestamp())
+
                 self.showCreateMortgage()
             } else if error != nil {
                 // TODO: Implement proper error response
@@ -101,7 +102,6 @@ class RegisterCredentialsVC: UIViewController, UITextFieldDelegate {
     public func textFieldDidBeginEditing(_ textField: UITextField)
     {
         textField.becomeFirstResponder()
-        print(#function)
     }
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool
@@ -132,6 +132,10 @@ class RegisterCredentialsVC: UIViewController, UITextFieldDelegate {
     }
     
     private func showCreateMortgage() {
+        // TODO: It appears we may have a navigation controller embedded within the existing one
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appDelegate.window!.rootViewController = navController
+        
         let storyboard = UIStoryboard.init(name: "CreateMortgage", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "CreateMortgageFVC") as! CreateMortgageFVC
         controller.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)

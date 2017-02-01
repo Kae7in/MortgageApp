@@ -20,12 +20,4 @@ class UserAccountTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testSerialization() {
-        let account = UserAccount(userID: "1234", firstName: "John", lastName: "Appleseed", email: "john@example.com", phone: "512-555-5555", username: "japple", creationDate: "tody")
-        let dictionary = account.dict
-        let serializedAccount = UserAccount(dict: dictionary)
-        
-        XCTAssertEqual(account, serializedAccount)
-    }
 }
