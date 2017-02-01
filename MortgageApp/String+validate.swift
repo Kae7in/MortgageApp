@@ -19,4 +19,12 @@ extension String {
         let phoneRegex = "^\\d{3}-\\d{3}-\\d{4}$"
         return NSPredicate(format: "SELF MATCHES %@", phoneRegex).evaluate(with: self)
     }
+    
+    func isValidUsername() -> Bool {
+        return (lengthOfBytes(using: String.Encoding.utf8) >= FormLimits.minNameLength)
+    }
+    
+    func isValidPassword() -> Bool {
+        return (lengthOfBytes(using: String.Encoding.utf8) >= FormLimits.minNameLength)
+    }
 }

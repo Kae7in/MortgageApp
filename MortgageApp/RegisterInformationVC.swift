@@ -18,6 +18,7 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var phoneTextField: UITextField!
     
     var facebookTapGesture: UITapGestureRecognizer?
+    var userAccount: UserAccount?
 
     override func viewDidLoad() {
         
@@ -42,6 +43,7 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
         facebookRegisterLabel.addGestureRecognizer(facebookTapGesture!)
         
         addDoneButtonOnKeyboard()
+        hideKeyboardWhenTappedAround()
         
         // Disable next button until fields are valid
         nextButton.enable(enabled: false)
@@ -75,6 +77,9 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
             // TODO: pass email through
         } else if segue.identifier == "toRegisterCredentials" {
             let controller = segue.destination as! RegisterCredentialsVC
+            
+            // TODO: Create a UserAccount object
+
             controller.modalTransitionStyle = UIModalTransitionStyle.coverVertical
         }
     }
@@ -101,11 +106,11 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
         
         var valid = emailField.text?.isValidEmail()
         
-        if (firstNameField.text?.lengthOfBytes(using: String.Encoding.utf8))! < FormLimits.minNameLength {
+        if (!(firstNameField.text?.isValidUsername())!) {
             valid = false
         }
         
-        if (lastNameField.text?.lengthOfBytes(using: String.Encoding.utf8))! < FormLimits.minNameLength {
+        if (!(lastNameField.text?.isValidUsername())!) {
             valid = false
         }
         

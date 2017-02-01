@@ -93,6 +93,16 @@
 		833F9AF41E3957580050D9D8 /* UNNotificationRequest+payments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833F9AF11E3957580050D9D8 /* UNNotificationRequest+payments.swift */; };
 		834FA9B11E42372C000FDE09 /* FormLimits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FA9B01E42372C000FDE09 /* FormLimits.swift */; };
 		836C856B1E41091800C01777 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A1382E1E3C188300F67EBF /* RoundedButton.swift */; };
+		838774E41E4245D1008079F2 /* String+validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FFB53F1E416A4100A52650 /* String+validate.swift */; };
+		838774E51E4245D2008079F2 /* String+validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FFB53F1E416A4100A52650 /* String+validate.swift */; };
+		838774E61E4245E3008079F2 /* FormLimits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FA9B01E42372C000FDE09 /* FormLimits.swift */; };
+		838774E71E4245E4008079F2 /* FormLimits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834FA9B01E42372C000FDE09 /* FormLimits.swift */; };
+		838774E91E424850008079F2 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838774E81E424850008079F2 /* UserAccount.swift */; };
+		838774EA1E424850008079F2 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838774E81E424850008079F2 /* UserAccount.swift */; };
+		838774EB1E424850008079F2 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838774E81E424850008079F2 /* UserAccount.swift */; };
+		838774ED1E424881008079F2 /* DictionaryConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838774EC1E424881008079F2 /* DictionaryConvertible.swift */; };
+		838774EE1E424881008079F2 /* DictionaryConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838774EC1E424881008079F2 /* DictionaryConvertible.swift */; };
+		838774EF1E424881008079F2 /* DictionaryConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838774EC1E424881008079F2 /* DictionaryConvertible.swift */; };
 		83A1380C1E3BC83E00F67EBF /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A1380B1E3BC83E00F67EBF /* Onboarding.storyboard */; };
 		83A1380D1E3BC83E00F67EBF /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A1380B1E3BC83E00F67EBF /* Onboarding.storyboard */; };
 		83A138101E3BCDA800F67EBF /* Amortization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A1380F1E3BCDA800F67EBF /* Amortization.storyboard */; };
@@ -108,6 +118,7 @@
 		83A138291E3BFEF500F67EBF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A138281E3BFEF500F67EBF /* Login.storyboard */; };
 		83A1382A1E3BFEF500F67EBF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A138281E3BFEF500F67EBF /* Login.storyboard */; };
 		83A1382F1E3C188300F67EBF /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A1382E1E3C188300F67EBF /* RoundedButton.swift */; };
+		83B09B831E425456001BE368 /* UserAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B09B821E425456001BE368 /* UserAccountTests.swift */; };
 		83D69AA31E3FAE7F00905018 /* BorderedInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D69AA21E3FAE7F00905018 /* BorderedInputView.swift */; };
 		83D69AA51E3FB1ED00905018 /* RegisterInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D69AA41E3FB1ED00905018 /* RegisterInformationVC.swift */; };
 		83FFB5401E416A4100A52650 /* String+validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FFB53F1E416A4100A52650 /* String+validate.swift */; };
@@ -180,6 +191,8 @@
 		833F9AED1E3956F10050D9D8 /* UIViewController+keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+keyboard.swift"; sourceTree = "<group>"; };
 		833F9AF11E3957580050D9D8 /* UNNotificationRequest+payments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UNNotificationRequest+payments.swift"; sourceTree = "<group>"; };
 		834FA9B01E42372C000FDE09 /* FormLimits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormLimits.swift; sourceTree = "<group>"; };
+		838774E81E424850008079F2 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
+		838774EC1E424881008079F2 /* DictionaryConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryConvertible.swift; sourceTree = "<group>"; };
 		83A1380B1E3BC83E00F67EBF /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		83A1380F1E3BCDA800F67EBF /* Amortization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Amortization.storyboard; sourceTree = "<group>"; };
 		83A138131E3BEF6800F67EBF /* ExtraPayments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExtraPayments.storyboard; sourceTree = "<group>"; };
@@ -188,6 +201,7 @@
 		83A1381F1E3BFCF200F67EBF /* CreateMortgage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateMortgage.storyboard; sourceTree = "<group>"; };
 		83A138281E3BFEF500F67EBF /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		83A1382E1E3C188300F67EBF /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		83B09B821E425456001BE368 /* UserAccountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountTests.swift; sourceTree = "<group>"; };
 		83D69AA21E3FAE7F00905018 /* BorderedInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedInputView.swift; sourceTree = "<group>"; };
 		83D69AA41E3FB1ED00905018 /* RegisterInformationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterInformationVC.swift; sourceTree = "<group>"; };
 		83FFB53F1E416A4100A52650 /* String+validate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+validate.swift"; sourceTree = "<group>"; };
@@ -266,6 +280,7 @@
 			children = (
 				1A36D43D1DF86AF40093A411 /* MortgageAppTests.swift */,
 				1A36D43F1DF86AF40093A411 /* Info.plist */,
+				83B09B821E425456001BE368 /* UserAccountTests.swift */,
 			);
 			path = MortgageAppTests;
 			sourceTree = SOURCE_ROOT;
@@ -285,6 +300,7 @@
 				1A36D4571DF86CC00093A411 /* MortgageCalculator.swift */,
 				1A36D45B1DF895070093A411 /* Mortgage.swift */,
 				1AABB4861DFA06A9006A3B91 /* Amortization.swift */,
+				838774E81E424850008079F2 /* UserAccount.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -390,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				834FA9B01E42372C000FDE09 /* FormLimits.swift */,
+				838774EC1E424881008079F2 /* DictionaryConvertible.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -790,6 +807,7 @@
 				1AB349BB1E009FA400E76049 /* View4.swift in Sources */,
 				1A36D4581DF86CC00093A411 /* MortgageCalculator.swift in Sources */,
 				1AB349CB1E01BB3A00E76049 /* IntroDetailVC.swift in Sources */,
+				838774ED1E424881008079F2 /* DictionaryConvertible.swift in Sources */,
 				83A1382F1E3C188300F67EBF /* RoundedButton.swift in Sources */,
 				1A410D711E2EE8660007B5C0 /* CreateMortgageFVC.swift in Sources */,
 				1A5BB8051E16CD3600B55D11 /* RegisterCredentialsVC.swift in Sources */,
@@ -805,6 +823,7 @@
 				83FFB5401E416A4100A52650 /* String+validate.swift in Sources */,
 				1AF882D81E1AC013000CA84F /* MortgageListVC.swift in Sources */,
 				1A80FF7B1DFF0D3800193664 /* MortgageDetailVC.swift in Sources */,
+				838774E91E424850008079F2 /* UserAccount.swift in Sources */,
 				1AB349BF1E00A0AD00E76049 /* View6.swift in Sources */,
 				1AB349AF1E006DDD00E76049 /* View1.swift in Sources */,
 				83D69AA51E3FB1ED00905018 /* RegisterInformationVC.swift in Sources */,
@@ -819,10 +838,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				831AB2381E39308100863BA0 /* MortgageDetailVC.swift in Sources */,
+				838774E61E4245E3008079F2 /* FormLimits.swift in Sources */,
 				831AB2321E39300000863BA0 /* AppDelegate.swift in Sources */,
+				838774EE1E424881008079F2 /* DictionaryConvertible.swift in Sources */,
 				831AB23A1E3930A700863BA0 /* IntroPVC.swift in Sources */,
+				838774EA1E424850008079F2 /* UserAccount.swift in Sources */,
 				833F9AEF1E3956F10050D9D8 /* UIViewController+keyboard.swift in Sources */,
 				1A0D373A1E354FCA005B9114 /* AmortizationVC.swift in Sources */,
+				83B09B831E425456001BE368 /* UserAccountTests.swift in Sources */,
 				831AB22C1E392FF400863BA0 /* MortgageCalculator.swift in Sources */,
 				831AB2441E3930C200863BA0 /* IntroDetailVC.swift in Sources */,
 				1A1427E91E2FFFAA00D52F90 /* PreviousExtraPaymentsVC.swift in Sources */,
@@ -834,6 +857,7 @@
 				831AB2301E392FFC00863BA0 /* Amortization.swift in Sources */,
 				831AB2391E39309500863BA0 /* ExtraPaymentVC.swift in Sources */,
 				1A36D43E1DF86AF40093A411 /* MortgageAppTests.swift in Sources */,
+				838774E41E4245D1008079F2 /* String+validate.swift in Sources */,
 				833F9AF31E3957580050D9D8 /* UNNotificationRequest+payments.swift in Sources */,
 				1A410D751E2EEA300007B5C0 /* CreateMortgageFVC.swift in Sources */,
 				1A1427EE1E306ADA00D52F90 /* SettingsVC.swift in Sources */,
@@ -861,15 +885,19 @@
 				833F9AF41E3957580050D9D8 /* UNNotificationRequest+payments.swift in Sources */,
 				831AB2311E392FFD00863BA0 /* Amortization.swift in Sources */,
 				831AB2371E39302600863BA0 /* ExtraPaymentVC.swift in Sources */,
+				838774E71E4245E4008079F2 /* FormLimits.swift in Sources */,
+				838774EF1E424881008079F2 /* DictionaryConvertible.swift in Sources */,
 				831AB2431E3930AD00863BA0 /* View7.swift in Sources */,
 				831AB2341E39301800863BA0 /* LoginVC.swift in Sources */,
 				1A36D4491DF86AF50093A411 /* MortgageAppUITests.swift in Sources */,
 				831AB23E1E3930AD00863BA0 /* View2.swift in Sources */,
 				833F9AEC1E3956BF0050D9D8 /* UIColor+themes.swift in Sources */,
 				831AB23F1E3930AD00863BA0 /* View3.swift in Sources */,
+				838774EB1E424850008079F2 /* UserAccount.swift in Sources */,
 				831AB2351E39301800863BA0 /* RegisterCredentialsVC.swift in Sources */,
 				1A410D761E2EEA310007B5C0 /* CreateMortgageFVC.swift in Sources */,
 				1A1427EF1E306ADA00D52F90 /* SettingsVC.swift in Sources */,
+				838774E51E4245D2008079F2 /* String+validate.swift in Sources */,
 				836C856B1E41091800C01777 /* RoundedButton.swift in Sources */,
 				831AB2411E3930AD00863BA0 /* View5.swift in Sources */,
 				831AB23D1E3930AD00863BA0 /* View1.swift in Sources */,

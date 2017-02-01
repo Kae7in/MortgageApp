@@ -54,10 +54,10 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="i6Q-Zr-23z" userLabel="Username">
-                                                <rect key="frame" x="64" y="0.0" width="280" height="44"/>
+                                                <rect key="frame" x="64" y="0.0" width="256" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="19m-dU-xoG"/>
-                                                    <constraint firstAttribute="width" constant="280" id="BGb-Yo-sn3"/>
+                                                    <constraint firstAttribute="width" constant="256" id="BGb-Yo-sn3"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="miT-tW-s90"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
@@ -89,11 +89,11 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NfJ-lv-vjM" userLabel="Password">
-                                                <rect key="frame" x="64" y="0.0" width="280" height="44"/>
+                                                <rect key="frame" x="64" y="0.0" width="207" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="DLo-ek-MCq"/>
                                                     <constraint firstAttribute="height" constant="44" id="Ijt-JI-wyH"/>
-                                                    <constraint firstAttribute="width" constant="280" id="grQ-Pr-vE1"/>
+                                                    <constraint firstAttribute="width" constant="207" id="grQ-Pr-vE1"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
@@ -243,10 +243,10 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DbN-Yh-jwU" userLabel="Username">
-                                                <rect key="frame" x="64" y="0.0" width="280" height="44"/>
+                                                <rect key="frame" x="64" y="0.0" width="256" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="39b-uZ-5cP"/>
-                                                    <constraint firstAttribute="width" constant="280" id="Ugu-XW-Ggi"/>
+                                                    <constraint firstAttribute="width" constant="256" id="Ugu-XW-Ggi"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="kEA-q3-3LL"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
@@ -278,9 +278,9 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QCs-cC-5Y9" userLabel="Password">
-                                                <rect key="frame" x="64" y="0.0" width="280" height="44"/>
+                                                <rect key="frame" x="64" y="0.0" width="256" height="44"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="280" id="Duw-ko-q0t"/>
+                                                    <constraint firstAttribute="width" constant="256" id="Duw-ko-q0t"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="N8y-yJ-q4q"/>
                                                     <constraint firstAttribute="height" constant="44" id="gaa-7G-76f"/>
                                                 </constraints>
@@ -313,10 +313,10 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ERo-HF-vJz" userLabel="Confirm Password">
-                                                <rect key="frame" x="64" y="0.0" width="280" height="44"/>
+                                                <rect key="frame" x="64" y="0.0" width="256" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="Lum-5v-yN1"/>
-                                                    <constraint firstAttribute="width" constant="280" id="Tyo-yV-nDf"/>
+                                                    <constraint firstAttribute="width" constant="256" id="Tyo-yV-nDf"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="Uym-F5-bHU"/>
                                                 </constraints>
                                                 <nil key="textColor"/>

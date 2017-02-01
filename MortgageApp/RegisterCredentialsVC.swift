@@ -35,13 +35,20 @@ class RegisterCredentialsVC: UIViewController, UITextFieldDelegate {
                 NSFontAttributeName : UIFont.systemFont(ofSize: 18)
             ]
         )
-        
         let range = NSRange(location: 0, length: 1)
         attributeString.addAttribute(NSFontAttributeName, value:UIFont.systemFont(ofSize: 24, weight: UIFontWeightBold), range: range)
         backButton .setAttributedTitle(attributeString, for: UIControlState.normal)
         backButton.alpha = 0
         
-        self.hideKeyboardWhenTappedAround()
+        // Disable next button until fields are valid
+        createAccountButton.enable(enabled: false)
+        
+        // Add field validation to enable/disable fields
+        usernameField.addTarget(self, action: #selector(textFieldEditingChanged), for: UIControlEvents.editingChanged)
+        passwordField.addTarget(self, action: #selector(textFieldEditingChanged), for: UIControlEvents.editingChanged)
+        confirmPasswordField.addTarget(self, action: #selector(textFieldEditingChanged), for: UIControlEvents.editingChanged)
+
+        hideKeyboardWhenTappedAround()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,6 +65,38 @@ class RegisterCredentialsVC: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: Actions
+    @IBAction func createAccountButtonTouchDown(_ sender: Any) {
+        createAccountButton.highlight()
+    }
+    
+    @IBAction func submitButtonAction(_ sender: Any) {
+        createAccountButton.removeHighlight()
+        
+        // TODO: Pass to Firebase
+        
+        let username: String = usernameField.text!.lowercased()
+        let password: String = passwordField.text!
+        
+        // Attempt to create new Firebase User
+        let email = "example@example.com"
+        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+            if user != nil {
+                // Associate username with uuid
+                self.ref.child("usernames").child(username).setValue(user!.uid)
+                
+                // Add fields to uuid entry
+                let userRef = self.ref.child("users").child(user!.uid)
+                userRef.child("email").setValue(email)
+                userRef.child("username").setValue(username)
+                
+                self.showCreateMortgage()
+            } else if error != nil {
+                // TODO: Implement proper error response
+            }
+        })
+    }
+    
     // MARK: UITextFieldDelegate
     public func textFieldDidBeginEditing(_ textField: UITextField)
     {
@@ -65,68 +104,31 @@ class RegisterCredentialsVC: UIViewController, UITextFieldDelegate {
         print(#function)
     }
     
-    public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool
-    {
-        print(#function)
-        return true
-    }
-    
-    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
-    {
-        print(#function)
-        return true
-    }
-    
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         textField.resignFirstResponder()
-        print(#function)
         return true
-    }
-
-    // MARK: Actions
-    @IBAction func createAccountButtonTouchDown(_ sender: Any) {
-        createAccountButton.highlight()
-    }
-
-    @IBAction func submitButtonAction(_ sender: Any) {
-        createAccountButton.removeHighlight()
-        
-        if validateFields() {
-            let username: String = usernameField.text!.lowercased()
-            let password: String = passwordField.text!
-            
-            // Attempt to create new Firebase User
-            let email = "example@example.com"
-            FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
-                if user != nil {
-                    // Associate username with uuid
-                    self.ref.child("usernames").child(username).setValue(user!.uid)
-                    
-                    // Add fields to uuid entry
-                    let userRef = self.ref.child("users").child(user!.uid)
-                    userRef.child("email").setValue(email)
-                    userRef.child("username").setValue(username)
-                    
-                    self.showCreateMortgage()
-                } else if error != nil {
-                    // TODO: Implement proper error response
-                }
-            })
-        }
     }
     
-    /* Validate the login fields (e.g. fields not empty) */
-    func validateFields() -> Bool {
-        let username: String = usernameField.text!.lowercased()
-        let password: String = passwordField.text!
-        let confirmPassword: String = confirmPasswordField.text!
-        let email = "example@example.com"
+    func textFieldEditingChanged() {
         
-        if email == "" || username == "" || password == "" || confirmPassword == "" { return false }
-        if password != confirmPassword { return false }
+        var valid = usernameField.text?.isValidUsername()
+        let password = passwordField.text!
+        let confirmPassword = confirmPasswordField.text!
         
-        return true
+        if (!password.isValidPassword()) {
+            valid = false
+        }
+
+        if (!confirmPassword.isValidPassword()) {
+            valid = false
+        }
+        
+        if password != confirmPassword {
+            valid = false
+        }
+        
+        createAccountButton.enable(enabled: valid!)
     }
     
     private func showCreateMortgage() {
