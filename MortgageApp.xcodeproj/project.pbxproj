@@ -570,7 +570,7 @@
 				TargetAttributes = {
 					1A36D4241DF86AF40093A411 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 47P2F7XFH5;
+						DevelopmentTeam = 576CT6HP83;
 						ProvisioningStyle = Automatic;
 					};
 					1A36D4381DF86AF40093A411 = {
@@ -1034,7 +1034,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 47P2F7XFH5;
+				DEVELOPMENT_TEAM = 576CT6HP83;
 				INFOPLIST_FILE = MortgageApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kw.MortgageApp;
@@ -1049,7 +1049,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 47P2F7XFH5;
+				DEVELOPMENT_TEAM = 576CT6HP83;
 				INFOPLIST_FILE = MortgageApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kw.MortgageApp;
