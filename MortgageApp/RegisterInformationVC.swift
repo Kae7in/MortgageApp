@@ -8,8 +8,6 @@
 
 import UIKit
 
-let minNameLength = 4 // TODO: Move to shared file
-
 class RegisterInformationVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nextButton: RoundedButton!
@@ -103,11 +101,11 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
         
         var valid = emailField.text?.isValidEmail()
         
-        if (firstNameField.text?.lengthOfBytes(using: String.Encoding.utf8))! < minNameLength {
+        if (firstNameField.text?.lengthOfBytes(using: String.Encoding.utf8))! < FormLimits.minNameLength {
             valid = false
         }
         
-        if (lastNameField.text?.lengthOfBytes(using: String.Encoding.utf8))! < minNameLength {
+        if (lastNameField.text?.lengthOfBytes(using: String.Encoding.utf8))! < FormLimits.minNameLength {
             valid = false
         }
         
