@@ -30,4 +30,20 @@ extension UIColor {
     static func customGrey(alpha: CGFloat = 1.0) -> UIColor {
         return UIColor(rgbColorCodeRed: 247, green: 247, blue: 247, alpha: 1.0)
     }
+    
+    static func textGrey(alpha: CGFloat = 1.0) -> UIColor {
+        return UIColor(rgbColorCodeRed: 155, green: 155, blue: 155, alpha: 1.0)
+    }
+
+    static func lineGrey(alpha: CGFloat = 1.0) -> UIColor {
+        return UIColor(rgbColorCodeRed: 151, green: 151, blue: 151, alpha: 1.0)
+    }
+
+    static func primaryButton(alpha: CGFloat = 1.0) -> UIColor {
+        return UIColor(rgbColorCodeRed: 227, green: 71, blue: 52, alpha: 1.0)
+    }
+    
+    static func primaryButtonHiglight(alpha: CGFloat = 1.0) -> UIColor {
+        return UIColor(rgbColorCodeRed: 177, green: 21, blue: 2, alpha: 1.0)
+    }
 }

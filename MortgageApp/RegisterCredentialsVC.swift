@@ -1,5 +1,5 @@
 //
-//  RegisterVC.swift
+//  RegisterCredentialsVC.swift
 //  MortgageApp
 //
 //  Created by Kaelin Hooper on 12/30/16.
@@ -10,31 +10,63 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class RegisterVC: UIViewController {
-
+class RegisterCredentialsVC: UIViewController {
+    
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var createAccountButton: RoundedButton!
+    
     
     var ref: FIRDatabaseReference!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.ref = FIRDatabase.database().reference()
+        
+        // Setup back button
+        let string = NSLocalizedString("< Back", comment: "Back button to take user to previous screen")
+        let attributeString = NSMutableAttributedString(string: string, attributes:
+            [
+                NSForegroundColorAttributeName : UIColor.black,
+                NSFontAttributeName : UIFont.systemFont(ofSize: 18)
+            ]
+        )
+        
+        let range = NSRange(location: 0, length: 1)
+        attributeString.addAttribute(NSFontAttributeName, value:UIFont.systemFont(ofSize: 24, weight: UIFontWeightBold), range: range)
+        backButton .setAttributedTitle(attributeString, for: UIControlState.normal)
+        backButton.alpha = 0
         
         self.hideKeyboardWhenTappedAround()
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Fade back button in
+        
+        UIView.animate(withDuration: 0.2, animations: {
+            self.backButton.alpha = 1.0
+        })
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    
-    @IBAction func submitButtonAction(_ sender: UIButton) {
+    // MARK: Actions
+    @IBAction func createAccountButtonTouchDown(_ sender: Any) {
+        createAccountButton.highlight()
+    }
+
+    @IBAction func submitButtonAction(_ sender: Any) {
+        createAccountButton.removeHighlight()
+        
         if validateFields() {
             let email: String = emailField.text!
             let username: String = usernameField.text!.lowercased()
@@ -58,7 +90,7 @@ class RegisterVC: UIViewController {
             })
         }
     }
-        
+    
     /* Validate the login fields (e.g. fields not empty) */
     func validateFields() -> Bool {
         let email: String = emailField.text!
@@ -82,12 +114,7 @@ class RegisterVC: UIViewController {
         }
     }
     
-    @IBAction func signInButtonAction(_ sender: UIButton) {
-        // Segue to the sign in screen
-        let controller = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "signIn")
-        controller.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
-        self.present(controller, animated: true) {
-        }
+    @IBAction func goBackAction(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
     }
-    
 }
