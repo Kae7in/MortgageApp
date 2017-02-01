@@ -98,6 +98,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="MYS-gU-qp5" id="gHs-Qb-h58"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Help" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vv-6Q-kf5">
                                                 <rect key="frame" x="270" y="11" width="42" height="21"/>
@@ -426,10 +429,10 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CNP-cs-02z" userLabel="First Name">
-                                                <rect key="frame" x="64" y="0.0" width="280" height="44"/>
+                                                <rect key="frame" x="64" y="0.0" width="256" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="DX6-Vj-Ruk"/>
-                                                    <constraint firstAttribute="width" constant="280" id="JcM-XC-j25"/>
+                                                    <constraint firstAttribute="width" constant="256" id="JcM-XC-j25"/>
                                                     <constraint firstAttribute="height" constant="44" id="eY8-db-NUb"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
@@ -461,11 +464,11 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="s3B-69-C9P" userLabel="Last Name">
-                                                <rect key="frame" x="64" y="0.0" width="280" height="44"/>
+                                                <rect key="frame" x="64" y="0.0" width="256" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="Bfs-pN-Swu"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="Wry-1G-idO"/>
-                                                    <constraint firstAttribute="width" constant="280" id="ebD-wC-BOM"/>
+                                                    <constraint firstAttribute="width" constant="256" id="ebD-wC-BOM"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
@@ -496,9 +499,9 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hNG-Nm-qCN">
-                                                <rect key="frame" x="64" y="0.0" width="280" height="44"/>
+                                                <rect key="frame" x="64" y="0.0" width="256" height="44"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="280" id="KEf-Td-AUc"/>
+                                                    <constraint firstAttribute="width" constant="256" id="KEf-Td-AUc"/>
                                                     <constraint firstAttribute="height" constant="44" id="YAX-Ad-PBA"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="jag-4n-G9O"/>
                                                 </constraints>
@@ -531,11 +534,11 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone (optional)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iBK-Ao-bW7">
-                                                <rect key="frame" x="64" y="0.0" width="280" height="44"/>
+                                                <rect key="frame" x="64" y="0.0" width="256" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="8Rp-RX-Ned"/>
                                                     <constraint firstAttribute="height" constant="44" id="C2o-68-jUg"/>
-                                                    <constraint firstAttribute="width" constant="280" id="JLd-O1-lqu"/>
+                                                    <constraint firstAttribute="width" constant="256" id="JLd-O1-lqu"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
@@ -631,7 +634,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailField" destination="CNP-cs-02z" id="gjU-oy-DxQ"/>
+                        <outlet property="emailField" destination="hNG-Nm-qCN" id="HrZ-Le-ajH"/>
                         <outlet property="facebookRegisterLabel" destination="Ahz-Gl-mlU" id="htk-FZ-D2R"/>
                         <outlet property="firstNameField" destination="CNP-cs-02z" id="P0Q-ma-xtO"/>
                         <outlet property="lastNameField" destination="s3B-69-C9P" id="Gxr-qG-grK"/>

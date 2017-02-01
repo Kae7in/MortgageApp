@@ -8,6 +8,7 @@
 
 import UIKit
 
+let minNameLength = 4 // TODO: Move to shared file
 
 class RegisterInformationVC: UIViewController, UITextFieldDelegate {
     
@@ -19,10 +20,11 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var phoneTextField: UITextField!
     
     var facebookTapGesture: UITapGestureRecognizer?
-    
+
     override func viewDidLoad() {
         
         self.navigationController?.navigationBar.isTranslucent = false
+        
         // Construct facebook registration attributes
         let string = NSLocalizedString("Register with Facebook", comment: "Prompt for user to register with Faceobok")
         let attributeString = NSMutableAttributedString(string: string, attributes:
@@ -42,6 +44,15 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
         facebookRegisterLabel.addGestureRecognizer(facebookTapGesture!)
         
         addDoneButtonOnKeyboard()
+        
+        // Disable next button until fields are valid
+        nextButton.enable(enabled: false)
+        
+        // Add field validation to enable/disable fields
+        firstNameField.addTarget(self, action: #selector(textFieldEditingChanged), for: UIControlEvents.editingChanged)
+        lastNameField.addTarget(self, action: #selector(textFieldEditingChanged), for: UIControlEvents.editingChanged)
+        emailField.addTarget(self, action: #selector(textFieldEditingChanged), for: UIControlEvents.editingChanged)
+        phoneTextField.addTarget(self, action: #selector(textFieldEditingChanged), for: UIControlEvents.editingChanged)
         
         super.viewDidLoad()
     }
@@ -82,23 +93,30 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
         print(#function)
     }
     
-    public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool
-    {
-        print(#function)
-        return true
-    }
-    
-    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
-    {
-        print(#function)
-        return true
-    }
-    
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         textField.resignFirstResponder()
-        print(#function)
         return true
+    }
+    
+    func textFieldEditingChanged() {
+        
+        var valid = emailField.text?.isValidEmail()
+        
+        if (firstNameField.text?.lengthOfBytes(using: String.Encoding.utf8))! < minNameLength {
+            valid = false
+        }
+        
+        if (lastNameField.text?.lengthOfBytes(using: String.Encoding.utf8))! < minNameLength {
+            valid = false
+        }
+        
+        // TODO: We may want to simply pass the phone text in (e.g. 1-800 or ext. 123)
+        if (phoneTextField.text?.lengthOfBytes(using: String.Encoding.utf8))! > 0 {
+            valid = phoneTextField.text?.isValidPhone()
+        }
+
+        nextButton.enable(enabled: valid!)
     }
     
     // MARK: Helpers
