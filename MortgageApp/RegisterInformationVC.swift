@@ -112,7 +112,7 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
         }
         
         // TODO: We may want to simply pass the phone text in (e.g. 1-800 or ext. 123)
-        if (phoneTextField.text?.lengthOfBytes(using: String.Encoding.utf8))! > 0 {
+        if (!(phoneTextField.text?.isEmpty)!) {
             valid = phoneTextField.text?.isValidPhone()
         }
 
