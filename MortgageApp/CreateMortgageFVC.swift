@@ -19,8 +19,8 @@ class CreateMortgageFVC: FormViewController {
     var ref: FIRDatabaseReference!
     var formHasLoadedOnce = false
     var navBar: UINavigationBar!
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +44,7 @@ class CreateMortgageFVC: FormViewController {
         self.navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: UIApplication.shared.statusBarFrame.height + 44))
         navBar.isTranslucent = true
         self.view.addSubview(navBar)
-        let navItem = UINavigationItem(title: "Create Mortgage")
+        let navItem = UINavigationItem(title: "New Mortgage")
         let cancelItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(cancel))
         let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: #selector(done))
         navItem.leftBarButtonItem = cancelItem
@@ -58,14 +58,15 @@ class CreateMortgageFVC: FormViewController {
     
     func layoutForm() {
         self.form = Section("Basics"){ section in
-                var header = HeaderFooterView<UIView>(.class)
-                header.height = { self.navBar.frame.height }
-                section.header = header
+            var header = HeaderFooterView<UIView>(.class)
+            header.height = { self.navBar.frame.height }
+            section.header = header
             }
             <<< SegmentedRow<String>("segments") {
                 $0.options = ["Fixed Rate", "Adjustable Rate"]
                 $0.value = "Fixed Rate"
             }
+            +++ Section("BASICS")
             <<< TextRow(){ row in
                 row.title = "Mortgage Name"
                 row.placeholder = "1207 S Washington"
@@ -107,11 +108,11 @@ class CreateMortgageFVC: FormViewController {
                 formatter.locale = .current
                 formatter.dateStyle = .short
                 $0.dateFormatter = formatter
-            }
-            .onChange({ (row) in
-                // TODO: Update all extra payments (if any) to reflect this change
-            })
-            +++ Section("Additional Details")
+                }
+                .onChange({ (row) in
+                    // TODO: Update all extra payments (if any) to reflect this change
+                })
+            +++ Section("ADDITIONAL DETAILS")
             <<< DecimalRow(){
                 $0.title = "Home Insurance (monthly)"
                 $0.placeholder = "$100"
@@ -134,7 +135,7 @@ class CreateMortgageFVC: FormViewController {
                 row.title = "Blah"
                 row.placeholder = "Blah"
             }
-            +++ Section("Additional Payment History"){
+            +++ Section("PREVIOUS EXTRA PAYMENTS"){
                 // TODO: Enable swipe to delete/edit actions on these rows using editActionsForRowAtIndexPath UITableViewDelegate method
                 $0.tag = "additional_payment_history"
                 for extra in self.mortgage.extras {
@@ -143,9 +144,11 @@ class CreateMortgageFVC: FormViewController {
                         row.value = String(extra["extraAmount"] as! Int)  // TODO: Show start date and/or end date instead of amount
                     }
                 }
-            }
-            form.last! <<< ButtonRow("Add Extra Payment") { (row: ButtonRow) in
-                row.title = row.tag
+        }
+        form.last! <<< CustomButtonRow() { row in
+            row.value = ButtonData(title: "Add Extra Payment", action: ClosureSleeve({
+                self.showPreviousExtraPayments()
+            }))
             }
             .onCellSelection({ (cell, row) in
                 self.showPreviousExtraPayments()
@@ -186,23 +189,22 @@ class CreateMortgageFVC: FormViewController {
     
     func validInput() -> Bool {
         // Handle unused variables
-//        let valuesDictionary = self.form.values()
-//
-//        let name: String? = valuesDictionary["mortgage_name"] as? String
-//        let principal: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["sale_price"] as! Double)
-//        let downPayment: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["down_payment"] as! Double)
-//        let loanTerm: Int? = valuesDictionary["loan_term"] as? Int
-//        let interestRate: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["interest_rate"] as! Double)
-//        let startDate: Date? = valuesDictionary["start_date"] as? Date
-//        let backItem = UIBarButtonItem()
-//        backItem.title = ""
-//        navigationItem.backBarButtonItem = backItem
-
+        //        let valuesDictionary = self.form.values()
+        //
+        //        let name: String? = valuesDictionary["mortgage_name"] as? String
+        //        let principal: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["sale_price"] as! Double)
+        //        let downPayment: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["down_payment"] as! Double)
+        //        let loanTerm: Int? = valuesDictionary["loan_term"] as? Int
+        //        let interestRate: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["interest_rate"] as! Double)
+        //        let startDate: Date? = valuesDictionary["start_date"] as? Date
+        //        let backItem = UIBarButtonItem()
+        //        backItem.title = ""
+        //        navigationItem.backBarButtonItem = backItem
+        
         // TODO: Validate these values
         
         return true
     }
-    
     
     func createAndSaveMortgage() -> Mortgage {
         // Extract data from form
@@ -236,11 +238,10 @@ class CreateMortgageFVC: FormViewController {
         self.present(controller, animated: true) {
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
 }
 
 

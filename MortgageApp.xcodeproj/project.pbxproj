@@ -57,6 +57,11 @@
 		1AF882D81E1AC013000CA84F /* MortgageListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF882D71E1AC013000CA84F /* MortgageListVC.swift */; };
 		1AF882D91E1AC013000CA84F /* MortgageListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF882D71E1AC013000CA84F /* MortgageListVC.swift */; };
 		1AF882DA1E1AC013000CA84F /* MortgageListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF882D71E1AC013000CA84F /* MortgageListVC.swift */; };
+		831031F01E43D69E002A88F0 /* CustomButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 831031EF1E43D69E002A88F0 /* CustomButtonCell.xib */; };
+		831031F11E43D69E002A88F0 /* CustomButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 831031EF1E43D69E002A88F0 /* CustomButtonCell.xib */; };
+		831031F31E43D73D002A88F0 /* CustomButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831031F21E43D73D002A88F0 /* CustomButtonCell.swift */; };
+		831031F71E43DEBC002A88F0 /* CustomButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831031F21E43D73D002A88F0 /* CustomButtonCell.swift */; };
+		831031F81E43E2EE002A88F0 /* CustomButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831031F21E43D73D002A88F0 /* CustomButtonCell.swift */; };
 		831AB22C1E392FF400863BA0 /* MortgageCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D4571DF86CC00093A411 /* MortgageCalculator.swift */; };
 		831AB22D1E392FF500863BA0 /* MortgageCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D4571DF86CC00093A411 /* MortgageCalculator.swift */; };
 		831AB22E1E392FF800863BA0 /* Mortgage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D45B1DF895070093A411 /* Mortgage.swift */; };
@@ -187,6 +192,8 @@
 		361665E4A68BCB7623A2CE65 /* Pods-MortgageApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MortgageApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MortgageApp/Pods-MortgageApp.debug.xcconfig"; sourceTree = "<group>"; };
 		55F65F6B9B39C856DCD36446 /* Pods-MortgageApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MortgageApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MortgageApp/Pods-MortgageApp.release.xcconfig"; sourceTree = "<group>"; };
 		6C4CB58B544BA95AAC291678 /* Pods-MortgageAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MortgageAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MortgageAppUITests/Pods-MortgageAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		831031EF1E43D69E002A88F0 /* CustomButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomButtonCell.xib; sourceTree = "<group>"; };
+		831031F21E43D73D002A88F0 /* CustomButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonCell.swift; sourceTree = "<group>"; };
 		833F9AE91E3956BF0050D9D8 /* UIColor+themes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+themes.swift"; sourceTree = "<group>"; };
 		833F9AED1E3956F10050D9D8 /* UIViewController+keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+keyboard.swift"; sourceTree = "<group>"; };
 		833F9AF11E3957580050D9D8 /* UNNotificationRequest+payments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UNNotificationRequest+payments.swift"; sourceTree = "<group>"; };
@@ -443,6 +450,8 @@
 			children = (
 				83A1381F1E3BFCF200F67EBF /* CreateMortgage.storyboard */,
 				1A410D701E2EE8660007B5C0 /* CreateMortgageFVC.swift */,
+				831031EF1E43D69E002A88F0 /* CustomButtonCell.xib */,
+				831031F21E43D73D002A88F0 /* CustomButtonCell.swift */,
 			);
 			name = CreateMortgage;
 			sourceTree = "<group>";
@@ -614,6 +623,7 @@
 				1A36D4331DF86AF40093A411 /* LaunchScreen.storyboard in Resources */,
 				83A138291E3BFEF500F67EBF /* Login.storyboard in Resources */,
 				83A138101E3BCDA800F67EBF /* Amortization.storyboard in Resources */,
+				831031F01E43D69E002A88F0 /* CustomButtonCell.xib in Resources */,
 				1A5BB7FF1E16C3E400B55D11 /* GoogleService-Info.plist in Resources */,
 				83A138171E3BF4F900F67EBF /* MortgageDetail.storyboard in Resources */,
 				83A138141E3BEF6800F67EBF /* ExtraPayments.storyboard in Resources */,
@@ -638,6 +648,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831031F11E43D69E002A88F0 /* CustomButtonCell.xib in Resources */,
 				1A5BB8011E16C3E400B55D11 /* GoogleService-Info.plist in Resources */,
 				1A0D37371E32ABAB005B9114 /* Assets.xcassets in Resources */,
 				83A138181E3BF4F900F67EBF /* MortgageDetail.storyboard in Resources */,
@@ -826,6 +837,7 @@
 				838774E91E424850008079F2 /* UserAccount.swift in Sources */,
 				1AB349BF1E00A0AD00E76049 /* View6.swift in Sources */,
 				1AB349AF1E006DDD00E76049 /* View1.swift in Sources */,
+				831031F31E43D73D002A88F0 /* CustomButtonCell.swift in Sources */,
 				83D69AA51E3FB1ED00905018 /* RegisterInformationVC.swift in Sources */,
 				1AB349B71E0096F800E76049 /* View2.swift in Sources */,
 				1A7DE08D1E099EB300E29CED /* ExtraPaymentVC.swift in Sources */,
@@ -840,6 +852,7 @@
 				831AB2381E39308100863BA0 /* MortgageDetailVC.swift in Sources */,
 				838774E61E4245E3008079F2 /* FormLimits.swift in Sources */,
 				831AB2321E39300000863BA0 /* AppDelegate.swift in Sources */,
+				831031F81E43E2EE002A88F0 /* CustomButtonCell.swift in Sources */,
 				838774EE1E424881008079F2 /* DictionaryConvertible.swift in Sources */,
 				831AB23A1E3930A700863BA0 /* IntroPVC.swift in Sources */,
 				838774EA1E424850008079F2 /* UserAccount.swift in Sources */,
@@ -897,6 +910,7 @@
 				831AB2351E39301800863BA0 /* RegisterCredentialsVC.swift in Sources */,
 				1A410D761E2EEA310007B5C0 /* CreateMortgageFVC.swift in Sources */,
 				1A1427EF1E306ADA00D52F90 /* SettingsVC.swift in Sources */,
+				831031F71E43DEBC002A88F0 /* CustomButtonCell.swift in Sources */,
 				838774E51E4245D2008079F2 /* String+validate.swift in Sources */,
 				836C856B1E41091800C01777 /* RoundedButton.swift in Sources */,
 				831AB2411E3930AD00863BA0 /* View5.swift in Sources */,
