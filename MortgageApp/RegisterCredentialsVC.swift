@@ -93,7 +93,8 @@ class RegisterCredentialsVC: UIViewController, UITextFieldDelegate {
 
                 self.showCreateMortgage()
             } else if error != nil {
-                // TODO: Implement proper error response
+                let controller = UIAlertController(title: NSLocalizedString("Error", comment: "Generic error"), message: error?.localizedDescription ?? NSLocalizedString("Unknown error", comment: "An unknown error occurred"), preferredStyle: UIAlertControllerStyle.alert)
+                self.present(controller, animated: true, completion: {})
             }
         })
     }
