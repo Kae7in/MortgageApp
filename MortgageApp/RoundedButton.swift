@@ -19,6 +19,11 @@ class RoundedButton:UIButton {
         removeHighlight()
     }
     
+    func enable(enabled: Bool) {
+        self.isEnabled = enabled
+        backgroundColor = enabled ? UIColor.primaryButton() : UIColor.secondary()
+    }
+    
     func highlight() {
         backgroundColor = UIColor.primaryButtonHiglight()
     }

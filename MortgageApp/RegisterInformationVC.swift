@@ -8,18 +8,22 @@
 
 import UIKit
 
-
 class RegisterInformationVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nextButton: RoundedButton!
     @IBOutlet weak var facebookRegisterLabel: UILabel!
+    @IBOutlet weak var firstNameField: UITextField!
+    @IBOutlet weak var lastNameField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     
     var facebookTapGesture: UITapGestureRecognizer?
-    
+    var userAccount: UserAccount?
+
     override func viewDidLoad() {
         
         self.navigationController?.navigationBar.isTranslucent = false
+        
         // Construct facebook registration attributes
         let string = NSLocalizedString("Register with Facebook", comment: "Prompt for user to register with Faceobok")
         let attributeString = NSMutableAttributedString(string: string, attributes:
@@ -39,6 +43,16 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
         facebookRegisterLabel.addGestureRecognizer(facebookTapGesture!)
         
         addDoneButtonOnKeyboard()
+        hideKeyboardWhenTappedAround()
+        
+        // Disable next button until fields are valid
+        nextButton.enable(enabled: false)
+        
+        // Add field validation to enable/disable fields
+        firstNameField.addTarget(self, action: #selector(textFieldEditingChanged), for: UIControlEvents.editingChanged)
+        lastNameField.addTarget(self, action: #selector(textFieldEditingChanged), for: UIControlEvents.editingChanged)
+        emailField.addTarget(self, action: #selector(textFieldEditingChanged), for: UIControlEvents.editingChanged)
+        phoneTextField.addTarget(self, action: #selector(textFieldEditingChanged), for: UIControlEvents.editingChanged)
         
         super.viewDidLoad()
     }
@@ -63,6 +77,21 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
             // TODO: pass email through
         } else if segue.identifier == "toRegisterCredentials" {
             let controller = segue.destination as! RegisterCredentialsVC
+            
+            if userAccount == nil {
+                // Create a new account object since once does not exist yet
+                userAccount = UserAccount(firstName: firstNameField.text!, lastName: lastNameField.text!, email: emailField.text!, phone: phoneTextField.text!)
+            } else {
+                // Update properties as they may have been modified
+                userAccount?.firstName = firstNameField.text!
+                userAccount?.lastName = lastNameField.text!
+                userAccount?.email = emailField.text!
+                userAccount?.phone = phoneTextField.text!
+            }
+            
+            // Pass the user account through for further processing
+            controller.userAccount = userAccount
+
             controller.modalTransitionStyle = UIModalTransitionStyle.coverVertical
         }
     }
@@ -76,26 +105,29 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
     public func textFieldDidBeginEditing(_ textField: UITextField)
     {
         textField.becomeFirstResponder()
-        print(#function)
-    }
-    
-    public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool
-    {
-        print(#function)
-        return true
-    }
-    
-    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
-    {
-        print(#function)
-        return true
     }
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         textField.resignFirstResponder()
-        print(#function)
         return true
+    }
+    
+    func textFieldEditingChanged() {
+        
+        var valid = emailField.text?.isValidEmail()
+        
+        if (!(firstNameField.text?.isValidUsername())!) {
+            valid = false
+        }
+        
+        if (!(lastNameField.text?.isValidUsername())!) {
+            valid = false
+        }
+        
+        // Bypassing validation of phone #s since they could vary significantly.
+
+        nextButton.enable(enabled: valid!)
     }
     
     // MARK: Helpers
