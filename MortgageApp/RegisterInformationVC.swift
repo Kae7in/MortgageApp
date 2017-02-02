@@ -125,10 +125,7 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
             valid = false
         }
         
-        // TODO: We may want to simply pass the phone text in (e.g. 1-800 or ext. 123)
-        if (!(phoneTextField.text?.isEmpty)!) {
-            valid = phoneTextField.text?.isValidPhone()
-        }
+        // Bypassing validation of phone #s since they could vary significantly.
 
         nextButton.enable(enabled: valid!)
     }
