@@ -64,25 +64,16 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     public func textFieldDidBeginEditing(_ textField: UITextField)
     {
         textField.becomeFirstResponder()
-        print(#function)
-    }
-    
-    public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool
-    {
-        print(#function)
-        return true
-    }
-    
-    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
-    {
-        print(#function)
-        return true
     }
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         textField.resignFirstResponder()
-        print(#function)
+        
+        if textField == emailField {
+            passwordField.becomeFirstResponder()
+        }
+        
         return true
     }
     
@@ -99,10 +90,18 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: Actions
+    @IBAction func signInButtonTouchDown(_ sender: Any) {
+        signInButton.highlight()
+    }
+    
     @IBAction func loginButtonAction(_ sender: UIButton) {
+        signInButton.removeHighlight()
         
         let email: String = emailField.text!
         let password: String = passwordField.text!
+        
+        // Dismiss keyboard
+        view.endEditing(true)
         
         // Attempt Firebase user sign-in
         FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
@@ -113,6 +112,11 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 appDelegate.window!.rootViewController = rootViewController
             } else if error != nil {                
                 let controller = UIAlertController(title: NSLocalizedString("Error", comment: "Generic error"), message: error?.localizedDescription ?? NSLocalizedString("Unknown error", comment: "An unknown error occurred"), preferredStyle: UIAlertControllerStyle.alert)
+                
+                controller.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style:UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
+                    controller.dismiss(animated: true, completion: nil)
+                }))
+                
                 self.present(controller, animated: true, completion: {})
             }
         })

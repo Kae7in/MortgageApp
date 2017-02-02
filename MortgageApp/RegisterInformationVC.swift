@@ -110,6 +110,15 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         textField.resignFirstResponder()
+        
+        if textField == firstNameField {
+            lastNameField.becomeFirstResponder()
+        } else if textField == lastNameField {
+            emailField.becomeFirstResponder()
+        } else if textField == emailField {
+            phoneTextField.becomeFirstResponder()
+        }
+        
         return true
     }
     
