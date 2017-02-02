@@ -111,8 +111,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 appDelegate.window!.rootViewController = rootViewController
-            } else if error != nil {
-                // TODO
+            } else if error != nil {                
+                let controller = UIAlertController(title: NSLocalizedString("Error", comment: "Generic error"), message: error?.localizedDescription ?? NSLocalizedString("Unknown error", comment: "An unknown error occurred"), preferredStyle: UIAlertControllerStyle.alert)
+                self.present(controller, animated: true, completion: {})
             }
         })
     }
