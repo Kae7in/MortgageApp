@@ -73,6 +73,9 @@ class RegisterCredentialsVC: UIViewController, UITextFieldDelegate {
     @IBAction func submitButtonAction(_ sender: Any) {
         createAccountButton.removeHighlight()
         
+        // Dismiss keyboard
+        view.endEditing(true)
+
         assert(userAccount != nil, "A user account should be defined here")
         userAccount?.username = usernameField.text!
 
@@ -93,7 +96,11 @@ class RegisterCredentialsVC: UIViewController, UITextFieldDelegate {
 
                 self.showCreateMortgage()
             } else if error != nil {
-                // TODO: Implement proper error response
+                let controller = UIAlertController(title: NSLocalizedString("Error", comment: "Generic error"), message: error?.localizedDescription ?? NSLocalizedString("Unknown error", comment: "An unknown error occurred"), preferredStyle: UIAlertControllerStyle.alert)
+                controller.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style:UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
+                    controller.dismiss(animated: true, completion: nil)
+                }))                
+                self.present(controller, animated: true, completion: {})
             }
         })
     }
@@ -107,6 +114,13 @@ class RegisterCredentialsVC: UIViewController, UITextFieldDelegate {
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         textField.resignFirstResponder()
+        
+        if textField == usernameField {
+            passwordField.becomeFirstResponder()
+        } else if textField == passwordField {
+            confirmPasswordField.becomeFirstResponder()
+        }
+        
         return true
     }
     

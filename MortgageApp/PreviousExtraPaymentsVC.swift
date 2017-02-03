@@ -27,7 +27,7 @@ class PreviousExtraPaymentsVC: FormViewController {
         self.navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: UIApplication.shared.statusBarFrame.height + 44))
         navBar.isTranslucent = true
         self.view.addSubview(navBar)
-        let navItem = UINavigationItem(title: "Extra Payments")
+        let navItem = UINavigationItem(title: "Previous Extra Payment")
         let cancelItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(cancel))
         let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: #selector(done))
         navItem.leftBarButtonItem = cancelItem
@@ -49,7 +49,8 @@ class PreviousExtraPaymentsVC: FormViewController {
                 $0.options = ["One Time", "Recurring"]
                 $0.value = "One Time"
             }
-            +++ Section(header: "Extra Payments", footer: "Please provide EXACT dates and amounts.")
+            +++ Section(header: "You must accurately add extra payments you’ve made in the past in order to correctly track the progress of your mortgage.", footer: "")
+            +++ Section(header: "Extra Payment", footer: "Please provide EXACT dates and amounts.")
             <<< IntRow(){
                 $0.title = "Payment Amount"
                 $0.tag = "payment_amount"
@@ -130,4 +131,14 @@ class PreviousExtraPaymentsVC: FormViewController {
         super.didReceiveMemoryWarning()
     }
 
+    // MARK: UITableViewDelegate
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+    {
+        if indexPath.section == 0 && indexPath.row == 0 {
+            cell.backgroundColor = UIColor.clear
+            // TODO: Attempting to remove the line seperator for this cell only.
+            // This is something that may need to be done when the cell is created.
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 1000, bottom: 0, right: 0)
+        }
+    }
 }

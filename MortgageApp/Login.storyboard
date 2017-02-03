@@ -64,7 +64,7 @@
                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                 <connections>
-                                                    <outlet property="delegate" destination="edh-Hy-vIH" id="vja-Vm-YDe"/>
+                                                    <outlet property="delegate" destination="MYS-gU-qp5" id="MH4-C0-bTV"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
@@ -137,6 +137,7 @@
                                 <state key="normal" title="SIGN IN"/>
                                 <connections>
                                     <action selector="loginButtonAction:" destination="MYS-gU-qp5" eventType="touchUpInside" id="bje-XQ-5He"/>
+                                    <action selector="signInButtonTouchDown:" destination="MYS-gU-qp5" eventType="touchDown" id="g5k-iH-6MO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udQ-eU-nP7">
@@ -159,13 +160,13 @@
                                 <rect key="frame" x="69" y="498" width="237" height="61"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="DON'T HAVE AN ACCOUNT?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXp-AC-Z2l">
-                                        <rect key="frame" x="0.0" y="0.0" width="237" height="21.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="237" height="22"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHR-8f-fuo">
-                                        <rect key="frame" x="87" y="21.5" width="63" height="39.5"/>
+                                        <rect key="frame" x="87" y="22" width="63" height="39"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <state key="normal" title="Sign up">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -221,7 +222,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4IM-uS-f7C">
-                                <rect key="frame" x="127.5" y="50" width="120" height="84"/>
+                                <rect key="frame" x="128" y="50" width="120" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="amx-7f-S7P"/>
                                     <constraint firstAttribute="width" constant="120" id="oTM-yZ-vcd"/>
@@ -231,7 +232,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4BF-N6-v82">
-                                <rect key="frame" x="27.5" y="203" width="320" height="165"/>
+                                <rect key="frame" x="28" y="203" width="320" height="165"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VEj-i1-jDk" userLabel="Username Container" customClass="BorderedInputView" customModule="MortgageApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
@@ -254,7 +255,7 @@
                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="namePhonePad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                 <connections>
-                                                    <outlet property="delegate" destination="edh-Hy-vIH" id="G5n-Sm-49u"/>
+                                                    <outlet property="delegate" destination="sHa-wd-unR" id="2KM-uZ-PZk"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
@@ -289,7 +290,7 @@
                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                                 <connections>
-                                                    <outlet property="delegate" destination="edh-Hy-vIH" id="yFD-N7-EaH"/>
+                                                    <outlet property="delegate" destination="sHa-wd-unR" id="aXT-p8-r9K"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
@@ -324,7 +325,7 @@
                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                                 <connections>
-                                                    <outlet property="delegate" destination="edh-Hy-vIH" id="jTw-wp-gTU"/>
+                                                    <outlet property="delegate" destination="sHa-wd-unR" id="g5C-g8-JR6"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
@@ -348,7 +349,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOq-iB-m6R" customClass="RoundedButton" customModule="MortgageApp" customModuleProvider="target">
-                                <rect key="frame" x="72.5" y="397" width="230" height="44"/>
+                                <rect key="frame" x="73" y="397" width="230" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="230" id="J5J-bB-kxq"/>
                                     <constraint firstAttribute="height" constant="44" id="y01-Ft-gmH"/>
@@ -407,7 +408,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ufd-gx-woE">
-                                <rect key="frame" x="127.5" y="50" width="120" height="84"/>
+                                <rect key="frame" x="128" y="50" width="120" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="akh-82-jpl"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="gtu-1i-amn"/>
@@ -417,7 +418,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nLX-hy-v2r">
-                                <rect key="frame" x="27.5" y="203" width="320" height="220"/>
+                                <rect key="frame" x="28" y="203" width="320" height="220"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZp-5W-HlG" userLabel="First Name Container" customClass="BorderedInputView" customModule="MortgageApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
@@ -569,7 +570,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frP-7l-LwK" customClass="RoundedButton" customModule="MortgageApp" customModuleProvider="target">
-                                <rect key="frame" x="81.5" y="452" width="212" height="44"/>
+                                <rect key="frame" x="82" y="451" width="212" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="212" id="Llx-Vk-D87"/>
                                     <constraint firstAttribute="height" constant="44" id="zFA-AY-3pt"/>
@@ -584,7 +585,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahz-Gl-mlU">
-                                <rect key="frame" x="66" y="519" width="243" height="20.5"/>
+                                <rect key="frame" x="66" y="518" width="243" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="243" id="CcH-HM-9x3"/>
                                 </constraints>
@@ -599,16 +600,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ifE-YC-LAd">
-                                <rect key="frame" x="56.5" y="564.5" width="262" height="55.5"/>
+                                <rect key="frame" x="57" y="564" width="262" height="56"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALREADY HAVE AN ACCOUNT?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1E-xT-1dV">
-                                        <rect key="frame" x="0.0" y="0.0" width="262" height="21.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="262" height="22"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWN-kY-IPk">
-                                        <rect key="frame" x="103" y="21.5" width="56" height="34"/>
+                                        <rect key="frame" x="103" y="22" width="56" height="34"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <state key="normal" title="Sign in">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
