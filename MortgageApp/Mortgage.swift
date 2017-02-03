@@ -17,7 +17,7 @@ class Mortgage: NSObject {
     
     /// Number of months the loan originated with (e.g. 30 year mortgage --> 360 months)
     var loanTermMonths: Int = 360
-    
+
     /// Beginning principal amount of the loan minus the down payment; does not change
     var salePrice: NSDecimalNumber = 200000
     
@@ -109,6 +109,18 @@ class Mortgage: NSObject {
         self.monthlyPayment = mortgage.monthlyPayment
     }
     
+    /// Update loan term based on years
+    func setLoanTerm(years: Int) {
+        self.loanTermMonths = years * 12  // TODO: Can we extract the # of months in a year from NSCalender?
+    }
+    
+    /// Updates the down payment
+    func update(downPayment: NSDecimalNumber, principal: NSDecimalNumber) {
+        
+        // TODO: Define magic number 100
+        let downPercent = downPayment.dividing(by: principal).multiplying(by: NSDecimalNumber(value: 100))
+        self.downPayment = downPercent.stringValue + "%" // TODO: Formatting should be contained in a view model class
+    }
     
     /// The sale price of the loan minus the down payment
     func loanAmount() -> NSDecimalNumber {

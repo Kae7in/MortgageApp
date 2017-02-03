@@ -56,6 +56,7 @@ class CreateMortgageFVC: FormViewController {
     }
     
     
+    
     func layoutForm() {
         self.form = Section("Basics"){ section in
             var header = HeaderFooterView<UIView>(.class)
@@ -70,12 +71,12 @@ class CreateMortgageFVC: FormViewController {
             <<< TextRow(){ row in
                 row.title = "Mortgage Name"
                 row.placeholder = "1207 S Washington"
-                row.tag = "mortgage_name"
+                row.tag = MortgageFormValidator.mortgageNameField
             }
             <<< DecimalRow(){
                 $0.title = "Sale Price"
                 $0.placeholder = "$200,000"
-                $0.tag = "sale_price"
+                $0.tag = MortgageFormValidator.salePriceField
                 let formatter = CurrencyFormatter()
                 formatter.locale = .current
                 formatter.numberStyle = .currency
@@ -84,7 +85,7 @@ class CreateMortgageFVC: FormViewController {
             <<< DecimalRow() {
                 $0.title = "Down Payment"
                 $0.placeholder = "$20,000"
-                $0.tag = "down_payment"
+                $0.tag = MortgageFormValidator.downPaymentField
                 let formatter = CurrencyFormatter()
                 formatter.locale = .current
                 formatter.numberStyle = .currency
@@ -93,17 +94,17 @@ class CreateMortgageFVC: FormViewController {
             <<< IntRow() {
                 $0.title = "Loan Term (years)"
                 $0.placeholder = "30"
-                $0.tag = "loan_term"
+                $0.tag = MortgageFormValidator.loanTermYearsField
             }
             <<< DecimalRow() {
                 $0.title = "Interest Rate"
                 $0.placeholder = "3.6%"
-                $0.tag = "interest_rate"
+                $0.tag = MortgageFormValidator.interestRateField
             }
             <<< DateRow() {
                 $0.title = "Start Date"
                 $0.value = Date()
-                $0.tag = "start_date"
+                $0.tag = MortgageFormValidator.startDateField
                 let formatter = DateFormatter()
                 formatter.locale = .current
                 formatter.dateStyle = .short
@@ -116,7 +117,7 @@ class CreateMortgageFVC: FormViewController {
             <<< DecimalRow(){
                 $0.title = "Home Insurance (monthly)"
                 $0.placeholder = "$100"
-                $0.tag = "home_insurance"
+                $0.tag = MortgageFormValidator.homeInsuranceCostField
                 let formatter = CurrencyFormatter()
                 formatter.locale = .current
                 formatter.numberStyle = .currency
@@ -125,7 +126,7 @@ class CreateMortgageFVC: FormViewController {
             <<< DecimalRow() {
                 $0.title = "Property Tax Rate"
                 $0.placeholder = "2.38%"
-                $0.tag = "property_tax"
+                $0.tag = MortgageFormValidator.propertyTaxRateField
             }
             +++ Section("Adjustable Rate Details") {
                 $0.hidden = "$segments != 'Adjustable Rate'"
@@ -188,42 +189,60 @@ class CreateMortgageFVC: FormViewController {
     
     
     func validInput() -> Bool {
-        // Handle unused variables
-        //        let valuesDictionary = self.form.values()
-        //
-        //        let name: String? = valuesDictionary["mortgage_name"] as? String
-        //        let principal: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["sale_price"] as! Double)
-        //        let downPayment: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["down_payment"] as! Double)
-        //        let loanTerm: Int? = valuesDictionary["loan_term"] as? Int
-        //        let interestRate: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["interest_rate"] as! Double)
-        //        let startDate: Date? = valuesDictionary["start_date"] as? Date
-        //        let backItem = UIBarButtonItem()
-        //        backItem.title = ""
-        //        navigationItem.backBarButtonItem = backItem
+        var result = false
         
-        // TODO: Validate these values
+        do {
+            try MortgageFormValidator.validateFormFields(dictionary: self.form.values())
+            result = true
+        } catch MortgageFormError.invalidType(let field) {
+            print("Invalid type in field \(field)")
+        } catch MortgageFormError.invalidLength(let length, let field) {
+            print("Invalid length in field \(field) needs \(length)")
+        } catch MortgageFormError.invalidText(let field) {
+            print("Invalid text in field \(field)")
+        } catch MortgageFormError.outOfRangeDouble(let value, let field) {
+            print("Invalid range in field \(field) needs \(value)")
+        } catch MortgageFormError.outOfRangeInt(let value, let field) {
+            print("Invalid range in field \(field) needs \(value)")
+        } catch MortgageFormError.outOfRangeDate(let field) {
+            print("Invalidate date in field \(field)")
+        } catch {
+            // TODO: Review lengthy post describing how to correct the error with "swift enclosing catch is not exhaustive"
+            // All enum types are handled.  Adding an empty 'catch' for now.
+            // http://stackoverflow.com/questions/30720497/swift-do-try-catch-syntax
+        }
         
-        return true
+        return result
     }
     
     func createAndSaveMortgage() -> Mortgage {
+        
+        // TODO: Do we want to instantiate the mortage object here?  mortgage = Mortgage()
+        // Perhaps not in case there are extra payments already entered?
+
+        // Verify we are validating data first
+        assert(validInput())
+        
         // Extract data from form
         let valuesDictionary = self.form.values()
-        let name: String? = valuesDictionary["mortgage_name"] as? String
-        let principal: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["sale_price"] as! Double)
-        let downPayment: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["down_payment"] as! Double)
-        let loanTerm: Int? = valuesDictionary["loan_term"] as? Int
-        let interestRate: NSDecimalNumber? = NSDecimalNumber(value: valuesDictionary["interest_rate"] as! Double)
-        let startDate: Date? = valuesDictionary["start_date"] as? Date
+        let name = valuesDictionary[MortgageFormValidator.mortgageNameField] as! String
+        let principal = NSDecimalNumber(value: valuesDictionary[MortgageFormValidator.salePriceField] as! Double)
+        let downPayment = NSDecimalNumber(value: valuesDictionary[MortgageFormValidator.downPaymentField] as! Double)
+        let loanTermYears = valuesDictionary[MortgageFormValidator.loanTermYearsField] as! Int
+        let interestRate = NSDecimalNumber(value: valuesDictionary[MortgageFormValidator.interestRateField] as! Double)
+        let startDate = valuesDictionary[MortgageFormValidator.startDateField] as! Date
+        let homeInsuranceCost = NSDecimalNumber(value: valuesDictionary[MortgageFormValidator.homeInsuranceCostField] as! Double)
+        let propertyTaxRate = NSDecimalNumber(value: valuesDictionary[MortgageFormValidator.propertyTaxRateField] as! Double)
         
         // Assign data to mortgage instance properties
-        self.mortgage.name = name!
-        self.mortgage.salePrice = principal!
-        self.mortgage.interestRate = interestRate!
-        self.mortgage.loanTermMonths = loanTerm! * 12
-        let downPercent: NSDecimalNumber? = downPayment?.dividing(by: principal!).multiplying(by: NSDecimalNumber(value: 100))
-        self.mortgage.downPayment = downPercent!.stringValue + "%"
-        self.mortgage.startDate = startDate!
+        mortgage.name = name
+        mortgage.salePrice = principal
+        mortgage.interestRate = interestRate
+        mortgage.startDate = startDate
+        mortgage.setLoanTerm(years: loanTermYears)
+        mortgage.update(downPayment: downPayment, principal: principal)
+        mortgage.homeInsurance = homeInsuranceCost
+        mortgage.propertyTaxRate = propertyTaxRate
         
         self.mortgage.save()
         
@@ -233,7 +252,7 @@ class CreateMortgageFVC: FormViewController {
     private func showPreviousExtraPayments() {
         let storyboard = UIStoryboard.init(name: "PreviousExtraPayments", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "PreviousExtraPaymentsVC") as! PreviousExtraPaymentsVC
-        self.mortgage.startDate = self.form.rowBy(tag: "start_date")?.baseValue as! Date  // TODO: Why are we modifying the mortgate object here and now?
+        self.mortgage.startDate = self.form.rowBy(tag: MortgageFormValidator.startDateField)?.baseValue as! Date  // TODO: Why are we modifying the mortgate object here and now?
         controller.mortgage = self.mortgage
         self.present(controller, animated: true) {
         }

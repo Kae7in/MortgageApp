@@ -62,6 +62,10 @@
 		831031F31E43D73D002A88F0 /* CustomButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831031F21E43D73D002A88F0 /* CustomButtonCell.swift */; };
 		831031F71E43DEBC002A88F0 /* CustomButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831031F21E43D73D002A88F0 /* CustomButtonCell.swift */; };
 		831031F81E43E2EE002A88F0 /* CustomButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831031F21E43D73D002A88F0 /* CustomButtonCell.swift */; };
+		831124791E44DBC200A6F09B /* MortgageFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831124781E44DBC200A6F09B /* MortgageFormValidator.swift */; };
+		8311247A1E44DBC200A6F09B /* MortgageFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831124781E44DBC200A6F09B /* MortgageFormValidator.swift */; };
+		8311247B1E44DBC200A6F09B /* MortgageFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831124781E44DBC200A6F09B /* MortgageFormValidator.swift */; };
+		8311247D1E44FEEA00A6F09B /* MortgageFormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8311247C1E44FEEA00A6F09B /* MortgageFormValidatorTests.swift */; };
 		831AB22C1E392FF400863BA0 /* MortgageCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D4571DF86CC00093A411 /* MortgageCalculator.swift */; };
 		831AB22D1E392FF500863BA0 /* MortgageCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D4571DF86CC00093A411 /* MortgageCalculator.swift */; };
 		831AB22E1E392FF800863BA0 /* Mortgage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A36D45B1DF895070093A411 /* Mortgage.swift */; };
@@ -194,6 +198,8 @@
 		6C4CB58B544BA95AAC291678 /* Pods-MortgageAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MortgageAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MortgageAppUITests/Pods-MortgageAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		831031EF1E43D69E002A88F0 /* CustomButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomButtonCell.xib; sourceTree = "<group>"; };
 		831031F21E43D73D002A88F0 /* CustomButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonCell.swift; sourceTree = "<group>"; };
+		831124781E44DBC200A6F09B /* MortgageFormValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MortgageFormValidator.swift; sourceTree = "<group>"; };
+		8311247C1E44FEEA00A6F09B /* MortgageFormValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MortgageFormValidatorTests.swift; sourceTree = "<group>"; };
 		833F9AE91E3956BF0050D9D8 /* UIColor+themes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+themes.swift"; sourceTree = "<group>"; };
 		833F9AED1E3956F10050D9D8 /* UIViewController+keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+keyboard.swift"; sourceTree = "<group>"; };
 		833F9AF11E3957580050D9D8 /* UNNotificationRequest+payments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UNNotificationRequest+payments.swift"; sourceTree = "<group>"; };
@@ -288,6 +294,7 @@
 				1A36D43D1DF86AF40093A411 /* MortgageAppTests.swift */,
 				1A36D43F1DF86AF40093A411 /* Info.plist */,
 				83B09B821E425456001BE368 /* UserAccountTests.swift */,
+				8311247C1E44FEEA00A6F09B /* MortgageFormValidatorTests.swift */,
 			);
 			path = MortgageAppTests;
 			sourceTree = SOURCE_ROOT;
@@ -414,6 +421,7 @@
 			children = (
 				834FA9B01E42372C000FDE09 /* FormLimits.swift */,
 				838774EC1E424881008079F2 /* DictionaryConvertible.swift */,
+				831124781E44DBC200A6F09B /* MortgageFormValidator.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -813,6 +821,7 @@
 				1A5BB8031E16C9D000B55D11 /* LoginVC.swift in Sources */,
 				833F9AF21E3957580050D9D8 /* UNNotificationRequest+payments.swift in Sources */,
 				1A1427ED1E306ADA00D52F90 /* SettingsVC.swift in Sources */,
+				831124791E44DBC200A6F09B /* MortgageFormValidator.swift in Sources */,
 				833F9AEE1E3956F10050D9D8 /* UIViewController+keyboard.swift in Sources */,
 				1A36D4291DF86AF40093A411 /* AppDelegate.swift in Sources */,
 				1AB349BB1E009FA400E76049 /* View4.swift in Sources */,
@@ -857,6 +866,7 @@
 				831AB23A1E3930A700863BA0 /* IntroPVC.swift in Sources */,
 				838774EA1E424850008079F2 /* UserAccount.swift in Sources */,
 				833F9AEF1E3956F10050D9D8 /* UIViewController+keyboard.swift in Sources */,
+				8311247A1E44DBC200A6F09B /* MortgageFormValidator.swift in Sources */,
 				1A0D373A1E354FCA005B9114 /* AmortizationVC.swift in Sources */,
 				83B09B831E425456001BE368 /* UserAccountTests.swift in Sources */,
 				831AB22C1E392FF400863BA0 /* MortgageCalculator.swift in Sources */,
@@ -869,6 +879,7 @@
 				1AF882D91E1AC013000CA84F /* MortgageListVC.swift in Sources */,
 				831AB2301E392FFC00863BA0 /* Amortization.swift in Sources */,
 				831AB2391E39309500863BA0 /* ExtraPaymentVC.swift in Sources */,
+				8311247D1E44FEEA00A6F09B /* MortgageFormValidatorTests.swift in Sources */,
 				1A36D43E1DF86AF40093A411 /* MortgageAppTests.swift in Sources */,
 				838774E41E4245D1008079F2 /* String+validate.swift in Sources */,
 				833F9AF31E3957580050D9D8 /* UNNotificationRequest+payments.swift in Sources */,
@@ -914,6 +925,7 @@
 				838774E51E4245D2008079F2 /* String+validate.swift in Sources */,
 				836C856B1E41091800C01777 /* RoundedButton.swift in Sources */,
 				831AB2411E3930AD00863BA0 /* View5.swift in Sources */,
+				8311247B1E44DBC200A6F09B /* MortgageFormValidator.swift in Sources */,
 				831AB23D1E3930AD00863BA0 /* View1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
