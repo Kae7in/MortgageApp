@@ -120,6 +120,7 @@ class MortgageFormValidator {
         
         // TODO:
         // Also need to handle situation where user creates extra payments then changes the mortgage start date such that the extra payment no longer falls within the mortgage.
+        // I think we need to wait for the extra payment to actually be scheduled first.
     }
     
     static func valid(loanTermYears: Int, startDate: Date) -> Bool {
