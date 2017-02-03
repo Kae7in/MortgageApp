@@ -190,21 +190,28 @@ class CreateMortgageFVC: FormViewController {
     
     func validInput() -> Bool {
         var result = false
+        var fieldName = ""
         
         do {
             try MortgageFormValidator.validateFormFields(dictionary: self.form.values())
             result = true
         } catch MortgageFormError.invalidType(let field) {
+            fieldName = field
             print("Invalid type in field \(field)")
         } catch MortgageFormError.invalidLength(let length, let field) {
+            fieldName = field
             print("Invalid length in field \(field) needs \(length)")
         } catch MortgageFormError.invalidText(let field) {
+            fieldName = field
             print("Invalid text in field \(field)")
         } catch MortgageFormError.outOfRangeDouble(let value, let field) {
+            fieldName = field
             print("Invalid range in field \(field) needs \(value)")
         } catch MortgageFormError.outOfRangeInt(let value, let field) {
+            fieldName = field
             print("Invalid range in field \(field) needs \(value)")
         } catch MortgageFormError.outOfRangeDate(let field) {
+            fieldName = field
             print("Invalidate date in field \(field)")
         } catch {
             // TODO: Review lengthy post describing how to correct the error with "swift enclosing catch is not exhaustive"
@@ -212,6 +219,15 @@ class CreateMortgageFVC: FormViewController {
             // http://stackoverflow.com/questions/30720497/swift-do-try-catch-syntax
         }
         
+        if !result {
+            let message = "Contents of field \(fieldName) is invalid"
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style:UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            present(alert, animated: true, completion: {
+            })
+        }
         return result
     }
     
