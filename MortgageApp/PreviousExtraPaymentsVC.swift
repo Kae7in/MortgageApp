@@ -54,7 +54,7 @@ class PreviousExtraPaymentsVC: FormViewController {
             <<< IntRow(){
                 $0.title = "Payment Amount"
                 $0.tag = "payment_amount"
-                $0.placeholder = "$150"
+                $0.placeholder = "$150.00"
                 let formatter = CurrencyFormatter()
                 formatter.locale = .current
                 formatter.numberStyle = .currency
@@ -112,13 +112,15 @@ class PreviousExtraPaymentsVC: FormViewController {
         let paymentAmount: Int? = valuesDictionary["payment_amount"] as? Int
         let paymentStartPeriod: Int = Calendar.current.dateComponents([.month], from: self.mortgage.startDate, to: paymentStartDate!).month! + 1
         
-        var extra = ["startMonth": paymentStartPeriod, "endMonth": paymentStartPeriod, "extraIntervalMonths": 1, "extraAmount": paymentAmount!]
+        var extra = ["startMonth": paymentStartPeriod, "endMonth": paymentStartPeriod, "extraIntervalMonths": 1, "extraAmount": paymentAmount!] as [String : Any]
+        extra["startDate"] = paymentStartDate
         
         if paymentType == "Recurring" {
             let paymentEndDate: Date? = valuesDictionary["end_date"] as? Date
             let paymentEndPeriod: Int = Calendar.current.dateComponents([.month], from: self.mortgage.startDate, to: paymentEndDate!).month! + 1
             let monthFrequency: Int? = valuesDictionary["month_frequency"] as? Int
             
+            extra["endDate"] = paymentEndDate
             extra["endMonth"] = paymentEndPeriod
             extra["extraIntervalMonths"] = monthFrequency
         }
