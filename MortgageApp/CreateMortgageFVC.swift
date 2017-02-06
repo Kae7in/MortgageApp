@@ -137,7 +137,6 @@ class CreateMortgageFVC: FormViewController {
                 row.placeholder = "Blah"
             }
             +++ Section("PREVIOUS EXTRA PAYMENTS"){
-                // TODO: Enable swipe to delete/edit actions on these rows using editActionsForRowAtIndexPath UITableViewDelegate method
                 $0.tag = "additional_payment_history"
                 for extra in self.mortgage.extras {
                     $0 <<< LabelRow() { row in
@@ -285,6 +284,29 @@ class CreateMortgageFVC: FormViewController {
         }
     }
     
+    // MARK: UITableViewDelegate
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if indexPath.section == 3 {
+            // This is the extra payments section
+            return true
+        }
+        
+        return false
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return UITableViewCellEditingStyle.delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if mortgage.extras.indices.contains(indexPath.row) {
+            mortgage.extras.remove(at: indexPath.row)
+        }
+
+        layoutForm()
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
