@@ -146,16 +146,17 @@ class RegisterCredentialsVC: UIViewController, UITextFieldDelegate {
     }
     
     private func showCreateMortgage() {
-        // TODO: It appears we may have a navigation controller embedded within the existing one
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        appDelegate.window!.rootViewController = navController
-        
-        let storyboard = UIStoryboard.init(name: "CreateMortgage", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "CreateMortgageFVC") as! CreateMortgageFVC
-        controller.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        controller.goingToIntro = true
-        let navController = UINavigationController.init(rootViewController: controller)
-        self.present(navController, animated: true) {
+        let rootViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+        UIView.transition(with: appDelegate.window!, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: { 
+            appDelegate.window!.rootViewController = rootViewController
+        }) { (completed) in
+            let storyboard = UIStoryboard.init(name: "CreateMortgage", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "CreateMortgageFVC") as! CreateMortgageFVC
+            controller.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            controller.goingToIntro = true
+            rootViewController.present(controller, animated: true, completion: nil)
         }
     }
     

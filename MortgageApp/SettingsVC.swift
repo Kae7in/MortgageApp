@@ -27,10 +27,14 @@ class SettingsVC: UIViewController {
         try! FIRAuth.auth()?.signOut()  // TODO: Add failure catch
         
         // Manually transition back to login view
+        // navigate to the login screen
         let rootViewController: UIViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "signUp")
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let navigationController = UINavigationController(rootViewController: rootViewController)
+        navigationController.navigationBar.isHidden = true
+        
         UIView.transition(with: appDelegate.window!, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: {
-            appDelegate.window!.rootViewController = rootViewController
+            appDelegate.window!.rootViewController = navigationController
         }) { (completed) in
             
         }
