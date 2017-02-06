@@ -8,15 +8,6 @@
 
 import Foundation
 
-enum MortgageFormError: Error {
-    case invalidType(field: String)
-    case invalidLength(_: Int, field: String)
-    case invalidText(field: String)
-    case outOfRangeDouble(_: Double, field: String)
-    case outOfRangeInt(_: Int, field: String)
-    case outOfRangeDate(field: String)
-}
-
 class MortgageFormValidator {
 
     // Form fields
@@ -42,80 +33,80 @@ class MortgageFormValidator {
         
         // Name must be of type String
         guard let name = dictionary[MortgageFormValidator.mortgageNameField] as? String else {
-            throw MortgageFormError.invalidType(field: MortgageFormValidator.mortgageNameField)
+            throw FormError.invalidType(field: MortgageFormValidator.mortgageNameField)
         }
         // Name must be ASCII only
         let range = name.rangeOfCharacter(from: NSCharacterSet.letters)
         guard range != nil else {
-            throw MortgageFormError.invalidText(field: MortgageFormValidator.mortgageNameField)
+            throw FormError.invalidText(field: MortgageFormValidator.mortgageNameField)
         }
         // Name length must be in range
         let length = name.utf16.count
         guard (length > 0 && length < MortgageFormValidator.maximumNameLength) else {
-            throw MortgageFormError.invalidLength(length, field: MortgageFormValidator.mortgageNameField)
+            throw FormError.invalidLength(length, field: MortgageFormValidator.mortgageNameField)
         }
         
         // Principal must be of type Double
         guard let principal = dictionary[MortgageFormValidator.salePriceField] as? Double else {
-            throw MortgageFormError.invalidType(field: MortgageFormValidator.salePriceField)
+            throw FormError.invalidType(field: MortgageFormValidator.salePriceField)
         }
         // Principal must be in range
         guard (principal > 0 && principal < MortgageFormValidator.maximumPrincipal) else {
-            throw MortgageFormError.outOfRangeDouble(MortgageFormValidator.maximumPrincipal, field: MortgageFormValidator.salePriceField)
+            throw FormError.outOfRangeDouble(MortgageFormValidator.maximumPrincipal, field: MortgageFormValidator.salePriceField)
         }
         
         // Down payment must be of type Double
         guard let downPayment = dictionary[MortgageFormValidator.downPaymentField] as? Double else {
-            throw MortgageFormError.invalidType(field: MortgageFormValidator.downPaymentField)
+            throw FormError.invalidType(field: MortgageFormValidator.downPaymentField)
         }
         // Down payment must be in range
         guard (downPayment >= 0 && downPayment < principal) else {
-            throw MortgageFormError.outOfRangeDouble(downPayment, field: MortgageFormValidator.downPaymentField)
+            throw FormError.outOfRangeDouble(downPayment, field: MortgageFormValidator.downPaymentField)
         }
         
         // Loan term must be of type Int
         guard let loanTermYears = dictionary[MortgageFormValidator.loanTermYearsField] as? Int else {
-            throw MortgageFormError.invalidType(field: MortgageFormValidator.loanTermYearsField)
+            throw FormError.invalidType(field: MortgageFormValidator.loanTermYearsField)
         }
         guard (loanTermYears > 0 && loanTermYears < MortgageFormValidator.maximumloanTermYears) else {
-            throw MortgageFormError.outOfRangeInt(loanTermYears, field: MortgageFormValidator.loanTermYearsField)
+            throw FormError.outOfRangeInt(loanTermYears, field: MortgageFormValidator.loanTermYearsField)
         }
         
         // Interest rate must be of type Double
         guard let interestRate = dictionary[MortgageFormValidator.interestRateField] as? Double else {
-            throw MortgageFormError.invalidType(field: MortgageFormValidator.interestRateField)
+            throw FormError.invalidType(field: MortgageFormValidator.interestRateField)
         }
         // Interest rate must be in range
         guard (interestRate >= 0 && interestRate < MortgageFormValidator.maximumInterestRate) else {
-            throw MortgageFormError.outOfRangeDouble(MortgageFormValidator.maximumInterestRate, field: MortgageFormValidator.interestRateField)
+            throw FormError.outOfRangeDouble(MortgageFormValidator.maximumInterestRate, field: MortgageFormValidator.interestRateField)
         }
 
         // Start date must be of type Date
         guard let startDate = dictionary[MortgageFormValidator.startDateField] as? Date else {
-            throw MortgageFormError.invalidType(field: MortgageFormValidator.startDateField)
+            throw FormError.invalidType(field: MortgageFormValidator.startDateField)
         }
         
         // Home insurance must be of type Double
         guard let homeInsuranceCost = dictionary[MortgageFormValidator.homeInsuranceCostField] as? Double else {
-            throw MortgageFormError.invalidType(field: MortgageFormValidator.homeInsuranceCostField)
+            throw FormError.invalidType(field: MortgageFormValidator.homeInsuranceCostField)
         }
         // Home insurance must be in range
         guard (homeInsuranceCost > 0 && homeInsuranceCost < MortgageFormValidator.maximumHomeInsuranceCost) else {
-            throw MortgageFormError.outOfRangeDouble(MortgageFormValidator.maximumHomeInsuranceCost, field: MortgageFormValidator.homeInsuranceCostField)
+            throw FormError.outOfRangeDouble(MortgageFormValidator.maximumHomeInsuranceCost, field: MortgageFormValidator.homeInsuranceCostField)
         }
         
         // Property tax rate must be of type Double
         guard let propertyTaxRate = dictionary[MortgageFormValidator.propertyTaxRateField] as? Double else {
-            throw MortgageFormError.invalidType(field: MortgageFormValidator.propertyTaxRateField)
+            throw FormError.invalidType(field: MortgageFormValidator.propertyTaxRateField)
         }
         // Property tax rate must be in range
         guard (propertyTaxRate >= 0 && propertyTaxRate < MortgageFormValidator.maximumPropertyTaxRate) else {
-            throw MortgageFormError.outOfRangeDouble(MortgageFormValidator.maximumPropertyTaxRate, field: MortgageFormValidator.propertyTaxRateField)
+            throw FormError.outOfRangeDouble(MortgageFormValidator.maximumPropertyTaxRate, field: MortgageFormValidator.propertyTaxRateField)
         }
         
         // Project loan term must be greater than the current date
         guard MortgageFormValidator.valid(loanTermYears: loanTermYears, startDate: startDate) else {
-            throw MortgageFormError.outOfRangeDate(field: MortgageFormValidator.startDateField)
+            throw FormError.outOfRangeDate(field: MortgageFormValidator.startDateField)
         }
         
         // TODO:

@@ -9,11 +9,16 @@
 import UIKit
 import Eureka
 
+// TODO: This enum should be moved to the future "ExtraPayment" class
+enum PaymentType: String {
+    case oneTime = "One Time"
+    case recurring = "Recurring"
+}
+
 class PreviousExtraPaymentsVC: FormViewController {
     
     var mortgage: Mortgage!
     var navBar: UINavigationBar!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,15 +50,15 @@ class PreviousExtraPaymentsVC: FormViewController {
                 header.height = { self.navBar.frame.height }
                 section.header = header
             }
-            <<< SegmentedRow<String>("segments") {
-                $0.options = ["One Time", "Recurring"]
-                $0.value = "One Time"
+            <<< SegmentedRow<String>(PreviousExtraPaymentsFormValidator.paymentTypeField) {
+                $0.options = [PaymentType.oneTime.rawValue, PaymentType.recurring.rawValue]
+                $0.value = PaymentType.oneTime.rawValue
             }
             +++ Section(header: "You must accurately add extra payments you’ve made in the past in order to correctly track the progress of your mortgage.", footer: "")
             +++ Section(header: "Extra Payment", footer: "Please provide EXACT dates and amounts.")
-            <<< IntRow(){
+            <<< DecimalRow(){
                 $0.title = "Payment Amount"
-                $0.tag = "payment_amount"
+                $0.tag = PreviousExtraPaymentsFormValidator.paymentAmountField
                 $0.placeholder = "$150.00"
                 let formatter = CurrencyFormatter()
                 formatter.locale = .current
@@ -62,7 +67,7 @@ class PreviousExtraPaymentsVC: FormViewController {
             }
             <<< DateRow() {
                 $0.title = "Payment Date"
-                $0.tag = "start_date"
+                $0.tag = PreviousExtraPaymentsFormValidator.startDateField
                 $0.value = Date()
                 let formatter = DateFormatter()
                 formatter.locale = .current
@@ -72,7 +77,7 @@ class PreviousExtraPaymentsVC: FormViewController {
             <<< DateRow() {
                 $0.title = "Payment End Date"
                 $0.tag = "end_date"
-                $0.hidden = "$segments != 'Recurring'"
+                $0.hidden = "$payment_type != 'Recurring'" // TODO: How can we substitute string literal definitions matching each string here?
                 let formatter = DateFormatter()
                 formatter.locale = .current
                 formatter.dateStyle = .short
@@ -80,8 +85,8 @@ class PreviousExtraPaymentsVC: FormViewController {
             }
             <<< IntRow() {
                 $0.title = "Month-Frequency of Payments"
-                $0.tag = "month_frequency"
-                $0.hidden = "$segments != 'Recurring'"
+                $0.tag = PreviousExtraPaymentsFormValidator.paymentFrequencyField
+                $0.hidden = "$payment_type != 'Recurring'" // TODO: How can we substitute string literal definitions matching each string here?
                 $0.value = 1
             }
     }
@@ -101,24 +106,64 @@ class PreviousExtraPaymentsVC: FormViewController {
     
     
     func validInput() -> Bool {
-        return true
+        var result = false
+        var fieldName = ""
+
+        do {
+            try PreviousExtraPaymentsFormValidator.validateFormFields(dictionary: self.form.values())
+            result = true
+        } catch FormError.invalidType(let field) {
+            fieldName = field
+            print("Invalid type in field \(field)")
+        } catch FormError.invalidLength(let length, let field) {
+            fieldName = field
+            print("Invalid length in field \(field) needs \(length)")
+        } catch FormError.invalidText(let field) {
+            fieldName = field
+            print("Invalid text in field \(field)")
+        } catch FormError.outOfRangeDouble(let value, let field) {
+            fieldName = field
+            print("Invalid range in field \(field) needs \(value)")
+        } catch FormError.outOfRangeInt(let value, let field) {
+            fieldName = field
+            print("Invalid range in field \(field) needs \(value)")
+        } catch FormError.outOfRangeDate(let field) {
+            fieldName = field
+            print("Invalidate date in field \(field)")
+        } catch {
+            // TODO: Review lengthy post describing how to correct the error with "swift enclosing catch is not exhaustive"
+            // All enum types are handled.  Adding an empty 'catch' for now.
+            // http://stackoverflow.com/questions/30720497/swift-do-try-catch-syntax
+        }
+
+        if !result {
+            let message = "Contents of field \(fieldName) is invalid"
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style:UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            present(alert, animated: true, completion: {
+            })
+        }
+        
+        return result
     }
     
     
     func packageUpExtraPayment() {
         let valuesDictionary = self.form.values()
-        let paymentStartDate: Date? = valuesDictionary["start_date"] as? Date
-        let paymentType: String? = valuesDictionary["segments"] as? String
-        let paymentAmount: Int? = valuesDictionary["payment_amount"] as? Int
+        let paymentStartDate: Date? = valuesDictionary[PreviousExtraPaymentsFormValidator.startDateField] as? Date
+        let paymentType: String? = valuesDictionary[PreviousExtraPaymentsFormValidator.paymentTypeField] as? String
+        let paymentAmount: Double? = valuesDictionary[PreviousExtraPaymentsFormValidator.paymentAmountField] as? Double
         let paymentStartPeriod: Int = Calendar.current.dateComponents([.month], from: self.mortgage.startDate, to: paymentStartDate!).month! + 1
         
         var extra = ["startMonth": paymentStartPeriod, "endMonth": paymentStartPeriod, "extraIntervalMonths": 1, "extraAmount": paymentAmount!] as [String : Any]
         extra["startDate"] = paymentStartDate
         
-        if paymentType == "Recurring" {
-            let paymentEndDate: Date? = valuesDictionary["end_date"] as? Date
+        if paymentType == PaymentType.recurring.rawValue {
+            let paymentEndDate: Date? = valuesDictionary[PreviousExtraPaymentsFormValidator.endDateField] as? Date
             let paymentEndPeriod: Int = Calendar.current.dateComponents([.month], from: self.mortgage.startDate, to: paymentEndDate!).month! + 1
-            let monthFrequency: Int? = valuesDictionary["month_frequency"] as? Int
+            let monthFrequency: Int? = valuesDictionary[PreviousExtraPaymentsFormValidator.paymentFrequencyField] as? Int
             
             extra["endDate"] = paymentEndDate
             extra["endMonth"] = paymentEndPeriod
