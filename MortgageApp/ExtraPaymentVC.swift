@@ -45,6 +45,7 @@ class ExtraPaymentVC: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         layoutViews()
     }
     
@@ -139,9 +140,8 @@ class ExtraPaymentVC: UIViewController {
         updatePrincipalBalanceLabel(value: newMortgage.paymentSchedule[self.mortgage!.currentPeriod() - 1].remainingLoanBalance)
         updateInterestBalanceLabel(value: newMortgage.totalLoanCost)
         updateTimeBalanceLabels(monthsLeft: newMortgage.paymentSchedule.count)  // TODO: Subtract today's date from the paymentSchedule
-        updateInterestSavingsLabel(value: newMortgage.totalInterestSavings())
-        updateTimeSavingsLabels(months: newMortgage.originalMortgage!.loanTermMonths - newMortgage.paymentSchedule.count)
-        updateInterestSavingsLabel(value: newMortgage.totalInterestSavings())
+        updateInterestSavingsLabel(value: newMortgage.totalInterestSavings().subtracting(self.mortgage!.totalInterestSavings()))
+        updateTimeSavingsLabels(months: self.mortgage!.numberOfPayments - newMortgage.numberOfPayments)
     }
     
     
