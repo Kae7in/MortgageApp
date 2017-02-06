@@ -157,15 +157,15 @@ class ExtraPaymentVC: UIViewController {
     
     
     func saveButton(sender: UIBarButtonItem) {
-        if self.mortgage?.extras.count != self.newMortgage.extras.count {
-            self.newMortgage.save()
-            _ = self.navigationController?.popViewController(animated: true)
+        if mortgage?.extras.count != self.newMortgage.extras.count {
+            newMortgage.save()
+            dismiss(animated: true, completion: nil)
         }
     }
     
     
     func cancelButton(sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 
 }

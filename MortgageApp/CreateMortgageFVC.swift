@@ -142,7 +142,18 @@ class CreateMortgageFVC: FormViewController {
                 for extra in self.mortgage.extras {
                     $0 <<< LabelRow() { row in
                         row.title = "Extra Payment"
-                        row.value = String(extra["extraAmount"] as! Int)  // TODO: Show start date and/or end date instead of amount
+                        
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.locale = Locale(identifier: "en_US")
+                        dateFormatter.setLocalizedDateFormatFromTemplate("dd/M/yyyy")
+                        
+                        if let endDate = extra["endDate"] as? Date {
+                            // Recurring payments have an "end" date
+                            row.value = dateFormatter.string(from: endDate)
+                        } else if let startDate = extra["startDate"] as? Date {
+                            // Both fixed and recurring payments have a "start" date
+                            row.value = dateFormatter.string(from: startDate)
+                        }
                     }
                 }
         }
