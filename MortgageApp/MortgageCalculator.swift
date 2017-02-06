@@ -11,23 +11,36 @@ import Foundation
 
 class MortgageCalculator: NSObject {
     
+    /// Used to round decimals to the nearest cent
     func roundDecimals(num: NSDecimalNumber) -> NSDecimalNumber {
-        let handler = NSDecimalNumberHandler(roundingMode: NSDecimalNumber.RoundingMode.plain, scale: 2, raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false)
+        let handler = NSDecimalNumberHandler(roundingMode: NSDecimalNumber.RoundingMode.plain,
+                                             scale: 2, raiseOnExactness: false,
+                                             raiseOnOverflow: false,
+                                             raiseOnUnderflow: false,
+                                             raiseOnDivideByZero: false)
         let rounded = num.rounding(accordingToBehavior: handler)
         return rounded
     }
     
+    
+    /// Returns the total amount of extra money to be paid on the given month (loanMonth)
     func calculateExtraPayment(mortgage: Mortgage, loanMonth: Int) -> NSDecimalNumber {
         var totalExtra = 0
+        
         if (mortgage.extras.count > 0) {
+            // iterate through all the extra payments made on this mortgage
             for i in 0..<mortgage.extras.count {
                 var extra = mortgage.extras[i]
+                
+                // get the relevant properties of the extra payment
                 let startMonth: Int = extra["startMonth"] as! Int
                 let endMonth: Int = extra["endMonth"] as! Int
                 let extraIntervalMonths: Int = extra["extraIntervalMonths"] as! Int
                 let extraAmount: Int = extra["extraAmount"] as! Int
                 
+                // check if loanMonth falls within the time-range of this extra payment
                 if (loanMonth >= startMonth && loanMonth <= endMonth) {
+                    // check if loanMonth is the current interval month
                     if ((loanMonth - startMonth) % extraIntervalMonths == 0) {
                         totalExtra += extraAmount * 100
                     }
@@ -38,41 +51,62 @@ class MortgageCalculator: NSObject {
         return NSDecimalNumber(value: totalExtra)
     }
     
+    
+    /// Get the monthly interest for a given APR
     func aprToMonthlyInterest(apr: NSDecimalNumber) -> NSDecimalNumber {
         // apr / (12 * 100)
         return apr.dividing(by: NSDecimalNumber(value: 12).multiplying(by: NSDecimalNumber(value: 100)))
     }
     
+    
+    /// Get the monthly property tax based on the mortgage's annual propertyTaxRate property
     func calculatePropertyTax(mortgage: Mortgage) -> NSDecimalNumber {
         var monthlyPropertyTax: NSDecimalNumber
+        
+        // if mortgage.propertyTaxRate > 0
         if (mortgage.propertyTaxRate.compare(NSDecimalNumber(value: 0)) == ComparisonResult.orderedDescending) {
             // monthlyPropertyTax = (mortgage.salePrice * 100 * (options.propertyTaxRate / 100)) / 12
-            monthlyPropertyTax = (mortgage.salePrice.multiplying(by: NSDecimalNumber(value: 100)).multiplying(by: mortgage.propertyTaxRate.dividing(by: NSDecimalNumber(value: 100))).dividing(by: NSDecimalNumber(value: 12)))
+            monthlyPropertyTax = (mortgage.salePrice.multiplying(by: NSDecimalNumber(value: 100))  // multiply by 100 so we're not dealing with decimals in the calculation
+                                .multiplying(by: mortgage.propertyTaxRate.dividing(by: NSDecimalNumber(value: 100)))
+                                .dividing(by: NSDecimalNumber(value: 12)))
         } else {
             monthlyPropertyTax = 0
         }
+        
         return monthlyPropertyTax
     }
     
+    
+    /// For ARM Mortgage: Returns boolean indicating that the interest is to be adjusted
     func needsInterestReset(mortgage: Mortgage, loanMonth: Int) -> Bool {
         if (mortgage.adjustFixedRateMonths <= 0 || loanMonth <= mortgage.adjustFixedRateMonths) {
+            // either adjustFixedRateMonths is negative (ERROR)
+            // or the given month isn't at the first adjustable period, yet
             return false
         }
+        
+        // heuristic for adjustable rate mortgages
         return (loanMonth - mortgage.adjustFixedRateMonths - 1) % mortgage.adjustIntervalMonths == 0
     }
     
+    
+    /// Returns the interest rate for a given month (loanMonth), which can vary with ARMs
     func calculateInterestRate(mortgage: Mortgage, loanMonth: Int) -> NSDecimalNumber {
         if (mortgage.adjustFixedRateMonths <= 0 || loanMonth <= mortgage.adjustFixedRateMonths) {
+            // either adjustFixedRateMonths is negative (ERROR)
+            // or the given month isn't at the first adjustable period, yet
             return mortgage.interestRate
         }
         
         var armInterestRate: NSDecimalNumber = mortgage.interestRate.adding(mortgage.adjustInitialCap)
         if (loanMonth > mortgage.adjustFixedRateMonths + 1) {
+            // iterate through and add each adjustment interval up to the given month (loanMonth)
             for _ in stride(from: mortgage.adjustFixedRateMonths + mortgage.adjustIntervalMonths, to: loanMonth, by: mortgage.adjustIntervalMonths) {
                 armInterestRate = armInterestRate.adding(mortgage.adjustPeriodicCap)
             }
         }
         
+        // essentially min(armInterestRate, mortgage.adjustLifetimeCap + mortgage.interestRate)
         let temp = mortgage.adjustLifetimeCap.adding(mortgage.interestRate)
         let comp: ComparisonResult = armInterestRate.compare(temp)
         if comp == ComparisonResult.orderedDescending {
@@ -82,23 +116,29 @@ class MortgageCalculator: NSObject {
         return armInterestRate
     }
     
+    
+    /// Get the recurring monthly payment (NOT including extra payments) for the given mortgage
     func calculateMonthlyPayment(loanAmount: NSDecimalNumber, loanTermMonths: Int, interestRate: NSDecimalNumber) -> NSDecimalNumber {
         let monthlyInterestRate: NSDecimalNumber = aprToMonthlyInterest(apr: interestRate)
         
-        var powerRaise: NSDecimalNumber = monthlyInterestRate.adding(NSDecimalNumber(value:1))
-        powerRaise = powerRaise.raising(toPower: loanTermMonths)
-        
-        var monthlyPayment = loanAmount.multiplying(by: monthlyInterestRate.multiplying(by: powerRaise))
-        monthlyPayment = monthlyPayment.dividing(by: powerRaise.subtracting(NSDecimalNumber(value: 1)))
+        // apply interest rate to the loan amount to calculate the recurring monthly payment (PI)
+        let powerRaise: NSDecimalNumber = monthlyInterestRate.adding(NSDecimalNumber(value:1))
+                                        .raising(toPower: loanTermMonths)
+        let monthlyPayment = loanAmount.multiplying(by: monthlyInterestRate.multiplying(by: powerRaise))
+                                        .dividing(by: powerRaise.subtracting(NSDecimalNumber(value: 1)))
         
         return monthlyPayment
     }
     
+    
+    /// Processes and returns the given mortgage
     func calculateMortgage(mortgage: Mortgage) -> Mortgage {
         calculateAmortizations(mortgage: mortgage)
         return mortgage
     }
     
+    
+    /// Populates the paymentSchedule[Amortization] array and initializes additional properties for the given mortgage instance
     func calculateAmortizations(mortgage: Mortgage) {
         // To avoid rounding errors, all dollars will be converted to cents and converted back to dollars
         var remainingLoanAmountInCents = mortgage.loanAmount().multiplying(by: NSDecimalNumber(value: 100))
@@ -109,13 +149,23 @@ class MortgageCalculator: NSObject {
         var loanYear = 1
         var loanYearRollUpSummary = [String: NSDecimalNumber]()
         var currentInterestRate = calculateInterestRate(mortgage: mortgage, loanMonth: 1)
-        var currentMonthlyPaymentInCents = calculateMonthlyPayment(loanAmount: remainingLoanAmountInCents, loanTermMonths: mortgage.loanTermMonths, interestRate: currentInterestRate)
+        var currentMonthlyPaymentInCents = calculateMonthlyPayment(loanAmount: remainingLoanAmountInCents,
+                                                                   loanTermMonths: mortgage.loanTermMonths,
+                                                                   interestRate: currentInterestRate)
         let rollupSummaryFields = ["interest", "principal", "extra", "principalTotal", "propertyTax", "paymentTotal"]
         
-        while remainingLoanAmountInCents.compare(NSDecimalNumber(value: 1)) == ComparisonResult.orderedSame || remainingLoanAmountInCents.compare(NSDecimalNumber(value: 1)) == ComparisonResult.orderedDescending {
+        /*
+         What follows is property assignments to the amortization instance
+         declared below followed by updating them in prep for the next iteration
+         of the loop. Each amortization instance is stored inside the paymentSchedule
+         array on the given mortgage instance.
+        */
+        while remainingLoanAmountInCents.compare(NSDecimalNumber(value: 1)) == ComparisonResult.orderedSame
+            || remainingLoanAmountInCents.compare(NSDecimalNumber(value: 1)) == ComparisonResult.orderedDescending {
             loanMonth += 1
-            let amortization = Amortization()
+            let amortization = Amortization() // amortization instance for this period
             
+            // may only return true if this is an ARM (if the adjustable* properties on the mortgage instance are not the default)
             if needsInterestReset(mortgage: mortgage, loanMonth: loanMonth) {
                 currentInterestRate = calculateInterestRate(mortgage: mortgage, loanMonth: loanMonth)
                 currentMonthlyPaymentInCents = calculateMonthlyPayment(loanAmount: remainingLoanAmountInCents, loanTermMonths: mortgage.loanTermMonths + 1 - loanMonth, interestRate: currentInterestRate)
@@ -123,31 +173,36 @@ class MortgageCalculator: NSObject {
             
             amortization.interestRate = currentInterestRate
             amortization.scheduledMonthlyPayment = currentMonthlyPaymentInCents
-            amortization.interest = remainingLoanAmountInCents.multiplying(by: aprToMonthlyInterest(apr: amortization.interestRate))
-            amortization.principal = currentMonthlyPaymentInCents.subtracting(amortization.interest)
+            amortization.interest = remainingLoanAmountInCents.multiplying(by: aprToMonthlyInterest(apr: amortization.interestRate))  // interest component of this month's payment
+            amortization.principal = currentMonthlyPaymentInCents.subtracting(amortization.interest)  // principal component of this month's payment
             
             if remainingLoanAmountInCents.compare(amortization.principal) == ComparisonResult.orderedAscending {
+                // this is the last payment in the mortgage
                 amortization.principal = remainingLoanAmountInCents
                 amortization.extra = 0
             } else {
                 amortization.extra = calculateExtraPayment(mortgage: mortgage, loanMonth: loanMonth)
             }
             
-            amortization.principalTotal = amortization.principal.adding(amortization.extra)
+            amortization.principalTotal = amortization.principal.adding(amortization.extra)  // total principal paid so far
             amortization.propertyTax = monthlyPropertyTaxInCents
-            amortization.paymentTotal = amortization.interest.adding(amortization.principalTotal.adding(monthlyPropertyTaxInCents))
+            amortization.paymentTotal = amortization.interest.adding(amortization.principalTotal.adding(monthlyPropertyTaxInCents))  // total P+I paid so far
+                
+            // calculate this month's payment date
             var comps = DateComponents()
             comps.setValue(loanMonth, for: Calendar.Component.month)
             amortization.paymentDate = Calendar.current.date(byAdding: comps, to: mortgage.startDate)!
+                
             remainingLoanAmountInCents = remainingLoanAmountInCents.subtracting(amortization.principalTotal)
-            
             if remainingLoanAmountInCents.compare(NSDecimalNumber(value: 0)) == ComparisonResult.orderedAscending {
                 remainingLoanAmountInCents = 0
             }
             amortization.remainingLoanBalance = remainingLoanAmountInCents
-            
             amortization.loanMonth = loanMonth
             amortization.loanYear = loanYear
+            
+            // populate loanYearRollupSummary (a summary of data just for this year)
+            // TODO: Can probably get rid of this since we're using the Amortization class, anyway
             _ = rollupSummaryFields.map({ (field: String) in
                 if loanYearRollUpSummary[field] != nil {
                     loanYearRollUpSummary[field] = loanYearRollUpSummary[field]?.adding(amortization.value(forKey: field) as! NSDecimalNumber)
@@ -158,11 +213,14 @@ class MortgageCalculator: NSObject {
                 amortization.setValue(loanYearRollUpSummary[field], forKey: field + "LoanYearToDate")
             })
             
+            // reset the loanYearRollupSummary when we turn over a new year
             if loanMonth % 12 == 0 {
                 loanYearRollUpSummary = [String: NSDecimalNumber]()
                 loanYear += 1
             }
             
+            // sum the previous amortization's fields with the current amortization
+            // only for the properties whereby we're tracking totals
             _ = rollupSummaryFields.map({ (field: String) in
                 if previousAmortization != nil {
                     let prev: NSDecimalNumber = previousAmortization!.value(forKey: field + "ToDate") as! NSDecimalNumber
@@ -179,10 +237,11 @@ class MortgageCalculator: NSObject {
         }
         
         
-        // Round all amortization values to dollars
+        // round all amortization values to dollars
         mortgage.totalLoanCost = 0
         let additionalFieldsToProcess = ["scheduledMonthlyPayment", "remainingLoanBalance"]
         
+        // assign the total-fields (like interestToDate) we rolled up over time to its appropriate month
         for i in 0..<amortizations.count {
             let amortization = amortizations[i]
             _ = rollupSummaryFields.map({ (field: String) in
