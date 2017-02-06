@@ -130,6 +130,13 @@
 		83B09B831E425456001BE368 /* UserAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B09B821E425456001BE368 /* UserAccountTests.swift */; };
 		83D69AA31E3FAE7F00905018 /* BorderedInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D69AA21E3FAE7F00905018 /* BorderedInputView.swift */; };
 		83D69AA51E3FB1ED00905018 /* RegisterInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D69AA41E3FB1ED00905018 /* RegisterInformationVC.swift */; };
+		83E796A61E48D2C2001031CE /* PreviousExtraPaymentsFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E796A51E48D2C2001031CE /* PreviousExtraPaymentsFormValidator.swift */; };
+		83E796A71E48D2C2001031CE /* PreviousExtraPaymentsFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E796A51E48D2C2001031CE /* PreviousExtraPaymentsFormValidator.swift */; };
+		83E796A81E48D2C2001031CE /* PreviousExtraPaymentsFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E796A51E48D2C2001031CE /* PreviousExtraPaymentsFormValidator.swift */; };
+		83E796AA1E48D333001031CE /* FormError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E796A91E48D333001031CE /* FormError.swift */; };
+		83E796AB1E48D333001031CE /* FormError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E796A91E48D333001031CE /* FormError.swift */; };
+		83E796AC1E48D333001031CE /* FormError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E796A91E48D333001031CE /* FormError.swift */; };
+		83E796AE1E48EF63001031CE /* PreviousExtraPaymentsFormValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E796AD1E48EF63001031CE /* PreviousExtraPaymentsFormValidatorTests.swift */; };
 		83FFB5401E416A4100A52650 /* String+validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FFB53F1E416A4100A52650 /* String+validate.swift */; };
 		9101B69E65A77A193E63F839 /* Pods_MortgageAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC64DA83D2664394F9645E6 /* Pods_MortgageAppTests.framework */; };
 		D0D4EAD7B6014BECB5CC9200 /* Pods_MortgageAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88664985621365C37BA174D5 /* Pods_MortgageAppUITests.framework */; };
@@ -217,6 +224,9 @@
 		83B09B821E425456001BE368 /* UserAccountTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountTests.swift; sourceTree = "<group>"; };
 		83D69AA21E3FAE7F00905018 /* BorderedInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedInputView.swift; sourceTree = "<group>"; };
 		83D69AA41E3FB1ED00905018 /* RegisterInformationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterInformationVC.swift; sourceTree = "<group>"; };
+		83E796A51E48D2C2001031CE /* PreviousExtraPaymentsFormValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousExtraPaymentsFormValidator.swift; sourceTree = "<group>"; };
+		83E796A91E48D333001031CE /* FormError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormError.swift; sourceTree = "<group>"; };
+		83E796AD1E48EF63001031CE /* PreviousExtraPaymentsFormValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousExtraPaymentsFormValidatorTests.swift; sourceTree = "<group>"; };
 		83FFB53F1E416A4100A52650 /* String+validate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+validate.swift"; sourceTree = "<group>"; };
 		88664985621365C37BA174D5 /* Pods_MortgageAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MortgageAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E27CC53BEBDDD432DC524D /* Pods-MortgageAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MortgageAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MortgageAppTests/Pods-MortgageAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -295,6 +305,7 @@
 				1A36D43F1DF86AF40093A411 /* Info.plist */,
 				83B09B821E425456001BE368 /* UserAccountTests.swift */,
 				8311247C1E44FEEA00A6F09B /* MortgageFormValidatorTests.swift */,
+				83E796AD1E48EF63001031CE /* PreviousExtraPaymentsFormValidatorTests.swift */,
 			);
 			path = MortgageAppTests;
 			sourceTree = SOURCE_ROOT;
@@ -422,6 +433,8 @@
 				834FA9B01E42372C000FDE09 /* FormLimits.swift */,
 				838774EC1E424881008079F2 /* DictionaryConvertible.swift */,
 				831124781E44DBC200A6F09B /* MortgageFormValidator.swift */,
+				83E796A51E48D2C2001031CE /* PreviousExtraPaymentsFormValidator.swift */,
+				83E796A91E48D333001031CE /* FormError.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -825,6 +838,7 @@
 				833F9AEE1E3956F10050D9D8 /* UIViewController+keyboard.swift in Sources */,
 				1A36D4291DF86AF40093A411 /* AppDelegate.swift in Sources */,
 				1AB349BB1E009FA400E76049 /* View4.swift in Sources */,
+				83E796AA1E48D333001031CE /* FormError.swift in Sources */,
 				1A36D4581DF86CC00093A411 /* MortgageCalculator.swift in Sources */,
 				1AB349CB1E01BB3A00E76049 /* IntroDetailVC.swift in Sources */,
 				838774ED1E424881008079F2 /* DictionaryConvertible.swift in Sources */,
@@ -850,6 +864,7 @@
 				83D69AA51E3FB1ED00905018 /* RegisterInformationVC.swift in Sources */,
 				1AB349B71E0096F800E76049 /* View2.swift in Sources */,
 				1A7DE08D1E099EB300E29CED /* ExtraPaymentVC.swift in Sources */,
+				83E796A61E48D2C2001031CE /* PreviousExtraPaymentsFormValidator.swift in Sources */,
 				1ADD8AB61E397FB400CB8A13 /* Date+calculations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -869,14 +884,17 @@
 				8311247A1E44DBC200A6F09B /* MortgageFormValidator.swift in Sources */,
 				1A0D373A1E354FCA005B9114 /* AmortizationVC.swift in Sources */,
 				83B09B831E425456001BE368 /* UserAccountTests.swift in Sources */,
+				83E796AE1E48EF63001031CE /* PreviousExtraPaymentsFormValidatorTests.swift in Sources */,
 				831AB22C1E392FF400863BA0 /* MortgageCalculator.swift in Sources */,
 				831AB2441E3930C200863BA0 /* IntroDetailVC.swift in Sources */,
 				1A1427E91E2FFFAA00D52F90 /* PreviousExtraPaymentsVC.swift in Sources */,
 				1ADD8AB71E397FB400CB8A13 /* Date+calculations.swift in Sources */,
 				1A8D4A251E1C2495000D2592 /* CustomTableViewCell.swift in Sources */,
 				831AB22E1E392FF800863BA0 /* Mortgage.swift in Sources */,
+				83E796AB1E48D333001031CE /* FormError.swift in Sources */,
 				833F9AEB1E3956BF0050D9D8 /* UIColor+themes.swift in Sources */,
 				1AF882D91E1AC013000CA84F /* MortgageListVC.swift in Sources */,
+				83E796A71E48D2C2001031CE /* PreviousExtraPaymentsFormValidator.swift in Sources */,
 				831AB2301E392FFC00863BA0 /* Amortization.swift in Sources */,
 				831AB2391E39309500863BA0 /* ExtraPaymentVC.swift in Sources */,
 				8311247D1E44FEEA00A6F09B /* MortgageFormValidatorTests.swift in Sources */,
@@ -909,6 +927,7 @@
 				833F9AF41E3957580050D9D8 /* UNNotificationRequest+payments.swift in Sources */,
 				831AB2311E392FFD00863BA0 /* Amortization.swift in Sources */,
 				831AB2371E39302600863BA0 /* ExtraPaymentVC.swift in Sources */,
+				83E796AC1E48D333001031CE /* FormError.swift in Sources */,
 				838774E71E4245E4008079F2 /* FormLimits.swift in Sources */,
 				838774EF1E424881008079F2 /* DictionaryConvertible.swift in Sources */,
 				831AB2431E3930AD00863BA0 /* View7.swift in Sources */,
@@ -927,6 +946,7 @@
 				831AB2411E3930AD00863BA0 /* View5.swift in Sources */,
 				8311247B1E44DBC200A6F09B /* MortgageFormValidator.swift in Sources */,
 				831AB23D1E3930AD00863BA0 /* View1.swift in Sources */,
+				83E796A81E48D2C2001031CE /* PreviousExtraPaymentsFormValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

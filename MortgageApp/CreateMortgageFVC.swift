@@ -205,22 +205,22 @@ class CreateMortgageFVC: FormViewController {
         do {
             try MortgageFormValidator.validateFormFields(dictionary: self.form.values())
             result = true
-        } catch MortgageFormError.invalidType(let field) {
+        } catch FormError.invalidType(let field) {
             fieldName = field
             print("Invalid type in field \(field)")
-        } catch MortgageFormError.invalidLength(let length, let field) {
+        } catch FormError.invalidLength(let length, let field) {
             fieldName = field
             print("Invalid length in field \(field) needs \(length)")
-        } catch MortgageFormError.invalidText(let field) {
+        } catch FormError.invalidText(let field) {
             fieldName = field
             print("Invalid text in field \(field)")
-        } catch MortgageFormError.outOfRangeDouble(let value, let field) {
+        } catch FormError.outOfRangeDouble(let value, let field) {
             fieldName = field
             print("Invalid range in field \(field) needs \(value)")
-        } catch MortgageFormError.outOfRangeInt(let value, let field) {
+        } catch FormError.outOfRangeInt(let value, let field) {
             fieldName = field
             print("Invalid range in field \(field) needs \(value)")
-        } catch MortgageFormError.outOfRangeDate(let field) {
+        } catch FormError.outOfRangeDate(let field) {
             fieldName = field
             print("Invalidate date in field \(field)")
         } catch {
