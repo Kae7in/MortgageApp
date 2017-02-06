@@ -29,6 +29,14 @@ class MortgageDetailVC: UIViewController {
     }
     
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        print("TEST")
+        self.updateLabels(balanceLeft: mortgage!.loanAmount().adding(mortgage!.totalLoanCost), timeLeft: self.mortgage!.numberOfPayments)
+    }
+    
+    
     func layoutViews() {
         // TODO: Use current balance remaining and current time left
         updateLabels(balanceLeft: mortgage!.loanAmount().adding(mortgage!.totalLoanCost), timeLeft: self.mortgage!.numberOfPayments)
