@@ -31,6 +31,10 @@ extension UIColor {
         return UIColor(rgbColorCodeRed: 247, green: 247, blue: 247, alpha: 1.0)
     }
     
+    static func cellSeparator() -> UIColor {
+        return UIColor(rgbColorCodeRed: 200, green: 200, blue: 200, alpha: 1.0)
+    }
+    
     static func textGrey(alpha: CGFloat = 1.0) -> UIColor {
         return UIColor(rgbColorCodeRed: 155, green: 155, blue: 155, alpha: 1.0)
     }

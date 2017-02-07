@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,20 +12,97 @@
         <!--Create MortgageFVC-->
         <scene sceneID="h1f-bw-zwA">
             <objects>
-                <viewController storyboardIdentifier="CreateMortgageFVC" id="hwa-4I-yZi" customClass="CreateMortgageFVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Dw4-bu-MEI"/>
-                        <viewControllerLayoutGuide type="bottom" id="tti-ek-LQH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bYO-A0-jET">
+                <viewController id="hwa-4I-yZi" customClass="CreateMortgageFVC" customModule="MortgageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="VgJ-lv-jyQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MortgageDetailCell" id="ws0-rp-Gf5" customClass="MortgageDetailCell" customModule="MortgageApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ws0-rp-Gf5" id="TsV-No-Sy3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Field" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4s-T8-iAR">
+                                            <rect key="frame" x="13" y="11" width="190" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jjc-U4-Nyc">
+                                            <rect key="frame" x="211" y="6" width="151" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                        </textField>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fieldLabel" destination="N4s-T8-iAR" id="hVo-cI-FOu"/>
+                                    <outlet property="textField" destination="Jjc-U4-Nyc" id="1VW-iD-Rhf"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MortgageTypeCell" id="NM8-aR-bQM" customClass="MortgageTypeCell" customModule="MortgageApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="100" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NM8-aR-bQM" id="cZV-k6-f2T">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lbo-sU-Yvf">
+                                            <rect key="frame" x="98" y="7" width="220" height="29"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="220" id="BBM-6R-RNT"/>
+                                            </constraints>
+                                            <segments>
+                                                <segment title="Fixed Rate"/>
+                                                <segment title="Adjustable Rate"/>
+                                            </segments>
+                                        </segmentedControl>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lbo-sU-Yvf" firstAttribute="centerX" secondItem="cZV-k6-f2T" secondAttribute="centerX" constant="20.5" id="266-6t-7p7"/>
+                                        <constraint firstItem="lbo-sU-Yvf" firstAttribute="top" secondItem="cZV-k6-f2T" secondAttribute="top" constant="7" id="NWg-v0-CcX"/>
+                                        <constraint firstAttribute="bottom" secondItem="lbo-sU-Yvf" secondAttribute="bottom" constant="8" id="tUV-jU-JCI"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="mortgageTypeSegment" destination="lbo-sU-Yvf" id="jRX-30-vD0"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hwa-4I-yZi" id="sQX-Py-o39"/>
+                            <outlet property="delegate" destination="hwa-4I-yZi" id="LhY-0j-0TC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="XnI-aQ-Ybr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="POl-sz-KkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="766" y="805"/>
+            <point key="canvasLocation" x="1704.8" y="804.64767616191909"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cwj-55-IbM">
+            <objects>
+                <navigationController storyboardIdentifier="CreateMortgage" automaticallyAdjustsScrollViewInsets="NO" id="gsG-AH-wF9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CG4-Jl-mZz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hwa-4I-yZi" kind="relationship" relationship="rootViewController" id="52e-9n-41X"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qB3-SR-7rS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="765.60000000000002" y="804.64767616191909"/>
         </scene>
     </scenes>
 </document>

@@ -36,7 +36,7 @@ class MortgageFormValidator {
             throw FormError.invalidType(field: MortgageFormValidator.mortgageNameField)
         }
         // Name must be ASCII only
-        let range = name.rangeOfCharacter(from: NSCharacterSet.letters)
+        let range = name.rangeOfCharacter(from: NSCharacterSet.alphanumerics)
         guard range != nil else {
             throw FormError.invalidText(field: MortgageFormValidator.mortgageNameField)
         }

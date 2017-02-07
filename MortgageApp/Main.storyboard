@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gEU-p9-sHF">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gEU-p9-sHF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -90,7 +90,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="253-ad-U9a" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mortgages" image="house" id="IcX-w7-FGl"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gAk-ar-knE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gAk-ar-knE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -135,11 +135,20 @@
                     <navigationItem key="navigationItem" id="LK5-e9-gxP"/>
                     <connections>
                         <outlet property="tableView" destination="Ec0-I4-Hms" id="2JH-t1-Jn1"/>
+                        <segue destination="WAT-9m-COI" kind="presentation" identifier="segueCreateMortgage" id="F9f-0w-T4E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYa-Ga-x54" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="765.60000000000002" y="35.532233883058474"/>
+        </scene>
+        <!--CreateMortgage-->
+        <scene sceneID="nyh-zH-alP">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CreateMortgageNavigation" storyboardName="CreateMortgage" referencedIdentifier="CreateMortgage" id="WAT-9m-COI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7yp-QV-68M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1575" y="-46"/>
         </scene>
     </scenes>
     <resources>
