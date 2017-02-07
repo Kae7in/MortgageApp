@@ -12,8 +12,7 @@ import FirebaseDatabase
 class ExtraPaymentVC: UIViewController {
     
     var mortgage: Mortgage? = nil
-    var newMortgage: Mortgage!
-    var newM: Mortgage? = nil
+    var extra: Dictionary<String, Any>? = nil
     var mc: MortgageCalculator = MortgageCalculator()
     var ref: FIRDatabaseReference!
 
@@ -46,6 +45,7 @@ class ExtraPaymentVC: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         layoutViews()
     }
     
@@ -113,52 +113,49 @@ class ExtraPaymentVC: UIViewController {
     
     
     @IBAction func paymentTypeChanged(_ sender: UISegmentedControl) {
-        updateMortgageMetrics()
+        if self.extra != nil {
+            updateMortgageMetrics()
+        }
     }
     
     
     func updateMortgageMetrics() {
-        var extras = [Dictionary<String, Int>]()
-        
         if paymentTypeControl.selectedSegmentIndex == 0 {
-            extras = [["startMonth":self.mortgage!.currentPeriod(),
+            self.extra = ["startMonth":self.mortgage!.currentPeriod(),
                        "endMonth":360,
                        "extraIntervalMonths":1,
-                       "extraAmount":Int(extraPaymentSlider.value)]]
+                       "extraAmount":Int(extraPaymentSlider.value)]
         } else {
-            extras = [["startMonth":self.mortgage!.currentPeriod(),
+            self.extra = ["startMonth":self.mortgage!.currentPeriod(),
                        "endMonth":self.mortgage!.currentPeriod(),
                        "extraIntervalMonths":1,
-                       "extraAmount":Int(extraPaymentSlider.value)]]
+                       "extraAmount":Int(extraPaymentSlider.value)]
         }
         
-        print(extras)
-        
-        self.newMortgage = calculateNewMortgageFromExtras(mortgage: self.mortgage!, newExtras: extras)
+        var newMortgage = Mortgage(self.mortgage!)
+        newMortgage.extras.append(extra!)
+        newMortgage = mc.calculateMortgage(mortgage: newMortgage)
         
         updateExtraPaymentLabel(value: self.extraPaymentSlider.value)
         updatePrincipalBalanceLabel(value: newMortgage.paymentSchedule[self.mortgage!.currentPeriod() - 1].remainingLoanBalance)
         updateInterestBalanceLabel(value: newMortgage.totalLoanCost)
         updateTimeBalanceLabels(monthsLeft: newMortgage.paymentSchedule.count)  // TODO: Subtract today's date from the paymentSchedule
-        updateInterestSavingsLabel(value: newMortgage.totalInterestSavings())
-        updateTimeSavingsLabels(months: newMortgage.originalMortgage!.loanTermMonths - newMortgage.paymentSchedule.count)
-        updateInterestSavingsLabel(value: newMortgage.totalInterestSavings())
-    }
-    
-    
-    func calculateNewMortgageFromExtras(mortgage: Mortgage, newExtras: [Dictionary<String, Any>]) -> Mortgage {
-        var newM = Mortgage(mortgage)
-        for extra in newExtras {
-            newM.extras.append(extra)
-        }
-        newM = mc.calculateMortgage(mortgage: newM)
-        return newM
+        updateInterestSavingsLabel(value: newMortgage.totalInterestSavings().subtracting(self.mortgage!.totalInterestSavings()))
+        updateTimeSavingsLabels(months: self.mortgage!.numberOfPayments - newMortgage.numberOfPayments)
     }
     
     
     func saveButton(sender: UIBarButtonItem) {
-        if mortgage?.extras.count != self.newMortgage.extras.count {
-            newMortgage.save()
+        if self.extra != nil {
+            // append the new extra to the global mortgage instance
+            self.mortgage?.extras.append(self.extra!)
+            
+            // run it through the calculator to update all of its values
+            _ = self.mc.calculateMortgage(mortgage: self.mortgage!)
+            
+            // save the global mortgage instance before dismissing the view
+            self.mortgage?.save()
+            
             dismiss(animated: true, completion: nil)
         }
     }
