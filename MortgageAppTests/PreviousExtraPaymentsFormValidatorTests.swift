@@ -1,14 +1,14 @@
 //
-//  MortgageFormValidatorTests.swift
+//  PreviousExtraPaymentsFormValidatorTests.swift
 //  MortgageApp
 //
-//  Created by Christopher Combes on 2/3/17.
+//  Created by Christopher Combes on 2/6/17.
 //  Copyright © 2017 Keller Williams Realty, Inc. All rights reserved.
 //
 
 import XCTest
 
-class MortgageFormValidatorTests: XCTestCase {
+class PreviousExtraPaymentsFormValidatorTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -19,22 +19,19 @@ class MortgageFormValidatorTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testBasicData() {
         
         let dictionary : [String : Any] = [
-            MortgageFormValidator.mortgageNameField : "Northern",
-            MortgageFormValidator.salePriceField : 100000.00,
-            MortgageFormValidator.downPaymentField : 1000.00,
-            MortgageFormValidator.loanTermYearsField : 30,
-            MortgageFormValidator.interestRateField : 5.0,
-            MortgageFormValidator.startDateField : Date(),
-            MortgageFormValidator.homeInsuranceCostField : 100.00,
-            MortgageFormValidator.propertyTaxRateField : 8.0
+            PreviousExtraPaymentsFormValidator.startDateField : Date(),
+            PreviousExtraPaymentsFormValidator.paymentTypeField : PaymentType.recurring.rawValue,
+            PreviousExtraPaymentsFormValidator.paymentAmountField : 100.00,
+            PreviousExtraPaymentsFormValidator.paymentFrequencyField : 12,
+            PreviousExtraPaymentsFormValidator.endDateField : Date().addingTimeInterval(1.0) // Insure end date is greater than start date
         ]
-
+        
         do {
-            try MortgageFormValidator.validateFormFields(dictionary: dictionary)
+            try PreviousExtraPaymentsFormValidator.validateFormFields(dictionary: dictionary)
         } catch FormError.invalidType(let field) {
             XCTFail("Invalid type in field \(field)")
         } catch FormError.invalidLength(let length, let field) {
