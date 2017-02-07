@@ -12,6 +12,7 @@ target 'MortgageApp' do
   pod 'Firebase/Database'
   pod 'Eureka', '~> 2.0.0-beta.1'
   pod "GlyuckDataGrid"
+  pod 'HGCircularSlider', '~> 1.0.3'
 
   target 'MortgageAppTests' do
     inherit! :search_paths

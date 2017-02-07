@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HGCircularSlider.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MortgageApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,12 +47,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
+		<key>01E9FE51F89215D0FFFCF2A90DD7B4B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4BCDCED8FC44F2DC831241592EC6827D</key>
+		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DB9AE2123A60FD2D03A7C5F06A43D5B6</key>
+		<key>C802653666523ACB72DB8A6405671008</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE6F1E8F8F8D7CAD793A904D335C5771</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FA2DEB2EC9E2F0FC1C6FBFD049B98B6E</key>
+		<key>F2F115242E9C31595EDE9869D1CB62E3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -12,6 +12,9 @@
 		1A0D37391E354FCA005B9114 /* AmortizationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0D37381E354FCA005B9114 /* AmortizationVC.swift */; };
 		1A0D373A1E354FCA005B9114 /* AmortizationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0D37381E354FCA005B9114 /* AmortizationVC.swift */; };
 		1A0D373B1E354FCA005B9114 /* AmortizationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0D37381E354FCA005B9114 /* AmortizationVC.swift */; };
+		1A101D6A1E4982BC007D2328 /* CircleGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A101D691E4982BC007D2328 /* CircleGraphView.swift */; };
+		1A101D6B1E4982BC007D2328 /* CircleGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A101D691E4982BC007D2328 /* CircleGraphView.swift */; };
+		1A101D6C1E4982BC007D2328 /* CircleGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A101D691E4982BC007D2328 /* CircleGraphView.swift */; };
 		1A1427E81E2FFFAA00D52F90 /* PreviousExtraPaymentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1427E71E2FFFAA00D52F90 /* PreviousExtraPaymentsVC.swift */; };
 		1A1427E91E2FFFAA00D52F90 /* PreviousExtraPaymentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1427E71E2FFFAA00D52F90 /* PreviousExtraPaymentsVC.swift */; };
 		1A1427EA1E2FFFAA00D52F90 /* PreviousExtraPaymentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1427E71E2FFFAA00D52F90 /* PreviousExtraPaymentsVC.swift */; };
@@ -162,6 +165,7 @@
 
 /* Begin PBXFileReference section */
 		1A0D37381E354FCA005B9114 /* AmortizationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmortizationVC.swift; sourceTree = "<group>"; };
+		1A101D691E4982BC007D2328 /* CircleGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleGraphView.swift; sourceTree = "<group>"; };
 		1A1427E71E2FFFAA00D52F90 /* PreviousExtraPaymentsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousExtraPaymentsVC.swift; sourceTree = "<group>"; };
 		1A1427EC1E306ADA00D52F90 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		1A36D4251DF86AF40093A411 /* MortgageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MortgageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -482,6 +486,7 @@
 			children = (
 				83A138161E3BF4F900F67EBF /* MortgageDetail.storyboard */,
 				1A80FF7A1DFF0D3800193664 /* MortgageDetailVC.swift */,
+				1A101D691E4982BC007D2328 /* CircleGraphView.swift */,
 			);
 			name = MortgageDetail;
 			sourceTree = "<group>";
@@ -856,6 +861,7 @@
 				83D69AA31E3FAE7F00905018 /* BorderedInputView.swift in Sources */,
 				83FFB5401E416A4100A52650 /* String+validate.swift in Sources */,
 				1AF882D81E1AC013000CA84F /* MortgageListVC.swift in Sources */,
+				1A101D6A1E4982BC007D2328 /* CircleGraphView.swift in Sources */,
 				1A80FF7B1DFF0D3800193664 /* MortgageDetailVC.swift in Sources */,
 				838774E91E424850008079F2 /* UserAccount.swift in Sources */,
 				1AB349BF1E00A0AD00E76049 /* View6.swift in Sources */,
@@ -878,6 +884,7 @@
 				831AB2321E39300000863BA0 /* AppDelegate.swift in Sources */,
 				831031F81E43E2EE002A88F0 /* CustomButtonCell.swift in Sources */,
 				838774EE1E424881008079F2 /* DictionaryConvertible.swift in Sources */,
+				1A101D6B1E4982BC007D2328 /* CircleGraphView.swift in Sources */,
 				831AB23A1E3930A700863BA0 /* IntroPVC.swift in Sources */,
 				838774EA1E424850008079F2 /* UserAccount.swift in Sources */,
 				833F9AEF1E3956F10050D9D8 /* UIViewController+keyboard.swift in Sources */,
@@ -931,6 +938,7 @@
 				838774E71E4245E4008079F2 /* FormLimits.swift in Sources */,
 				838774EF1E424881008079F2 /* DictionaryConvertible.swift in Sources */,
 				831AB2431E3930AD00863BA0 /* View7.swift in Sources */,
+				1A101D6C1E4982BC007D2328 /* CircleGraphView.swift in Sources */,
 				831AB2341E39301800863BA0 /* LoginVC.swift in Sources */,
 				1A36D4491DF86AF50093A411 /* MortgageAppUITests.swift in Sources */,
 				831AB23E1E3930AD00863BA0 /* View2.swift in Sources */,
