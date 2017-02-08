@@ -116,7 +116,7 @@ class MortgageFormValidator {
     
     static func valid(loanTermYears: Int, startDate: Date) -> Bool {
         let currentDate = NSDate() as Date
-        let projectedDate = NSCalendar.current.date(byAdding: Calendar.Component.month, value: loanTermYears, to: startDate)
+        let projectedDate = NSCalendar.current.date(byAdding: Calendar.Component.year, value: loanTermYears, to: startDate)
         return currentDate < projectedDate! // TODO: Assuming we get a valid value back
     }
 }
