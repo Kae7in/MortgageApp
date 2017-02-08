@@ -39,6 +39,7 @@ class CreateMortgageFVC: UITableViewController, UITextFieldDelegate {
     var propertyTaxField: UITextField?
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,6 +50,10 @@ class CreateMortgageFVC: UITableViewController, UITextFieldDelegate {
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.backgroundColor = UIColor.customGrey()
         
+        // Load reference to custom button cell
+        let nibName = UINib(nibName: "CustomButtonCell", bundle:nil)
+        self.tableView.register(nibName, forCellReuseIdentifier: "CustomButtonCell")
+
         hideKeyboardWhenTappedAround()
     }
     
@@ -202,6 +207,13 @@ class CreateMortgageFVC: UITableViewController, UITextFieldDelegate {
     
     
     func done() {
+        
+        // Dismiss keyboard from all fields
+        self.view.endEditing(true)
+        
+        if (isValidInput()) {
+            print("valid")
+        }
 //        if validInput() {
 //            let m = createAndSaveMortgage()
 //            UNNotificationRequest.setPaymentReminderNotification(mortgage: m)
@@ -240,54 +252,89 @@ class CreateMortgageFVC: UITableViewController, UITextFieldDelegate {
         present(alert, animated: true, completion: nil)
     }
     
-//    func validInput() -> Bool {
-//        var result = false
-//        var fieldName = ""
-//        
-//        self.form.validate()
-//        return false
-//        
-//        do {
-//            try MortgageFormValidator.validateFormFields(dictionary: self.form.values())
-//            result = true
-//        } catch FormError.invalidType(let field) {
-//            fieldName = field
-//            print("Invalid type in field \(field)")
-//        } catch FormError.invalidLength(let length, let field) {
-//            fieldName = field
-//            print("Invalid length in field \(field) needs \(length)")
-//        } catch FormError.invalidText(let field) {
-//            fieldName = field
-//            print("Invalid text in field \(field)")
-//        } catch FormError.outOfRangeDouble(let value, let field) {
-//            fieldName = field
-//            print("Invalid range in field \(field) needs \(value)")
-//        } catch FormError.outOfRangeInt(let value, let field) {
-//            fieldName = field
-//            print("Invalid range in field \(field) needs \(value)")
-//        } catch FormError.outOfRangeDate(let field) {
-//            fieldName = field
-//            print("Invalidate date in field \(field)")
-//        } catch {
-//            // TODO: Review lengthy post describing how to correct the error with "swift enclosing catch is not exhaustive"
-//            // All enum types are handled.  Adding an empty 'catch' for now.
-//            // http://stackoverflow.com/questions/30720497/swift-do-try-catch-syntax
-//        }
-//        
-//        if !result {
-//            let index = IndexPath(row: 0, section: 1)
-//            let cell = self.tableView?.cellForRow(at: index)
-//            let title = cell?.textLabel?.text ?? "?"
-//            let message = "\(title) is invalid"
-//            let alert = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.alert)
-//            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style:UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
-//                alert.dismiss(animated: true, completion: nil)
-//            }))
-//            present(alert, animated: true, completion: {
-//            })
-//        }
-//        return result
-//    }
+    func clearHighlights() {
+        for i in 0..<6 {
+            let cell = self.tableView.cellForRow(at: IndexPath(row: i, section: 1)) as! MortgageDetailCell
+            cell.fieldLabel.textColor = UIColor.black
+        }
+        for i in 0..<2 {
+            let cell = self.tableView.cellForRow(at: IndexPath(row: i, section: 2)) as! MortgageDetailCell
+            cell.fieldLabel.textColor = UIColor.black
+        }
+    }
+    
+    func highlightDetailCell(at indexPath: IndexPath) {
+        let cell = self.tableView.cellForRow(at: indexPath) as! MortgageDetailCell
+        cell.fieldLabel.textColor = UIColor.red
+    }
+    
+    func isValidInput() -> Bool {
+        var fieldName = ""
+        var result = false
+        
+        // Clear invalid rows prior to evaluation
+        clearHighlights()
+        
+        // Build dictionary for validation
+        var dictionary: [String: Any?] = [
+            MortgageFormValidator.mortgageNameField : mortgageNameField?.text,
+            MortgageFormValidator.salePriceField : salePriceField?.text,
+            MortgageFormValidator.downPaymentField : downPaymentField?.text,
+            MortgageFormValidator.loanTermYearsField : loanTermField?.text,
+            MortgageFormValidator.interestRateField : interestRateField?.text,
+            MortgageFormValidator.startDateField : startDateField?.text,
+            MortgageFormValidator.homeInsuranceCostField : homeInsuranceField?.text,
+            MortgageFormValidator.propertyTaxRateField : propertyTaxField?.text
+        ]
+        
+        do {
+            try MortgageFormValidator.validateFormFields(dictionary: dictionary)
+            result = true
+        } catch FormError.invalidType(let field) {
+            fieldName = field
+            print("Invalid type in field \(field)")
+        } catch FormError.invalidLength(let length, let field) {
+            fieldName = field
+            print("Invalid length in field \(field) needs \(length)")
+        } catch FormError.invalidText(let field) {
+            fieldName = field
+            print("Invalid text in field \(field)")
+        } catch FormError.outOfRangeDouble(let value, let field) {
+            fieldName = field
+            print("Invalid range in field \(field) needs \(value)")
+        } catch FormError.outOfRangeInt(let value, let field) {
+            fieldName = field
+            print("Invalid range in field \(field) needs \(value)")
+        } catch FormError.outOfRangeDate(let field) {
+            fieldName = field
+            print("Invalidate date in field \(field)")
+        } catch {
+            // TODO: Review lengthy post describing how to correct the error with "swift enclosing catch is not exhaustive"
+            // All enum types are handled.  Adding an empty 'catch' for now.
+            // http://stackoverflow.com/questions/30720497/swift-do-try-catch-syntax
+        }
+        
+        // If field name is invalid then highlight the invalid row
+        if fieldName == MortgageFormValidator.mortgageNameField {
+            highlightDetailCell(at: IndexPath(row: 0, section: 1))
+        } else if fieldName == MortgageFormValidator.salePriceField {
+            highlightDetailCell(at: IndexPath(row: 1, section: 1))
+        } else if fieldName == MortgageFormValidator.downPaymentField {
+            highlightDetailCell(at: IndexPath(row: 2, section: 1))
+        } else if fieldName == MortgageFormValidator.loanTermYearsField {
+            highlightDetailCell(at: IndexPath(row: 3, section: 1))
+        } else if fieldName == MortgageFormValidator.interestRateField {
+            highlightDetailCell(at: IndexPath(row: 4, section: 1))
+        } else if fieldName == MortgageFormValidator.startDateField {
+            highlightDetailCell(at: IndexPath(row: 5, section: 1))
+        } else if fieldName == MortgageFormValidator.homeInsuranceCostField {
+            highlightDetailCell(at: IndexPath(row: 0, section: 2))
+        } else if fieldName == MortgageFormValidator.propertyTaxRateField {
+            highlightDetailCell(at: IndexPath(row: 1, section: 2))
+        }
+
+        return true
+    }
     
     func createAndSaveMortgage() -> Mortgage {
         
@@ -353,6 +400,7 @@ class CreateMortgageFVC: UITableViewController, UITextFieldDelegate {
     // MARK: UITextFieldDelegate
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.becomeFirstResponder()
+        clearHighlights()
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField) {
@@ -432,13 +480,14 @@ class CreateMortgageFVC: UITableViewController, UITextFieldDelegate {
                 detailCell.fieldLabel.text = "Start Date"
                 // TODO: This needs to be a label or non-editable text field
                 detailCell.textField.placeholder = "July 22, 2017" // TODO: Today plus date formatter
+                detailCell.textField.isUserInteractionEnabled = false
                 // TODO: Show calendar selection
                 startDateField = detailCell.textField
             }
 
             detailCell.textField.delegate = self
             
-            cell?.selectionStyle = UITableViewCellSelectionStyle.none
+            //cell?.selectionStyle = UITableViewCellSelectionStyle.none
             cell = detailCell
             
         } else if indexPath.section == 2 {
@@ -457,7 +506,7 @@ class CreateMortgageFVC: UITableViewController, UITextFieldDelegate {
             
             detailCell.textField.delegate = self
             
-            cell?.selectionStyle = UITableViewCellSelectionStyle.none
+            //cell?.selectionStyle = UITableViewCellSelectionStyle.none
             cell = detailCell
             
         } else {
@@ -469,15 +518,18 @@ class CreateMortgageFVC: UITableViewController, UITextFieldDelegate {
             } else {
                 
                 // PREVIOUS EXTRA PAYMENTS
-                let detailCell = tableView.dequeueReusableCell(withIdentifier: "MortgageDetailCell") as! MortgageDetailCell
                 if indexPath.row == 0 {
-                    detailCell.fieldLabel.text = "Add Extra Payment"
-                    homeInsuranceField = detailCell.textField
-                    detailCell.textField.text = ""
+                    let detailCell = tableView.dequeueReusableCell(withIdentifier: "CustomButtonCell") as! CustomButtonCell
+                        //tableView.dequeueReusableCellWithIdentifier("CustomButtonCell", forIndexPath: indexPath) as! CustomButtonCell
+                    detailCell.titleLabel.text = "Add Extra Payment"
+                    detailCell.addTarget {
+                        print("tap")
+                    }
+                    
+                    cell = detailCell
                 }
                 
-                detailCell.textField.delegate = self
-                cell = detailCell
+                //cell?.selectionStyle = UITableViewCellSelectionStyle.default
             }
         }
         
@@ -532,6 +584,8 @@ class CreateMortgageFVC: UITableViewController, UITextFieldDelegate {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // TODO: handle row selection for adding extra payments
+        // TODO: This method is not being called for some reason
+        print("select")
     }
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {

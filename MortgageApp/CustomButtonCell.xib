@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,6 +22,10 @@
                         <rect key="frame" x="10" y="9" width="24" height="24"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <state key="normal" image="plus"/>
+                        <connections>
+                            <action selector="onTouchDown:" destination="8Ox-sT-wnT" eventType="touchDown" id="4db-yp-5lS"/>
+                            <action selector="onTouchUpInside:" destination="8Ox-sT-wnT" eventType="touchUpInside" id="ZNk-vw-v8w"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Extra Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilu-Vs-ghv">
                         <rect key="frame" x="45" y="11" width="322" height="21"/>
@@ -33,7 +37,7 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="customButtonView" destination="9ws-WZ-ZzH" id="Fxm-bj-HrC"/>
+                <outlet property="customButton" destination="9ws-WZ-ZzH" id="oAD-X4-0Dc"/>
                 <outlet property="titleLabel" destination="ilu-Vs-ghv" id="YTC-Ba-UGS"/>
             </connections>
             <point key="canvasLocation" x="34.5" y="54"/>
