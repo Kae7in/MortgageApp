@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HGCircularSlider
 
 class MortgageDetailVC: UIViewController {
     
@@ -18,7 +19,9 @@ class MortgageDetailVC: UIViewController {
     @IBOutlet weak var balanceCents: UILabel!
     @IBOutlet weak var yearsLeftLabel: UILabel!
     @IBOutlet weak var monthsLeftLabel: UILabel!
-    @IBOutlet weak var monthlyPaymentLabel: UILabel!
+//    @IBOutlet weak var circleGraph: CircleGraphView!
+    @IBOutlet weak var principalRingGraph: CircularSlider!
+    @IBOutlet weak var interestRingGraph: CircularSlider!
     
     
     override func viewDidLoad() {
@@ -33,6 +36,7 @@ class MortgageDetailVC: UIViewController {
         super.viewWillAppear(animated)
         
         self.updateLabels(balanceLeft: mortgage!.loanAmount().adding(mortgage!.totalLoanCost), timeLeft: self.mortgage!.numberOfPayments)
+        self.layoutChart()
     }
     
     
@@ -73,7 +77,33 @@ class MortgageDetailVC: UIViewController {
     
     
     func layoutChart() {
-        // TODO: Implement double Ring Graph
+        let period = self.mortgage!.currentPeriod() - 1
+        let maxPrincipal: CGFloat = CGFloat(self.mortgage!.loanAmount().floatValue)
+        let principalProgress: CGFloat = CGFloat(self.mortgage!.paymentSchedule[period].principalTotalToDate.floatValue)
+        let maxInterest: CGFloat = CGFloat(self.mortgage!.originalMortgage!.totalLoanCost.floatValue)
+        let interestProgress: CGFloat = CGFloat(self.mortgage!.paymentSchedule[period].interestToDate.adding(self.mortgage!.totalInterestSavings()).floatValue)
+        
+        self.principalRingGraph.isUserInteractionEnabled = false
+        self.principalRingGraph.lineWidth = 15.0
+        self.principalRingGraph.backgroundColor = UIColor.clear
+        self.principalRingGraph.endThumbImage = UIImage()
+        self.principalRingGraph.diskColor = UIColor.clear
+        self.principalRingGraph.trackFillColor = UIColor.primary()
+        self.principalRingGraph.trackColor = UIColor.primary(alpha: 0.05)
+        self.principalRingGraph.minimumValue = 0.0
+        self.principalRingGraph.maximumValue = maxPrincipal
+        self.principalRingGraph.endPointValue = principalProgress
+        
+        self.interestRingGraph.isUserInteractionEnabled = false
+        self.interestRingGraph.lineWidth = 15.0
+        self.interestRingGraph.backgroundColor = UIColor.clear
+        self.interestRingGraph.endThumbImage = UIImage()
+        self.interestRingGraph.diskColor = UIColor.clear
+        self.interestRingGraph.trackFillColor = UIColor.secondary()
+        self.interestRingGraph.trackColor = UIColor.secondary(alpha: 0.05)
+        self.interestRingGraph.minimumValue = 0.0
+        self.interestRingGraph.maximumValue = maxInterest
+        self.interestRingGraph.endPointValue = interestProgress
     }
     
     
