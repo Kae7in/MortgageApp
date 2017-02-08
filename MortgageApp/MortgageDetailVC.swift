@@ -80,7 +80,7 @@ class MortgageDetailVC: UIViewController {
         let period = self.mortgage!.currentPeriod() - 1
         let maxPrincipal: CGFloat = CGFloat(self.mortgage!.loanAmount().floatValue)
         let principalProgress: CGFloat = CGFloat(self.mortgage!.paymentSchedule[period].principalTotalToDate.floatValue)
-        let maxInterest: CGFloat = CGFloat(self.mortgage!.totalLoanCost.floatValue)
+        let maxInterest: CGFloat = CGFloat(self.mortgage!.originalMortgage!.totalLoanCost.floatValue)
         let interestProgress: CGFloat = CGFloat(self.mortgage!.paymentSchedule[period].interestToDate.adding(self.mortgage!.totalInterestSavings()).floatValue)
         
         self.principalRingGraph.isUserInteractionEnabled = false
