@@ -54,6 +54,16 @@ class RegisterInformationVC: UIViewController, UITextFieldDelegate {
         emailField.addTarget(self, action: #selector(textFieldEditingChanged), for: UIControlEvents.editingChanged)
         phoneTextField.addTarget(self, action: #selector(textFieldEditingChanged), for: UIControlEvents.editingChanged)
         
+        // Fill form with fake data for easier testing
+        let arguments = CommandLine.arguments
+        if arguments.contains("fill-registration") {
+            firstNameField.text = "FirstName"
+            lastNameField.text = "LastName"
+            let uuid = UUID().uuidString
+            emailField.text = String(format: "%@@example.com", uuid)
+            textFieldEditingChanged()
+        }
+
         super.viewDidLoad()
     }
     
