@@ -16,65 +16,51 @@ class CreateMortgageFVC: FormViewController {
     let mortgage = Mortgage()
     var goingToIntro: Bool = false  // This flag should be set to true if this is the first ever mortgage the user has created
     var mortgageData = MortgageData()  // List of mortgages the previous UITableView will use as data
-    var ref: FIRDatabaseReference!
-    var formHasLoadedOnce = false
-    var navBar: UINavigationBar!
     
-    
+    let mortgageFieldTitle = "Mortgage Name"
+    let salePriceFieldTitle = "Sale Price"
+    let downPaymentFieldTitle = "Down Payment"
+    let loanTermFieldTitle = "Loan Term (years)"
+    let interestRateFieldTitle = "Interest Rate"
+    let startDateFieldTitle = "Start Date"
+    let homeInsuranceFieldTitle = "Home Insurance (monthly)"
+    let propertyTaxRateFieldTitle = "Property Tax Rate"
+    let extraPaymentFieldTitle = "Extra Payment"
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.ref = FIRDatabase.database().reference()
         self.layoutNavigationBar()
         self.layoutForm()
     }
     
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidLoad()
-        
-        if formHasLoadedOnce {
-            self.layoutForm()  // TODO: Get rid of this hacky way of reloading the form when extra payment rows have been added
-        }
-        self.formHasLoadedOnce = true
-    }
-    
-    
     func layoutNavigationBar() {
-        self.navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: UIApplication.shared.statusBarFrame.height + 44))
-        navBar.isTranslucent = true
-        self.view.addSubview(navBar)
-        let navItem = UINavigationItem(title: "New Mortgage")
-        let cancelItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(cancel))
-        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: #selector(done))
-        navItem.leftBarButtonItem = cancelItem
-        navItem.rightBarButtonItem = doneItem
-        self.navBar.setItems([navItem], animated: false)
-        self.navigationController?.navigationBar.isTranslucent = false
-        self.navBar.isTranslucent = false
-        self.automaticallyAdjustsScrollViewInsets = false
+        self.title = "New Mortgage"
+        let cancelItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: self, action: #selector(cancel))
+        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(done))
+        navigationItem.leftBarButtonItem = cancelItem
+        navigationItem.rightBarButtonItem = doneItem
     }
-    
-    
     
     func layoutForm() {
         self.form = Section("Basics"){ section in
             var header = HeaderFooterView<UIView>(.class)
-            header.height = { self.navBar.frame.height }
+            header.height = { 20 }
             section.header = header
             }
             <<< SegmentedRow<String>("segments") {
                 $0.options = ["Fixed Rate", "Adjustable Rate"]
                 $0.value = "Fixed Rate"
+                $0.baseCell.backgroundColor = UIColor.clear
             }
             +++ Section("BASICS")
             <<< TextRow(){ row in
-                row.title = "Mortgage Name"
+                row.title = mortgageFieldTitle
                 row.placeholder = "1207 S Washington"
                 row.tag = MortgageFormValidator.mortgageNameField
             }
             <<< DecimalRow(){
-                $0.title = "Sale Price"
+                $0.title = salePriceFieldTitle
                 $0.placeholder = "$200,000"
                 $0.tag = MortgageFormValidator.salePriceField
                 let formatter = CurrencyFormatter()
@@ -83,7 +69,7 @@ class CreateMortgageFVC: FormViewController {
                 $0.formatter = formatter
             }
             <<< DecimalRow() {
-                $0.title = "Down Payment"
+                $0.title = downPaymentFieldTitle
                 $0.placeholder = "$20,000"
                 $0.tag = MortgageFormValidator.downPaymentField
                 let formatter = CurrencyFormatter()
@@ -92,17 +78,17 @@ class CreateMortgageFVC: FormViewController {
                 $0.formatter = formatter
             }
             <<< IntRow() {
-                $0.title = "Loan Term (years)"
+                $0.title = loanTermFieldTitle
                 $0.placeholder = "30"
                 $0.tag = MortgageFormValidator.loanTermYearsField
             }
             <<< DecimalRow() {
-                $0.title = "Interest Rate"
+                $0.title = interestRateFieldTitle
                 $0.placeholder = "3.6%"
                 $0.tag = MortgageFormValidator.interestRateField
             }
             <<< DateRow() {
-                $0.title = "Start Date"
+                $0.title = startDateFieldTitle
                 $0.value = Date()
                 $0.tag = MortgageFormValidator.startDateField
                 let formatter = DateFormatter()
@@ -115,7 +101,7 @@ class CreateMortgageFVC: FormViewController {
                 })
             +++ Section("ADDITIONAL DETAILS")
             <<< DecimalRow(){
-                $0.title = "Home Insurance (monthly)"
+                $0.title = homeInsuranceFieldTitle
                 $0.placeholder = "$100"
                 $0.tag = MortgageFormValidator.homeInsuranceCostField
                 let formatter = CurrencyFormatter()
@@ -124,7 +110,7 @@ class CreateMortgageFVC: FormViewController {
                 $0.formatter = formatter
             }
             <<< DecimalRow() {
-                $0.title = "Property Tax Rate"
+                $0.title = propertyTaxRateFieldTitle
                 $0.placeholder = "2.38%"
                 $0.tag = MortgageFormValidator.propertyTaxRateField
             }
@@ -140,7 +126,7 @@ class CreateMortgageFVC: FormViewController {
                 $0.tag = "additional_payment_history"
                 for extra in self.mortgage.extras {
                     $0 <<< LabelRow() { row in
-                        row.title = "Extra Payment"
+                        row.title = extraPaymentFieldTitle
                         
                         let dateFormatter = DateFormatter()
                         dateFormatter.locale = Locale(identifier: "en_US")
@@ -197,6 +183,29 @@ class CreateMortgageFVC: FormViewController {
         self.dismiss(animated: true, completion: {})
     }
     
+    func displayAlertFor(fieldName: String) {
+        
+        var titlesDictionary = [
+            MortgageFormValidator.mortgageNameField : mortgageFieldTitle,
+            MortgageFormValidator.salePriceField : salePriceFieldTitle,
+            MortgageFormValidator.downPaymentField : downPaymentFieldTitle,
+            MortgageFormValidator.loanTermYearsField : loanTermFieldTitle,
+            MortgageFormValidator.interestRateField : interestRateFieldTitle,
+            MortgageFormValidator.startDateField : startDateFieldTitle,
+            MortgageFormValidator.homeInsuranceCostField : homeInsuranceFieldTitle,
+            MortgageFormValidator.propertyTaxRateField : propertyTaxRateFieldTitle
+        ]
+        
+        if let fieldTitle = titlesDictionary[fieldName] {
+            let message = "\(fieldTitle) is invalid"
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style:UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            
+            present(alert, animated: true, completion: nil)
+        }
+    }
     
     func validInput() -> Bool {
         var result = false
@@ -230,14 +239,9 @@ class CreateMortgageFVC: FormViewController {
         }
         
         if !result {
-            let message = "Contents of field \(fieldName) is invalid"
-            let alert = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style:UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
-                alert.dismiss(animated: true, completion: nil)
-            }))
-            present(alert, animated: true, completion: {
-            })
+            displayAlertFor(fieldName: fieldName)
         }
+        
         return result
     }
     

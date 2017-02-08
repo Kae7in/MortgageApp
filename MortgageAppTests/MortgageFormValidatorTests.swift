@@ -23,7 +23,7 @@ class MortgageFormValidatorTests: XCTestCase {
     func testBasicData() {
         
         let dictionary : [String : Any] = [
-            MortgageFormValidator.mortgageNameField : "Northern",
+            MortgageFormValidator.mortgageNameField : "123 Somewhere Drive",
             MortgageFormValidator.salePriceField : 100000.00,
             MortgageFormValidator.downPaymentField : 1000.00,
             MortgageFormValidator.loanTermYearsField : 30,

@@ -48,6 +48,14 @@ class RegisterCredentialsVC: UIViewController, UITextFieldDelegate {
         passwordField.addTarget(self, action: #selector(textFieldEditingChanged), for: UIControlEvents.editingChanged)
         confirmPasswordField.addTarget(self, action: #selector(textFieldEditingChanged), for: UIControlEvents.editingChanged)
 
+        let arguments = CommandLine.arguments
+        if arguments.contains("fill-registration") {
+            usernameField.text = UUID().uuidString
+            passwordField.text = "test123"
+            confirmPasswordField.text = passwordField.text
+            textFieldEditingChanged()
+        }
+        
         hideKeyboardWhenTappedAround()
     }
     
@@ -153,10 +161,11 @@ class RegisterCredentialsVC: UIViewController, UITextFieldDelegate {
             appDelegate.window!.rootViewController = rootViewController
         }) { (completed) in
             let storyboard = UIStoryboard.init(name: "CreateMortgage", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "CreateMortgageFVC") as! CreateMortgageFVC
+            let navController = storyboard.instantiateViewController(withIdentifier: "CreateMortgage") as! UINavigationController
+            let controller = navController.topViewController as! CreateMortgageFVC
             controller.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             controller.goingToIntro = true
-            rootViewController.present(controller, animated: true, completion: nil)
+            rootViewController.present(navController, animated: true, completion: nil)
         }
     }
     
