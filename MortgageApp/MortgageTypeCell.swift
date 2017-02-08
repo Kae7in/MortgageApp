@@ -11,8 +11,24 @@ import UIKit
 class MortgageTypeCell: UITableViewCell {
     @IBOutlet weak var mortgageTypeSegment: UISegmentedControl!
     
+    var valueChangedAction: ((Int) -> Void)?
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         backgroundColor = UIColor.clear
+    }
+    
+    func addTarget(_ target: @escaping (Int) -> Void) {
+        valueChangedAction = target
+        
+        if valueChangedAction != nil {
+            mortgageTypeSegment.addTarget(self, action: #selector(onValueChanged), for: UIControlEvents.valueChanged)
+        }
+    }
+    
+    func onValueChanged(segment: UISegmentedControl) {
+        if valueChangedAction != nil {
+            valueChangedAction!(segment.selectedSegmentIndex)
+        }
     }
 }

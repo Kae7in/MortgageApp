@@ -16,6 +16,7 @@ class MortgageDetailCell: UITableViewCell {
         super.init(coder: aDecoder)
         
         // Add cell separators since we removed them in the table view
+        // TODO: Adding separators on each cell creates a double separator. We could try adding subviews in the segment row to hide them.
         var image = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: 1.0))
         image.backgroundColor = UIColor.cellSeparator()
         contentView.addSubview(image)

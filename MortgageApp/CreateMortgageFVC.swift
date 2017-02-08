@@ -11,29 +11,45 @@ import Eureka
 import FirebaseDatabase
 import UserNotifications
 
-class CreateMortgageFVC: UITableViewController {
+class CreateMortgageFVC: UITableViewController, UITextFieldDelegate {
 
     let mortgage = Mortgage()
     var goingToIntro: Bool = false  // This flag should be set to true if this is the first ever mortgage the user has created
     var mortgageData = MortgageData()  // List of mortgages the previous UITableView will use as data
     var FBRef: FIRDatabaseReference!
     
-    enum RateType: String {
-        case fixed = "Fixed Rate"
-        case adjustable = "Adjustable Rate"
+    enum RateType: Int {
+        case fixed = 0
+        case adjustable
     }
     
-    var sectionTitles = ["", "BASICS", "ADDITIONAL DETAILS", "PREVIOUS EXTRA PAYMENTS"]
+    var mortgageRateType: RateType = .fixed {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
+    var mortgageTypeSegment: UISegmentedControl?
+    var mortgageNameField: UITextField?
+    var salePriceField: UITextField?
+    var downPaymentField: UITextField?
+    var loanTermField: UITextField?
+    var interestRateField: UITextField?
+    var startDateField: UITextField?
+    var homeInsuranceField: UITextField?
+    var propertyTaxField: UITextField?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.FBRef = FIRDatabase.database().reference()
-        self.layoutNavigationBar()
+        FBRef = FIRDatabase.database().reference()
+        layoutNavigationBar()
         
         // Hide separators for the first cell which contains a segment
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.backgroundColor = UIColor.customGrey()
+        
+        hideKeyboardWhenTappedAround()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,11 +58,11 @@ class CreateMortgageFVC: UITableViewController {
     
     func layoutNavigationBar() {
 
-        self.title = "New Mortgage"
+        title = "New Mortgage"
         let cancelItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: self, action: #selector(cancel))
         let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(done))
-        self.navigationItem.leftBarButtonItem = cancelItem
-        self.navigationItem.rightBarButtonItem = doneItem
+        navigationItem.leftBarButtonItem = cancelItem
+        navigationItem.rightBarButtonItem = doneItem
     }
     
 //    func layoutForm() {
@@ -212,7 +228,7 @@ class CreateMortgageFVC: UITableViewController {
     
     
     func cancel() {
-        self.dismiss(animated: true, completion: {})
+        dismiss(animated: true, completion: {})
     }
     
     func showAlertForField(_ title: String?) {
@@ -316,17 +332,64 @@ class CreateMortgageFVC: UITableViewController {
 //        }
     }
 
+    // MARK: Helper Methods
+//    func formatCurrency(text: String) -> String {
+//        let formatter = NumberFormatter()
+//        formatter.numberStyle = .currency
+//        formatter.maximumFractionDigits = 2;
+//        formatter.locale = Locale(identifier: Locale.current.identifier)
+//        let result = formatter.str
+//            //.string(from: value as NSNumber);
+//        return result!;
+//    }
+    
+//    func configure(cell: MortgageDetailCell, title: String, placeholder: String, field: inout UITextField) {
+//        cell.fieldLabel.text = title
+//        cell.textField.placeholder = placeholder
+//        field = cell.textField
+    //        cell.textField.delegate = self
+    //    }
+    
+    // MARK: UITextFieldDelegate
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.becomeFirstResponder()
+    }
+    
+    public func textFieldDidEndEditing(_ textField: UITextField) {
+        // TODO: Handle formatting. Do we extract #s from currency fields and ignore other characters? Easiest way perhaps.
+        if let text = textField.text {
+            if textField == salePriceField {
+                textField.text = "$\(text)"
+            }
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     // MARK: UITableViewDataSource
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return mortgageRateType == .adjustable ? 5 : 4
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if section == 0 {
+            return 1
+        } else if section == 1 {
+            return 6
+        } else if section == 2 {
+            return 2
+        }
+        
+        if section == 3 && mortgageRateType == .adjustable {
+            return 1
+        }
+
+        return mortgage.extras.count + 1 // Account for adding payment row
     }
     
-    // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-    // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cell: UITableViewCell?
@@ -334,20 +397,88 @@ class CreateMortgageFVC: UITableViewController {
         if indexPath.section == 0 {
             // MORTAGE TYPE
             let typeCell = tableView.dequeueReusableCell(withIdentifier: "MortgageTypeCell") as! MortgageTypeCell
+            if typeCell.valueChangedAction == nil {
+                typeCell.addTarget({ (segment) in
+                    self.mortgageRateType = segment == 0 ? RateType.fixed : RateType.adjustable
+                })
+            }
             cell = typeCell
         } else if indexPath.section == 1 {
             // BASICS
             
             let detailCell = tableView.dequeueReusableCell(withIdentifier: "MortgageDetailCell") as! MortgageDetailCell
-            detailCell.fieldLabel.text = "FIELD"
-            detailCell.textField.text = "DATA"
             
+            if indexPath.row == 0 {
+                detailCell.fieldLabel.text = "Mortgage Name"
+                detailCell.textField.placeholder = "1207 S Washington"
+                mortgageNameField = detailCell.textField
+            } else if indexPath.row == 1 {
+                detailCell.fieldLabel.text = "Sale Price"
+                detailCell.textField.placeholder = "$200,000"
+                salePriceField = detailCell.textField
+            } else if indexPath.row == 2 {
+                detailCell.fieldLabel.text = "Down Payment"
+                detailCell.textField.placeholder = "$200,000"
+                downPaymentField = detailCell.textField
+            } else if indexPath.row == 3 {
+                detailCell.fieldLabel.text = "Loan Term (years)"
+                detailCell.textField.placeholder = "30"
+                loanTermField = detailCell.textField
+            } else if indexPath.row == 4 {
+                detailCell.fieldLabel.text = "Interest Rate"
+                detailCell.textField.placeholder = "3.6%"
+                interestRateField = detailCell.textField
+            } else if indexPath.row == 5 {
+                detailCell.fieldLabel.text = "Start Date"
+                // TODO: This needs to be a label or non-editable text field
+                detailCell.textField.placeholder = "July 22, 2017" // TODO: Today plus date formatter
+                // TODO: Show calendar selection
+                startDateField = detailCell.textField
+            }
+
+            detailCell.textField.delegate = self
+            
+            cell?.selectionStyle = UITableViewCellSelectionStyle.none
             cell = detailCell
             
         } else if indexPath.section == 2 {
             // ADDITIONAL DETAILS
+            
+            let detailCell = tableView.dequeueReusableCell(withIdentifier: "MortgageDetailCell") as! MortgageDetailCell
+            if indexPath.row == 0 {
+                detailCell.fieldLabel.text = "Home Insurance (monthly)"
+                detailCell.textField.placeholder = "$100"
+                homeInsuranceField = detailCell.textField
+            } else if indexPath.row == 1 {
+                detailCell.fieldLabel.text = "Property Tax Rate"
+                detailCell.textField.placeholder = "2.38%"
+                propertyTaxField = detailCell.textField
+            }
+            
+            detailCell.textField.delegate = self
+            
+            cell?.selectionStyle = UITableViewCellSelectionStyle.none
+            cell = detailCell
+            
         } else {
-            // PREVIOUS EXTRA PAYMENTS
+            if indexPath.section == 3 && mortgageRateType == .adjustable {
+                let detailCell = tableView.dequeueReusableCell(withIdentifier: "MortgageDetailCell") as! MortgageDetailCell
+                detailCell.fieldLabel.text = "Adjustable"
+                detailCell.textField.text = "Rate"
+                cell = detailCell
+            } else {
+                
+                // PREVIOUS EXTRA PAYMENTS
+                let detailCell = tableView.dequeueReusableCell(withIdentifier: "MortgageDetailCell") as! MortgageDetailCell
+                if indexPath.row == 0 {
+                    detailCell.fieldLabel.text = "Add Extra Payment"
+                    homeInsuranceField = detailCell.textField
+                    detailCell.textField.text = ""
+                }
+                
+                detailCell.textField.delegate = self
+                cell = detailCell
+            }
         }
         
         return cell!
@@ -355,7 +486,7 @@ class CreateMortgageFVC: UITableViewController {
 
     // Individual rows can opt out of having the -editing property set for them. If not implemented, all rows are assumed to be editable.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        if indexPath.section == 3 {
+        if indexPath.section == 3 && mortgageRateType == .adjustable {
             // This is the extra payments section
             return true
         }
@@ -372,7 +503,20 @@ class CreateMortgageFVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionTitles[section]
+        if section == 0 {
+            return ""
+        }
+        else if section == 1 {
+            return "BASICS"
+        } else if section == 2 {
+            return "ADDITIONAL DETAILS"
+        }
+        
+        if section == 3 && mortgageRateType == .adjustable {
+            return "ADJUSTABLE RATE DETAILS"
+        }
+
+        return "PREVIOUS EXTRA PAYMENTS"
     }
     
     // MARK: UITableViewDelegate
@@ -385,16 +529,9 @@ class CreateMortgageFVC: UITableViewController {
         
         return 22.0
     }
-    
-    
-//    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        if indexPath.section == 0 {
-//            cell.backgroundColor = UIColor.clear
-//        }
-//    }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        // TODO: handle row selection for adding extra payments
     }
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
