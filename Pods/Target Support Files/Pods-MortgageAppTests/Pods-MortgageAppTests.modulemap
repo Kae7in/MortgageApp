@@ -1,6 +1,0 @@
-framework module Pods_MortgageAppTests {
-  umbrella header "Pods-MortgageAppTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
