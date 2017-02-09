@@ -154,7 +154,7 @@ class PreviousExtraPaymentsVC: FormViewController {
         let valuesDictionary = self.form.values()
         let paymentStartDate: Date? = valuesDictionary[PreviousExtraPaymentsFormValidator.startDateField] as? Date
         let paymentType: String? = valuesDictionary[PreviousExtraPaymentsFormValidator.paymentTypeField] as? String
-        let paymentAmount: Double? = valuesDictionary[PreviousExtraPaymentsFormValidator.paymentAmountField] as? Double
+        let paymentAmount: Int? = valuesDictionary[PreviousExtraPaymentsFormValidator.paymentAmountField] as? Int
         let paymentStartPeriod: Int = Calendar.current.dateComponents([.month], from: self.mortgage.startDate, to: paymentStartDate!).month! + 1
         
         var extra = ["startMonth": paymentStartPeriod, "endMonth": paymentStartPeriod, "extraIntervalMonths": 1, "extraAmount": paymentAmount!] as [String : Any]

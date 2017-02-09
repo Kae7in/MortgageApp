@@ -14,7 +14,6 @@ class ExtraPaymentVC: UIViewController {
     var mortgage: Mortgage? = nil
     var extra: Dictionary<String, Any>? = nil
     var mc: MortgageCalculator = MortgageCalculator()
-    var ref: FIRDatabaseReference!
 
     @IBOutlet weak var navbar: UINavigationItem!
     
@@ -34,7 +33,6 @@ class ExtraPaymentVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ref = FIRDatabase.database().reference()
         layoutViews()
     }
 

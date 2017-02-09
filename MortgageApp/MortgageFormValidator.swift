@@ -108,15 +108,26 @@ class MortgageFormValidator {
         guard MortgageFormValidator.valid(loanTermYears: loanTermYears, startDate: startDate) else {
             throw FormError.outOfRangeDate(field: MortgageFormValidator.startDateField)
         }
-        
-        // TODO:
-        // Also need to handle situation where user creates extra payments then changes the mortgage start date such that the extra payment no longer falls within the mortgage.
-        // I think we need to wait for the extra payment to actually be scheduled first.
     }
     
     static func valid(loanTermYears: Int, startDate: Date) -> Bool {
         let currentDate = NSDate() as Date
         let projectedDate = NSCalendar.current.date(byAdding: Calendar.Component.year, value: loanTermYears, to: startDate)
         return currentDate < projectedDate! // TODO: Assuming we get a valid value back
+    }
+    
+    // TODO: This code should probably be moved to the Mortgage class
+    static func validateExtraPayments(mortgage: Mortgage, newStartDate: Date) -> Bool {
+        
+        // Validate start date is maintained within extra payment dates
+        for extra in mortgage.extras {
+            if let startDate = extra["startDate"] as? Date {
+                if newStartDate >= startDate {
+                    return false
+                }
+            }
+        }
+        
+        return true
     }
 }
