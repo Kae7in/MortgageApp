@@ -19,13 +19,24 @@ class Mortgage: NSObject {
     var loanTermMonths: Int = 360
 
     /// Beginning principal amount of the loan minus the down payment; does not change
-    var salePrice: NSDecimalNumber = 200000
+    var salePrice: NSDecimalNumber = 200_000
     
     /// Interest rate (not APR) of the loan; can fluctuate in an Adjustable Rate Mortgage
     var interestRate: NSDecimalNumber = 3.6
     
     /// Percent of the mortgage principal that the downpayment makes up
-    var downPayment: String = "20%"
+    var downPaymentPercent: String {
+        get {
+            // TODO: Define magic number 100
+            let downPercent = downPayment.dividing(by: salePrice).multiplying(by: NSDecimalNumber(value: 100))
+            return downPercent.stringValue + "%" // TODO: Formatting should be contained in a view model class
+        }
+        set {
+        }
+    }
+    
+    /// Downpayment on the mortgage principal
+    var downPayment: NSDecimalNumber = 20_000
     
     /**
      List of extra payments
@@ -110,27 +121,17 @@ class Mortgage: NSObject {
     }
     
     /// Update loan term based on years
+    func getLoanTermYears() -> Int {
+        return self.loanTermMonths / 12
+    }
+    
     func setLoanTerm(years: Int) {
         self.loanTermMonths = years * 12  // TODO: Can we extract the # of months in a year from NSCalender?
     }
     
-    /// Updates the down payment
-    func update(downPayment: NSDecimalNumber, principal: NSDecimalNumber) {
-        
-        // TODO: Define magic number 100
-        let downPercent = downPayment.dividing(by: principal).multiplying(by: NSDecimalNumber(value: 100))
-        self.downPayment = downPercent.stringValue + "%" // TODO: Formatting should be contained in a view model class
-    }
-    
     /// The sale price of the loan minus the down payment
     func loanAmount() -> NSDecimalNumber {
-        var str: String = self.downPayment
-        let i = str.characters.index(of: "%")!
-        let downPercent: NSDecimalNumber = NSDecimalNumber(string: str.substring(to: i))
-        
-        // self.salePrice - (down payment)
-        let loanAmount = self.salePrice.subtracting(self.salePrice.multiplying(by: downPercent.dividing(by: 100)))
-        
+        let loanAmount = salePrice.subtracting(downPayment)
         return loanAmount
     }
     

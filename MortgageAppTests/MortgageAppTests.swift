@@ -24,23 +24,23 @@ class MortgageAppTests: XCTestCase {
     func testCalculateLoanAmount1() {
         let m = Mortgage()
         
-        m.downPayment = "20%"
+        m.downPayment = 20_000
         m.interestRate = 3.6
         m.loanTermMonths = 360
-        m.salePrice = 200000
+        m.salePrice = 200_000
         
-        XCTAssert(m.loanAmount() == 160000)
+        XCTAssert(m.loanAmount() == 180_000)
     }
     
     func testCalculateLoanAmount2() {
         let m = Mortgage()
         
-        m.downPayment = "0%"
+        m.downPayment = 0
         m.interestRate = 3.6
         m.loanTermMonths = 360
-        m.salePrice = 200000
+        m.salePrice = 200_000
         
-        XCTAssert(m.loanAmount() == 200000)
+        XCTAssert(m.loanAmount() == 200_000)
     }
     
     func testRoundDecimals() {
@@ -162,10 +162,10 @@ class MortgageAppTests: XCTestCase {
         let m = Mortgage()
         let c = MortgageCalculator()
         
-        m.downPayment = "0%"
+        m.downPayment = 0
         m.interestRate = 3.6
         m.loanTermMonths = 360
-        m.salePrice = 200000
+        m.salePrice = 200_000
         
         XCTAssertEqual(c.roundDecimals(num: c.calculateMonthlyPayment(loanAmount: m.loanAmount(), loanTermMonths: m.loanTermMonths, interestRate: m.interestRate)), 909.29)
     }
@@ -174,10 +174,10 @@ class MortgageAppTests: XCTestCase {
         var m = Mortgage()
         let c = MortgageCalculator()
         
-        m.downPayment = "0%"
+        m.downPayment = 0
         m.interestRate = 3.6
         m.loanTermMonths = 360
-        m.salePrice = 200000
+        m.salePrice = 200_000
         m.extras = [["startMonth":1, "endMonth":360, "extraIntervalMonths":1, "extraAmount":100]]
         
         m = c.calculateMortgage(mortgage: m)
@@ -190,10 +190,10 @@ class MortgageAppTests: XCTestCase {
         var m = Mortgage()
         let c = MortgageCalculator()
         
-        m.downPayment = "0%"
+        m.downPayment = 0
         m.interestRate = 3.6
         m.loanTermMonths = 360
-        m.salePrice = 200000
+        m.salePrice = 200_000
         m.extras = [["startMonth":1, "endMonth":360, "extraIntervalMonths":1, "extraAmount":100], ["startMonth":1, "endMonth":1, "extraIntervalMonths":1, "extraAmount":1000]]
         m = c.calculateMortgage(mortgage: m)
         

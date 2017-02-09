@@ -20,6 +20,12 @@ class PreviousExtraPaymentsVC: FormViewController {
     var mortgage: Mortgage!
     var navBar: UINavigationBar!
 
+    let paymentAmountFieldTitle = "Payment Amount"
+    let startDateFieldTitle = "Payment Date"
+    let endDateFieldTitle = "Payment End Date"
+    let frequencyFieldTitle = "Month-Frequency of Payments"
+    let paymentTypeFieldTitle = "Payment Type"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,7 +63,7 @@ class PreviousExtraPaymentsVC: FormViewController {
             +++ Section(header: "You must accurately add extra payments you’ve made in the past in order to correctly track the progress of your mortgage.", footer: "")
             +++ Section(header: "Extra Payment", footer: "Please provide EXACT dates and amounts.")
             <<< DecimalRow(){
-                $0.title = "Payment Amount"
+                $0.title = paymentAmountFieldTitle
                 $0.tag = PreviousExtraPaymentsFormValidator.paymentAmountField
                 $0.placeholder = "$150.00"
                 let formatter = CurrencyFormatter()
@@ -66,7 +72,7 @@ class PreviousExtraPaymentsVC: FormViewController {
                 $0.formatter = formatter
             }
             <<< DateRow() {
-                $0.title = "Payment Date"
+                $0.title = startDateFieldTitle
                 $0.tag = PreviousExtraPaymentsFormValidator.startDateField
                 $0.value = Date()
                 let formatter = DateFormatter()
@@ -75,7 +81,7 @@ class PreviousExtraPaymentsVC: FormViewController {
                 $0.dateFormatter = formatter
             }
             <<< DateRow() {
-                $0.title = "Payment End Date"
+                $0.title = endDateFieldTitle
                 $0.tag = "end_date"
                 $0.hidden = "$payment_type != 'Recurring'" // TODO: How can we substitute string literal definitions matching each string here?
                 let formatter = DateFormatter()
@@ -84,7 +90,7 @@ class PreviousExtraPaymentsVC: FormViewController {
                 $0.dateFormatter = formatter
             }
             <<< IntRow() {
-                $0.title = "Month-Frequency of Payments"
+                $0.title = frequencyFieldTitle
                 $0.tag = PreviousExtraPaymentsFormValidator.paymentFrequencyField
                 $0.hidden = "$payment_type != 'Recurring'" // TODO: How can we substitute string literal definitions matching each string here?
                 $0.value = 1
@@ -104,13 +110,34 @@ class PreviousExtraPaymentsVC: FormViewController {
         self.dismiss(animated: true, completion: {})
     }
     
+    func displayAlertFor(fieldName: String) {
+        
+        var titlesDictionary = [
+            PreviousExtraPaymentsFormValidator.startDateField : startDateFieldTitle,
+            PreviousExtraPaymentsFormValidator.endDateField : endDateFieldTitle,
+            PreviousExtraPaymentsFormValidator.paymentAmountField : paymentAmountFieldTitle,
+            PreviousExtraPaymentsFormValidator.paymentFrequencyField : frequencyFieldTitle,
+            PreviousExtraPaymentsFormValidator.paymentTypeField : paymentTypeFieldTitle
+        ]
+        
+        if let fieldTitle = titlesDictionary[fieldName] {
+            let message = "\(fieldTitle) is invalid"
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style:UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            
+            present(alert, animated: true, completion: nil)
+        }
+    }
     
     func validInput() -> Bool {
         var result = false
         var fieldName = ""
-
+        let formFields = self.form.values()
+        
         do {
-            try PreviousExtraPaymentsFormValidator.validateFormFields(dictionary: self.form.values())
+            try PreviousExtraPaymentsFormValidator.validateFormFields(dictionary: formFields)
             result = true
         } catch FormError.invalidType(let field) {
             fieldName = field
@@ -135,29 +162,26 @@ class PreviousExtraPaymentsVC: FormViewController {
             // All enum types are handled.  Adding an empty 'catch' for now.
             // http://stackoverflow.com/questions/30720497/swift-do-try-catch-syntax
         }
-
-        if !result {
-            let message = "Contents of field \(fieldName) is invalid"
-            let alert = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style:UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
-                alert.dismiss(animated: true, completion: nil)
-            }))
-            present(alert, animated: true, completion: {
-            })
-        }
         
+        if !result {
+            displayAlertFor(fieldName: fieldName)
+        }
+
         return result
     }
     
     
     func packageUpExtraPayment() {
         let valuesDictionary = self.form.values()
-        let paymentStartDate: Date? = valuesDictionary[PreviousExtraPaymentsFormValidator.startDateField] as? Date
-        let paymentType: String? = valuesDictionary[PreviousExtraPaymentsFormValidator.paymentTypeField] as? String
-        let paymentAmount: Double? = valuesDictionary[PreviousExtraPaymentsFormValidator.paymentAmountField] as? Double
-        let paymentStartPeriod: Int = Calendar.current.dateComponents([.month], from: self.mortgage.startDate, to: paymentStartDate!).month! + 1
+        let paymentStartDate = valuesDictionary[PreviousExtraPaymentsFormValidator.startDateField] as? Date
+        let paymentType = valuesDictionary[PreviousExtraPaymentsFormValidator.paymentTypeField] as? String
+        let paymentAmount = valuesDictionary[PreviousExtraPaymentsFormValidator.paymentAmountField] as? Double
+        let paymentStartPeriod = Calendar.current.dateComponents([.month], from: self.mortgage.startDate, to: paymentStartDate!).month! + 1
         
-        var extra = ["startMonth": paymentStartPeriod, "endMonth": paymentStartPeriod, "extraIntervalMonths": 1, "extraAmount": paymentAmount!] as [String : Any]
+        // We store/access the extra amount as an integer
+        let integerPayment = Int(paymentAmount!)
+        
+        var extra = ["startMonth": paymentStartPeriod, "endMonth": paymentStartPeriod, "extraIntervalMonths": 1, "extraAmount": integerPayment] as [String : Any]
         extra["startDate"] = paymentStartDate
         
         if paymentType == PaymentType.recurring.rawValue {

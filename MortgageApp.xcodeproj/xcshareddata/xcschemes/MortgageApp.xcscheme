@@ -86,6 +86,10 @@
             argument = "fill-registration"
             isEnabled = "NO">
          </CommandLineArgument>
+         <CommandLineArgument
+            argument = "fill-mortgage"
+            isEnabled = "NO">
+         </CommandLineArgument>
       </CommandLineArguments>
       <EnvironmentVariables>
          <EnvironmentVariable
