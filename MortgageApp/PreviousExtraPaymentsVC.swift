@@ -152,12 +152,15 @@ class PreviousExtraPaymentsVC: FormViewController {
     
     func packageUpExtraPayment() {
         let valuesDictionary = self.form.values()
-        let paymentStartDate: Date? = valuesDictionary[PreviousExtraPaymentsFormValidator.startDateField] as? Date
-        let paymentType: String? = valuesDictionary[PreviousExtraPaymentsFormValidator.paymentTypeField] as? String
-        let paymentAmount: Int? = valuesDictionary[PreviousExtraPaymentsFormValidator.paymentAmountField] as? Int
-        let paymentStartPeriod: Int = Calendar.current.dateComponents([.month], from: self.mortgage.startDate, to: paymentStartDate!).month! + 1
+        let paymentStartDate = valuesDictionary[PreviousExtraPaymentsFormValidator.startDateField] as? Date
+        let paymentType = valuesDictionary[PreviousExtraPaymentsFormValidator.paymentTypeField] as? String
+        let paymentAmount = valuesDictionary[PreviousExtraPaymentsFormValidator.paymentAmountField] as? Double
+        let paymentStartPeriod = Calendar.current.dateComponents([.month], from: self.mortgage.startDate, to: paymentStartDate!).month! + 1
         
-        var extra = ["startMonth": paymentStartPeriod, "endMonth": paymentStartPeriod, "extraIntervalMonths": 1, "extraAmount": paymentAmount!] as [String : Any]
+        // We store/access the extra amount as an integer
+        let integerPayment = Int(paymentAmount!)
+        
+        var extra = ["startMonth": paymentStartPeriod, "endMonth": paymentStartPeriod, "extraIntervalMonths": 1, "extraAmount": integerPayment] as [String : Any]
         extra["startDate"] = paymentStartDate
         
         if paymentType == PaymentType.recurring.rawValue {

@@ -71,7 +71,7 @@ class MortgageListVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                 mortgage.name = dict["name"] as! String
                 mortgage.salePrice = NSDecimalNumber(decimal: (dict["salePrice"] as! NSNumber).decimalValue)
                 mortgage.interestRate = NSDecimalNumber(decimal: (dict["interestRate"] as! NSNumber).decimalValue)
-                mortgage.downPayment = dict["downPayment"] as! String
+                mortgage.downPayment = NSDecimalNumber(decimal: (dict["downPayment"] as! NSNumber).decimalValue)
                 mortgage.propertyTaxRate = NSDecimalNumber(decimal: (dict["propertyTaxRate"] as! NSNumber).decimalValue)
                 mortgage.homeInsurance = NSDecimalNumber(decimal: (dict["homeInsurance"] as! NSNumber).decimalValue)
                 mortgage.adjustFixedRateMonths = Int(dict["adjustFixedRateMonths"] as! Int)

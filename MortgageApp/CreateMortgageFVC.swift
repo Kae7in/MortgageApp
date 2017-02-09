@@ -91,13 +91,13 @@ class CreateMortgageFVC: FormViewController {
                 formatter.locale = .current
                 formatter.numberStyle = .currency
                 $0.formatter = formatter
-                // $0.value = // TODO: Down payment is a computed property so we need to derive the form value here
+                $0.value = editingMortgage ? mortgage.downPayment.doubleValue : nil
             }
             <<< IntRow() {
                 $0.title = loanTermFieldTitle
                 $0.placeholder = "30"
                 $0.tag = MortgageFormValidator.loanTermYearsField
-                $0.value = editingMortgage ? mortgage.loanTermMonths / 12 : nil
+                $0.value = editingMortgage ? mortgage.getLoanTermYears() : nil
             }
             <<< DecimalRow() {
                 $0.title = interestRateFieldTitle
@@ -305,7 +305,7 @@ class CreateMortgageFVC: FormViewController {
         mortgage.interestRate = interestRate
         mortgage.startDate = startDate
         mortgage.setLoanTerm(years: loanTermYears)
-        mortgage.update(downPayment: downPayment, principal: principal)
+        mortgage.downPayment = downPayment
         mortgage.homeInsurance = homeInsuranceCost
         mortgage.propertyTaxRate = propertyTaxRate
     }
