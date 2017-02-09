@@ -84,7 +84,11 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "fill-registration"
-            isEnabled = "YES">
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "fill-mortgage"
+            isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
       <EnvironmentVariables>

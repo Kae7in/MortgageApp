@@ -31,7 +31,20 @@ class CreateMortgageFVC: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TODO: Load test data using command-line argument for faster testing
+        let arguments = CommandLine.arguments
+        if arguments.contains("fill-mortgage") {
+            // Assign data to mortgage instance properties
+            mortgage.name = "Willow Way"
+            mortgage.salePrice = 200_000
+            mortgage.interestRate = 2.38
+            mortgage.startDate = Date()
+            mortgage.loanTermMonths = 360
+            mortgage.downPayment = 20_000
+            mortgage.homeInsurance = 200
+            mortgage.propertyTaxRate = 2.38
+            
+            editingMortgage = true
+        }
         
         self.layoutNavigationBar()
         self.layoutForm()
